@@ -1,0 +1,160 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  padding: 1.5rem 0;
+  z-index: 100;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.header.scrolled {
+  padding: 1rem 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logoImg {
+  height: 40px;
+  width: auto;
+  transition: height 0.3s ease;
+}
+
+.header.scrolled .logoImg {
+  height: 35px;
+}
+
+.nav {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.navLink {
+  font-weight: 500;
+  color: var(--color-secondary);
+  transition: color 0.2s ease;
+  font-size: 0.95rem;
+  position: relative;
+}
+
+.navLink:hover {
+  color: var(--color-primary);
+}
+
+.navLink.active {
+  color: var(--color-primary);
+}
+
+.navLink.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-primary);
+  border-radius: 2px;
+}
+
+.ctaBtn {
+  background: var(--color-secondary);
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.ctaBtn:hover {
+  background: var(--color-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 155, 159, 0.3);
+}
+
+/* Mobile Menu Button */
+.mobileMenuBtn {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--color-secondary);
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+/* Mobile Navigation */
+.mobileNav {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: white;
+  padding: 1rem 2rem 2rem;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  border-top: 1px solid var(--color-border);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
+
+.mobileNavOpen {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.mobileNavLink {
+  padding: 1rem 0;
+  font-weight: 500;
+  color: var(--color-secondary);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.mobileNavLink:hover {
+  color: var(--color-primary);
+}
+
+.mobileCtaBtn {
+  margin-top: 1.5rem;
+  background: var(--color-secondary);
+  color: white;
+  padding: 0.8rem;
+  text-align: center;
+  border-radius: 50px;
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .nav {
+    display: none;
+  }
+  
+  .mobileMenuBtn {
+    display: block;
+  }
+  
+  .mobileNav {
+    display: flex;
+  }
+}
