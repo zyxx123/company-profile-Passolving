@@ -1,6 +1,7 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FadeIn from '@/components/animations/FadeIn';
+import HeroBanner from '@/components/HeroBanner';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
@@ -27,42 +28,47 @@ const caseStudies = [
 
 export default function Portfolio() {
   return (
-    <main style={{ minHeight: '100vh', backgroundColor: '#ffffff' }}>
-      <Header />
-      
-      <div style={{ paddingTop: '10rem', paddingBottom: '4rem', maxWidth: '1400px', margin: '0 auto', paddingLeft: '2rem', paddingRight: '2rem' }}>
-        <FadeIn>
-          <h1 style={{ fontSize: '4.5rem', fontWeight: '800', color: '#111827', lineHeight: '1.05', letterSpacing: '-0.03em', marginBottom: '1.5rem', maxWidth: '800px' }}>
-            Client Impact & Case Studies
-          </h1>
-          <p style={{ fontSize: '1.25rem', color: '#6b7280', maxWidth: '600px', lineHeight: '1.6' }}>
-            We don't just plan strategies, we ensure they translate into measurable, sustainable structural results. Explore our track record.
-          </p>
-        </FadeIn>
+    <main style={{ minHeight: '100vh', position: 'relative', overflow: 'hidden' }}>
+      {/* Background blobs */}
+      <div style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', zIndex: -1, background: 'white' }}>
+        <div style={{ position: 'absolute', top: '-10%', right: '-5%', width: '50vw', height: '50vw', background: 'radial-gradient(circle, rgba(0, 155, 159, 0.05) 0%, transparent 70%)', borderRadius: '50%' }}></div>
+        <div style={{ position: 'absolute', top: '40%', left: '-10%', width: '60vw', height: '60vw', background: 'radial-gradient(circle, rgba(226, 63, 136, 0.03) 0%, transparent 70%)', borderRadius: '50%' }}></div>
       </div>
 
-      <section style={{ maxWidth: '1400px', margin: '0 auto', padding: '4rem 2rem 8rem' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '2px', background: '#e5e7eb', borderTop: '2px solid #111827' }}>
-          {caseStudies.map((study, index) => (
-            <FadeIn key={index} delay={index * 0.1}>
-              <Link href={`/portfolio/${study.slug}`} style={{ display: 'grid', gridTemplateColumns: '1fr 2fr 1fr', gap: '2rem', padding: '4rem 2rem', background: 'white', textDecoration: 'none', transition: 'background 0.3s ease' }} className="portfolioRow">
-                <div>
-                  <span style={{ fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '1px', color: 'var(--color-primary)', fontWeight: '600' }}>
-                    {study.client}
-                  </span>
-                </div>
-                <div>
-                  <h2 style={{ fontSize: '2.5rem', color: '#111827', margin: '0 0 1rem 0', fontWeight: '700', letterSpacing: '-0.02em' }}>{study.title}</h2>
-                  <p style={{ color: '#6b7280', fontSize: '1.1rem', lineHeight: '1.6', margin: 0, maxWidth: '600px' }}>
-                    {study.description}
-                  </p>
-                </div>
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', color: '#111827' }}>
-                  <ArrowRight size={32} strokeWidth={1} />
-                </div>
-              </Link>
-            </FadeIn>
-          ))}
+      <Header />
+      
+      <HeroBanner 
+        title="Client Impact & Case Studies" 
+        subtitle="We don't just plan strategies, we ensure they translate into measurable, sustainable structural results. Explore our track record."
+        bgImage="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=2560&q=80"
+      />
+
+      <section className="section" style={{ padding: '4rem 0 8rem' }}>
+        <div className="container">
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '2.5rem' }}>
+            {caseStudies.map((study, index) => (
+              <FadeIn key={index} delay={index * 0.1}>
+                <Link href={`/portfolio/${study.slug}`} className="glass portfolioCard" style={{ display: 'grid', gridTemplateColumns: '1fr 2fr 1fr', gap: '2rem', padding: '3rem', borderRadius: '24px', textDecoration: 'none', transition: 'all 0.3s ease' }}>
+                  <div>
+                    <span style={{ display: 'inline-block', padding: '0.4rem 1rem', background: 'var(--color-primary)', color: 'white', borderRadius: '50px', fontSize: '0.85rem', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '1px' }}>
+                      {study.client}
+                    </span>
+                  </div>
+                  <div>
+                    <h2 style={{ fontSize: '2rem', color: 'var(--color-secondary)', margin: '0 0 1rem 0', fontWeight: '700' }}>{study.title}</h2>
+                    <p style={{ color: 'var(--color-text-light)', fontSize: '1.05rem', lineHeight: '1.6', margin: 0 }}>
+                      {study.description}
+                    </p>
+                  </div>
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', color: 'var(--color-primary)' }}>
+                    <div style={{ width: '50px', height: '50px', background: 'rgba(0, 155, 159, 0.1)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                      <ArrowRight size={24} />
+                    </div>
+                  </div>
+                </Link>
+              </FadeIn>
+            ))}
+          </div>
         </div>
       </section>
 

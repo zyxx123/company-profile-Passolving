@@ -162,3 +162,6 @@ h1, h2, h3, h4, h5, h6 {
 .float-delayed { animation: float-delayed 8s ease-in-out infinite; animation-delay: 2s; }
 .portfolioRow:hover { background-color: #f9fafb !important; }
 .insightCard:hover .insightImage { transform: scale(1.05); filter: grayscale(0%) !important; }
+.insightCard:hover { transform: translateY(-10px) !important; }
+.portfolioCard:hover { transform: translateY(-5px) !important; box-shadow: 0 15px 30px rgba(0, 155, 159, 0.15) !important; }
+.serviceFeatureCard:hover { transform: translateY(-10px) !important; }

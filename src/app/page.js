@@ -11,36 +11,43 @@ export default function Home() {
     <div className={styles.main}>
       <Header />
       
-      {/* Tier-1 Hero Section */}
+      {/* Vibrant Background Blobs */}
+      <div className={styles.pageBg}></div>
+
+      {/* Hero Section (Vibrant & Colorful) */}
       <section className={styles.hero}>
-        <div className={styles.heroBackground}></div>
-        <div className={styles.heroContent}>
-          <FadeIn>
-            <h1 className={styles.heroTitle}>
-              Solving What Matters,<br/>
-              Scaling What Works.
-            </h1>
-          </FadeIn>
-          <FadeIn delay={0.2}>
-            <p className={styles.heroDescription}>
-              We are the pioneer in Agility Assessment & National Soft Skill Certification. We partner with leaders to confront uncomfortable realities and drive structural transformation.
-            </p>
-          </FadeIn>
-          <FadeIn delay={0.4}>
-            <Link href="/services" className={styles.heroBtn}>
-              Discover Our Expertise <ArrowRight size={18} />
-            </Link>
-          </FadeIn>
+        <div className={styles.heroImageContainer}>
+          <div className={styles.heroOverlay}>
+            <div className={styles.heroContent}>
+              <FadeIn>
+                <h1 className={styles.heroTitle}>
+                  Empowering<br/>
+                  Agility & Digital<br/>
+                  Transformation
+                </h1>
+              </FadeIn>
+              <FadeIn delay={0.2}>
+                <p className={styles.heroDescription}>
+                  Unlock your organization's potential through expert consulting, training, and insight. Pioneer in Agility Assessment & National Soft Skill Certification.
+                </p>
+              </FadeIn>
+              <FadeIn delay={0.4}>
+                <Link href="/services" className={styles.heroBtn}>
+                  Explore Our Services <ArrowRight size={18} />
+                </Link>
+              </FadeIn>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Clean Minimalist Services Section */}
+      {/* Services Section with Dark Transition */}
       <section className={styles.servicesWrapper}>
+        
         <FadeIn>
-          <h2 className={styles.sectionTitle}>Our Capabilities</h2>
-          <p className={styles.sectionSubtitle}>
-            Integrating engineering discipline, management, and human learning into three core pillars to deliver sustainable results across organizations.
-          </p>
+          <div className={styles.sectionHeader}>
+            <h2 className={styles.sectionTitle}>Our Core Pillars</h2>
+          </div>
         </FadeIn>
         
         <div className={styles.servicesGrid}>
@@ -49,6 +56,7 @@ export default function Home() {
               title="Training"
               description="Equip your teams with agile methodologies, leadership skills, and innovation frameworks through interactive learning."
               buttonText="Learn More"
+              href="/services/training"
               icon={GraduationCap}
             />
           </FadeIn>
@@ -57,6 +65,7 @@ export default function Home() {
               title="Consulting"
               description="Strategic guidance to drive structural change, operational efficiency, and digital evolution using Empathy-System-Result."
               buttonText="View Solutions"
+              href="/services/consulting"
               icon={Handshake}
             />
           </FadeIn>
@@ -65,34 +74,28 @@ export default function Home() {
               title="Research"
               description="Data-driven insights, market analysis, and pioneering studies for informed decision-making and performance tracking."
               buttonText="Discover Insights"
+              href="/services/research"
               icon={Search}
             />
           </FadeIn>
         </div>
       </section>
       
-      {/* High-Impact Section */}
-      <section className={styles.impactSection}>
-        <div className={styles.impactBg}></div>
-        <div style={{ position: 'relative', zIndex: 1, maxWidth: '1400px', margin: '0 auto', display: 'flex', alignItems: 'center', height: '100%' }}>
-          <div style={{ maxWidth: '600px' }}>
-            <FadeIn>
-              <h2 style={{ fontSize: '3rem', fontWeight: 'bold', marginBottom: '1.5rem', lineHeight: '1.1' }}>
-                The Iceberg of Ignorance
-              </h2>
-            </FadeIn>
-            <FadeIn delay={0.2}>
-              <p style={{ fontSize: '1.25rem', color: 'rgba(255,255,255,0.8)', lineHeight: '1.8', marginBottom: '3rem' }}>
+      {/* Colorful Impact Teaser */}
+      <section style={{ backgroundColor: 'var(--color-secondary)', padding: '6rem 0 8rem' }}>
+        <div className="container">
+          <FadeIn>
+            <div style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto', color: 'white' }}>
+              <h2 style={{ fontSize: '3rem', fontWeight: 'bold', marginBottom: '1.5rem', color: 'white', textShadow: '0 4px 20px rgba(0,0,0,0.3)' }}>Solving What Matters, Scaling What Works</h2>
+              <p style={{ fontSize: '1.2rem', color: 'rgba(255,255,255,0.9)', lineHeight: '1.8', marginBottom: '3rem' }}>
                 Senior management often only sees 4% of the issues in their companies. We work in the unseen 96% that determines the true quality of decision impacts. 
-                Trusted by top organizations operating in highly complex environments.
+                Trusted by top organizations operating in highly complex, regulated, and demanding environments across industries.
               </p>
-            </FadeIn>
-            <FadeIn delay={0.4}>
-              <Link href="/about" className={styles.heroBtn} style={{ background: 'white', color: '#111827' }}>
-                Read Our Philosophy <ArrowRight size={18} />
+              <Link href="/portfolio" className={styles.heroBtn} style={{ background: 'white', color: 'var(--color-primary)' }}>
+                View Our Case Studies <ArrowRight size={18} />
               </Link>
-            </FadeIn>
-          </div>
+            </div>
+          </FadeIn>
         </div>
       </section>
 

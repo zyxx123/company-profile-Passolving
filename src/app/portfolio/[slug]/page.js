@@ -1,6 +1,7 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FadeIn from '@/components/animations/FadeIn';
+import HeroBanner from '@/components/HeroBanner';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 
@@ -31,70 +32,68 @@ const caseStudiesData = {
   }
 };
 
-export default function CaseStudy({ params }) {
-  const data = caseStudiesData[params.slug];
+export default async function CaseStudy({ params }) {
+  const resolvedParams = await params;
+  const data = caseStudiesData[resolvedParams.slug];
 
   if (!data) {
     return <div style={{padding: '10rem 2rem', textAlign: 'center'}}>Case Study Not Found</div>;
   }
 
   return (
-    <main style={{ backgroundColor: '#ffffff' }}>
+    <main style={{ minHeight: '100vh', position: 'relative', overflow: 'hidden' }}>
+      {/* Background blobs */}
+      <div style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', zIndex: -1, background: 'white' }}>
+        <div style={{ position: 'absolute', top: '-10%', right: '-5%', width: '50vw', height: '50vw', background: 'radial-gradient(circle, rgba(0, 155, 159, 0.05) 0%, transparent 70%)', borderRadius: '50%' }}></div>
+        <div style={{ position: 'absolute', top: '40%', left: '-10%', width: '60vw', height: '60vw', background: 'radial-gradient(circle, rgba(226, 63, 136, 0.03) 0%, transparent 70%)', borderRadius: '50%' }}></div>
+      </div>
+
       <Header />
       
-      {/* Article Hero */}
-      <div style={{ paddingTop: '10rem', paddingBottom: '4rem', maxWidth: '1000px', margin: '0 auto', paddingLeft: '2rem', paddingRight: '2rem' }}>
-        <FadeIn>
-          <Link href="/portfolio" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', color: '#6b7280', marginBottom: '2rem', fontSize: '0.9rem', fontWeight: '500', letterSpacing: '1px', textTransform: 'uppercase' }}>
+      <HeroBanner 
+        title={data.title} 
+        subtitle={data.client}
+        bgImage={data.heroImage}
+      />
+
+      <section className="section" style={{ padding: '2rem 0 8rem' }}>
+        <div className="container">
+          <Link href="/portfolio" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', color: 'var(--color-primary)', marginBottom: '3rem', fontSize: '0.9rem', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '1px' }}>
             <ArrowLeft size={16} /> Back to Case Studies
           </Link>
-          <h1 style={{ fontSize: '4.5rem', fontWeight: '800', color: '#111827', lineHeight: '1.1', letterSpacing: '-0.03em', marginBottom: '1.5rem' }}>
-            {data.title}
-          </h1>
-          <p style={{ fontSize: '1.25rem', color: 'var(--color-primary)', fontWeight: '600', letterSpacing: '1px', textTransform: 'uppercase' }}>
-            {data.client}
-          </p>
-        </FadeIn>
-      </div>
 
-      {/* Hero Image */}
-      <FadeIn delay={0.2}>
-        <div style={{ width: '100%', height: '60vh', backgroundImage: `url(${data.heroImage})`, backgroundSize: 'cover', backgroundPosition: 'center', filter: 'grayscale(50%)' }}></div>
-      </FadeIn>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '3rem' }}>
+            
+            <FadeIn>
+              <div className="glass" style={{ padding: '3rem', borderRadius: '24px', borderLeft: '5px solid var(--color-primary)' }}>
+                <h3 style={{ fontSize: '1.2rem', textTransform: 'uppercase', letterSpacing: '2px', color: 'var(--color-primary)', marginBottom: '1rem', fontWeight: 'bold' }}>01. The Context</h3>
+                <p style={{ fontSize: '1.25rem', color: 'var(--color-secondary)', lineHeight: '1.8', fontWeight: '500' }}>
+                  {data.context}
+                </p>
+              </div>
+            </FadeIn>
 
-      {/* Content Grid */}
-      <div style={{ maxWidth: '1000px', margin: '0 auto', padding: '6rem 2rem' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '5rem' }}>
-          
-          <FadeIn>
-            <div style={{ borderTop: '2px solid #111827', paddingTop: '2rem' }}>
-              <h3 style={{ fontSize: '1rem', textTransform: 'uppercase', letterSpacing: '2px', color: '#6b7280', marginBottom: '1rem' }}>01. The Context</h3>
-              <p style={{ fontSize: '1.5rem', color: '#111827', lineHeight: '1.6', fontWeight: '400' }}>
-                {data.context}
-              </p>
-            </div>
-          </FadeIn>
+            <FadeIn delay={0.1}>
+              <div className="glass" style={{ padding: '3rem', borderRadius: '24px', borderLeft: '5px solid var(--color-accent)' }}>
+                <h3 style={{ fontSize: '1.2rem', textTransform: 'uppercase', letterSpacing: '2px', color: 'var(--color-accent)', marginBottom: '1rem', fontWeight: 'bold' }}>02. Our Approach</h3>
+                <p style={{ fontSize: '1.25rem', color: 'var(--color-secondary)', lineHeight: '1.8', fontWeight: '500' }}>
+                  {data.approach}
+                </p>
+              </div>
+            </FadeIn>
 
-          <FadeIn>
-            <div style={{ borderTop: '2px solid #111827', paddingTop: '2rem' }}>
-              <h3 style={{ fontSize: '1rem', textTransform: 'uppercase', letterSpacing: '2px', color: '#6b7280', marginBottom: '1rem' }}>02. Our Approach</h3>
-              <p style={{ fontSize: '1.5rem', color: '#111827', lineHeight: '1.6', fontWeight: '400' }}>
-                {data.approach}
-              </p>
-            </div>
-          </FadeIn>
+            <FadeIn delay={0.2}>
+              <div className="glass-dark" style={{ padding: '3rem', borderRadius: '24px', borderLeft: '5px solid #00d4d8', color: 'white' }}>
+                <h3 style={{ fontSize: '1.2rem', textTransform: 'uppercase', letterSpacing: '2px', color: '#00d4d8', marginBottom: '1rem', fontWeight: 'bold' }}>03. The Impact</h3>
+                <p style={{ fontSize: '1.5rem', color: 'white', lineHeight: '1.6', fontWeight: '700', letterSpacing: '0.5px' }}>
+                  {data.impact}
+                </p>
+              </div>
+            </FadeIn>
 
-          <FadeIn>
-            <div style={{ borderTop: '2px solid var(--color-primary)', paddingTop: '2rem' }}>
-              <h3 style={{ fontSize: '1rem', textTransform: 'uppercase', letterSpacing: '2px', color: 'var(--color-primary)', marginBottom: '1rem' }}>03. The Impact</h3>
-              <p style={{ fontSize: '2rem', color: '#111827', lineHeight: '1.4', fontWeight: '600', letterSpacing: '-0.02em' }}>
-                {data.impact}
-              </p>
-            </div>
-          </FadeIn>
-
+          </div>
         </div>
-      </div>
+      </section>
 
       <Footer />
     </main>

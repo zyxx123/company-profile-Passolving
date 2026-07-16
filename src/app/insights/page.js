@@ -1,6 +1,7 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FadeIn from '@/components/animations/FadeIn';
+import HeroBanner from '@/components/HeroBanner';
 
 const insightsData = [
   {
@@ -28,42 +29,45 @@ const insightsData = [
 
 export default function Insights() {
   return (
-    <main style={{ minHeight: '100vh', backgroundColor: '#ffffff' }}>
-      <Header />
-      
-      <div style={{ paddingTop: '10rem', paddingBottom: '4rem', maxWidth: '1400px', margin: '0 auto', paddingLeft: '2rem', paddingRight: '2rem' }}>
-        <FadeIn>
-          <h1 style={{ fontSize: '4.5rem', fontWeight: '800', color: '#111827', lineHeight: '1.05', letterSpacing: '-0.03em', marginBottom: '1.5rem', maxWidth: '800px' }}>
-            Featured Insights
-          </h1>
-          <p style={{ fontSize: '1.25rem', color: '#6b7280', maxWidth: '600px', lineHeight: '1.6' }}>
-            Research, methodologies, and perspectives from PASSolving on the most critical issues facing corporate leadership today.
-          </p>
-        </FadeIn>
+    <main style={{ minHeight: '100vh', position: 'relative', overflow: 'hidden' }}>
+      {/* Background blobs */}
+      <div style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', zIndex: -1, background: 'white' }}>
+        <div style={{ position: 'absolute', top: '-10%', right: '-5%', width: '50vw', height: '50vw', background: 'radial-gradient(circle, rgba(0, 155, 159, 0.05) 0%, transparent 70%)', borderRadius: '50%' }}></div>
+        <div style={{ position: 'absolute', top: '40%', left: '-10%', width: '60vw', height: '60vw', background: 'radial-gradient(circle, rgba(226, 63, 136, 0.03) 0%, transparent 70%)', borderRadius: '50%' }}></div>
       </div>
 
-      <section style={{ maxWidth: '1400px', margin: '0 auto', padding: '2rem 2rem 8rem' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '4rem' }}>
-          {insightsData.map((insight, index) => (
-            <FadeIn key={index} delay={index * 0.1}>
-              <article style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', cursor: 'pointer' }} className="insightCard">
-                <div style={{ width: '100%', height: '280px', backgroundImage: `url(${insight.image})`, backgroundSize: 'cover', backgroundPosition: 'center', filter: 'grayscale(30%)', transition: 'all 0.4s ease' }} className="insightImage"></div>
-                <div>
-                  <span style={{ fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '1.5px', color: 'var(--color-primary)', fontWeight: '600', display: 'block', marginBottom: '0.75rem' }}>
-                    {insight.category}
-                  </span>
-                  <h3 style={{ fontSize: '1.75rem', color: '#111827', fontWeight: '700', lineHeight: '1.3', marginBottom: '1rem', letterSpacing: '-0.01em' }}>
-                    {insight.title}
-                  </h3>
-                  <div style={{ display: 'flex', gap: '1rem', color: '#6b7280', fontSize: '0.9rem' }}>
-                    <span>{insight.author}</span>
-                    <span>&mdash;</span>
-                    <span>{insight.date}</span>
+      <Header />
+      
+      <HeroBanner 
+        title="Featured Insights" 
+        subtitle="Research, methodologies, and perspectives from PASSolving on the most critical issues facing corporate leadership today."
+        bgImage="https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixlib=rb-4.0.3&auto=format&fit=crop&w=2560&q=80"
+      />
+
+      <section className="section" style={{ padding: '4rem 0 8rem' }}>
+        <div className="container">
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '3rem' }}>
+            {insightsData.map((insight, index) => (
+              <FadeIn key={index} delay={index * 0.1}>
+                <article className="glass insightCard" style={{ display: 'flex', flexDirection: 'column', borderRadius: '24px', overflow: 'hidden', cursor: 'pointer', transition: 'all 0.3s ease', height: '100%' }}>
+                  <div style={{ width: '100%', height: '240px', backgroundImage: `url(${insight.image})`, backgroundSize: 'cover', backgroundPosition: 'center', transition: 'all 0.4s ease' }} className="insightImage"></div>
+                  <div style={{ padding: '2rem' }}>
+                    <span style={{ display: 'inline-block', padding: '0.3rem 0.8rem', background: 'rgba(0, 155, 159, 0.1)', color: 'var(--color-primary)', borderRadius: '50px', fontSize: '0.8rem', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '1rem' }}>
+                      {insight.category}
+                    </span>
+                    <h3 style={{ fontSize: '1.5rem', color: 'var(--color-secondary)', fontWeight: '700', lineHeight: '1.4', marginBottom: '1.5rem' }}>
+                      {insight.title}
+                    </h3>
+                    <div style={{ display: 'flex', gap: '1rem', color: 'var(--color-text-light)', fontSize: '0.9rem', fontWeight: '500' }}>
+                      <span>{insight.author}</span>
+                      <span>&bull;</span>
+                      <span>{insight.date}</span>
+                    </div>
                   </div>
-                </div>
-              </article>
-            </FadeIn>
-          ))}
+                </article>
+              </FadeIn>
+            ))}
+          </div>
         </div>
       </section>
 

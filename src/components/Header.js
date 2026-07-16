@@ -54,17 +54,17 @@ export default function Header() {
               <div className={styles.megaSection}>
                 <h4>Core Pillars</h4>
                 <div className={styles.megaList}>
-                  <Link href="/services">Training <ArrowRight size={14} /></Link>
-                  <Link href="/services">Consulting <ArrowRight size={14} /></Link>
-                  <Link href="/services">Research <ArrowRight size={14} /></Link>
+                  <Link href="/services/training">Training <ArrowRight size={14} /></Link>
+                  <Link href="/services/consulting">Consulting <ArrowRight size={14} /></Link>
+                  <Link href="/services/research">Research <ArrowRight size={14} /></Link>
                 </div>
               </div>
               <div className={styles.megaSection}>
                 <h4>Specialized Focus</h4>
                 <div className={styles.megaList}>
-                  <Link href="/services">LEGO® Serious Play® <ArrowRight size={14} /></Link>
-                  <Link href="/services">Agility Assessment <ArrowRight size={14} /></Link>
-                  <Link href="/services">Soft Skill Certification <ArrowRight size={14} /></Link>
+                  <Link href="/services/lego-serious-play">LEGO® Serious Play® <ArrowRight size={14} /></Link>
+                  <Link href="/services/agility-assessment">Agility Assessment <ArrowRight size={14} /></Link>
+                  <Link href="/services/soft-skill-certification">Soft Skill Certification <ArrowRight size={14} /></Link>
                 </div>
               </div>
             </div>
@@ -82,7 +82,7 @@ export default function Header() {
             <Link href="/about" className={`${styles.navLink} ${isActive('/about')}`}>Our Firm</Link>
           </div>
 
-          <Link href="#contact" className={styles.ctaBtn}>Contact Us</Link>
+          <Link href="/contact" className={styles.ctaBtn}>Contact Us</Link>
         </nav>
 
         {/* Mobile Hamburger Icon */}
