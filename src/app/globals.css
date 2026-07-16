@@ -160,3 +160,5 @@ h1, h2, h3, h4, h5, h6 {
 
 .float { animation: float 6s ease-in-out infinite; }
 .float-delayed { animation: float-delayed 8s ease-in-out infinite; animation-delay: 2s; }
+.portfolioRow:hover { background-color: #f9fafb !important; }
+.insightCard:hover .insightImage { transform: scale(1.05); filter: grayscale(0%) !important; }

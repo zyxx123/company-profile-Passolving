@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ChevronDown, ArrowRight } from 'lucide-react';
 import styles from './Header.module.css';
 
 export default function Header() {
@@ -42,28 +42,53 @@ export default function Header() {
         
         {/* Desktop Nav */}
         <nav className={styles.nav}>
-          <Link href="/" className={`${styles.navLink} ${isActive('/')}`}>Home</Link>
-          <Link href="/about" className={`${styles.navLink} ${isActive('/about')}`}>About Us</Link>
-          <Link href="/services" className={`${styles.navLink} ${isActive('/services')}`}>Services</Link>
-          <Link href="/portfolio" className={`${styles.navLink} ${isActive('/portfolio')}`}>Portfolio</Link>
-          <Link href="#contact" className={styles.navLink}>Contact</Link>
-          <Link href="#login" className={styles.ctaBtn}>Log In/Request a Demo</Link>
+          <div className={styles.navItem}>
+            <Link href="/" className={`${styles.navLink} ${isActive('/')}`}>Home</Link>
+          </div>
+          
+          <div className={styles.navItem}>
+            <span className={`${styles.navLink} ${isActive('/services')}`} style={{cursor: 'pointer'}}>
+              Expertise <ChevronDown size={14} />
+            </span>
+            <div className={styles.megaMenu}>
+              <div className={styles.megaSection}>
+                <h4>Core Pillars</h4>
+                <div className={styles.megaList}>
+                  <Link href="/services">Training <ArrowRight size={14} /></Link>
+                  <Link href="/services">Consulting <ArrowRight size={14} /></Link>
+                  <Link href="/services">Research <ArrowRight size={14} /></Link>
+                </div>
+              </div>
+              <div className={styles.megaSection}>
+                <h4>Specialized Focus</h4>
+                <div className={styles.megaList}>
+                  <Link href="/services">LEGO® Serious Play® <ArrowRight size={14} /></Link>
+                  <Link href="/services">Agility Assessment <ArrowRight size={14} /></Link>
+                  <Link href="/services">Soft Skill Certification <ArrowRight size={14} /></Link>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className={styles.navItem}>
+            <Link href="/portfolio" className={`${styles.navLink} ${isActive('/portfolio')}`}>Case Studies</Link>
+          </div>
+          
+          <div className={styles.navItem}>
+            <Link href="/insights" className={`${styles.navLink} ${isActive('/insights')}`}>Insights</Link>
+          </div>
+          
+          <div className={styles.navItem}>
+            <Link href="/about" className={`${styles.navLink} ${isActive('/about')}`}>Our Firm</Link>
+          </div>
+
+          <Link href="#contact" className={styles.ctaBtn}>Contact Us</Link>
         </nav>
 
         {/* Mobile Hamburger Icon */}
         <button className={styles.mobileMenuBtn} onClick={toggleMobileMenu} aria-label="Toggle Menu">
           {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
-      </div>
-
-      {/* Mobile Nav Menu */}
-      <div className={`${styles.mobileNav} ${isMobileMenuOpen ? styles.mobileNavOpen : ''}`}>
-        <Link href="/" className={styles.mobileNavLink} onClick={toggleMobileMenu}>Home</Link>
-        <Link href="/about" className={styles.mobileNavLink} onClick={toggleMobileMenu}>About Us</Link>
-        <Link href="/services" className={styles.mobileNavLink} onClick={toggleMobileMenu}>Services</Link>
-        <Link href="/portfolio" className={styles.mobileNavLink} onClick={toggleMobileMenu}>Portfolio</Link>
-        <Link href="#contact" className={styles.mobileNavLink} onClick={toggleMobileMenu}>Contact</Link>
-        <Link href="#login" className={styles.mobileCtaBtn} onClick={toggleMobileMenu}>Log In/Request a Demo</Link>
       </div>
     </header>
   );

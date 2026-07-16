@@ -1,87 +1,68 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FadeIn from '@/components/animations/FadeIn';
+import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 
 const caseStudies = [
   {
-    title: "Medical Centre: Margin Improvement",
-    client: "Pusat Medis Layanan TKI",
-    challenge: "Persaingan ketat, kurang diferensiasi layanan, kapasitas dan alur layanan tidak optimal.",
-    solution: "Redesain alur layanan medis (business process) dan penerapan sistem manajemen pasien berbasis digital.",
-    result: "Pusat medis berhasil masuk Top 5 nasional. Volume pasien melonjak dari 300 menjadi >10.000 per bulan. Revenue meningkat hingga 1000%."
+    title: "Margin Improvement at Scale",
+    client: "National Medical Centre",
+    slug: "medical-centre",
+    description: "How we redesigned medical service business processes to increase patient volume from 300 to >10,000 per month."
   },
   {
-    title: "Efisiensi Biaya HR Perusahaan Agribisnis",
-    client: "Perusahaan Besar Agribisnis (>20 Tahun)",
-    challenge: "Biaya operasional tinggi tak sebanding pendapatan, tata kelola konvensional kontra produktif, struktur organisasi rumit (banyak SBU).",
-    solution: "Perapihan struktur organisasi, pemetaan proses bisnis untuk menemukan bottle-neck, dan strategi efisiensi iteratif.",
-    result: "Menekan biaya operasional terkait HR dari Rp 12 Milyar/bulan menjadi Rp 5 Milyar/bulan dalam satu tahun."
+    title: "HR Cost Efficiency Restructuring",
+    client: "Leading Agribusiness Conglomerate",
+    slug: "agribusiness-hr",
+    description: "Streamlining organizational structures to reduce HR operational costs by Rp 7 Billion per month in a single year."
   },
   {
-    title: "SBU Optimization: Strategic Inventory Margin",
-    client: "PT XYZ (Perusahaan Agribisnis)",
-    challenge: "Kerugian bulanan akibat stok tidak akurat, proses stock opname lambat dan manual.",
-    solution: "Observasi proses, perancangan ulang stock opname, mentoring dan pendampingan eksekusi 5S.",
-    result: "Akurasi stok naik 98%, waktu opname turun dari 1 bulan jadi 3 hari. Percepatan revenue 800M rupiah dalam setengah tahun. Mengungkap fraud selama 5 tahun."
-  },
-  {
-    title: "Productivity Enhancement - Change Management",
-    client: "Pos Indonesia",
-    challenge: "Kebutuhan menerjemahkan arah strategis menjadi aksi terkoordinasi dalam 3 bulan, hanya melibatkan tim HR.",
-    solution: "Perumusan kerangka Change Management realistis, menyelaraskan narasi perubahan, dan transfer pemahaman ke tim internal.",
-    result: "Dokumen Change Management & Communication Strategy menjadi referensi tunggal dalam menjalankan program."
+    title: "SBU Strategic Inventory Margin",
+    client: "PT XYZ",
+    slug: "sbu-optimization",
+    description: "Accelerating revenue by Rp 800 Billion in six months and uncovering systemic fraud through total process redesign."
   }
 ];
 
 export default function Portfolio() {
   return (
-    <main style={{ minHeight: '100vh', backgroundColor: 'var(--color-background)' }}>
+    <main style={{ minHeight: '100vh', backgroundColor: '#ffffff' }}>
       <Header />
       
-      <div style={{ paddingTop: '8rem', paddingBottom: '4rem', background: 'var(--color-secondary)', color: 'white' }}>
-        <div className="container">
-          <FadeIn>
-            <h1 style={{ fontSize: '3.5rem', fontWeight: 'bold', marginBottom: '1.5rem', color: 'white' }}>
-              PASS Projects & Case Studies
-            </h1>
-            <p style={{ fontSize: '1.25rem', color: 'rgba(255,255,255,0.8)', maxWidth: '800px', lineHeight: '1.8' }}>
-              Our portfolio of transformation. We don't just plan strategies, we ensure they translate into measurable, sustainable results.
-            </p>
-          </FadeIn>
-        </div>
+      <div style={{ paddingTop: '10rem', paddingBottom: '4rem', maxWidth: '1400px', margin: '0 auto', paddingLeft: '2rem', paddingRight: '2rem' }}>
+        <FadeIn>
+          <h1 style={{ fontSize: '4.5rem', fontWeight: '800', color: '#111827', lineHeight: '1.05', letterSpacing: '-0.03em', marginBottom: '1.5rem', maxWidth: '800px' }}>
+            Client Impact & Case Studies
+          </h1>
+          <p style={{ fontSize: '1.25rem', color: '#6b7280', maxWidth: '600px', lineHeight: '1.6' }}>
+            We don't just plan strategies, we ensure they translate into measurable, sustainable structural results. Explore our track record.
+          </p>
+        </FadeIn>
       </div>
 
-      <section className="section" style={{ backgroundColor: 'var(--color-surface)' }}>
-        <div className="container">
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '3rem' }}>
-            {caseStudies.map((study, index) => (
-              <FadeIn key={index} delay={index * 0.1}>
-                <div style={{ background: 'white', borderRadius: '24px', padding: '3rem', border: '1px solid var(--color-border)', boxShadow: '0 10px 30px rgba(0,0,0,0.03)' }}>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '2rem', flexWrap: 'wrap', gap: '1rem' }}>
-                    <h2 style={{ fontSize: '2rem', color: 'var(--color-secondary)', margin: 0 }}>{study.title}</h2>
-                    <span style={{ background: 'rgba(0, 155, 159, 0.1)', color: 'var(--color-primary-dark)', padding: '0.5rem 1rem', borderRadius: '50px', fontWeight: '600', fontSize: '0.9rem' }}>
-                      {study.client}
-                    </span>
-                  </div>
-                  
-                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem' }}>
-                    <div>
-                      <h4 style={{ color: 'var(--color-primary)', marginBottom: '0.5rem', textTransform: 'uppercase', fontSize: '0.85rem', letterSpacing: '1px' }}>Tantangan</h4>
-                      <p style={{ color: 'var(--color-text-light)', lineHeight: '1.6' }}>{study.challenge}</p>
-                    </div>
-                    <div>
-                      <h4 style={{ color: 'var(--color-primary)', marginBottom: '0.5rem', textTransform: 'uppercase', fontSize: '0.85rem', letterSpacing: '1px' }}>Solusi</h4>
-                      <p style={{ color: 'var(--color-text-light)', lineHeight: '1.6' }}>{study.solution}</p>
-                    </div>
-                    <div style={{ background: 'var(--color-surface)', padding: '1.5rem', borderRadius: '12px' }}>
-                      <h4 style={{ color: 'var(--color-secondary)', marginBottom: '0.5rem', textTransform: 'uppercase', fontSize: '0.85rem', letterSpacing: '1px' }}>Hasil (Impact)</h4>
-                      <p style={{ color: 'var(--color-text)', fontWeight: '500', lineHeight: '1.6' }}>{study.result}</p>
-                    </div>
-                  </div>
+      <section style={{ maxWidth: '1400px', margin: '0 auto', padding: '4rem 2rem 8rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '2px', background: '#e5e7eb', borderTop: '2px solid #111827' }}>
+          {caseStudies.map((study, index) => (
+            <FadeIn key={index} delay={index * 0.1}>
+              <Link href={`/portfolio/${study.slug}`} style={{ display: 'grid', gridTemplateColumns: '1fr 2fr 1fr', gap: '2rem', padding: '4rem 2rem', background: 'white', textDecoration: 'none', transition: 'background 0.3s ease' }} className="portfolioRow">
+                <div>
+                  <span style={{ fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '1px', color: 'var(--color-primary)', fontWeight: '600' }}>
+                    {study.client}
+                  </span>
                 </div>
-              </FadeIn>
-            ))}
-          </div>
+                <div>
+                  <h2 style={{ fontSize: '2.5rem', color: '#111827', margin: '0 0 1rem 0', fontWeight: '700', letterSpacing: '-0.02em' }}>{study.title}</h2>
+                  <p style={{ color: '#6b7280', fontSize: '1.1rem', lineHeight: '1.6', margin: 0, maxWidth: '600px' }}>
+                    {study.description}
+                  </p>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', color: '#111827' }}>
+                  <ArrowRight size={32} strokeWidth={1} />
+                </div>
+              </Link>
+            </FadeIn>
+          ))}
         </div>
       </section>
 
