@@ -13,7 +13,7 @@
                 <div class="absolute -right-6 -bottom-6 w-32 h-32 bg-primary transform rotate-45 -z-10 transition-transform duration-500 group-hover/main:rotate-90"></div>
                 
                 <!-- Contact Form -->
-                <div class="lg:col-span-3 p-10 md:p-16 relative">
+                <div class="lg:col-span-3 p-10 md:p-16 relative" data-aos="fade-right" data-aos-duration="800">
                     <div class="absolute top-0 left-0 w-2 h-full bg-primary"></div>
                     
                     <div class="mb-12">
@@ -28,7 +28,7 @@
                 </div>
 
                 <!-- Contact Info -->
-                <div class="lg:col-span-2 bg-secondary p-10 md:p-16 h-full flex flex-col justify-center relative overflow-hidden text-white border-l-4 border-secondary lg:border-l-0">
+                <div class="lg:col-span-2 bg-secondary p-10 md:p-16 h-full flex flex-col justify-center relative overflow-hidden text-white border-l-4 border-secondary lg:border-l-0" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
                     
                     <!-- Abstract Background Cut -->
                     <div class="absolute top-0 right-0 w-40 h-40 bg-primary/10 transform translate-x-1/2 -translate-y-1/2 rotate-45 pointer-events-none"></div>

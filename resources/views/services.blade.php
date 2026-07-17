@@ -10,7 +10,7 @@
             
             <!-- The Business Agility Assessment -->
             <div class="mb-32">
-                <div class="bg-secondary p-12 md:p-20 relative overflow-hidden shadow-2xl border-l-8 border-primary group">
+                <div class="bg-secondary p-12 md:p-20 relative overflow-hidden shadow-2xl border-l-8 border-primary group" data-aos="fade-up" data-aos-duration="800">
                     <div class="absolute -right-20 -top-20 w-64 h-64 border-4 border-primary/20 transform rotate-45 pointer-events-none group-hover:rotate-90 transition-transform duration-1000"></div>
                     
                     <div class="relative z-10 text-center max-w-4xl mx-auto">
@@ -46,7 +46,7 @@
 
             <!-- Training Methodology -->
             <div class="mb-32">
-                <div class="text-center mb-16">
+                <div class="text-center mb-16" data-aos="fade-up" data-aos-duration="700">
                     <h2 class="text-primary font-black tracking-widest uppercase text-sm mb-4">{{ __('Core Approach') }}</h2>
                     <h3 class="text-4xl md:text-5xl font-black text-secondary tracking-tight mb-6 uppercase">{{ __('Training Methodology') }}</h3>
                     <p class="text-xl text-slate-500 max-w-2xl mx-auto font-medium">{{ __('Setiap fase disesuaikan dengan konteks organisasi dan tingkat kesiapan perubahan.') }}</p>
@@ -54,7 +54,7 @@
                 
                 <div class="grid md:grid-cols-2 gap-0 max-w-5xl mx-auto mb-16 border-2 border-slate-200">
                     <!-- 80% Activity -->
-                    <div class="bg-white p-12 border-r border-slate-200 hover:bg-secondary hover:text-white transition-colors duration-500 group relative overflow-hidden">
+                    <div class="bg-white p-12 border-r border-slate-200 hover:bg-secondary hover:text-white transition-colors duration-500 group relative overflow-hidden" data-aos="fade-right" data-aos-duration="700">
                         <div class="text-6xl font-black text-primary mb-6 transform group-hover:scale-110 group-hover:translate-x-2 transition-transform duration-500 relative z-10">80%</div>
                         <h4 class="text-2xl font-black text-secondary mb-4 relative z-10 group-hover:text-primary transition-colors tracking-widest uppercase">ACTIVITY</h4>
                         <p class="text-slate-600 group-hover:text-slate-300 text-lg leading-relaxed relative z-10 font-medium">
@@ -63,7 +63,7 @@
                     </div>
                     
                     <!-- 20% Insight -->
-                    <div class="bg-white p-12 hover:bg-primary transition-colors duration-500 group relative overflow-hidden">
+                    <div class="bg-white p-12 hover:bg-primary transition-colors duration-500 group relative overflow-hidden" data-aos="fade-left" data-aos-duration="700" data-aos-delay="150">
                         <div class="text-6xl font-black text-secondary mb-6 transform group-hover:scale-110 group-hover:translate-x-2 transition-transform duration-500 relative z-10">20%</div>
                         <h4 class="text-2xl font-black text-secondary mb-4 relative z-10 tracking-widest uppercase">INSIGHT</h4>
                         <p class="text-slate-600 group-hover:text-secondary/80 text-lg leading-relaxed relative z-10 font-medium">
@@ -74,22 +74,22 @@
 
                 <!-- Design Training Steps -->
                 <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-0 border-t border-l border-slate-200">
-                    <div class="bg-white p-8 border-b border-r border-slate-200 hover:bg-slate-50 transition-colors group">
+                    <div class="bg-white p-8 border-b border-r border-slate-200 hover:bg-slate-50 transition-colors group" data-aos="fade-up" data-aos-duration="500" data-aos-delay="0">
                         <div class="text-sm font-black tracking-widest text-primary mb-4 transform group-hover:translate-x-2 transition-transform">STEP 1</div>
                         <h5 class="text-xl font-black text-secondary mb-3 uppercase">{{ __('Problem Identification') }}</h5>
                         <p class="text-slate-500 text-sm font-medium">{{ __('Identifikasi permasalahan dan kebutuhan melalui sesi empathize.') }}</p>
                     </div>
-                    <div class="bg-white p-8 border-b border-r border-slate-200 hover:bg-slate-50 transition-colors group">
+                    <div class="bg-white p-8 border-b border-r border-slate-200 hover:bg-slate-50 transition-colors group" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
                         <div class="text-sm font-black tracking-widest text-primary mb-4 transform group-hover:translate-x-2 transition-transform">STEP 2</div>
                         <h5 class="text-xl font-black text-secondary mb-3 uppercase">{{ __('Action Development') }}</h5>
                         <p class="text-slate-500 text-sm font-medium">{{ __('Penyusunan modul, metode pembelajaran, dan aktivitas pelatihan.') }}</p>
                     </div>
-                    <div class="bg-white p-8 border-b border-r border-slate-200 hover:bg-slate-50 transition-colors group">
+                    <div class="bg-white p-8 border-b border-r border-slate-200 hover:bg-slate-50 transition-colors group" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
                         <div class="text-sm font-black tracking-widest text-primary mb-4 transform group-hover:translate-x-2 transition-transform">STEP 3</div>
                         <h5 class="text-xl font-black text-secondary mb-3 uppercase">{{ __('Program Implementation') }}</h5>
                         <p class="text-slate-500 text-sm font-medium">{{ __('Implementasi secara interaktif, partisipatif dengan penekanan pada praktik.') }}</p>
                     </div>
-                    <div class="bg-white p-8 border-b border-r border-slate-200 hover:bg-slate-50 transition-colors group">
+                    <div class="bg-white p-8 border-b border-r border-slate-200 hover:bg-slate-50 transition-colors group" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
                         <div class="text-sm font-black tracking-widest text-primary mb-4 transform group-hover:translate-x-2 transition-transform">STEP 4</div>
                         <h5 class="text-xl font-black text-secondary mb-3 uppercase">{{ __('Evaluation') }}</h5>
                         <p class="text-slate-500 text-sm font-medium">{{ __('Mengukur efektivitas melalui pre/post test, coaching, dan report evaluation.') }}</p>
@@ -99,7 +99,7 @@
 
             <!-- LEGO Serious Play -->
             <div class="mb-32">
-                <div class="bg-white border-4 border-secondary p-12 md:p-20 relative overflow-hidden text-center max-w-5xl mx-auto shadow-2xl group">
+                <div class="bg-white border-4 border-secondary p-12 md:p-20 relative overflow-hidden text-center max-w-5xl mx-auto shadow-2xl group" data-aos="zoom-in" data-aos-duration="700">
                     <div class="absolute -left-10 -bottom-10 w-40 h-40 bg-primary/20 transform rotate-45 transition-transform duration-700 group-hover:scale-150 pointer-events-none"></div>
                     <h3 class="text-4xl md:text-5xl lg:text-6xl font-black text-secondary mb-4 tracking-tight">LEGO® Serious Play®</h3>
                     <h4 class="text-2xl font-black text-primary mb-8 uppercase tracking-widest">{{ __('From Bricks to Insights') }}</h4>
@@ -118,31 +118,31 @@
 
             <!-- PASS Engagement (4S) -->
             <div class="mb-32">
-                <div class="text-center mb-16">
+                <div class="text-center mb-16" data-aos="fade-up" data-aos-duration="700">
                     <h2 class="text-primary font-black tracking-widest uppercase text-sm mb-4">{{ __('PASS Engagement') }}</h2>
                     <h3 class="text-4xl md:text-5xl font-black text-secondary tracking-tight mb-6 uppercase">{{ __('The 4S Framework') }}</h3>
                 </div>
                 
                 <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-0 border-t border-l border-slate-200">
-                    <div class="bg-white p-8 border-b border-r border-slate-200 hover:bg-secondary hover:text-white transition-colors duration-300 group">
+                    <div class="bg-white p-8 border-b border-r border-slate-200 hover:bg-secondary hover:text-white transition-colors duration-300 group" data-aos="fade-up" data-aos-duration="500" data-aos-delay="0">
                         <h4 class="text-2xl font-black text-secondary mb-4 group-hover:text-primary transition-colors">SCAN</h4>
                         <p class="font-bold text-slate-400 mb-4 text-xs uppercase tracking-widest">{{ __('(Diagnosis)') }}</p>
                         <p class="text-slate-600 group-hover:text-slate-300 text-sm mb-6 font-medium leading-relaxed">{{ __('Memberikan kejelasan objective atas masalah nyata sebelum keputusan strategis diambil.') }}</p>
                         <p class="text-xs text-primary font-bold">{{ __('Deliverables: Level Report, Org Diagnostic, Priority Mapping.') }}</p>
                     </div>
-                    <div class="bg-white p-8 border-b border-r border-slate-200 hover:bg-secondary hover:text-white transition-colors duration-300 group">
+                    <div class="bg-white p-8 border-b border-r border-slate-200 hover:bg-secondary hover:text-white transition-colors duration-300 group" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
                         <h4 class="text-2xl font-black text-secondary mb-4 group-hover:text-primary transition-colors">SHIFT</h4>
                         <p class="font-bold text-slate-400 mb-4 text-xs uppercase tracking-widest">{{ __('(Behavior)') }}</p>
                         <p class="text-slate-600 group-hover:text-slate-300 text-sm mb-6 font-medium leading-relaxed">{{ __('Mengubah cara kerja dan kepemimpinan agar organisasi mampu mengambil keputusan adaptif.') }}</p>
                         <p class="text-xs text-primary font-bold">{{ __('Deliverables: Learning Sessions, Retrospectives, Coaching.') }}</p>
                     </div>
-                    <div class="bg-white p-8 border-b border-r border-slate-200 hover:bg-secondary hover:text-white transition-colors duration-300 group">
+                    <div class="bg-white p-8 border-b border-r border-slate-200 hover:bg-secondary hover:text-white transition-colors duration-300 group" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
                         <h4 class="text-2xl font-black text-secondary mb-4 group-hover:text-primary transition-colors">SCALE</h4>
                         <p class="font-bold text-slate-400 mb-4 text-xs uppercase tracking-widest">{{ __('(Strategy)') }}</p>
                         <p class="text-slate-600 group-hover:text-slate-300 text-sm mb-6 font-medium leading-relaxed">{{ __('Memastikan perubahan tidak berhenti di inisiatif, tetapi menjadi sistem kerja organisasi.') }}</p>
                         <p class="text-xs text-primary font-bold">{{ __('Deliverables: Roadmap, Process Redesign, Enablement Assets.') }}</p>
                     </div>
-                    <div class="bg-white p-8 border-b border-r border-slate-200 hover:bg-secondary hover:text-white transition-colors duration-300 group">
+                    <div class="bg-white p-8 border-b border-r border-slate-200 hover:bg-secondary hover:text-white transition-colors duration-300 group" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
                         <h4 class="text-2xl font-black text-secondary mb-4 group-hover:text-primary transition-colors">SCRIBE</h4>
                         <p class="font-bold text-slate-400 mb-4 text-xs uppercase tracking-widest">{{ __('(Research)') }}</p>
                         <p class="text-slate-600 group-hover:text-slate-300 text-sm mb-6 font-medium leading-relaxed">{{ __('Menyusun story of impact untuk pemangku kepentingan.') }}</p>
@@ -153,7 +153,7 @@
 
             <!-- Certification -->
             <div>
-                <div class="bg-primary p-12 md:p-20 text-secondary text-center shadow-xl border-b-8 border-secondary relative overflow-hidden group">
+                <div class="bg-primary p-12 md:p-20 text-secondary text-center shadow-xl border-b-8 border-secondary relative overflow-hidden group" data-aos="fade-up" data-aos-duration="800">
                     <div class="absolute left-0 top-0 w-32 h-32 bg-white/10 transform rotate-45 -translate-x-1/2 -translate-y-1/2 group-hover:scale-150 transition-transform duration-700"></div>
                     <h3 class="text-3xl md:text-4xl font-black mb-6 uppercase tracking-widest">{{ __('LSP Softskill Indonesia Kompeten') }}</h3>
                     <p class="mb-12 max-w-3xl mx-auto text-lg text-secondary/80 font-bold">{{ __('SKKNI 2020-234 tentang Penetapan Standar Kompetensi Kerja Nasional Indonesia Kategori Pendidikan Bidang Soft skills.') }}</p>

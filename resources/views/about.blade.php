@@ -10,7 +10,7 @@
             <div class="grid lg:grid-cols-2 gap-20 items-center mb-32">
                 
                 <!-- The Iceberg of Ignorance -->
-                <div class="relative">
+                <div class="relative" data-aos="fade-right" data-aos-duration="800">
                     <div class="absolute -left-6 -top-6 w-20 h-20 bg-primary/20 transform rotate-45 -z-10"></div>
                     <h2 class="text-4xl md:text-5xl font-black text-secondary mb-8 tracking-tight uppercase">{{ __('The Iceberg of Ignorance') }}</h2>
                     <p class="text-xl text-slate-500 mb-12 leading-relaxed border-l-4 border-primary pl-6">
@@ -19,19 +19,19 @@
                     
                     <div class="space-y-4 relative z-10">
                         <!-- Stats Rows -->
-                        <div class="flex items-center gap-6 p-4 bg-white border border-slate-200 hover:border-secondary transition-colors duration-300 group">
+                        <div class="flex items-center gap-6 p-4 bg-white border border-slate-200 hover:border-secondary transition-colors duration-300 group" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
                             <span class="w-16 h-16 flex items-center justify-center bg-secondary text-white font-black text-xl transform group-hover:rotate-12 transition-transform">4%</span>
                             <span class="font-bold text-slate-700 text-lg group-hover:text-secondary transition-colors">{{ __('Senior Management only sees 4% of the issues') }}</span>
                         </div>
-                        <div class="flex items-center gap-6 p-4 bg-white border border-slate-200 hover:border-secondary transition-colors duration-300 group">
+                        <div class="flex items-center gap-6 p-4 bg-white border border-slate-200 hover:border-secondary transition-colors duration-300 group" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
                             <span class="w-16 h-16 flex items-center justify-center bg-secondary text-white font-black text-xl transform group-hover:rotate-12 transition-transform">9%</span>
                             <span class="font-bold text-slate-700 text-lg group-hover:text-secondary transition-colors">{{ __('Team Managers see 9% of the problems') }}</span>
                         </div>
-                        <div class="flex items-center gap-6 p-4 bg-white border border-slate-200 hover:border-secondary transition-colors duration-300 group">
+                        <div class="flex items-center gap-6 p-4 bg-white border border-slate-200 hover:border-secondary transition-colors duration-300 group" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
                             <span class="w-16 h-16 flex items-center justify-center bg-secondary text-white font-black text-xl transform group-hover:rotate-12 transition-transform">74%</span>
                             <span class="font-bold text-slate-700 text-lg group-hover:text-secondary transition-colors">{{ __('Team Leaders see 74% of the problems') }}</span>
                         </div>
-                        <div class="flex items-center gap-6 p-4 bg-primary border border-primary hover:bg-secondary hover:border-secondary transition-colors duration-300 group">
+                        <div class="flex items-center gap-6 p-4 bg-primary border border-primary hover:bg-secondary hover:border-secondary transition-colors duration-300 group" data-aos="fade-up" data-aos-duration="500" data-aos-delay="400">
                             <span class="w-16 h-16 flex items-center justify-center bg-white text-secondary font-black text-xl transform group-hover:rotate-12 transition-transform">100%</span>
                             <span class="font-bold text-secondary group-hover:text-white text-lg transition-colors">{{ __('Staff sees 100% of the problems') }}</span>
                         </div>
@@ -39,7 +39,7 @@
                 </div>
                 
                 <!-- Mengapa PASS -->
-                <div class="bg-secondary p-12 md:p-16 shadow-2xl relative overflow-hidden text-white border-b-8 border-primary">
+                <div class="bg-secondary p-12 md:p-16 shadow-2xl relative overflow-hidden text-white border-b-8 border-primary" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
                     <div class="absolute -right-20 -top-20 w-64 h-64 border-4 border-primary/20 transform rotate-45 pointer-events-none"></div>
                     
                     <div class="relative z-10">
@@ -85,14 +85,14 @@
 
             <!-- What Leaders Say -->
             <div>
-                <div class="text-center mb-16">
+                <div class="text-center mb-16" data-aos="fade-up" data-aos-duration="700">
                     <h2 class="text-primary font-black tracking-widest uppercase text-sm mb-4">{{ __('Testimonials') }}</h2>
                     <h3 class="text-4xl md:text-5xl font-black text-secondary tracking-tight uppercase">{{ __('What Leaders Say') }}</h3>
                 </div>
 
                 <div class="grid md:grid-cols-3 gap-0 border-t border-l border-slate-200 bg-white">
                     <!-- Testimonial 1 -->
-                    <div class="p-10 border-b border-r border-slate-200 hover:bg-secondary hover:text-white transition-colors duration-300 group cursor-pointer relative overflow-hidden">
+                    <div class="p-10 border-b border-r border-slate-200 hover:bg-secondary hover:text-white transition-colors duration-300 group cursor-pointer relative overflow-hidden" data-aos="fade-up" data-aos-duration="500" data-aos-delay="0">
                         <div class="absolute right-0 top-0 w-16 h-16 bg-primary/10 transform rotate-45 translate-x-8 -translate-y-8 group-hover:bg-primary/20 transition-colors"></div>
                         <p class="text-slate-600 group-hover:text-slate-300 text-lg font-medium italic mb-8 leading-relaxed relative z-10">{{ __('"Apa yang harus dilakukan, langsung dipraktekkan! Agile-Design Thinking dari PASS berbeda dari yang biasanya."') }}</p>
                         <div class="relative z-10 mt-auto">
@@ -102,7 +102,7 @@
                     </div>
                     
                     <!-- Testimonial 2 -->
-                    <div class="p-10 border-b border-r border-slate-200 hover:bg-secondary hover:text-white transition-colors duration-300 group cursor-pointer relative overflow-hidden">
+                    <div class="p-10 border-b border-r border-slate-200 hover:bg-secondary hover:text-white transition-colors duration-300 group cursor-pointer relative overflow-hidden" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
                         <div class="absolute right-0 top-0 w-16 h-16 bg-primary/10 transform rotate-45 translate-x-8 -translate-y-8 group-hover:bg-primary/20 transition-colors"></div>
                         <p class="text-slate-600 group-hover:text-slate-300 text-lg font-medium italic mb-8 leading-relaxed relative z-10">{{ __('"Tim PASS berisi profesional berpengalaman dengan solusi implementatif dalam bentuk report yang langsung berdampak pada bisnis."') }}</p>
                         <div class="relative z-10 mt-auto">
@@ -112,7 +112,7 @@
                     </div>
 
                     <!-- Testimonial 3 -->
-                    <div class="p-10 border-b border-r border-slate-200 hover:bg-secondary hover:text-white transition-colors duration-300 group cursor-pointer relative overflow-hidden">
+                    <div class="p-10 border-b border-r border-slate-200 hover:bg-secondary hover:text-white transition-colors duration-300 group cursor-pointer relative overflow-hidden" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
                         <div class="absolute right-0 top-0 w-16 h-16 bg-primary/10 transform rotate-45 translate-x-8 -translate-y-8 group-hover:bg-primary/20 transition-colors"></div>
                         <p class="text-slate-600 group-hover:text-slate-300 text-lg font-medium italic mb-8 leading-relaxed relative z-10">{{ __('"PASSolving membantu kami melihat realita dengan objektif dan memberikan solusi yang tepat."') }}</p>
                         <div class="relative z-10 mt-auto">
@@ -122,7 +122,7 @@
                     </div>
 
                     <!-- Testimonial 4 -->
-                    <div class="p-10 border-b border-r border-slate-200 hover:bg-secondary hover:text-white transition-colors duration-300 group cursor-pointer relative overflow-hidden">
+                    <div class="p-10 border-b border-r border-slate-200 hover:bg-secondary hover:text-white transition-colors duration-300 group cursor-pointer relative overflow-hidden" data-aos="fade-up" data-aos-duration="500" data-aos-delay="0">
                         <div class="absolute right-0 top-0 w-16 h-16 bg-primary/10 transform rotate-45 translate-x-8 -translate-y-8 group-hover:bg-primary/20 transition-colors"></div>
                         <p class="text-slate-600 group-hover:text-slate-300 text-lg font-medium italic mb-8 leading-relaxed relative z-10">{{ __('"PASSolving membantu membangun visi kuat dan peta jalannya."') }}</p>
                         <div class="relative z-10 mt-auto">
@@ -132,7 +132,7 @@
                     </div>
 
                     <!-- Testimonial 5 -->
-                    <div class="p-10 border-b border-r border-slate-200 hover:bg-secondary hover:text-white transition-colors duration-300 group cursor-pointer relative overflow-hidden">
+                    <div class="p-10 border-b border-r border-slate-200 hover:bg-secondary hover:text-white transition-colors duration-300 group cursor-pointer relative overflow-hidden" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
                         <div class="absolute right-0 top-0 w-16 h-16 bg-primary/10 transform rotate-45 translate-x-8 -translate-y-8 group-hover:bg-primary/20 transition-colors"></div>
                         <p class="text-slate-600 group-hover:text-slate-300 text-lg font-medium italic mb-8 leading-relaxed relative z-10">{{ __('"Kami berhasil menghemat biaya tanpa mengorbankan kualitas."') }}</p>
                         <div class="relative z-10 mt-auto">
@@ -142,7 +142,7 @@
                     </div>
 
                     <!-- Testimonial 6 -->
-                    <div class="p-10 border-b border-r border-slate-200 hover:bg-secondary hover:text-white transition-colors duration-300 group cursor-pointer relative overflow-hidden">
+                    <div class="p-10 border-b border-r border-slate-200 hover:bg-secondary hover:text-white transition-colors duration-300 group cursor-pointer relative overflow-hidden" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
                         <div class="absolute right-0 top-0 w-16 h-16 bg-primary/10 transform rotate-45 translate-x-8 -translate-y-8 group-hover:bg-primary/20 transition-colors"></div>
                         <p class="text-slate-600 group-hover:text-slate-300 text-lg font-medium italic mb-8 leading-relaxed relative z-10">{{ __('"From Fragmented Teams to Unified Agility"') }}</p>
                         <div class="relative z-10 mt-auto">

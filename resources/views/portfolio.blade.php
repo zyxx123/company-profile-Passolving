@@ -63,7 +63,7 @@
                 @endphp
 
                 @foreach($caseStudies as $index => $study)
-                    <div>
+                    <div data-aos="fade-up" data-aos-duration="700" data-aos-delay="{{ $index * 100 }}">
                         <div class="block bg-white border-2 border-slate-100 hover:border-secondary transition-all duration-300 group relative overflow-hidden">
                             
                             <!-- Solid color block that slides in from left -->

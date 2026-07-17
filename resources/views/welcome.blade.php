@@ -18,21 +18,21 @@
             <div class="container mx-auto px-6 max-w-7xl relative z-10 flex flex-col lg:flex-row items-center">
                 <!-- Left Content -->
                 <div class="w-full lg:w-1/2 pt-20 pb-32">
-                    <div class="w-16 h-1 bg-primary mb-8 transform -skew-x-12"></div>
-                    <h1 class="text-5xl md:text-7xl font-black uppercase tracking-tighter leading-[1] mb-6">
+                    <div class="w-16 h-1 bg-primary mb-8 transform -skew-x-12" data-aos="fade-right" data-aos-duration="600"></div>
+                    <h1 class="text-5xl md:text-7xl font-black uppercase tracking-tighter leading-[1] mb-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
                         {!! __('Transforming<br/>Organizations<br/>With Agility') !!}
                     </h1>
-                    <p class="text-slate-400 font-medium mb-10 max-w-md">
+                    <p class="text-slate-400 font-medium mb-10 max-w-md" data-aos="fade-up" data-aos-duration="800" data-aos-delay="250">
                         {{ __('Pioneer in Agility Assessment & National Soft Skill Certification. We work when leadership is ready to face uncomfortable realities.') }}
                     </p>
-                    <a href="/contact" class="inline-block bg-primary text-secondary font-black text-sm uppercase tracking-widest px-8 py-4 hover:bg-white transition-colors relative overflow-hidden group">
+                    <a href="/contact" class="inline-block bg-primary text-secondary font-black text-sm uppercase tracking-widest px-8 py-4 hover:bg-white transition-colors relative overflow-hidden group" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
                         <span class="relative z-10">{{ __('Discover More') }}</span>
                         <div class="absolute inset-0 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left z-0"></div>
                     </a>
                 </div>
 
                 <!-- Right Content (Image) -->
-                <div class="w-full lg:w-1/2 relative hidden lg:block h-[600px]">
+                <div class="w-full lg:w-1/2 relative hidden lg:block h-[600px]" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
                     <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
                          class="absolute right-0 top-1/2 -translate-y-1/2 w-[500px] h-[650px] object-cover filter grayscale contrast-125"
                          alt="Professionals" 
@@ -52,7 +52,7 @@
                 <div class="flex flex-col lg:flex-row gap-16 items-center">
                     
                     <!-- Left Images -->
-                    <div class="w-full lg:w-1/2 relative h-[500px]">
+                    <div class="w-full lg:w-1/2 relative h-[500px]" data-aos="fade-right" data-aos-duration="800">
                         <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
                              class="absolute top-0 left-0 w-3/4 h-[400px] object-cover grayscale hover:grayscale-0 transition-all duration-500 shadow-2xl" alt="Team">
                         <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
@@ -79,7 +79,7 @@
                     </div>
 
                     <!-- Right Text -->
-                    <div class="w-full lg:w-1/2 pt-16 lg:pt-0">
+                    <div class="w-full lg:w-1/2 pt-16 lg:pt-0" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
                         <div class="flex items-center gap-2 mb-4">
                             <div class="w-4 h-4 bg-primary transform rotate-45"></div>
                             <span class="text-xs font-bold uppercase tracking-widest text-slate-400">{{ __('About Agency') }}</span>
@@ -218,7 +218,7 @@
              ============================================== -->
         <section class="py-32 bg-[#F8F9FA] relative">
             <div class="container mx-auto px-6 max-w-7xl">
-                <div class="text-center mb-16">
+                <div class="text-center mb-16" data-aos="fade-up" data-aos-duration="700">
                     <div class="flex items-center justify-center gap-2 mb-4">
                         <div class="w-4 h-4 bg-primary transform rotate-45"></div>
                         <span class="text-xs font-bold uppercase tracking-widest text-slate-400">{{ __('Our Services') }}</span>
@@ -238,7 +238,7 @@
                     @endphp
 
                     @foreach($services as $idx => $svc)
-                        <div class="border border-slate-100 p-10 hover:bg-secondary hover:text-white transition-colors duration-300 group flex flex-col items-center text-center {{ $svc['highlight'] ? 'bg-secondary text-white' : 'bg-white' }}">
+                        <div class="border border-slate-100 p-10 hover:bg-secondary hover:text-white transition-colors duration-300 group flex flex-col items-center text-center {{ $svc['highlight'] ? 'bg-secondary text-white' : 'bg-white' }}" data-aos="fade-up" data-aos-duration="600" data-aos-delay="{{ $idx * 100 }}">
                             <div class="text-slate-200 group-hover:text-primary transition-colors mb-8 {{ $svc['highlight'] ? 'text-primary' : '' }}">
                                 <svg class="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
                                     <path stroke-linecap="square" stroke-linejoin="miter" d="{{ $svc['icon'] }}"></path>
@@ -268,7 +268,7 @@
         <section class="bg-secondary pt-32 pb-64 relative">
             <div class="container mx-auto px-6 max-w-7xl">
                 <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 border-b border-white/10 pb-12">
-                    <h2 class="text-4xl md:text-5xl font-black uppercase text-white w-full md:w-2/3 leading-tight">
+                    <h2 class="text-4xl md:text-5xl font-black uppercase text-white w-full md:w-2/3 leading-tight" data-aos="fade-right" data-aos-duration="800">
                         {!! __('Grow With Community &<br/>Experience Endless Possibilities') !!}
                     </h2>
                     <a href="/about" class="mt-8 md:mt-0 bg-primary text-secondary px-8 py-4 text-xs font-black uppercase tracking-widest hover:bg-white transition-colors">
@@ -288,7 +288,7 @@
         <!-- White overlapping cards container (Pulled up into Navy section) -->
         <div class="bg-[#F8F9FA] relative z-20 pb-32">
             <div class="container mx-auto px-6 max-w-7xl -mt-40">
-                <div class="grid md:grid-cols-3 gap-0 shadow-2xl">
+                <div class="grid md:grid-cols-3 gap-0 shadow-2xl" data-aos="fade-up" data-aos-duration="800">
                     <div class="bg-white p-10 border-r border-slate-100 flex gap-6 hover:bg-slate-50 transition-colors">
                         <div class="w-10 h-10 bg-primary rounded-none flex items-center justify-center shrink-0">
                             <svg class="w-5 h-5 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
@@ -325,7 +325,7 @@
              ============================================== -->
         <section class="py-20 bg-white">
             <div class="container mx-auto px-6 max-w-7xl">
-                <div class="text-center mb-16">
+                <div class="text-center mb-16" data-aos="fade-up" data-aos-duration="700">
                     <div class="flex items-center justify-center gap-2 mb-4">
                         <div class="w-4 h-4 bg-primary transform rotate-45"></div>
                         <span class="text-xs font-bold uppercase tracking-widest text-slate-400">{{ __('Our Completed Works') }}</span>
@@ -343,7 +343,7 @@
                         ];
                     @endphp
                     @foreach($projects as $project)
-                    <div class="group relative overflow-hidden h-[350px] cursor-pointer">
+                    <div class="group relative overflow-hidden h-[350px] cursor-pointer" data-aos="fade-up" data-aos-duration="600" data-aos-delay="{{ $loop->index * 100 }}">
                         <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110" alt="Project">
                         <div class="absolute bottom-0 left-0 right-0 bg-secondary p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform">
                             <p class="text-primary text-xs font-bold uppercase tracking-widest mb-2">{{ $project['client'] }}</p>
@@ -363,7 +363,7 @@
              ============================================== -->
         <section class="py-32 bg-[#F8F9FA]">
             <div class="container mx-auto px-6 max-w-5xl">
-                <div class="flex flex-col md:flex-row items-center gap-16">
+                <div class="flex flex-col md:flex-row items-center gap-16" data-aos="fade-up" data-aos-duration="800">
                     <div class="w-full md:w-1/3 relative flex justify-center">
                         <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" class="w-48 h-48 rounded-full object-cover grayscale" alt="Client">
                         <!-- Quote badge -->
@@ -394,7 +394,7 @@
              ============================================== -->
         <section class="bg-white py-20 relative overflow-hidden">
             <div class="container mx-auto px-6 max-w-7xl">
-                <div class="bg-primary relative overflow-hidden shadow-2xl flex flex-col md:flex-row items-center justify-between p-12 lg:p-20">
+                <div class="bg-primary relative overflow-hidden shadow-2xl flex flex-col md:flex-row items-center justify-between p-12 lg:p-20" data-aos="zoom-in" data-aos-duration="700">
                     <!-- Left Text -->
                     <div class="relative z-10 w-full md:w-2/3">
                         <h2 class="text-4xl lg:text-6xl font-black uppercase leading-[1.1]">

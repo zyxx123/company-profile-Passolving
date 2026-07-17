@@ -15,14 +15,14 @@
     <div class="container mx-auto px-6 max-w-7xl relative z-10">
         <div class="max-w-3xl">
             <!-- Decorative line -->
-            <div class="w-20 h-2 bg-primary mb-8 transform -skew-x-12"></div>
+            <div class="w-20 h-2 bg-primary mb-8 transform -skew-x-12" data-aos="fade-right" data-aos-duration="600"></div>
             
-            <h1 class="text-5xl md:text-6xl lg:text-7xl font-black text-white leading-tight mb-6 uppercase tracking-widest drop-shadow-lg">
+            <h1 class="text-5xl md:text-6xl lg:text-7xl font-black text-white leading-tight mb-6 uppercase tracking-widest drop-shadow-lg" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
                 {{ $title }}
             </h1>
             
             @if($subtitle)
-                <p class="text-lg md:text-xl text-slate-300 font-medium leading-relaxed max-w-2xl border-l-4 border-primary pl-6 py-2">
+                <p class="text-lg md:text-xl text-slate-300 font-medium leading-relaxed max-w-2xl border-l-4 border-primary pl-6 py-2" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                     {{ $subtitle }}
                 </p>
             @endif
