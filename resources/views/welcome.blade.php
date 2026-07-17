@@ -146,15 +146,15 @@
                     
                     <div class="space-y-8">
                         <div class="flex items-center gap-6">
-                            <div class="w-16 h-16 rounded-full bg-primary flex items-center justify-center shrink-0 text-secondary font-black text-3xl shadow-lg">W</div>
+                            <div class="w-16 h-16 rounded-full bg-accent flex items-center justify-center shrink-0 text-primary font-black text-3xl shadow-lg">W</div>
                             <div class="text-2xl font-bold text-slate-700 uppercase tracking-wide">talk the WALK</div>
                         </div>
                         <div class="flex items-center gap-6">
-                            <div class="w-16 h-16 rounded-full bg-primary flex items-center justify-center shrink-0 text-secondary font-black text-3xl shadow-lg">H</div>
+                            <div class="w-16 h-16 rounded-full bg-accent flex items-center justify-center shrink-0 text-primary font-black text-3xl shadow-lg">H</div>
                             <div class="text-2xl font-bold text-slate-700 uppercase tracking-wide">HAPPINESS</div>
                         </div>
                         <div class="flex items-center gap-6">
-                            <div class="w-16 h-16 rounded-full bg-primary flex items-center justify-center shrink-0 text-secondary font-black text-3xl shadow-lg">Y</div>
+                            <div class="w-16 h-16 rounded-full bg-accent flex items-center justify-center shrink-0 text-primary font-black text-3xl shadow-lg">Y</div>
                             <div class="text-2xl font-bold text-slate-700 uppercase tracking-wide">YOU matters</div>
                         </div>
                     </div>
@@ -171,9 +171,9 @@
                             AKU<br/>
                             KAMU<br/>
                             KITA<br/>
-                            <span class="text-primary">SEMUA BISA</span>
+                            <span class="text-accent">SEMUA BISA</span>
                         </div>
-                        <a href="/about" class="inline-flex items-center justify-center px-8 py-3.5 bg-primary text-secondary font-black rounded-lg transition-all hover:bg-primary-dark">
+                        <a href="/about" class="btn-accent text-lg">
                             Kenali Kami Lebih Dekat
                         </a>
                     </div>
