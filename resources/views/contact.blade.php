@@ -5,8 +5,8 @@
         bgImage="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
     />
 
-    <section class="py-32 bg-[#F8FAFC]">
-        <div class="container mx-auto px-6 max-w-7xl">
+    <section class="py-32 bg-[#F8FAFC] bg-grid-lines relative">
+        <div class="container mx-auto px-6 max-w-7xl relative z-10">
             <div class="grid lg:grid-cols-5 gap-12 lg:gap-16">
                 
                 <!-- Contact Form -->

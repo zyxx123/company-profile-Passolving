@@ -1,6 +1,7 @@
 <x-layouts.app>
     <!-- Hero Section -->
-    <section class="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden min-h-[90vh] flex flex-col justify-center bg-[#F8FAFC]">
+    <section class="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden min-h-[90vh] flex flex-col justify-center bg-[#F8FAFC] bg-grid-pattern">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#F8FAFC]/50 to-[#F8FAFC] z-0"></div>
         <div class="container mx-auto px-6 max-w-7xl relative z-10 text-center">
             
             <div data-aos="fade-up" data-aos-duration="1000">
@@ -54,8 +55,9 @@
     </section>
 
     <!-- Services Section / Three Pillars -->
-    <section class="py-32 bg-[#F8FAFC] relative">
-        <div class="container mx-auto px-6 max-w-7xl">
+    <section class="py-32 bg-[#F8FAFC] bg-grid-lines relative">
+        <div class="absolute inset-0 bg-gradient-to-t from-[#F8FAFC] via-transparent to-[#F8FAFC] z-0 pointer-events-none"></div>
+        <div class="container mx-auto px-6 max-w-7xl relative z-10">
             <div class="text-center max-w-3xl mx-auto mb-20" data-aos="fade-up">
                 <h2 class="text-primary font-bold tracking-widest uppercase text-sm mb-4">Our Expertise</h2>
                 <h3 class="text-4xl md:text-5xl font-black text-secondary tracking-tight mb-6">Tiga Pilar Utama</h3>

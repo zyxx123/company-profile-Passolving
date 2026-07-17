@@ -5,8 +5,8 @@
         bgImage="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=2560&q=80"
     />
 
-    <section class="py-32 bg-[#F8FAFC]">
-        <div class="container mx-auto px-6 max-w-7xl">
+    <section class="py-32 bg-[#F8FAFC] bg-grid-lines relative">
+        <div class="container mx-auto px-6 max-w-7xl relative z-10">
             
             <!-- The Business Agility Assessment -->
             <div class="mb-40" data-aos="fade-up">

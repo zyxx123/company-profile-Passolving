@@ -5,8 +5,8 @@
         bgImage="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=2560&q=80"
     />
 
-    <section class="py-32 bg-[#F8FAFC]">
-        <div class="container mx-auto px-6 max-w-5xl">
+    <section class="py-32 bg-[#F8FAFC] bg-grid-pattern relative">
+        <div class="container mx-auto px-6 max-w-5xl relative z-10">
             <div class="space-y-12">
                 
                 @php

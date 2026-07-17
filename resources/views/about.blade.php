@@ -5,8 +5,8 @@
         bgImage="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=2560&q=80"
     />
 
-    <section class="py-32 bg-white">
-        <div class="container mx-auto px-6 max-w-7xl">
+    <section class="py-32 bg-[#F8FAFC] bg-grid-pattern relative">
+        <div class="container mx-auto px-6 max-w-7xl relative z-10">
             <div class="grid lg:grid-cols-2 gap-20 items-center mb-40">
                 
                 <!-- The Iceberg of Ignorance -->

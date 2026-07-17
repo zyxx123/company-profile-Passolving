@@ -22,6 +22,18 @@
     }
 }
 
+@layer utilities {
+    .bg-grid-pattern {
+        background-image: radial-gradient(rgba(43, 34, 97, 0.1) 1px, transparent 1px);
+        background-size: 24px 24px;
+    }
+    .bg-grid-lines {
+        background-image: linear-gradient(to right, rgba(43, 34, 97, 0.03) 1px, transparent 1px),
+                          linear-gradient(to bottom, rgba(43, 34, 97, 0.03) 1px, transparent 1px);
+        background-size: 48px 48px;
+    }
+}
+
 @layer components {
     .btn-primary {
         @apply inline-flex items-center justify-center px-8 py-3.5 bg-primary text-secondary font-black rounded-lg transition-all duration-300 hover:bg-primary-dark hover:shadow-lg hover:shadow-primary/30 active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary/50;
