@@ -8,12 +8,40 @@
 
 @theme {
     --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
-    
-    --color-primary: #2B2261; /* Deep Navy Purple (EASY ON EYES) */
-    --color-primary-dark: #1E1748;
-    --color-secondary: #0F172A; /* Slate 900 for dark sections */
-    --color-secondary-light: #1E293B;
-    --color-accent: #F3B62A; /* Mustard Yellow for highlights ONLY */
+    --color-primary: #F3B62A; /* Mustard Yellow for highlights and accents */
+    --color-primary-dark: #D9A01C;
+    --color-secondary: #2B2261; /* Deep Navy Purple for dark sections and text */
+    --color-secondary-light: #3D327D;
+    --color-accent: #0F172A; /* Slate 900 (Fallback) */
+
+    --animate-floating: floating 6s ease-in-out infinite;
+    --animate-gradient-x: gradient-x 15s ease infinite;
+    --animate-pulse-glow: pulse-glow 4s ease-in-out infinite;
+    --animate-blob: blob 7s infinite;
+    --animate-marquee-right: marquee-right 40s linear infinite;
+
+    @keyframes floating {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-20px); }
+    }
+    @keyframes gradient-x {
+        0%, 100% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+    }
+    @keyframes pulse-glow {
+        0%, 100% { opacity: 0.6; transform: scale(1); filter: blur(80px); }
+        50% { opacity: 1; transform: scale(1.1); filter: blur(100px); }
+    }
+    @keyframes blob {
+        0% { transform: translate(0px, 0px) scale(1); }
+        33% { transform: translate(30px, -50px) scale(1.1); }
+        66% { transform: translate(-20px, 20px) scale(0.9); }
+        100% { transform: translate(0px, 0px) scale(1); }
+    }
+    @keyframes marquee-right {
+        0% { transform: translateX(-50%); }
+        100% { transform: translateX(0); }
+    }
 }
 
 @layer base {
@@ -36,30 +64,30 @@
 
 @layer components {
     .btn-primary {
-        @apply inline-flex items-center justify-center px-8 py-3.5 bg-primary text-white font-semibold rounded-lg transition-all duration-300 hover:bg-primary-dark hover:shadow-lg hover:shadow-primary/30 active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary/50;
+        @apply inline-flex items-center justify-center px-8 py-3.5 bg-primary text-secondary font-black rounded-none transition-all duration-300 hover:bg-primary-dark hover:shadow-lg hover:shadow-primary/30 active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary/50;
     }
     .btn-accent {
-        @apply inline-flex items-center justify-center px-8 py-3.5 bg-accent text-primary font-black rounded-lg transition-all duration-300 hover:brightness-95 hover:shadow-lg hover:shadow-accent/30 active:scale-95 focus:outline-none focus:ring-2 focus:ring-accent/50;
+        @apply inline-flex items-center justify-center px-8 py-3.5 bg-secondary text-white font-black rounded-none transition-all duration-300 hover:bg-secondary-light hover:shadow-lg hover:shadow-secondary/30 active:scale-95 focus:outline-none focus:ring-2 focus:ring-secondary/50;
     }
     .btn-secondary {
-        @apply inline-flex items-center justify-center px-8 py-3.5 bg-secondary text-white font-semibold rounded-lg transition-all duration-300 hover:bg-secondary-light hover:shadow-lg hover:shadow-secondary/30 active:scale-95 focus:outline-none focus:ring-2 focus:ring-secondary/50;
+        @apply inline-flex items-center justify-center px-8 py-3.5 bg-secondary text-white font-bold rounded-none transition-all duration-300 hover:bg-secondary-light hover:shadow-lg hover:shadow-secondary/30 active:scale-95 focus:outline-none focus:ring-2 focus:ring-secondary/50;
     }
     .btn-outline {
-        @apply inline-flex items-center justify-center px-8 py-3.5 border-2 border-slate-200 text-slate-700 font-semibold rounded-lg transition-all duration-300 hover:border-primary hover:text-primary hover:bg-slate-50 active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary/50;
+        @apply inline-flex items-center justify-center px-8 py-3.5 border-2 border-slate-200 text-slate-700 font-bold rounded-none transition-all duration-300 hover:border-secondary hover:text-secondary hover:bg-slate-50 active:scale-95 focus:outline-none focus:ring-2 focus:ring-secondary/50;
     }
     .heading-1 {
-        @apply text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-secondary leading-tight;
+        @apply text-5xl md:text-6xl lg:text-7xl font-black tracking-tight text-secondary leading-tight uppercase;
     }
     .heading-2 {
-        @apply text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-secondary leading-tight;
+        @apply text-3xl md:text-4xl lg:text-5xl font-black tracking-tight text-secondary leading-tight uppercase;
     }
     .subheading {
-        @apply text-lg md:text-xl text-slate-500 leading-relaxed;
+        @apply text-lg md:text-xl text-slate-500 leading-relaxed font-medium;
     }
     .glass-card {
-        @apply bg-white border border-slate-100 shadow-sm rounded-2xl hover:shadow-xl hover:border-primary/20 transition-all duration-500;
+        @apply bg-white border border-slate-100 shadow-sm rounded-none hover:shadow-xl hover:border-secondary/20 transition-all duration-500;
     }
     .glass-card-dark {
-        @apply bg-secondary border border-white/5 shadow-2xl rounded-3xl text-white hover:border-primary/30 transition-all duration-500;
+        @apply bg-secondary border border-white/5 shadow-2xl rounded-none text-white hover:border-primary/30 transition-all duration-500;
     }
 }

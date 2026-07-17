@@ -1,72 +1,77 @@
-<footer class="bg-secondary text-white mt-auto border-t border-slate-800 pt-24 pb-12">
-    <div class="container mx-auto px-6 max-w-7xl">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 mb-20">
-            
-            <!-- Company Info -->
-            <div class="space-y-6">
-                <a href="/" class="flex items-center gap-3">
-                    <div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center text-secondary font-black text-xl">
-                        P
-                    </div>
-                    <span class="text-2xl font-black tracking-tight">PASSolving<span class="text-primary">.</span></span>
+<footer class="bg-secondary text-white mt-auto pt-20 pb-10 relative z-20 overflow-hidden border-t-4 border-primary">
+    <!-- Geometric Accent -->
+    <div class="absolute bottom-0 right-0 w-64 h-64 bg-primary/10 transform rotate-45 translate-x-1/2 translate-y-1/2 pointer-events-none"></div>
+    <div class="absolute top-0 left-0 w-32 h-32 border-4 border-primary/20 transform -rotate-12 -translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
+
+    <div class="container mx-auto px-6 max-w-7xl relative z-10">
+        <!-- Footer Top / Logo -->
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-16 gap-8">
+            <a href="/" class="flex items-center gap-3 group">
+                <img src="/logo-white.png" alt="PASSolving Logo" class="h-12 w-auto transform group-hover:rotate-12 transition-transform">
+            </a>
+            <div class="flex gap-4">
+                <a href="#" class="w-10 h-10 border border-white/20 flex items-center justify-center hover:bg-primary hover:text-secondary hover:border-primary transition-colors text-white">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                 </a>
-                <p class="text-slate-400 leading-relaxed font-medium">
-                    Solving What Matters.<br/>Scaling What Works.
-                </p>
-                <div class="flex gap-4 pt-4">
-                    <a href="https://instagram.com/passolving" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary transition-colors text-white hover:text-secondary hover:-translate-y-1">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
-                    </a>
+            </div>
+        </div>
+        
+        <hr class="border-white/10 mb-16">
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-12 lg:gap-16 mb-20">
+            <!-- Company -->
+            <div>
+                <h4 class="text-xs font-black mb-8 uppercase tracking-widest text-white">{{ __('Company') }}</h4>
+                <ul class="space-y-4 font-bold text-slate-400 text-sm">
+                    <li><a href="/about" class="hover:text-primary transition-colors flex items-center gap-2"><div class="w-1.5 h-1.5 bg-primary"></div> {{ __('About Us') }}</a></li>
+                    <li><a href="/services" class="hover:text-primary transition-colors flex items-center gap-2"><div class="w-1.5 h-1.5 bg-primary"></div> {{ __('Our Services') }}</a></li>
+                    <li><a href="/portfolio" class="hover:text-primary transition-colors flex items-center gap-2"><div class="w-1.5 h-1.5 bg-primary"></div> {{ __('Case Studies') }}</a></li>
+                    <li><a href="/contact" class="hover:text-primary transition-colors flex items-center gap-2"><div class="w-1.5 h-1.5 bg-primary"></div> {{ __('Contact Us') }}</a></li>
+                </ul>
+            </div>
+
+            <!-- Support -->
+            <div>
+                <h4 class="text-xs font-black mb-8 uppercase tracking-widest text-white">{{ __('Support') }}</h4>
+                <ul class="space-y-4 font-bold text-slate-400 text-sm">
+                    <li><a href="#" class="hover:text-primary transition-colors">{{ __('Help Center') }}</a></li>
+                    <li><a href="#" class="hover:text-primary transition-colors">{{ __('FAQ') }}</a></li>
+                    <li><a href="#" class="hover:text-primary transition-colors">{{ __('Privacy Policy') }}</a></li>
+                    <li><a href="#" class="hover:text-primary transition-colors">{{ __('Terms of Service') }}</a></li>
+                </ul>
+            </div>
+
+            <!-- Products -->
+            <div>
+                <h4 class="text-xs font-black mb-8 uppercase tracking-widest text-white">{{ __('Capabilities') }}</h4>
+                <ul class="space-y-4 font-bold text-slate-400 text-sm">
+                    <li><a href="#" class="hover:text-primary transition-colors">{{ __('Agility Assessment') }}</a></li>
+                    <li><a href="#" class="hover:text-primary transition-colors">{{ __('LEGO® Serious Play®') }}</a></li>
+                    <li><a href="#" class="hover:text-primary transition-colors">{{ __('Soft Skill Cert.') }}</a></li>
+                </ul>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="col-span-2 md:col-span-1">
+                <h4 class="text-xs font-black mb-6 uppercase tracking-widest text-white">{{ __('Subscribe to our newsletter') }}</h4>
+                <p class="text-xs font-medium text-slate-400 mb-6 leading-relaxed">{{ __('Stay updated with the latest news, updates, and exclusive offers.') }}</p>
+                
+                <div class="bg-transparent border-b-2 border-white/20 pb-2 flex gap-2 w-full focus-within:border-primary transition-colors group">
+                    <input type="email" placeholder="{{ __('Enter your email') }}" class="bg-transparent text-white px-2 py-2 outline-none flex-1 placeholder:text-slate-600 font-bold text-sm">
+                    <button class="text-white font-black group-hover:text-primary transition-colors">
+                        <svg class="w-6 h-6 transform -rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </button>
                 </div>
-            </div>
-
-            <!-- Quick Links -->
-            <div>
-                <h4 class="text-lg font-bold mb-8 uppercase tracking-widest text-slate-300">Quick Links</h4>
-                <ul class="space-y-4 font-medium text-slate-400">
-                    <li><a href="/services" class="hover:text-primary transition-colors flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary/50"></span> Our Services</a></li>
-                    <li><a href="/portfolio" class="hover:text-primary transition-colors flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary/50"></span> Case Studies</a></li>
-                    <li><a href="/about" class="hover:text-primary transition-colors flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary/50"></span> About Firm</a></li>
-                    <li><a href="/contact" class="hover:text-primary transition-colors flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary/50"></span> Contact Us</a></li>
-                </ul>
-            </div>
-
-            <!-- Services -->
-            <div>
-                <h4 class="text-lg font-bold mb-8 uppercase tracking-widest text-slate-300">Capabilities</h4>
-                <ul class="space-y-4 font-medium text-slate-400">
-                    <li><a href="/services" class="hover:text-primary transition-colors">The Business Agility Assessment™</a></li>
-                    <li><a href="/services" class="hover:text-primary transition-colors">LEGO® Serious Play®</a></li>
-                    <li><a href="/services" class="hover:text-primary transition-colors">Training & Consulting</a></li>
-                    <li><a href="/services" class="hover:text-primary transition-colors">Soft Skill Certification BNSP</a></li>
-                </ul>
-            </div>
-
-            <!-- Contact -->
-            <div>
-                <h4 class="text-lg font-bold mb-8 uppercase tracking-widest text-slate-300">Contact</h4>
-                <ul class="space-y-6 text-slate-400 font-medium">
-                    <li class="flex items-start gap-4">
-                        <svg class="w-6 h-6 text-accent shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
-                        <span>+62 897 9515 205</span>
-                    </li>
-                    <li class="flex items-center gap-4">
-                        <svg class="w-6 h-6 text-accent shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                        <span>bersama@passolving.com</span>
-                    </li>
-                    <li class="flex items-center gap-4">
-                        <svg class="w-6 h-6 text-accent shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
-                        <span>passolving.com</span>
-                    </li>
-                </ul>
             </div>
         </div>
 
-        <div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between gap-4 font-medium text-slate-500">
-            <p>&copy; {{ date('Y') }} PT PASSolving Transformasi Indonesia. All rights reserved.</p>
-            <div class="flex gap-8">
-                <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
-                <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+        <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 font-bold text-slate-500 text-xs">
+            <p>&copy; {{ date('Y') }} PASSolving. {{ __('All rights reserved.') }}</p>
+            <div class="flex gap-4">
+                <!-- Social Icons small -->
+                <a href="#" class="hover:text-primary transition-colors"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg></a>
+                <a href="#" class="hover:text-primary transition-colors"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+                <a href="#" class="hover:text-primary transition-colors"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
             </div>
         </div>
     </div>

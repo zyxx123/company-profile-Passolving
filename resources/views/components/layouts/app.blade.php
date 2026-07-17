@@ -32,7 +32,7 @@
         <x-header />
 
         <!-- Page Content -->
-        <main class="flex-grow pt-24">
+        <main class="flex-grow">
             {{ $slot }}
         </main>
 

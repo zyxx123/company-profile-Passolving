@@ -21,3 +21,10 @@ Route::get('/about', function () {
 Route::get('/contact', function () {
     return view('contact');
 });
+
+Route::get('/lang/{locale}', function ($locale) {
+    if (in_array($locale, ['en', 'id'])) {
+        session(['locale' => $locale]);
+    }
+    return redirect()->back();
+});

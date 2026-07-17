@@ -28,7 +28,7 @@ class ContactForm extends Component
             'message' => $this->message,
         ]);
 
-        $this->successMessage = 'Thank you! Your message has been sent successfully.';
+        $this->successMessage = __('Thank you! Your message has been sent successfully.');
         $this->reset(['name', 'email', 'message']);
     }
 
