@@ -132,4 +132,52 @@
             </div>
         </div>
     </section>
+    <!-- Filosofi & Principle Section -->
+    <section class="py-24 bg-white relative">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                
+                <!-- W.H.Y Philosophy -->
+                <div data-aos="fade-right">
+                    <h2 class="text-primary font-bold tracking-widest uppercase text-sm mb-4">Core Value</h2>
+                    <h3 class="text-4xl md:text-5xl font-black text-secondary tracking-tight mb-10">Filosofi Layanan Kami:<br/>'Agility in Action'</h3>
+                    
+                    <div class="space-y-8">
+                        <div class="flex items-center gap-6">
+                            <div class="w-16 h-16 rounded-full bg-primary flex items-center justify-center shrink-0 text-secondary font-black text-3xl shadow-lg">W</div>
+                            <div class="text-2xl font-bold text-slate-700 uppercase tracking-wide">talk the WALK</div>
+                        </div>
+                        <div class="flex items-center gap-6">
+                            <div class="w-16 h-16 rounded-full bg-primary flex items-center justify-center shrink-0 text-secondary font-black text-3xl shadow-lg">H</div>
+                            <div class="text-2xl font-bold text-slate-700 uppercase tracking-wide">HAPPINESS</div>
+                        </div>
+                        <div class="flex items-center gap-6">
+                            <div class="w-16 h-16 rounded-full bg-primary flex items-center justify-center shrink-0 text-secondary font-black text-3xl shadow-lg">Y</div>
+                            <div class="text-2xl font-bold text-slate-700 uppercase tracking-wide">YOU matters</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Principle Graphic -->
+                <div data-aos="fade-left" class="bg-secondary p-12 md:p-16 rounded-[3rem] shadow-2xl relative overflow-hidden text-center">
+                    <div class="absolute -right-20 -top-20 w-64 h-64 bg-primary/20 blur-[80px] rounded-full"></div>
+                    <div class="absolute -left-20 -bottom-20 w-64 h-64 bg-accent/20 blur-[80px] rounded-full"></div>
+                    
+                    <div class="relative z-10">
+                        <h4 class="text-primary font-bold tracking-widest uppercase text-lg mb-6">PRINCIPLE</h4>
+                        <div class="text-5xl md:text-6xl font-black text-white leading-tight mb-8">
+                            AKU<br/>
+                            KAMU<br/>
+                            KITA<br/>
+                            <span class="text-primary">SEMUA BISA</span>
+                        </div>
+                        <a href="/about" class="inline-flex items-center justify-center px-8 py-3.5 bg-primary text-secondary font-black rounded-lg transition-all hover:bg-primary-dark">
+                            Kenali Kami Lebih Dekat
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
 </x-layouts.app>

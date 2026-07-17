@@ -23,15 +23,15 @@
                             <span class="font-bold text-slate-700 text-lg">Senior Management only sees 4% of the issues</span>
                         </div>
                         <div data-aos="fade-up" data-aos-delay="100" class="flex items-center gap-6 p-6 rounded-2xl bg-[#F8FAFC] border border-slate-100 hover:border-primary/30 hover:shadow-md transition-all group">
-                            <span class="w-20 py-2 text-center bg-primary-dark text-white rounded-xl font-black text-xl shadow-sm group-hover:scale-110 transition-transform">9%</span>
+                            <span class="w-20 py-2 text-center bg-primary-dark text-secondary rounded-xl font-black text-xl shadow-sm group-hover:scale-110 transition-transform">9%</span>
                             <span class="font-bold text-slate-700 text-lg">Team Managers see 9% of the problems</span>
                         </div>
                         <div data-aos="fade-up" data-aos-delay="200" class="flex items-center gap-6 p-6 rounded-2xl bg-[#F8FAFC] border border-slate-100 hover:border-primary/30 hover:shadow-md transition-all group">
-                            <span class="w-20 py-2 text-center bg-primary text-white rounded-xl font-black text-xl shadow-sm group-hover:scale-110 transition-transform">74%</span>
+                            <span class="w-20 py-2 text-center bg-primary text-secondary rounded-xl font-black text-xl shadow-sm group-hover:scale-110 transition-transform">74%</span>
                             <span class="font-bold text-slate-700 text-lg">Team Leaders see 74% of the problems</span>
                         </div>
                         <div data-aos="fade-up" data-aos-delay="300" class="flex items-center gap-6 p-6 rounded-2xl bg-[#F8FAFC] border border-slate-100 hover:border-primary/30 hover:shadow-md transition-all group">
-                            <span class="w-20 py-2 text-center bg-accent text-white rounded-xl font-black text-xl shadow-sm group-hover:scale-110 transition-transform">100%</span>
+                            <span class="w-20 py-2 text-center bg-accent text-secondary rounded-xl font-black text-xl shadow-sm group-hover:scale-110 transition-transform">100%</span>
                             <span class="font-bold text-slate-700 text-lg">Staff sees 100% of the problems</span>
                         </div>
                     </div>

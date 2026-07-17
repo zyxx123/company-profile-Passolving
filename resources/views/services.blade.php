@@ -147,22 +147,22 @@
 
             <!-- Certification -->
             <div data-aos="fade-up">
-                <div class="bg-primary rounded-[3rem] p-12 md:p-20 text-white text-center shadow-xl">
+                <div class="bg-primary rounded-[3rem] p-12 md:p-20 text-secondary text-center shadow-xl">
                     <h3 class="text-3xl md:text-4xl font-black mb-6">LSP Softskill Indonesia Kompeten</h3>
-                    <p class="mb-12 max-w-3xl mx-auto text-lg text-white/80">SKKNI 2020-234 tentang Penetapan Standar Kompetensi Kerja Nasional Indonesia Kategori Pendidikan Bidang Soft skills.</p>
+                    <p class="mb-12 max-w-3xl mx-auto text-lg text-secondary/80 font-medium">SKKNI 2020-234 tentang Penetapan Standar Kompetensi Kerja Nasional Indonesia Kategori Pendidikan Bidang Soft skills.</p>
                     
                     <div class="grid md:grid-cols-3 gap-6">
-                        <div class="bg-white/10 p-8 rounded-2xl border border-white/20">
+                        <div class="bg-white/20 p-8 rounded-2xl border border-secondary/10 hover:bg-white/40 transition-colors">
                             <h4 class="text-2xl font-bold mb-3">Skema 1</h4>
-                            <p>Pemecahan Masalah (Problem Solving)</p>
+                            <p class="font-medium">Pemecahan Masalah (Problem Solving)</p>
                         </div>
-                        <div class="bg-white/10 p-8 rounded-2xl border border-white/20">
+                        <div class="bg-white/20 p-8 rounded-2xl border border-secondary/10 hover:bg-white/40 transition-colors">
                             <h4 class="text-2xl font-bold mb-3">Skema 2</h4>
-                            <p>Pengembangan Kepemimpinan</p>
+                            <p class="font-medium">Pengembangan Kepemimpinan</p>
                         </div>
-                        <div class="bg-white/10 p-8 rounded-2xl border border-white/20">
+                        <div class="bg-white/20 p-8 rounded-2xl border border-secondary/10 hover:bg-white/40 transition-colors">
                             <h4 class="text-2xl font-bold mb-3">Skema 3</h4>
-                            <p>Pengembangan Komunikasi yang Efektif</p>
+                            <p class="font-medium">Pengembangan Komunikasi yang Efektif</p>
                         </div>
                     </div>
                 </div>
