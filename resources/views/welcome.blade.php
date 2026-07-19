@@ -53,15 +53,15 @@
                     
                     <!-- Left Images -->
                     <div class="w-full lg:w-1/2 relative h-auto lg:h-[500px] mb-8 lg:mb-0" data-aos="fade-right" data-aos-duration="800">
-                        <div class="hidden lg:block">
+                        <div class="relative w-full h-[320px] sm:h-[400px] lg:h-full block">
                             <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
-                                 class="absolute top-0 left-0 w-3/4 h-[400px] object-cover grayscale hover:grayscale-0 transition-all duration-500 shadow-2xl" alt="Team">
+                                 class="absolute top-0 left-0 w-3/4 h-[220px] sm:h-[300px] lg:h-[400px] object-cover grayscale hover:grayscale-0 transition-all duration-500 shadow-2xl" alt="Team">
                             <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
-                                 class="absolute bottom-10 right-0 w-1/2 h-[250px] object-cover grayscale hover:grayscale-0 transition-all duration-500 shadow-2xl border-8 border-white" alt="Meeting">
+                                 class="absolute bottom-8 lg:bottom-10 right-0 w-[65%] lg:w-1/2 h-[160px] sm:h-[220px] lg:h-[250px] object-cover grayscale hover:grayscale-0 transition-all duration-500 shadow-2xl border-[6px] lg:border-8 border-white" alt="Meeting">
                         </div>
                         
                         <!-- Floating Yellow Stat Box -->
-                        <div class="relative lg:absolute lg:-bottom-10 lg:left-10 bg-primary p-6 lg:p-8 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-6 lg:gap-12 shadow-2xl w-full lg:w-max">
+                        <div class="relative -mt-12 sm:-mt-16 lg:mt-0 z-10 lg:absolute lg:-bottom-10 lg:left-10 bg-primary p-6 lg:p-8 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-6 lg:gap-12 shadow-2xl w-full lg:w-max mx-auto w-[90%] sm:w-full">
                             <div class="flex items-center gap-4">
                                 <svg class="w-12 h-12 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                                 <div>
