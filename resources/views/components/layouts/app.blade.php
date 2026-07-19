@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="scroll-smooth">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="scroll-smooth overflow-x-hidden">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,10 +25,10 @@
     <!-- Alpine.js -->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
-<body class="bg-[#F8FAFC] text-slate-800 antialiased selection:bg-primary selection:text-white relative">
+<body class="bg-[#F8FAFC] text-slate-800 antialiased selection:bg-primary selection:text-white relative overflow-x-hidden">
     
     <!-- Main Content Wrapper -->
-    <div class="relative z-10 min-h-screen flex flex-col">
+    <div class="relative z-10 min-h-screen flex flex-col w-full overflow-x-hidden">
         <x-header />
 
         <!-- Page Content -->
