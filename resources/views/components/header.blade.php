@@ -52,7 +52,7 @@
             <!-- Mobile Menu Button -->
             <button 
                 @click="mobileMenuOpen = !mobileMenuOpen" 
-                class="md:hidden p-2 text-white hover:text-primary transition-colors focus:outline-none"
+                class="md:hidden p-2 bg-secondary/60 rounded-md text-white hover:text-primary transition-colors focus:outline-none backdrop-blur-sm border border-white/10"
             >
                 <svg x-show="!mobileMenuOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
                 <svg x-show="mobileMenuOpen" x-cloak class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
