@@ -5,15 +5,15 @@
         bgImage="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=2560&q=80"
     />
 
-    <section class="py-24 md:py-32 bg-white relative">
+    <section class="py-16 md:py-24 lg:py-32 bg-white relative">
         <div class="container mx-auto px-6 max-w-7xl relative z-10">
-            <div class="grid lg:grid-cols-2 gap-20 items-center mb-32">
+            <div class="grid lg:grid-cols-2 gap-12 md:gap-20 items-center mb-16 md:mb-32">
                 
                 <!-- The Iceberg of Ignorance -->
                 <div class="relative" data-aos="fade-right" data-aos-duration="800">
                     <div class="absolute -left-6 -top-6 w-20 h-20 bg-primary/20 transform rotate-45 -z-10"></div>
-                    <h2 class="text-4xl md:text-5xl font-black text-secondary mb-8 tracking-tight uppercase">{{ __('The Iceberg of Ignorance') }}</h2>
-                    <p class="text-xl text-slate-500 mb-12 leading-relaxed border-l-4 border-primary pl-6">
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-black text-secondary mb-6 md:mb-8 tracking-tight uppercase">{{ __('The Iceberg of Ignorance') }}</h2>
+                    <p class="text-base md:text-xl text-slate-500 mb-8 md:mb-12 leading-relaxed border-l-4 border-primary pl-4 md:pl-6">
                         {!! __('Menurut Sidney Yoshida, <strong class="text-secondary">96% masalah tersembunyi dari Manajemen Senior</strong>. Dalam organisasi yang kompleks, isu-isu kritis secara sistematis tersaring saat naik ke atas hierarki. PASS bekerja di area yang sering tidak terlihat, namun paling menentukan kualitas dampak keputusan.') !!}
                     </p>
                     
@@ -39,11 +39,11 @@
                 </div>
                 
                 <!-- Mengapa PASS -->
-                <div class="bg-secondary p-12 md:p-16 shadow-2xl relative overflow-hidden text-white border-b-8 border-primary" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
+                <div class="bg-secondary p-8 md:p-12 lg:p-16 shadow-2xl relative overflow-hidden text-white border-b-8 border-primary" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
                     <div class="absolute -right-20 -top-20 w-64 h-64 border-4 border-primary/20 transform rotate-45 pointer-events-none"></div>
                     
                     <div class="relative z-10">
-                        <h3 class="text-4xl font-black text-white mb-8 uppercase tracking-widest flex items-center gap-4">
+                        <h3 class="text-2xl md:text-4xl font-black text-white mb-6 md:mb-8 uppercase tracking-widest flex items-center gap-4">
                             <div class="w-8 h-1 bg-primary"></div>
                             {{ __('Mengapa PASS?') }}
                         </h3>
@@ -87,10 +87,10 @@
             <div>
                 <div class="text-center mb-16" data-aos="fade-up" data-aos-duration="700">
                     <h2 class="text-primary font-black tracking-widest uppercase text-sm mb-4">{{ __('Testimonials') }}</h2>
-                    <h3 class="text-4xl md:text-5xl font-black text-secondary tracking-tight uppercase">{{ __('What Leaders Say') }}</h3>
+                    <h3 class="text-3xl md:text-4xl lg:text-5xl font-black text-secondary tracking-tight uppercase">{{ __('What Leaders Say') }}</h3>
                 </div>
 
-                <div class="grid md:grid-cols-3 gap-0 border-t border-l border-slate-200 bg-white">
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-0 border-t border-l border-slate-200 bg-white">
                     <!-- Testimonial 1 -->
                     <div class="p-10 border-b border-r border-slate-200 hover:bg-secondary hover:text-white transition-colors duration-300 group cursor-pointer relative overflow-hidden" data-aos="fade-up" data-aos-duration="500" data-aos-delay="0">
                         <div class="absolute right-0 top-0 w-16 h-16 bg-primary/10 transform rotate-45 translate-x-8 -translate-y-8 group-hover:bg-primary/20 transition-colors"></div>

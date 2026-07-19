@@ -5,7 +5,7 @@
         bgImage="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=2560&q=80"
     />
 
-    <section class="py-24 md:py-32 bg-white relative">
+    <section class="py-16 md:py-24 lg:py-32 bg-white relative">
         <div class="container mx-auto px-6 max-w-6xl relative z-10">
             <div class="space-y-12">
                 
@@ -69,7 +69,7 @@
                             <!-- Solid color block that slides in from left -->
                             <div class="absolute left-0 top-0 bottom-0 w-3 bg-{{ $study['color'] }} group-hover:w-full transition-all duration-500 ease-out z-0 opacity-100 group-hover:opacity-10"></div>
                             
-                            <div class="p-8 md:p-12 flex flex-col gap-6 relative z-10">
+                            <div class="p-6 md:p-8 lg:p-12 flex flex-col gap-4 md:gap-6 relative z-10">
                                 <!-- Client Badge -->
                                 <div>
                                     <span class="inline-block px-4 py-1 bg-secondary text-white font-black text-xs uppercase tracking-widest mb-4 group-hover:bg-primary group-hover:text-secondary transition-colors">{{ __($study['client']) }}</span>
@@ -77,11 +77,11 @@
                                 
                                 <!-- Content -->
                                 <div>
-                                    <h2 class="text-3xl font-black text-secondary mb-8 group-hover:text-primary transition-colors duration-300">
+                                    <h2 class="text-xl sm:text-2xl md:text-3xl font-black text-secondary mb-4 md:mb-8 group-hover:text-primary transition-colors duration-300">
                                         {{ __($study['title']) }}
                                     </h2>
                                     
-                                    <div class="grid md:grid-cols-3 gap-8 mb-4">
+                                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 mb-4">
                                         <div class="border-l-2 border-slate-200 pl-4 group-hover:border-secondary transition-colors">
                                             <h5 class="text-xs uppercase tracking-widest font-black text-slate-800 mb-2">{{ __('Context') }}</h5>
                                             <p class="text-sm text-slate-600 font-medium leading-relaxed">{{ __($study['context']) }}</p>
@@ -90,7 +90,7 @@
                                             <h5 class="text-xs uppercase tracking-widest font-black text-slate-800 mb-2">{{ __('PASS Role') }}</h5>
                                             <p class="text-sm text-slate-600 font-medium leading-relaxed">{{ __($study['role']) }}</p>
                                         </div>
-                                        <div class="bg-secondary p-6 text-white group-hover:bg-primary group-hover:text-secondary transition-colors duration-300 relative overflow-hidden">
+                                        <div class="bg-secondary p-4 md:p-6 text-white group-hover:bg-primary group-hover:text-secondary transition-colors duration-300 relative overflow-hidden">
                                             <div class="absolute -right-4 -bottom-4 w-16 h-16 bg-white/10 transform rotate-45 pointer-events-none"></div>
                                             <h5 class="text-xs uppercase tracking-widest font-black mb-2 opacity-80">{{ __('Focus & Result') }}</h5>
                                             <p class="text-sm font-bold leading-relaxed">{{ __($study['focus']) }}</p>

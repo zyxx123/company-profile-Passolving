@@ -4,7 +4,7 @@
         <!-- ==============================================
              1. HERO SECTION (Navy with Sharp Mustard Cuts)
              ============================================== -->
-        <section class="relative min-h-[90vh] bg-secondary text-white flex items-center pt-20 overflow-hidden">
+        <section class="relative min-h-[70vh] md:min-h-[90vh] bg-secondary text-white flex items-center pt-16 md:pt-20 overflow-hidden">
             <!-- Geometric Background Shapes -->
             <div class="absolute top-0 right-0 w-full h-full pointer-events-none overflow-hidden z-0">
                 <!-- Large Top Right Mustard Triangle -->
@@ -17,9 +17,9 @@
 
             <div class="container mx-auto px-6 max-w-7xl relative z-10 flex flex-col lg:flex-row items-center">
                 <!-- Left Content -->
-                <div class="w-full lg:w-1/2 pt-20 pb-32">
+                <div class="w-full lg:w-1/2 pt-10 md:pt-20 pb-20 md:pb-32">
                     <div class="w-16 h-1 bg-primary mb-8 transform -skew-x-12" data-aos="fade-right" data-aos-duration="600"></div>
-                    <h1 class="text-5xl md:text-7xl font-black uppercase tracking-tighter leading-[1] mb-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                    <h1 class="text-4xl md:text-5xl lg:text-7xl font-black uppercase tracking-tighter leading-[1] mb-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
                         {!! __('Transforming<br/>Organizations<br/>With Agility') !!}
                     </h1>
                     <p class="text-slate-400 font-medium mb-10 max-w-md" data-aos="fade-up" data-aos-duration="800" data-aos-delay="250">
@@ -44,7 +44,7 @@
         <!-- ==============================================
              2. ABOUT / SOLUTIONS SECTION (White)
              ============================================== -->
-        <section class="py-32 bg-white relative">
+        <section class="py-16 md:py-32 bg-white relative">
             <!-- Small triangle pointing down from hero -->
             <div class="absolute top-0 left-1/4 w-12 h-12 bg-secondary transform rotate-45 -translate-y-1/2"></div>
             
@@ -52,14 +52,16 @@
                 <div class="flex flex-col lg:flex-row gap-16 items-center">
                     
                     <!-- Left Images -->
-                    <div class="w-full lg:w-1/2 relative h-[500px]" data-aos="fade-right" data-aos-duration="800">
-                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
-                             class="absolute top-0 left-0 w-3/4 h-[400px] object-cover grayscale hover:grayscale-0 transition-all duration-500 shadow-2xl" alt="Team">
-                        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
-                             class="absolute bottom-10 right-0 w-1/2 h-[250px] object-cover grayscale hover:grayscale-0 transition-all duration-500 shadow-2xl border-8 border-white" alt="Meeting">
+                    <div class="w-full lg:w-1/2 relative h-auto lg:h-[500px] mb-8 lg:mb-0" data-aos="fade-right" data-aos-duration="800">
+                        <div class="hidden lg:block">
+                            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                                 class="absolute top-0 left-0 w-3/4 h-[400px] object-cover grayscale hover:grayscale-0 transition-all duration-500 shadow-2xl" alt="Team">
+                            <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                                 class="absolute bottom-10 right-0 w-1/2 h-[250px] object-cover grayscale hover:grayscale-0 transition-all duration-500 shadow-2xl border-8 border-white" alt="Meeting">
+                        </div>
                         
                         <!-- Floating Yellow Stat Box -->
-                        <div class="absolute -bottom-10 left-10 bg-primary p-8 flex items-center gap-12 shadow-2xl">
+                        <div class="relative lg:absolute lg:-bottom-10 lg:left-10 bg-primary p-6 lg:p-8 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-6 lg:gap-12 shadow-2xl w-full lg:w-max">
                             <div class="flex items-center gap-4">
                                 <svg class="w-12 h-12 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                                 <div>
@@ -67,7 +69,8 @@
                                     <div class="text-xs font-bold uppercase tracking-widest text-secondary">{{ __('Years Experience') }}</div>
                                 </div>
                             </div>
-                            <div class="w-px h-16 bg-secondary/20"></div>
+                            <div class="hidden sm:block w-px h-16 bg-secondary/20"></div>
+                            <div class="sm:hidden w-3/4 h-px bg-secondary/20"></div>
                             <div class="flex items-center gap-4">
                                 <svg class="w-12 h-12 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
                                 <div>
@@ -79,19 +82,19 @@
                     </div>
 
                     <!-- Right Text -->
-                    <div class="w-full lg:w-1/2 pt-16 lg:pt-0" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
+                    <div class="w-full lg:w-1/2 pt-8 lg:pt-0" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
                         <div class="flex items-center gap-2 mb-4">
                             <div class="w-4 h-4 bg-primary transform rotate-45"></div>
                             <span class="text-xs font-bold uppercase tracking-widest text-slate-400">{{ __('About Agency') }}</span>
                         </div>
-                        <h2 class="text-4xl md:text-5xl font-black uppercase text-secondary mb-6 leading-tight">
+                        <h2 class="text-3xl md:text-4xl lg:text-5xl font-black uppercase text-secondary mb-6 leading-tight">
                             {!! __('Ahead Of<br/>The Curve') !!}
                         </h2>
                         <p class="text-slate-500 mb-8 font-medium leading-relaxed">
                             {{ __('Through the Business Agility Assessment™ and LEGO® Serious Play®, we unlock your team\'s potential to navigate complex challenges and achieve sustainable growth. Kami bukan sekedar lembaga pelatihan — kami adalah mitra transformasi.') }}
                         </p>
 
-                        <div class="grid grid-cols-2 gap-8 mb-10">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 mb-10">
                             <div>
                                 <div class="w-12 h-12 bg-secondary rounded-none flex items-center justify-center text-primary mb-4 transform rotate-45">
                                     <svg class="w-6 h-6 -rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
@@ -199,13 +202,13 @@
                  @touchmove="dragMove($event)"
                  @touchend="dragEnd()">
                 <!-- Set 1 -->
-                <div class="flex items-center gap-16 px-8 w-max shrink-0">
+                <div class="flex items-center gap-8 md:gap-16 px-4 md:px-8 w-max shrink-0">
                     @foreach($partners as $partner)
                         <span class="text-sm md:text-base font-black tracking-widest uppercase text-slate-300 hover:text-secondary transition-colors whitespace-nowrap">{{ $partner }}</span>
                     @endforeach
                 </div>
                 <!-- Set 2 for seamless loop -->
-                <div class="flex items-center gap-16 px-8 w-max shrink-0">
+                <div class="flex items-center gap-8 md:gap-16 px-4 md:px-8 w-max shrink-0">
                     @foreach($partners as $partner)
                         <span class="text-sm md:text-base font-black tracking-widest uppercase text-slate-300 hover:text-secondary transition-colors whitespace-nowrap">{{ $partner }}</span>
                     @endforeach
@@ -216,17 +219,17 @@
         <!-- ==============================================
              4. WHAT WE OFFER (Light Gray)
              ============================================== -->
-        <section class="py-32 bg-[#F8F9FA] relative">
+        <section class="py-16 md:py-32 bg-[#F8F9FA] relative">
             <div class="container mx-auto px-6 max-w-7xl">
                 <div class="text-center mb-16" data-aos="fade-up" data-aos-duration="700">
                     <div class="flex items-center justify-center gap-2 mb-4">
                         <div class="w-4 h-4 bg-primary transform rotate-45"></div>
                         <span class="text-xs font-bold uppercase tracking-widest text-slate-400">{{ __('Our Services') }}</span>
                     </div>
-                    <h2 class="text-4xl md:text-5xl font-black uppercase text-secondary">{{ __('What We Offer') }}</h2>
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-black uppercase text-secondary">{{ __('What We Offer') }}</h2>
                 </div>
 
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-0 max-w-6xl mx-auto shadow-2xl relative z-10">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0 max-w-6xl mx-auto shadow-2xl relative z-10">
                     
                     @php
                         $services = [
@@ -238,7 +241,7 @@
                     @endphp
 
                     @foreach($services as $idx => $svc)
-                        <div class="border border-slate-100 p-10 hover:bg-secondary hover:text-white transition-colors duration-300 group flex flex-col items-center text-center {{ $svc['highlight'] ? 'bg-secondary text-white' : 'bg-white' }}" data-aos="fade-up" data-aos-duration="600" data-aos-delay="{{ $idx * 100 }}">
+                        <div class="border border-slate-100 p-6 md:p-10 hover:bg-secondary hover:text-white transition-colors duration-300 group flex flex-col items-center text-center {{ $svc['highlight'] ? 'bg-secondary text-white' : 'bg-white' }}" data-aos="fade-up" data-aos-duration="600" data-aos-delay="{{ $idx * 100 }}">
                             <div class="text-slate-200 group-hover:text-primary transition-colors mb-8 {{ $svc['highlight'] ? 'text-primary' : '' }}">
                                 <svg class="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
                                     <path stroke-linecap="square" stroke-linejoin="miter" d="{{ $svc['icon'] }}"></path>
@@ -265,10 +268,10 @@
         <!-- ==============================================
              5. GROW WITH COMMUNITY (Navy)
              ============================================== -->
-        <section class="bg-secondary pt-32 pb-64 relative">
+        <section class="bg-secondary pt-16 md:pt-32 pb-40 md:pb-64 relative">
             <div class="container mx-auto px-6 max-w-7xl">
                 <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 border-b border-white/10 pb-12">
-                    <h2 class="text-4xl md:text-5xl font-black uppercase text-white w-full md:w-2/3 leading-tight" data-aos="fade-right" data-aos-duration="800">
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-black uppercase text-white w-full md:w-2/3 leading-tight" data-aos="fade-right" data-aos-duration="800">
                         {!! __('Grow With Community &<br/>Experience Endless Possibilities') !!}
                     </h2>
                     <a href="/about" class="mt-8 md:mt-0 bg-primary text-secondary px-8 py-4 text-xs font-black uppercase tracking-widest hover:bg-white transition-colors">
@@ -286,9 +289,9 @@
         </section>
 
         <!-- White overlapping cards container (Pulled up into Navy section) -->
-        <div class="bg-[#F8F9FA] relative z-20 pb-32">
+        <div class="bg-[#F8F9FA] relative z-20 pb-16 md:pb-32">
             <div class="container mx-auto px-6 max-w-7xl -mt-40">
-                <div class="grid md:grid-cols-3 gap-0 shadow-2xl" data-aos="fade-up" data-aos-duration="800">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-0 shadow-2xl" data-aos="fade-up" data-aos-duration="800">
                     <div class="bg-white p-10 border-r border-slate-100 flex gap-6 hover:bg-slate-50 transition-colors">
                         <div class="w-10 h-10 bg-primary rounded-none flex items-center justify-center shrink-0">
                             <svg class="w-5 h-5 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
@@ -323,17 +326,17 @@
         <!-- ==============================================
              6. RECENT CLIENT PROJECTS (White)
              ============================================== -->
-        <section class="py-20 bg-white">
+        <section class="py-12 md:py-20 bg-white">
             <div class="container mx-auto px-6 max-w-7xl">
                 <div class="text-center mb-16" data-aos="fade-up" data-aos-duration="700">
                     <div class="flex items-center justify-center gap-2 mb-4">
                         <div class="w-4 h-4 bg-primary transform rotate-45"></div>
                         <span class="text-xs font-bold uppercase tracking-widest text-slate-400">{{ __('Our Completed Works') }}</span>
                     </div>
-                    <h2 class="text-4xl md:text-5xl font-black uppercase text-secondary">{{ __('Recent Client Projects') }}</h2>
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-black uppercase text-secondary">{{ __('Recent Client Projects') }}</h2>
                 </div>
 
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     @php
                         $projects = [
                             ['title' => __('Learning by Transforming'), 'client' => 'BNI Corporate University'],
@@ -361,7 +364,7 @@
         <!-- ==============================================
              7. TESTIMONIAL (White)
              ============================================== -->
-        <section class="py-32 bg-[#F8F9FA]">
+        <section class="py-16 md:py-32 bg-[#F8F9FA]">
             <div class="container mx-auto px-6 max-w-5xl">
                 <div class="flex flex-col md:flex-row items-center gap-16" data-aos="fade-up" data-aos-duration="800">
                     <div class="w-full md:w-1/3 relative flex justify-center">
@@ -377,7 +380,7 @@
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
                             @endfor
                         </div>
-                        <p class="text-slate-500 font-medium italic leading-relaxed text-lg mb-8">
+                        <p class="text-slate-500 font-medium italic leading-relaxed text-base md:text-lg mb-8">
                             {{ __('"Apa yang harus dilakukan, langsung dipraktekkan! Agile-Design Thinking dari PASS berbeda dari yang biasanya. Tim PASS berisi profesional berpengalaman dengan solusi implementatif yang langsung berdampak."') }}
                         </p>
                         <div>
@@ -392,12 +395,12 @@
         <!-- ==============================================
              8. LET'S START WORKING TOGETHER (Mustard Banner)
              ============================================== -->
-        <section class="bg-white py-20 relative overflow-hidden">
+        <section class="bg-white py-12 md:py-20 relative overflow-hidden">
             <div class="container mx-auto px-6 max-w-7xl">
-                <div class="bg-primary relative overflow-hidden shadow-2xl flex flex-col md:flex-row items-center justify-between p-12 lg:p-20" data-aos="zoom-in" data-aos-duration="700">
+                <div class="bg-primary relative overflow-hidden shadow-2xl flex flex-col md:flex-row items-center justify-between p-8 md:p-12 lg:p-20" data-aos="zoom-in" data-aos-duration="700">
                     <!-- Left Text -->
                     <div class="relative z-10 w-full md:w-2/3">
-                        <h2 class="text-4xl lg:text-6xl font-black uppercase leading-[1.1]">
+                        <h2 class="text-3xl md:text-4xl lg:text-6xl font-black uppercase leading-[1.1]">
                             <span class="text-secondary">{!! __('Let\'s Start Working Together.') !!}</span><br/>
                             <span class="text-secondary/60">{!! __('Get In Touch With Us!') !!}</span>
                         </h2>
