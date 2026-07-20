@@ -34,19 +34,25 @@
                         <span class="absolute bottom-0 left-0 w-full h-[2px] bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left {{ request()->is(ltrim($link['url'], '/')) || (request()->is('/') && $link['url'] == '/') ? 'scale-x-100' : '' }}"></span>
                     </a>
                 @endforeach
-                <!-- Language Switcher -->
-                <div class="flex items-center gap-2 text-xs font-bold tracking-widest uppercase">
-                    <a href="/lang/id" class="{{ app()->getLocale() == 'id' ? 'text-primary' : 'text-slate-500 hover:text-slate-300' }} transition-colors">ID</a>
-                    <span class="text-slate-600">|</span>
-                    <a href="/lang/en" class="{{ app()->getLocale() == 'en' ? 'text-primary' : 'text-slate-500 hover:text-slate-300' }} transition-colors">EN</a>
-                </div>
-
                 <!-- CTA Button -->
                 <a href="/contact" class="bg-primary text-secondary px-8 py-3 text-xs font-black uppercase tracking-widest hover:bg-white transition-colors relative overflow-hidden group">
                     <span class="relative z-10">Contact</span>
                     <!-- Diagonal hover effect -->
                     <div class="absolute inset-0 bg-white transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out z-0"></div>
                 </a>
+                
+                <!-- Language Switcher -->
+                <div class="relative ml-2" x-data="{ langOpen: false }" @click.away="langOpen = false">
+                    <button @click="langOpen = !langOpen" class="flex items-center gap-1 text-xs font-bold tracking-widest uppercase text-slate-300 hover:text-primary transition-colors focus:outline-none">
+                        <span x-text="'{{ strtoupper(app()->getLocale()) }}'"></span>
+                        <svg class="w-4 h-4 transition-transform duration-200" :class="langOpen ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    
+                    <div x-show="langOpen" x-cloak x-transition.opacity.duration.200ms class="absolute top-full right-0 mt-6 w-20 bg-secondary border border-white/10 shadow-2xl py-2 z-50">
+                        <a href="/lang/id" class="block px-4 py-2 text-xs font-bold tracking-widest uppercase hover:bg-white/5 transition-colors {{ app()->getLocale() == 'id' ? 'text-primary' : 'text-slate-300 hover:text-white' }}">ID</a>
+                        <a href="/lang/en" class="block px-4 py-2 text-xs font-bold tracking-widest uppercase hover:bg-white/5 transition-colors {{ app()->getLocale() == 'en' ? 'text-primary' : 'text-slate-300 hover:text-white' }}">EN</a>
+                    </div>
+                </div>
             </nav>
 
             <!-- Mobile Menu Button -->
@@ -83,11 +89,15 @@
             @endforeach
 
             <!-- Language Switcher Mobile -->
-            <div class="flex items-center gap-4 py-2 border-b border-white/5">
-                <span class="text-xs font-bold uppercase text-slate-500">Lang:</span>
-                <a href="/lang/id" class="text-sm font-bold uppercase {{ app()->getLocale() == 'id' ? 'text-primary' : 'text-slate-300 hover:text-primary' }}">ID</a>
-                <span class="text-slate-500">|</span>
-                <a href="/lang/en" class="text-sm font-bold uppercase {{ app()->getLocale() == 'en' ? 'text-primary' : 'text-slate-300 hover:text-primary' }}">EN</a>
+            <div class="py-2 border-b border-white/5" x-data="{ langOpenMob: false }">
+                <button @click="langOpenMob = !langOpenMob" class="flex items-center justify-between w-full text-sm font-bold uppercase tracking-widest text-slate-300 hover:text-primary transition-colors focus:outline-none">
+                    <span>Lang: {{ strtoupper(app()->getLocale()) }}</span>
+                    <svg class="w-4 h-4 transition-transform duration-200" :class="langOpenMob ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div x-show="langOpenMob" x-cloak class="mt-4 flex flex-col space-y-4 pl-4 pb-2">
+                    <a href="/lang/id" class="text-sm font-bold uppercase {{ app()->getLocale() == 'id' ? 'text-primary' : 'text-slate-400 hover:text-slate-200' }}">ID</a>
+                    <a href="/lang/en" class="text-sm font-bold uppercase {{ app()->getLocale() == 'en' ? 'text-primary' : 'text-slate-400 hover:text-slate-200' }}">EN</a>
+                </div>
             </div>
 
             <div class="pt-4">
