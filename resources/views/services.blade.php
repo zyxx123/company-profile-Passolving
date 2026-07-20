@@ -14,7 +14,7 @@
                     <div class="absolute -right-20 -top-20 w-64 h-64 border-4 border-primary/20 transform rotate-45 pointer-events-none group-hover:rotate-90 transition-transform duration-1000"></div>
                     
                     <div class="relative z-10 text-center max-w-4xl mx-auto">
-                        <div class="inline-flex items-center gap-2 px-6 py-2 bg-primary text-accent text-sm font-black mb-8 uppercase tracking-widest">
+                        <div class="inline-flex items-center gap-2 px-6 py-2 bg-primary text-[#0D4E50] text-sm font-black mb-8 uppercase tracking-widest">
                             Assessment Platform
                         </div>
                         <h3 class="text-2xl md:text-4xl lg:text-5xl font-black text-white mb-6 md:mb-8 tracking-tight uppercase">{{ __('The Business Agility Assessment™') }}</h3>

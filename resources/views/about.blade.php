@@ -56,7 +56,7 @@
                         
                         <div class="space-y-8">
                             <div class="flex gap-6 group">
-                                <div class="w-12 h-12 bg-white/5 flex items-center justify-center shrink-0 border border-white/20 text-xl font-black text-primary group-hover:bg-primary group-hover:text-accent group-hover:border-primary transition-all transform group-hover:rotate-12">1</div>
+                                <div class="w-12 h-12 bg-white/5 flex items-center justify-center shrink-0 border border-white/20 text-xl font-black text-primary group-hover:bg-primary group-hover:text-[#0D4E50] group-hover:border-primary transition-all transform group-hover:rotate-12">1</div>
                                 <div>
                                     <h4 class="text-lg uppercase tracking-widest font-black text-white mb-2">{{ __('Berpengalaman Lintas Industri') }}</h4>
                                     <p class="text-slate-400 leading-relaxed font-medium">{{ __('Berkolaborasi dengan lembaga besar nasional dan internasional (Pertamina, BAPPENAS, Kemenkes, UNDP, OJK, BNI, dan lainnya).') }}</p>
@@ -64,7 +64,7 @@
                             </div>
                             
                             <div class="flex gap-6 group">
-                                <div class="w-12 h-12 bg-white/5 flex items-center justify-center shrink-0 border border-white/20 text-xl font-black text-primary group-hover:bg-primary group-hover:text-accent group-hover:border-primary transition-all transform group-hover:rotate-12">2</div>
+                                <div class="w-12 h-12 bg-white/5 flex items-center justify-center shrink-0 border border-white/20 text-xl font-black text-primary group-hover:bg-primary group-hover:text-[#0D4E50] group-hover:border-primary transition-all transform group-hover:rotate-12">2</div>
                                 <div>
                                     <h4 class="text-lg uppercase tracking-widest font-black text-white mb-2">{{ __('Berbasis Sistem & Data') }}</h4>
                                     <p class="text-slate-400 leading-relaxed font-medium">{{ __('Menggunakan Empathy–System–Result Framework untuk memastikan setiap intervensi punya jalur hasil yang jelas.') }}</p>
@@ -72,7 +72,7 @@
                             </div>
                             
                             <div class="flex gap-6 group">
-                                <div class="w-12 h-12 bg-white/5 flex items-center justify-center shrink-0 border border-white/20 text-xl font-black text-primary group-hover:bg-primary group-hover:text-accent group-hover:border-primary transition-all transform group-hover:rotate-12">3</div>
+                                <div class="w-12 h-12 bg-white/5 flex items-center justify-center shrink-0 border border-white/20 text-xl font-black text-primary group-hover:bg-primary group-hover:text-[#0D4E50] group-hover:border-primary transition-all transform group-hover:rotate-12">3</div>
                                 <div>
                                     <h4 class="text-lg uppercase tracking-widest font-black text-white mb-2">{{ __('Pendekatan Humanis & Adaptif') }}</h4>
                                     <p class="text-slate-400 leading-relaxed font-medium">{{ __('Kami percaya transformasi berhasil hanya jika manusia di dalamnya ikut berubah. Kelas kami bukan untuk diingat, tapi membangun sistem.') }}</p>

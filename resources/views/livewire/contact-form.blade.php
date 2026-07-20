@@ -42,7 +42,7 @@
 
         <button 
             type="submit" 
-            class="w-full bg-secondary text-white px-8 py-4 font-black uppercase tracking-widest text-sm flex items-center justify-center gap-2 group hover:bg-primary hover:text-accent transition-colors duration-300 mt-4"
+            class="w-full bg-secondary text-white px-8 py-4 font-black uppercase tracking-widest text-sm flex items-center justify-center gap-2 group hover:bg-primary hover:text-[#0D4E50] transition-colors duration-300 mt-4"
         >
             <span wire:loading.remove wire:target="submit">{{ __('Submit Inquiry') }}</span>
             <svg wire:loading.remove wire:target="submit" class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>

@@ -7,13 +7,12 @@
 @source '../../app/Livewire/**/*.php';
 
 @theme {
-    --font-sans: 'Poppins', ui-sans-serif, system-ui, sans-serif;
-    --font-display: 'Lilita One', cursive;
-    --color-primary: #FFCE44; /* Poster Yellow */
-    --color-primary-dark: #E5B83D;
-    --color-secondary: #44C6D5; /* Poster Teal for sections/backgrounds */
-    --color-secondary-light: #5BD1DE;
-    --color-accent: #153F59; /* Poster Navy for strong contrast text/elements */
+    --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+    --color-primary: #F5B700; /* Yellow */
+    --color-primary-dark: #D4A000;
+    --color-secondary: #009A9A; /* Bright Teal */
+    --color-secondary-dark: #0D4E50; /* Deep Pine Green */
+    --color-accent: #009A9A; /* Bright Teal for headings/text */
 
     --animate-floating: floating 6s ease-in-out infinite;
     --animate-gradient-x: gradient-x 15s ease infinite;
@@ -53,42 +52,42 @@
 
 @layer utilities {
     .bg-grid-pattern {
-        background-image: radial-gradient(rgba(21, 63, 89, 0.08) 1px, transparent 1px);
+        background-image: radial-gradient(rgba(0, 154, 154, 0.08) 1px, transparent 1px);
         background-size: 24px 24px;
     }
     .bg-grid-lines {
-        background-image: linear-gradient(to right, rgba(21, 63, 89, 0.05) 1px, transparent 1px),
-                          linear-gradient(to bottom, rgba(21, 63, 89, 0.05) 1px, transparent 1px);
+        background-image: linear-gradient(to right, rgba(0, 154, 154, 0.05) 1px, transparent 1px),
+                          linear-gradient(to bottom, rgba(0, 154, 154, 0.05) 1px, transparent 1px);
         background-size: 48px 48px;
     }
 }
 
 @layer components {
     .btn-primary {
-        @apply inline-flex items-center justify-center px-8 py-3.5 bg-primary text-accent font-black rounded-none transition-all duration-300 hover:bg-primary-dark hover:shadow-lg hover:shadow-primary/30 active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary/50;
+        @apply inline-flex items-center justify-center px-8 py-3.5 bg-primary text-[#0D4E50] font-black rounded-none transition-all duration-300 hover:bg-primary-dark hover:shadow-lg hover:shadow-primary/30 active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary/50 uppercase tracking-widest text-sm;
     }
     .btn-accent {
-        @apply inline-flex items-center justify-center px-8 py-3.5 bg-secondary text-accent font-black rounded-none transition-all duration-300 hover:bg-secondary-light hover:shadow-lg hover:shadow-secondary/30 active:scale-95 focus:outline-none focus:ring-2 focus:ring-secondary/50;
+        @apply inline-flex items-center justify-center px-8 py-3.5 bg-secondary text-white font-black rounded-none transition-all duration-300 hover:opacity-90 hover:shadow-lg hover:shadow-secondary/30 active:scale-95 focus:outline-none focus:ring-2 focus:ring-secondary/50 uppercase tracking-widest text-sm;
     }
     .btn-secondary {
-        @apply inline-flex items-center justify-center px-8 py-3.5 bg-secondary text-accent font-bold rounded-none transition-all duration-300 hover:bg-secondary-light hover:shadow-lg hover:shadow-secondary/30 active:scale-95 focus:outline-none focus:ring-2 focus:ring-secondary/50;
+        @apply inline-flex items-center justify-center px-8 py-3.5 bg-secondary text-white font-black rounded-none transition-all duration-300 hover:opacity-90 hover:shadow-lg hover:shadow-secondary/30 active:scale-95 focus:outline-none focus:ring-2 focus:ring-secondary/50 uppercase tracking-widest text-sm;
     }
     .btn-outline {
-        @apply inline-flex items-center justify-center px-8 py-3.5 border-2 border-slate-200 text-slate-700 font-bold rounded-none transition-all duration-300 hover:border-accent hover:text-accent hover:bg-slate-50 active:scale-95 focus:outline-none focus:ring-2 focus:ring-accent/50;
+        @apply inline-flex items-center justify-center px-8 py-3.5 border-2 border-slate-200 text-slate-700 font-black rounded-none transition-all duration-300 hover:border-accent hover:text-accent hover:bg-slate-50 active:scale-95 focus:outline-none focus:ring-2 focus:ring-accent/50 uppercase tracking-widest text-sm;
     }
     .heading-1 {
-        @apply font-display text-5xl md:text-6xl lg:text-7xl tracking-wide text-accent leading-tight uppercase drop-shadow-sm;
+        @apply font-sans text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-accent leading-tight uppercase;
     }
     .heading-2 {
-        @apply font-display text-3xl md:text-4xl lg:text-5xl tracking-wide text-accent leading-tight uppercase drop-shadow-sm;
+        @apply font-sans text-3xl md:text-4xl lg:text-5xl font-black tracking-tight text-accent leading-tight uppercase;
     }
     .subheading {
         @apply text-lg md:text-xl text-slate-500 leading-relaxed font-medium;
     }
     .glass-card {
-        @apply bg-white border border-slate-100 shadow-sm rounded-none hover:shadow-xl hover:border-secondary/20 transition-all duration-500;
+        @apply bg-white border border-slate-100 shadow-xl rounded-none hover:shadow-2xl hover:border-secondary/20 transition-all duration-500;
     }
     .glass-card-dark {
-        @apply bg-secondary border border-white/5 shadow-2xl rounded-none text-white hover:border-primary/30 transition-all duration-500;
+        @apply bg-secondary border border-white/10 shadow-xl rounded-none text-white hover:border-primary/30 transition-all duration-500;
     }
 }

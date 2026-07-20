@@ -1,4 +1,4 @@
-<footer class="bg-secondary text-white mt-auto pt-20 pb-10 relative z-20 overflow-hidden border-t-4 border-primary">
+<footer class="bg-secondary-dark text-white mt-auto pt-20 pb-10 relative z-20 overflow-hidden border-t-4 border-primary">
     <!-- Geometric Accent -->
     <div class="absolute bottom-0 right-0 w-64 h-64 bg-primary/10 transform rotate-45 translate-x-1/2 translate-y-1/2 pointer-events-none"></div>
     <div class="absolute top-0 left-0 w-32 h-32 border-4 border-primary/20 transform -rotate-12 -translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
@@ -10,7 +10,7 @@
                 <img src="/logo-white.png" alt="PASSolving Logo" class="h-12 w-auto transform group-hover:rotate-12 transition-transform">
             </a>
             <div class="flex gap-4">
-                <a href="#" class="w-10 h-10 border border-white/20 flex items-center justify-center hover:bg-primary hover:text-accent hover:border-primary transition-colors text-white">
+                <a href="#" class="w-10 h-10 border border-white/20 flex items-center justify-center hover:bg-primary hover:text-[#0D4E50] hover:border-primary transition-colors text-white">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                 </a>
             </div>

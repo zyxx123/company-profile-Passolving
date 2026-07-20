@@ -35,8 +35,8 @@
                     </a>
                 @endforeach
                 <!-- CTA Button -->
-                <a href="/contact" class="bg-primary text-accent px-8 py-3 text-xs font-black uppercase tracking-widest hover:bg-white transition-colors relative overflow-hidden group">
-                    <span class="relative z-10">Contact</span>
+                <a href="/contact" class="bg-primary text-[#0D4E50] px-8 py-3 text-sm font-black uppercase tracking-widest hover:bg-white transition-all duration-300 relative overflow-hidden group">
+                    <span class="relative z-10">CONTACT</span>
                     <!-- Diagonal hover effect -->
                     <div class="absolute inset-0 bg-white transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out z-0"></div>
                 </a>
@@ -101,7 +101,7 @@
             </div>
 
             <div class="pt-4">
-                <a href="/contact" class="block w-full bg-primary text-accent text-center px-6 py-4 text-xs font-black uppercase tracking-widest">
+                <a href="/contact" class="block w-full bg-primary text-[#0D4E50] text-center px-6 py-4 text-xs font-black uppercase tracking-widest">
                     Contact Us
                 </a>
             </div>
