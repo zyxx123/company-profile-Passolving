@@ -25,7 +25,7 @@
                     <p class="text-slate-400 font-medium mb-10 max-w-md" data-aos="fade-up" data-aos-duration="800" data-aos-delay="250">
                         {{ __('Pioneer in Agility Assessment & National Soft Skill Certification. We work when leadership is ready to face uncomfortable realities.') }}
                     </p>
-                    <a href="/contact" class="inline-block bg-primary text-slate-900 font-black text-sm uppercase tracking-widest px-8 py-4 hover:bg-white transition-colors relative overflow-hidden group" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+                    <a href="/contact" class="inline-block bg-primary text-accent font-black text-sm uppercase tracking-widest px-8 py-4 hover:bg-white transition-colors relative overflow-hidden group" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
                         <span class="relative z-10">{{ __('Discover More') }}</span>
                         <div class="absolute inset-0 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left z-0"></div>
                     </a>
@@ -63,19 +63,19 @@
                         <!-- Floating Yellow Stat Box -->
                         <div class="relative -mt-12 sm:-mt-16 lg:mt-0 z-10 lg:absolute lg:-bottom-10 lg:left-10 bg-primary p-6 lg:p-8 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-6 lg:gap-12 shadow-2xl w-full lg:w-max mx-auto w-[90%] sm:w-full">
                             <div class="flex items-center gap-4">
-                                <svg class="w-12 h-12 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                <svg class="w-12 h-12 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                                 <div>
-                                    <div class="text-3xl font-black text-secondary">10<span class="text-white">+</span></div>
-                                    <div class="text-xs font-bold uppercase tracking-widest text-secondary">{{ __('Years Experience') }}</div>
+                                    <div class="text-3xl font-black text-accent">10<span class="text-white">+</span></div>
+                                    <div class="text-xs font-bold uppercase tracking-widest text-accent">{{ __('Years Experience') }}</div>
                                 </div>
                             </div>
                             <div class="hidden sm:block w-px h-16 bg-secondary/20"></div>
                             <div class="sm:hidden w-3/4 h-px bg-secondary/20"></div>
                             <div class="flex items-center gap-4">
-                                <svg class="w-12 h-12 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                                <svg class="w-12 h-12 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
                                 <div>
-                                    <div class="text-3xl font-black text-secondary">2K<span class="text-white">+</span></div>
-                                    <div class="text-xs font-bold uppercase tracking-widest text-secondary">{{ __('Projects Done') }}</div>
+                                    <div class="text-3xl font-black text-accent">2K<span class="text-white">+</span></div>
+                                    <div class="text-xs font-bold uppercase tracking-widest text-accent">{{ __('Projects Done') }}</div>
                                 </div>
                             </div>
                         </div>
@@ -87,7 +87,7 @@
                             <div class="w-4 h-4 bg-primary transform rotate-45"></div>
                             <span class="text-xs font-bold uppercase tracking-widest text-slate-400">{{ __('About Agency') }}</span>
                         </div>
-                        <h2 class="text-3xl md:text-4xl lg:text-5xl font-black uppercase text-secondary mb-6 leading-tight">
+                        <h2 class="text-3xl md:text-4xl lg:text-5xl font-black uppercase text-accent mb-6 leading-tight">
                             {!! __('Ahead Of<br/>The Curve') !!}
                         </h2>
                         <p class="text-slate-500 mb-8 font-medium leading-relaxed">
@@ -99,21 +99,21 @@
                                 <div class="w-12 h-12 bg-secondary rounded-none flex items-center justify-center text-primary mb-4 transform rotate-45">
                                     <svg class="w-6 h-6 -rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
                                 </div>
-                                <h4 class="font-black text-secondary uppercase text-sm mb-2">{{ __('Agile Consulting') }}</h4>
+                                <h4 class="font-black text-accent uppercase text-sm mb-2">{{ __('Agile Consulting') }}</h4>
                                 <p class="text-slate-400 text-sm">{{ __('Transformasi strategis untuk organisasi yang adaptif dan tangguh.') }}</p>
                             </div>
                             <div>
                                 <div class="w-12 h-12 bg-secondary rounded-none flex items-center justify-center text-primary mb-4 transform rotate-45">
                                     <svg class="w-6 h-6 -rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
                                 </div>
-                                <h4 class="font-black text-secondary uppercase text-sm mb-2">{{ __('BNSP Certified Training') }}</h4>
+                                <h4 class="font-black text-accent uppercase text-sm mb-2">{{ __('BNSP Certified Training') }}</h4>
                                 <p class="text-slate-400 text-sm">{{ __('Program sertifikasi soft skill nasional (Problem Solving, Leadership, Communication).') }}</p>
                             </div>
                         </div>
 
                         <!-- Progress Bar -->
                         <div class="mb-10">
-                            <div class="flex justify-between text-xs font-black uppercase text-secondary mb-2">
+                            <div class="flex justify-between text-xs font-black uppercase text-accent mb-2">
                                 <span>{{ __('Business Transformation') }}</span>
                                 <span>95%</span>
                             </div>
@@ -122,7 +122,7 @@
                             </div>
                         </div>
 
-                        <a href="/about" class="inline-block bg-primary text-slate-900 font-black text-sm uppercase tracking-widest px-8 py-4 hover:bg-secondary hover:text-white transition-colors">
+                        <a href="/about" class="inline-block bg-primary text-accent font-black text-sm uppercase tracking-widest px-8 py-4 hover:bg-secondary hover:text-white transition-colors">
                             {{ __('Discover More') }}
                         </a>
                     </div>
@@ -204,13 +204,13 @@
                 <!-- Set 1 -->
                 <div class="flex items-center gap-8 md:gap-16 px-4 md:px-8 w-max shrink-0">
                     @foreach($partners as $partner)
-                        <span class="text-sm md:text-base font-black tracking-widest uppercase text-slate-300 hover:text-secondary transition-colors whitespace-nowrap">{{ $partner }}</span>
+                        <span class="text-sm md:text-base font-black tracking-widest uppercase text-slate-300 hover:text-accent transition-colors whitespace-nowrap">{{ $partner }}</span>
                     @endforeach
                 </div>
                 <!-- Set 2 for seamless loop -->
                 <div class="flex items-center gap-8 md:gap-16 px-4 md:px-8 w-max shrink-0">
                     @foreach($partners as $partner)
-                        <span class="text-sm md:text-base font-black tracking-widest uppercase text-slate-300 hover:text-secondary transition-colors whitespace-nowrap">{{ $partner }}</span>
+                        <span class="text-sm md:text-base font-black tracking-widest uppercase text-slate-300 hover:text-accent transition-colors whitespace-nowrap">{{ $partner }}</span>
                     @endforeach
                 </div>
             </div>
@@ -226,7 +226,7 @@
                         <div class="w-4 h-4 bg-primary transform rotate-45"></div>
                         <span class="text-xs font-bold uppercase tracking-widest text-slate-400">{{ __('Our Services') }}</span>
                     </div>
-                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-black uppercase text-secondary">{{ __('What We Offer') }}</h2>
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-black uppercase text-accent">{{ __('What We Offer') }}</h2>
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0 max-w-6xl mx-auto shadow-2xl relative z-10">
@@ -246,7 +246,7 @@
                                     <path stroke-linecap="square" stroke-linejoin="miter" d="{{ $svc['icon'] }}"></path>
                                 </svg>
                             </div>
-                            <h3 class="text-xl font-black uppercase mb-4 {{ $svc['highlight'] ? 'text-white' : 'text-secondary group-hover:text-white' }}">{{ $svc['title'] }}</h3>
+                            <h3 class="text-xl font-black uppercase mb-4 {{ $svc['highlight'] ? 'text-white' : 'text-accent group-hover:text-white' }}">{{ $svc['title'] }}</h3>
                             <p class="text-sm leading-relaxed {{ $svc['highlight'] ? 'text-slate-400' : 'text-slate-500 group-hover:text-slate-400' }}">
                                 {{ $svc['desc'] }}
                             </p>
@@ -256,7 +256,7 @@
                 </div>
                 
                 <div class="text-center mt-12 relative z-20">
-                    <p class="text-xs font-bold uppercase tracking-widest text-slate-500">{{ __('Layanan transformasi organisasi yang dirancang khusus untuk bisnis Anda.') }} <a href="/services" class="text-secondary hover:text-primary border-b border-secondary hover:border-primary pb-1 ml-2">{{ __('Temukan Solusi Anda') }}</a></p>
+                    <p class="text-xs font-bold uppercase tracking-widest text-slate-500">{{ __('Layanan transformasi organisasi yang dirancang khusus untuk bisnis Anda.') }} <a href="/services" class="text-accent hover:text-primary border-b border-secondary hover:border-primary pb-1 ml-2">{{ __('Temukan Solusi Anda') }}</a></p>
                 </div>
             </div>
             
@@ -273,7 +273,7 @@
                     <h2 class="text-3xl md:text-4xl lg:text-5xl font-black uppercase text-white w-full md:w-2/3 leading-tight" data-aos="fade-right" data-aos-duration="800">
                         {!! __('Grow With Community &<br/>Experience Endless Possibilities') !!}
                     </h2>
-                    <a href="/about" class="mt-8 md:mt-0 bg-primary text-slate-900 px-8 py-4 text-xs font-black uppercase tracking-widest hover:bg-white transition-colors">
+                    <a href="/about" class="mt-8 md:mt-0 bg-primary text-accent px-8 py-4 text-xs font-black uppercase tracking-widest hover:bg-white transition-colors">
                         {{ __('Discover More') }}
                     </a>
                 </div>
@@ -293,28 +293,28 @@
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-0 shadow-2xl" data-aos="fade-up" data-aos-duration="800">
                     <div class="bg-white p-10 border-r border-slate-100 flex gap-6 hover:bg-slate-50 transition-colors">
                         <div class="w-10 h-10 bg-primary rounded-none flex items-center justify-center shrink-0">
-                            <svg class="w-5 h-5 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                            <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
                         </div>
                         <div>
-                            <h4 class="font-black text-secondary uppercase text-sm mb-2">{{ __('Pendekatan Berbasis Sistem') }}</h4>
+                            <h4 class="font-black text-accent uppercase text-sm mb-2">{{ __('Pendekatan Berbasis Sistem') }}</h4>
                             <p class="text-slate-500 text-xs leading-relaxed">{{ __('Menggunakan Empathy–System–Result Framework untuk memastikan setiap intervensi punya jalur hasil yang jelas.') }}</p>
                         </div>
                     </div>
                     <div class="bg-white p-10 border-r border-slate-100 flex gap-6 hover:bg-slate-50 transition-colors">
                         <div class="w-10 h-10 bg-primary rounded-none flex items-center justify-center shrink-0">
-                            <svg class="w-5 h-5 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                            <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
                         </div>
                         <div>
-                            <h4 class="font-black text-secondary uppercase text-sm mb-2">{{ __('Lintas Industri') }}</h4>
+                            <h4 class="font-black text-accent uppercase text-sm mb-2">{{ __('Lintas Industri') }}</h4>
                             <p class="text-slate-500 text-xs leading-relaxed">{{ __('Berkolaborasi dengan Pertamina, BAPPENAS, Kemenkes, UNDP, OJK, BNI, dan lembaga nasional lainnya.') }}</p>
                         </div>
                     </div>
                     <div class="bg-white p-10 flex gap-6 hover:bg-slate-50 transition-colors">
                         <div class="w-10 h-10 bg-primary rounded-none flex items-center justify-center shrink-0">
-                            <svg class="w-5 h-5 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                            <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
                         </div>
                         <div>
-                            <h4 class="font-black text-secondary uppercase text-sm mb-2">{{ __('Humanis & Adaptif') }}</h4>
+                            <h4 class="font-black text-accent uppercase text-sm mb-2">{{ __('Humanis & Adaptif') }}</h4>
                             <p class="text-slate-500 text-xs leading-relaxed">{{ __('Transformasi berhasil hanya jika manusia di dalamnya ikut berubah. Program kami membangun sistem, bukan sekedar dihafal.') }}</p>
                         </div>
                     </div>
@@ -332,7 +332,7 @@
                         <div class="w-4 h-4 bg-primary transform rotate-45"></div>
                         <span class="text-xs font-bold uppercase tracking-widest text-slate-400">{{ __('Our Completed Works') }}</span>
                     </div>
-                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-black uppercase text-secondary">{{ __('Recent Client Projects') }}</h2>
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-black uppercase text-accent">{{ __('Recent Client Projects') }}</h2>
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -351,7 +351,7 @@
                             <p class="text-primary text-xs font-bold uppercase tracking-widest mb-2">{{ $project['client'] }}</p>
                             <h4 class="text-white font-black uppercase text-sm leading-tight">{{ $project['title'] }}</h4>
                         </div>
-                        <div class="absolute bottom-20 right-6 w-10 h-10 bg-primary text-slate-900 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-4 group-hover:translate-y-0">
+                        <div class="absolute bottom-20 right-6 w-10 h-10 bg-primary text-accent flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-4 group-hover:translate-y-0">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                         </div>
                     </div>
@@ -369,7 +369,7 @@
                     <div class="w-full md:w-1/3 relative flex justify-center">
                         <img src="{{ asset('images/founder.png') }}" class="w-48 h-48 rounded-full object-cover" alt="Founder">
                         <!-- Quote badge -->
-                        <div class="absolute top-0 right-10 w-12 h-12 bg-primary rounded-full flex items-center justify-center text-slate-900">
+                        <div class="absolute top-0 right-10 w-12 h-12 bg-primary rounded-full flex items-center justify-center text-accent">
                             <span class="text-3xl font-serif font-black leading-none pt-2">"</span>
                         </div>
                     </div>
@@ -379,7 +379,7 @@
                             {{ __('"Transformasi tidak akan berhasil jika hanya berfokus pada sistem tanpa menyentuh aspek manusianya. Kami percaya bahwa perubahan sejati dimulai saat kepemimpinan siap menghadapi realitas yang sesungguhnya. Melalui pendekatan Agility, PASSolving hadir bukan sekadar sebagai penyedia pelatihan, melainkan mitra strategis untuk memastikan setiap intervensi memberikan dampak nyata yang berkelanjutan bagi organisasi Anda."') }}
                         </p>
                         <div>
-                            <h4 class="font-black text-secondary text-base md:text-lg">{{ __('Dr. Ir. Puti Retno Ali, MBA. ASEAN Eng.') }}</h4>
+                            <h4 class="font-black text-accent text-base md:text-lg">{{ __('Dr. Ir. Puti Retno Ali, MBA. ASEAN Eng.') }}</h4>
                             <p class="text-sm text-slate-500 font-bold mt-1">{{ __('Business Coach & Founder PASSolving') }}</p>
                         </div>
                     </div>
@@ -396,8 +396,8 @@
                     <!-- Left Text -->
                     <div class="relative z-10 w-full md:w-2/3">
                         <h2 class="text-3xl md:text-4xl lg:text-6xl font-black uppercase leading-[1.1]">
-                            <span class="text-secondary">{!! __('Let\'s Start Working Together.') !!}</span><br/>
-                            <span class="text-secondary/60">{!! __('Get In Touch With Us!') !!}</span>
+                            <span class="text-accent">{!! __('Let\'s Start Working Together.') !!}</span><br/>
+                            <span class="text-accent/60">{!! __('Get In Touch With Us!') !!}</span>
                         </h2>
                     </div>
                     
@@ -405,7 +405,7 @@
                     <div class="absolute right-0 top-0 h-full w-full md:w-1/2 bg-secondary transform skew-x-[-20deg] origin-bottom translate-x-32 z-0 hidden md:block"></div>
                     
                     <div class="relative z-10 w-full md:w-1/3 flex justify-start md:justify-end mt-8 md:mt-0">
-                        <a href="/contact" class="w-16 h-16 border-2 border-white flex items-center justify-center text-white hover:bg-white hover:text-secondary transition-colors group">
+                        <a href="/contact" class="w-16 h-16 border-2 border-white flex items-center justify-center text-white hover:bg-white hover:text-accent transition-colors group">
                             <svg class="w-6 h-6 transform rotate-45 group-hover:rotate-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                         </a>
                     </div>

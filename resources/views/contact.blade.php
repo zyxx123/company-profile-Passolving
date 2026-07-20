@@ -17,7 +17,7 @@
                     <div class="absolute top-0 left-0 w-2 h-full bg-primary"></div>
                     
                     <div class="mb-8 md:mb-12">
-                        <h2 class="text-2xl md:text-3xl lg:text-4xl font-black text-secondary mb-3 md:mb-4 tracking-tight uppercase">{{ __('Solving What Matters') }}</h2>
+                        <h2 class="text-2xl md:text-3xl lg:text-4xl font-black text-accent mb-3 md:mb-4 tracking-tight uppercase">{{ __('Solving What Matters') }}</h2>
                         <p class="text-slate-500 text-sm md:text-lg font-medium border-l-4 border-secondary/20 pl-4">{{ __('Hubungi kami untuk sesi Discovery, rancangan program kontekstual, hingga uji kelayakan dampak awal.') }}</p>
                     </div>
                     
@@ -43,7 +43,7 @@
                             <!-- Phone -->
                             <div class="flex items-start gap-6 group/item cursor-pointer">
                                 <div class="w-16 h-16 bg-white/5 flex items-center justify-center shrink-0 border border-white/20 group-hover/item:bg-primary group-hover/item:border-primary transition-colors duration-300 transform group-hover/item:rotate-12">
-                                    <svg class="w-7 h-7 text-white group-hover/item:text-secondary transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                                    <svg class="w-7 h-7 text-white group-hover/item:text-accent transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
                                 </div>
                                 <div>
                                     <h4 class="text-sm uppercase tracking-widest font-black text-slate-400 mb-1 group-hover/item:text-primary transition-colors">{{ __('WhatsApp') }}</h4>
@@ -56,7 +56,7 @@
                             <!-- Email -->
                             <div class="flex items-start gap-6 group/item cursor-pointer">
                                 <div class="w-16 h-16 bg-white/5 flex items-center justify-center shrink-0 border border-white/20 group-hover/item:bg-primary group-hover/item:border-primary transition-colors duration-300 transform group-hover/item:rotate-12">
-                                    <svg class="w-7 h-7 text-white group-hover/item:text-secondary transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                                    <svg class="w-7 h-7 text-white group-hover/item:text-accent transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                                 </div>
                                 <div>
                                     <h4 class="text-sm uppercase tracking-widest font-black text-slate-400 mb-1 group-hover/item:text-primary transition-colors">{{ __('Email') }}</h4>
@@ -69,7 +69,7 @@
                             <!-- Instagram -->
                             <div class="flex items-start gap-6 group/item cursor-pointer">
                                 <div class="w-16 h-16 bg-white/5 flex items-center justify-center shrink-0 border border-white/20 group-hover/item:bg-primary group-hover/item:border-primary transition-colors duration-300 transform group-hover/item:rotate-12">
-                                    <svg class="w-7 h-7 text-white group-hover/item:text-secondary transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="0" ry="0"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
+                                    <svg class="w-7 h-7 text-white group-hover/item:text-accent transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="0" ry="0"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
                                 </div>
                                 <div>
                                     <h4 class="text-sm uppercase tracking-widest font-black text-slate-400 mb-1 group-hover/item:text-primary transition-colors">{{ __('Instagram') }}</h4>

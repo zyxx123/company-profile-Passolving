@@ -1,14 +1,14 @@
 <div>
     @if ($successMessage)
         <div class="mb-8 p-4 bg-secondary/10 border-2 border-secondary flex items-start gap-3">
-            <svg class="w-6 h-6 text-secondary shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            <p class="text-secondary font-bold">{{ $successMessage }}</p>
+            <svg class="w-6 h-6 text-accent shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            <p class="text-accent font-bold">{{ $successMessage }}</p>
         </div>
     @endif
 
     <form wire:submit="submit" class="space-y-6">
         <div class="space-y-2">
-            <label class="block text-xs font-black uppercase tracking-widest text-secondary">{{ __('Full Name') }}</label>
+            <label class="block text-xs font-black uppercase tracking-widest text-accent">{{ __('Full Name') }}</label>
             <input 
                 type="text" 
                 wire:model="name" 
@@ -19,7 +19,7 @@
         </div>
 
         <div class="space-y-2">
-            <label class="block text-xs font-black uppercase tracking-widest text-secondary">{{ __('Corporate Email') }}</label>
+            <label class="block text-xs font-black uppercase tracking-widest text-accent">{{ __('Corporate Email') }}</label>
             <input 
                 type="email" 
                 wire:model="email" 
@@ -30,7 +30,7 @@
         </div>
 
         <div class="space-y-2">
-            <label class="block text-xs font-black uppercase tracking-widest text-secondary">{{ __('Message') }}</label>
+            <label class="block text-xs font-black uppercase tracking-widest text-accent">{{ __('Message') }}</label>
             <textarea 
                 rows="5" 
                 wire:model="message" 
@@ -42,7 +42,7 @@
 
         <button 
             type="submit" 
-            class="w-full bg-secondary text-white px-8 py-4 font-black uppercase tracking-widest text-sm flex items-center justify-center gap-2 group hover:bg-primary hover:text-secondary transition-colors duration-300 mt-4"
+            class="w-full bg-secondary text-white px-8 py-4 font-black uppercase tracking-widest text-sm flex items-center justify-center gap-2 group hover:bg-primary hover:text-accent transition-colors duration-300 mt-4"
         >
             <span wire:loading.remove wire:target="submit">{{ __('Submit Inquiry') }}</span>
             <svg wire:loading.remove wire:target="submit" class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>

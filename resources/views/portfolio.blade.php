@@ -72,12 +72,12 @@
                             <div class="p-6 md:p-8 lg:p-12 flex flex-col gap-4 md:gap-6 relative z-10">
                                 <!-- Client Badge -->
                                 <div>
-                                    <span class="inline-block px-4 py-1 bg-secondary text-white font-black text-xs uppercase tracking-widest mb-4 group-hover:bg-primary group-hover:text-secondary transition-colors">{{ __($study['client']) }}</span>
+                                    <span class="inline-block px-4 py-1 bg-secondary text-white font-black text-xs uppercase tracking-widest mb-4 group-hover:bg-primary group-hover:text-accent transition-colors">{{ __($study['client']) }}</span>
                                 </div>
                                 
                                 <!-- Content -->
                                 <div>
-                                    <h2 class="text-xl sm:text-2xl md:text-3xl font-black text-secondary mb-4 md:mb-8 group-hover:text-primary transition-colors duration-300">
+                                    <h2 class="text-xl sm:text-2xl md:text-3xl font-black text-accent mb-4 md:mb-8 group-hover:text-primary transition-colors duration-300">
                                         {{ __($study['title']) }}
                                     </h2>
                                     
@@ -90,7 +90,7 @@
                                             <h5 class="text-xs uppercase tracking-widest font-black text-slate-800 mb-2">{{ __('PASS Role') }}</h5>
                                             <p class="text-sm text-slate-600 font-medium leading-relaxed">{{ __($study['role']) }}</p>
                                         </div>
-                                        <div class="bg-secondary p-4 md:p-6 text-white group-hover:bg-primary group-hover:text-secondary transition-colors duration-300 relative overflow-hidden">
+                                        <div class="bg-secondary p-4 md:p-6 text-white group-hover:bg-primary group-hover:text-accent transition-colors duration-300 relative overflow-hidden">
                                             <div class="absolute -right-4 -bottom-4 w-16 h-16 bg-white/10 transform rotate-45 pointer-events-none"></div>
                                             <h5 class="text-xs uppercase tracking-widest font-black mb-2 opacity-80">{{ __('Focus & Result') }}</h5>
                                             <p class="text-sm font-bold leading-relaxed">{{ __($study['focus']) }}</p>
