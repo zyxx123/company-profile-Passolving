@@ -4,16 +4,15 @@
         <!-- ==============================================
              1. HERO SECTION (Navy with Sharp Mustard Cuts)
              ============================================== -->
-        <section class="relative min-h-[70vh] md:min-h-[90vh] bg-secondary text-white flex items-center pt-16 md:pt-20 overflow-hidden">
+        <section class="relative min-h-[70vh] md:min-h-[90vh] bg-secondary text-white flex items-center pt-16 md:pt-20">
             <!-- Geometric Background Shapes -->
             <div class="absolute top-0 right-0 w-full h-full pointer-events-none overflow-hidden z-0">
-                <!-- Large Top Right Pine Green Triangle -->
-                <div class="absolute -top-20 -right-20 w-[600px] h-[600px] bg-secondary-dark transform rotate-45 translate-x-1/4 -translate-y-1/4 opacity-90"></div>
-                <!-- Darker Triangle Overlapping it -->
-                <div class="absolute -top-10 -right-10 w-[600px] h-[600px] bg-secondary-dark transform rotate-45 translate-x-1/3 -translate-y-1/4 opacity-70"></div>
-                <!-- Bottom Left Pine Green Sharp Line -->
-                <div class="absolute -bottom-40 -left-20 w-[800px] h-[200px] bg-secondary-dark transform -rotate-45 opacity-90"></div>
+                <!-- Large Right Pine Green Diagonal Background -->
+                <div class="absolute top-0 right-0 w-[55%] h-full bg-secondary-dark" style="clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);"></div>
             </div>
+            
+            <!-- Bottom Edge Diamond Decoration -->
+            <div class="absolute -bottom-6 left-1/3 md:left-[30%] w-12 h-12 bg-secondary-dark transform rotate-45 z-20"></div>
 
             <div class="container mx-auto px-6 max-w-7xl relative z-10 flex flex-col lg:flex-row items-center">
                 <!-- Left Content -->
@@ -44,9 +43,6 @@
              2. ABOUT / SOLUTIONS SECTION (White)
              ============================================== -->
         <section class="py-16 md:py-32 bg-white relative">
-            <!-- Small triangle pointing down from hero -->
-            <div class="absolute top-0 left-1/4 w-12 h-12 bg-secondary transform rotate-45 -translate-y-1/2"></div>
-            
             <div class="container mx-auto px-6 max-w-7xl">
                 <div class="flex flex-col lg:flex-row gap-16 items-center">
                     
