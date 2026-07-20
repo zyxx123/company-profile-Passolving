@@ -255,13 +255,13 @@
                     
                 </div>
                 
-                <div class="text-center mt-12">
+                <div class="text-center mt-12 relative z-20">
                     <p class="text-xs font-bold uppercase tracking-widest text-slate-500">{{ __('Layanan transformasi organisasi yang dirancang khusus untuk bisnis Anda.') }} <a href="/services" class="text-secondary hover:text-primary border-b border-secondary hover:border-primary pb-1 ml-2">{{ __('Temukan Solusi Anda') }}</a></p>
                 </div>
             </div>
             
             <!-- Diagonal background element -->
-            <div class="absolute bottom-0 right-0 w-1/3 h-[400px] bg-slate-200/50 transform -skew-y-12 translate-y-1/2 -z-0"></div>
+            <div class="absolute bottom-0 right-0 w-1/3 h-[400px] bg-slate-200/50 transform -skew-y-12 translate-y-1/2 z-0 pointer-events-none"></div>
         </section>
 
         <!-- ==============================================
