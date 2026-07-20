@@ -368,7 +368,7 @@
             <div class="container mx-auto px-6 max-w-5xl">
                 <div class="flex flex-col md:flex-row items-center gap-16" data-aos="fade-up" data-aos-duration="800">
                     <div class="w-full md:w-1/3 relative flex justify-center">
-                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" class="w-48 h-48 rounded-full object-cover grayscale" alt="Client">
+                        <img src="{{ asset('images/founder.png') }}" class="w-48 h-48 rounded-full object-cover" alt="Founder">
                         <!-- Quote badge -->
                         <div class="absolute top-0 right-10 w-12 h-12 bg-primary rounded-full flex items-center justify-center text-secondary">
                             <span class="text-3xl font-serif font-black leading-none pt-2">"</span>
@@ -384,8 +384,8 @@
                             {{ __('"Apa yang harus dilakukan, langsung dipraktekkan! Agile-Design Thinking dari PASS berbeda dari yang biasanya. Tim PASS berisi profesional berpengalaman dengan solusi implementatif yang langsung berdampak."') }}
                         </p>
                         <div>
-                            <h4 class="font-black text-secondary uppercase tracking-widest text-sm">{{ __('Manager Retail Chain') }}</h4>
-                            <p class="text-xs text-slate-400 font-bold uppercase tracking-widest">{{ __('Indonesia') }}</p>
+                            <h4 class="font-black text-secondary uppercase tracking-widest text-sm">{{ __('Business Coach & Founder') }}</h4>
+                            <p class="text-xs text-slate-400 font-bold uppercase tracking-widest">{{ __('PASSolving') }}</p>
                         </div>
                     </div>
                 </div>
