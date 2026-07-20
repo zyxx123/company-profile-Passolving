@@ -34,10 +34,10 @@
             <div>
                 <h4 class="text-xs font-black mb-8 uppercase tracking-widest text-white">{{ __('Support') }}</h4>
                 <ul class="space-y-4 font-bold text-slate-400 text-sm">
-                    <li><a href="#" class="hover:text-primary transition-colors">{{ __('Help Center') }}</a></li>
-                    <li><a href="#" class="hover:text-primary transition-colors">{{ __('FAQ') }}</a></li>
-                    <li><a href="#" class="hover:text-primary transition-colors">{{ __('Privacy Policy') }}</a></li>
-                    <li><a href="#" class="hover:text-primary transition-colors">{{ __('Terms of Service') }}</a></li>
+                    <li><a href="/contact" class="hover:text-primary transition-colors">{{ __('Help Center') }}</a></li>
+                    <li><a href="/contact" class="hover:text-primary transition-colors">{{ __('FAQ') }}</a></li>
+                    <li><a href="/" class="hover:text-primary transition-colors">{{ __('Privacy Policy') }}</a></li>
+                    <li><a href="/" class="hover:text-primary transition-colors">{{ __('Terms of Service') }}</a></li>
                 </ul>
             </div>
 
@@ -45,9 +45,8 @@
             <div>
                 <h4 class="text-xs font-black mb-8 uppercase tracking-widest text-white">{{ __('Capabilities') }}</h4>
                 <ul class="space-y-4 font-bold text-slate-400 text-sm">
-                    <li><a href="#" class="hover:text-primary transition-colors">{{ __('Agility Assessment') }}</a></li>
-                    <li><a href="#" class="hover:text-primary transition-colors">{{ __('LEGO® Serious Play®') }}</a></li>
-                    <li><a href="#" class="hover:text-primary transition-colors">{{ __('Soft Skill Cert.') }}</a></li>
+                    <li><a href="/services" class="hover:text-primary transition-colors">{{ __('Agility Assessment') }}</a></li>
+                    <li><a href="/services" class="hover:text-primary transition-colors">{{ __('LEGO® Serious Play®') }}</a></li>
                 </ul>
             </div>
 
