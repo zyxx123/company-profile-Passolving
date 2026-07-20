@@ -151,29 +151,7 @@
                 </div>
             </div>
 
-            <!-- Certification -->
-            <div>
-                <div class="bg-primary p-8 md:p-12 lg:p-20 text-secondary text-center shadow-xl border-b-8 border-secondary relative overflow-hidden group" data-aos="fade-up" data-aos-duration="800">
-                    <div class="absolute left-0 top-0 w-32 h-32 bg-white/10 transform rotate-45 -translate-x-1/2 -translate-y-1/2 group-hover:scale-150 transition-transform duration-700"></div>
-                    <h3 class="text-2xl md:text-3xl lg:text-4xl font-black mb-4 md:mb-6 uppercase tracking-widest">{{ __('LSP Softskill Indonesia Kompeten') }}</h3>
-                    <p class="mb-8 md:mb-12 max-w-3xl mx-auto text-sm md:text-lg text-secondary/80 font-bold">{{ __('SKKNI 2020-234 tentang Penetapan Standar Kompetensi Kerja Nasional Indonesia Kategori Pendidikan Bidang Soft skills.') }}</p>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-0 relative z-10 border-t border-l border-secondary/20">
-                        <div class="bg-transparent p-8 border-b border-r border-secondary/20 hover:bg-secondary hover:text-white transition-colors duration-300 group/card">
-                            <h4 class="text-2xl font-black mb-3">{{ __('Skema 1') }}</h4>
-                            <p class="font-bold text-secondary/80 group-hover/card:text-white/80">{{ __('Pemecahan Masalah (Problem Solving)') }}</p>
-                        </div>
-                        <div class="bg-transparent p-8 border-b border-r border-secondary/20 hover:bg-secondary hover:text-white transition-colors duration-300 group/card">
-                            <h4 class="text-2xl font-black mb-3">{{ __('Skema 2') }}</h4>
-                            <p class="font-bold text-secondary/80 group-hover/card:text-white/80">{{ __('Pengembangan Kepemimpinan') }}</p>
-                        </div>
-                        <div class="bg-transparent p-8 border-b border-r border-secondary/20 hover:bg-secondary hover:text-white transition-colors duration-300 group/card">
-                            <h4 class="text-2xl font-black mb-3">{{ __('Skema 3') }}</h4>
-                            <p class="font-bold text-secondary/80 group-hover/card:text-white/80">{{ __('Pengembangan Komunikasi yang Efektif') }}</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
 
         </div>
     </section>
