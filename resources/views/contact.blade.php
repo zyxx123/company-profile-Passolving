@@ -46,9 +46,9 @@
                                     <svg class="w-7 h-7 text-white group-hover/item:text-secondary transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
                                 </div>
                                 <div>
-                                    <h4 class="text-sm uppercase tracking-widest font-black text-slate-400 mb-1 group-hover/item:text-primary transition-colors">{{ __('Phone') }}</h4>
+                                    <h4 class="text-sm uppercase tracking-widest font-black text-slate-400 mb-1 group-hover/item:text-primary transition-colors">{{ __('WhatsApp') }}</h4>
                                     <p class="text-xl font-bold text-white leading-relaxed">
-                                        +62 897 9515 205
+                                        <a href="https://wa.me/628979515205" target="_blank" class="hover:text-primary transition-colors block">+62 897 9515 205</a>
                                     </p>
                                 </div>
                             </div>
@@ -74,7 +74,7 @@
                                 <div>
                                     <h4 class="text-sm uppercase tracking-widest font-black text-slate-400 mb-1 group-hover/item:text-primary transition-colors">{{ __('Instagram') }}</h4>
                                     <p class="text-xl font-bold text-white leading-relaxed">
-                                        @passolving
+                                        <a href="https://www.instagram.com/passolving?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="hover:text-primary transition-colors block">@passolving</a>
                                     </p>
                                 </div>
                             </div>
