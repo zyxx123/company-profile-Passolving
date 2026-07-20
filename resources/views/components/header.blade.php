@@ -1,18 +1,60 @@
 <header 
     x-data="{ scrolled: false, mobileMenuOpen: false }" 
     @scroll.window="scrolled = (window.pageYOffset > 50)"
-    class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b"
-    :class="scrolled ? 'bg-secondary border-white/10 shadow-lg py-4' : 'bg-transparent border-transparent py-6'"
+    class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white shadow-md"
 >
-    <div class="container mx-auto px-6 max-w-7xl">
-        <div class="flex items-center justify-between">
+    <!-- Top Bar (Dark Teal) -->
+    <div class="bg-secondary-dark text-white">
+        <div class="container mx-auto px-6 max-w-7xl flex justify-between items-center h-16 md:h-20 gap-8 text-xs font-bold tracking-wide">
+            
             <!-- Logo -->
-            <a href="/" class="flex items-center gap-3 group">
-                <img src="/logo-white.png" alt="PASSolving Logo" class="h-10 w-auto transform group-hover:-rotate-6 transition-transform">
+            <a href="/" class="flex items-center">
+                <img src="{{ asset('logo-white.png') }}" alt="PASSolving Logo" class="h-8 md:h-12">
             </a>
 
-            <!-- Desktop Navigation -->
-            <nav class="hidden md:flex items-center gap-8">
+            <!-- Right side Desktop -->
+            <div class="hidden md:flex items-center justify-end gap-8 flex-1">
+                <div class="flex items-center gap-2">
+                    <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    <span>info@passolving.com</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                    <span>+62 897 951 5205</span>
+                </div>
+                <a href="/contact" class="bg-primary text-secondary-dark px-6 py-2 rounded-full uppercase tracking-widest hover:bg-primary-dark transition-colors">
+                    CONTACT US
+                </a>
+                
+                <!-- Language Switcher -->
+                <div class="relative" x-data="{ langOpen: false }" @click.away="langOpen = false">
+                    <button @click="langOpen = !langOpen" class="flex items-center gap-1 uppercase hover:text-primary transition-colors focus:outline-none">
+                        <span x-text="'{{ strtoupper(app()->getLocale()) }}'"></span>
+                        <svg class="w-3 h-3 transition-transform duration-200" :class="langOpen ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div x-show="langOpen" x-cloak class="absolute top-full right-0 mt-2 w-20 bg-white text-gray-800 shadow-lg py-1 z-50 rounded">
+                        <a href="/lang/id" class="block px-4 py-2 hover:bg-gray-100 transition-colors {{ app()->getLocale() == 'id' ? 'text-secondary-dark font-black' : '' }}">ID</a>
+                        <a href="/lang/en" class="block px-4 py-2 hover:bg-gray-100 transition-colors {{ app()->getLocale() == 'en' ? 'text-secondary-dark font-black' : '' }}">EN</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button 
+                @click="mobileMenuOpen = !mobileMenuOpen" 
+                class="md:hidden p-2 text-white hover:text-primary transition-colors focus:outline-none"
+            >
+                <svg x-show="!mobileMenuOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                <svg x-show="mobileMenuOpen" x-cloak class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Bottom Bar (White Nav) -->
+    <div class="hidden md:block bg-white border-b border-gray-100">
+        <div class="container mx-auto px-6 max-w-7xl h-14 flex items-center justify-center">
+            <!-- Desktop Navigation (Centered) -->
+            <nav class="flex items-center justify-center flex-1 gap-12">
                 @php
                     $links = [
                         ['name' => 'Home', 'url' => '/'],
@@ -25,44 +67,12 @@
                 @foreach($links as $link)
                     <a 
                         href="{{ $link['url'] }}" 
-                        class="text-xs font-bold uppercase tracking-widest transition-colors hover:text-primary relative group pb-1"
+                        class="text-[11px] font-black uppercase tracking-[0.2em] transition-colors hover:text-secondary {{ request()->is(ltrim($link['url'], '/')) || (request()->is('/') && $link['url'] == '/') ? 'text-secondary' : 'text-gray-800' }}"
                     >
-                        <span class="{{ request()->is(ltrim($link['url'], '/')) || (request()->is('/') && $link['url'] == '/') ? 'text-primary' : 'text-slate-300' }}">
-                            {{ $link['name'] }}
-                        </span>
-                        <!-- Sharp underline effect -->
-                        <span class="absolute bottom-0 left-0 w-full h-[2px] bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left {{ request()->is(ltrim($link['url'], '/')) || (request()->is('/') && $link['url'] == '/') ? 'scale-x-100' : '' }}"></span>
+                        {{ $link['name'] }}
                     </a>
                 @endforeach
-                <!-- CTA Button -->
-                <a href="/contact" class="bg-primary text-[#0D4E50] px-8 py-3 text-sm font-black uppercase tracking-widest hover:bg-white transition-all duration-300 relative overflow-hidden group">
-                    <span class="relative z-10">CONTACT</span>
-                    <!-- Diagonal hover effect -->
-                    <div class="absolute inset-0 bg-white transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out z-0"></div>
-                </a>
-                
-                <!-- Language Switcher -->
-                <div class="relative ml-2" x-data="{ langOpen: false }" @click.away="langOpen = false">
-                    <button @click="langOpen = !langOpen" class="flex items-center gap-1 text-xs font-bold tracking-widest uppercase text-slate-300 hover:text-primary transition-colors focus:outline-none">
-                        <span x-text="'{{ strtoupper(app()->getLocale()) }}'"></span>
-                        <svg class="w-4 h-4 transition-transform duration-200" :class="langOpen ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </button>
-                    
-                    <div x-show="langOpen" x-cloak x-transition.opacity.duration.200ms class="absolute top-full right-0 mt-6 w-20 bg-secondary border border-white/10 shadow-2xl py-2 z-50">
-                        <a href="/lang/id" class="block px-4 py-2 text-xs font-bold tracking-widest uppercase hover:bg-white/5 transition-colors {{ app()->getLocale() == 'id' ? 'text-primary' : 'text-slate-300 hover:text-white' }}">ID</a>
-                        <a href="/lang/en" class="block px-4 py-2 text-xs font-bold tracking-widest uppercase hover:bg-white/5 transition-colors {{ app()->getLocale() == 'en' ? 'text-primary' : 'text-slate-300 hover:text-white' }}">EN</a>
-                    </div>
-                </div>
             </nav>
-
-            <!-- Mobile Menu Button -->
-            <button 
-                @click="mobileMenuOpen = !mobileMenuOpen" 
-                class="md:hidden p-2 bg-secondary/60 rounded-md text-white hover:text-primary transition-colors focus:outline-none backdrop-blur-sm border border-white/10"
-            >
-                <svg x-show="!mobileMenuOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-                <svg x-show="mobileMenuOpen" x-cloak class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-            </button>
         </div>
     </div>
 
@@ -76,34 +86,23 @@
         x-transition:leave="transition ease-in duration-150"
         x-transition:leave-start="opacity-100 translate-y-0"
         x-transition:leave-end="opacity-0 -translate-y-4"
-        class="absolute top-full left-0 w-full bg-secondary border-t border-white/10 shadow-2xl md:hidden"
+        class="absolute top-full left-0 w-full bg-white border-t border-gray-100 shadow-xl md:hidden"
     >
-        <div class="flex flex-col px-6 py-4 space-y-4">
+        <div class="flex flex-col px-6 py-4 space-y-2">
             @foreach($links as $link)
                 <a 
                     href="{{ $link['url'] }}" 
-                    class="text-sm font-bold uppercase tracking-widest py-2 border-b border-white/5 {{ request()->is(ltrim($link['url'], '/')) || (request()->is('/') && $link['url'] == '/') ? 'text-primary' : 'text-slate-300 hover:text-primary' }}"
+                    class="text-xs font-black uppercase tracking-[0.2em] py-3 border-b border-gray-50 {{ request()->is(ltrim($link['url'], '/')) || (request()->is('/') && $link['url'] == '/') ? 'text-secondary' : 'text-gray-600' }}"
                 >
                     {{ $link['name'] }}
                 </a>
             @endforeach
-
-            <!-- Language Switcher Mobile -->
-            <div class="py-2 border-b border-white/5" x-data="{ langOpenMob: false }">
-                <button @click="langOpenMob = !langOpenMob" class="flex items-center justify-between w-full text-sm font-bold uppercase tracking-widest text-slate-300 hover:text-primary transition-colors focus:outline-none">
-                    <span>Lang: {{ strtoupper(app()->getLocale()) }}</span>
-                    <svg class="w-4 h-4 transition-transform duration-200" :class="langOpenMob ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                </button>
-                <div x-show="langOpenMob" x-cloak class="mt-4 flex flex-col space-y-4 pl-4 pb-2">
-                    <a href="/lang/id" class="text-sm font-bold uppercase {{ app()->getLocale() == 'id' ? 'text-primary' : 'text-slate-400 hover:text-slate-200' }}">ID</a>
-                    <a href="/lang/en" class="text-sm font-bold uppercase {{ app()->getLocale() == 'en' ? 'text-primary' : 'text-slate-400 hover:text-slate-200' }}">EN</a>
-                </div>
-            </div>
-
-            <div class="pt-4">
-                <a href="/contact" class="block w-full bg-primary text-[#0D4E50] text-center px-6 py-4 text-xs font-black uppercase tracking-widest">
-                    Contact Us
-                </a>
+            <a href="/contact" class="text-xs font-black uppercase tracking-[0.2em] py-3 border-b border-gray-50 text-primary">Contact Us</a>
+            
+            <div class="py-3 flex gap-4 text-xs font-black uppercase tracking-[0.2em]">
+                <a href="/lang/id" class="{{ app()->getLocale() == 'id' ? 'text-secondary' : 'text-gray-400' }}">ID</a>
+                <span class="text-gray-300">|</span>
+                <a href="/lang/en" class="{{ app()->getLocale() == 'en' ? 'text-secondary' : 'text-gray-400' }}">EN</a>
             </div>
         </div>
     </div>

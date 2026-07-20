@@ -5,9 +5,16 @@
         bgImage="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=2560&q=80"
     />
 
-    <section class="py-16 md:py-24 lg:py-32 bg-white relative">
+    <section class="py-16 md:py-24 lg:py-32 bg-[#F8F9FA] relative">
+        <!-- Decorative SVG Wave Background -->
+        <div class="absolute inset-0 z-0 opacity-10 pointer-events-none overflow-hidden">
+            <svg preserveAspectRatio="none" viewBox="0 0 100 100" class="w-full h-full fill-secondary-dark transform rotate-180 scale-150">
+                <path d="M0,0 L100,0 C90,30 50,70 0,100 Z" />
+            </svg>
+        </div>
+        
         <div class="container mx-auto px-6 max-w-6xl relative z-10">
-            <div class="space-y-12">
+            <div class="space-y-8 md:space-y-12">
                 
                 @php
                 $caseStudies = [
@@ -64,35 +71,35 @@
 
                 @foreach($caseStudies as $index => $study)
                     <div data-aos="fade-up" data-aos-duration="700" data-aos-delay="{{ $index * 100 }}">
-                        <div class="block bg-white border-2 border-slate-100 hover:border-secondary transition-all duration-300 group relative overflow-hidden">
+                        <div class="bg-white border border-gray-100 rounded-2xl shadow-sm hover:shadow-xl hover:border-primary transition-all duration-300 group relative overflow-hidden">
                             
-                            <!-- Solid color block that slides in from left -->
-                            <div class="absolute left-0 top-0 bottom-0 w-3 bg-{{ $study['color'] }} group-hover:w-full transition-all duration-500 ease-out z-0 opacity-100 group-hover:opacity-10"></div>
+                            <!-- Solid color block that slides in from left (Vinx Hover Effect) -->
+                            <div class="absolute left-0 top-0 bottom-0 w-2 bg-primary group-hover:w-full transition-all duration-500 ease-out z-0 opacity-100 group-hover:opacity-5"></div>
                             
-                            <div class="p-6 md:p-8 lg:p-12 flex flex-col gap-4 md:gap-6 relative z-10">
+                            <div class="p-6 md:p-8 lg:p-10 flex flex-col gap-4 md:gap-6 relative z-10">
                                 <!-- Client Badge -->
                                 <div>
-                                    <span class="inline-block px-4 py-1 bg-secondary text-white font-black text-xs uppercase tracking-widest mb-4 group-hover:bg-primary group-hover:text-[#0D4E50] transition-colors">{{ __($study['client']) }}</span>
+                                    <span class="inline-block px-4 py-1.5 bg-secondary-dark text-white rounded-full font-black text-[10px] uppercase tracking-widest mb-2 group-hover:bg-primary group-hover:text-secondary-dark transition-colors shadow-sm">{{ __($study['client']) }}</span>
                                 </div>
                                 
                                 <!-- Content -->
                                 <div>
-                                    <h2 class="text-xl sm:text-2xl md:text-3xl font-black text-accent mb-4 md:mb-8 group-hover:text-primary transition-colors duration-300">
+                                    <h2 class="text-2xl sm:text-3xl font-black text-secondary-dark mb-6 tracking-tight group-hover:text-primary transition-colors duration-300">
                                         {{ __($study['title']) }}
                                     </h2>
                                     
-                                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 mb-4">
-                                        <div class="border-l-2 border-slate-200 pl-4 group-hover:border-secondary transition-colors">
-                                            <h5 class="text-xs uppercase tracking-widest font-black text-slate-800 mb-2">{{ __('Context') }}</h5>
+                                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+                                        <div class="border-l-2 border-gray-200 pl-4 group-hover:border-primary transition-colors">
+                                            <h5 class="text-[10px] uppercase tracking-widest font-black text-gray-400 mb-2">{{ __('Context') }}</h5>
                                             <p class="text-sm text-slate-600 font-medium leading-relaxed">{{ __($study['context']) }}</p>
                                         </div>
-                                        <div class="border-l-2 border-slate-200 pl-4 group-hover:border-secondary transition-colors">
-                                            <h5 class="text-xs uppercase tracking-widest font-black text-slate-800 mb-2">{{ __('PASS Role') }}</h5>
+                                        <div class="border-l-2 border-gray-200 pl-4 group-hover:border-primary transition-colors">
+                                            <h5 class="text-[10px] uppercase tracking-widest font-black text-gray-400 mb-2">{{ __('PASS Role') }}</h5>
                                             <p class="text-sm text-slate-600 font-medium leading-relaxed">{{ __($study['role']) }}</p>
                                         </div>
-                                        <div class="bg-secondary p-4 md:p-6 text-white group-hover:bg-primary group-hover:text-[#0D4E50] transition-colors duration-300 relative overflow-hidden">
-                                            <div class="absolute -right-4 -bottom-4 w-16 h-16 bg-white/10 transform rotate-45 pointer-events-none"></div>
-                                            <h5 class="text-xs uppercase tracking-widest font-black mb-2 opacity-80">{{ __('Focus & Result') }}</h5>
+                                        <div class="bg-secondary-dark p-5 md:p-6 rounded-xl text-white group-hover:bg-primary group-hover:text-secondary-dark transition-colors duration-300 relative overflow-hidden shadow-md">
+                                            <div class="absolute -right-6 -bottom-6 w-24 h-24 bg-white/10 rounded-full blur-xl pointer-events-none"></div>
+                                            <h5 class="text-[10px] uppercase tracking-widest font-black mb-2 opacity-80">{{ __('Focus & Result') }}</h5>
                                             <p class="text-sm font-bold leading-relaxed">{{ __($study['focus']) }}</p>
                                         </div>
                                     </div>

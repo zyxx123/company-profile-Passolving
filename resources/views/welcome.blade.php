@@ -2,289 +2,94 @@
     <div class="font-sans selection:bg-secondary selection:text-white overflow-x-hidden">
         
         <!-- ==============================================
-             1. HERO SECTION (Navy with Sharp Mustard Cuts)
+             1. HERO SECTION (Vinx Style)
              ============================================== -->
-        <section class="relative min-h-[70vh] md:min-h-[90vh] bg-secondary text-white flex items-center pt-16 md:pt-20">
-            <!-- Geometric Background Shapes -->
-            <div class="absolute top-0 right-0 w-full h-full pointer-events-none overflow-hidden z-0">
-                <!-- Large Right Pine Green Diagonal Background -->
-                <div class="absolute top-0 right-0 w-[55%] h-full bg-secondary-dark" style="clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);"></div>
+        <section class="relative bg-secondary text-white overflow-visible pt-[128px] z-30">
+            <!-- Background Image on the right -->
+            <div class="absolute inset-y-0 right-0 w-full md:w-[60%] z-0">
+                <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+                     class="w-full h-full object-cover object-[60%_center] filter grayscale"
+                     alt="Professionals">
             </div>
-            
-            <!-- Bottom Edge Diamond Decoration -->
-            <div class="absolute -bottom-6 left-1/3 md:left-[30%] w-12 h-12 bg-secondary-dark transform rotate-45 z-20"></div>
 
-            <div class="container mx-auto px-6 max-w-7xl relative z-10 flex flex-col lg:flex-row items-center">
+            <!-- Curved SVG Separator -->
+            <div class="absolute inset-y-0 left-0 w-full md:w-[60%] z-0 h-full pointer-events-none hidden md:block">
+                <svg preserveAspectRatio="none" viewBox="0 0 100 100" class="w-full h-full fill-secondary">
+                    <path d="M0,0 L80,0 C90,30 50,70 90,100 L0,100 Z" />
+                </svg>
+                <!-- Yellow Swoosh -->
+                <svg preserveAspectRatio="none" viewBox="0 0 100 100" class="absolute top-0 left-0 w-full h-full fill-primary opacity-90 -z-10 transform translate-x-2">
+                    <path d="M0,0 L85,0 C100,40 45,75 95,100 L0,100 Z" />
+                </svg>
+            </div>
+
+            <div class="container mx-auto px-6 max-w-7xl relative z-10 min-h-[70vh] flex items-center pb-32">
                 <!-- Left Content -->
-                <div class="w-full lg:w-1/2 pt-10 md:pt-20 pb-20 md:pb-32">
-                    <h1 class="text-4xl md:text-5xl lg:text-7xl font-black uppercase tracking-tighter leading-[1] mb-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
-                        {!! __('Transforming<br/>Organizations<br/>With Agility') !!}
-                    </h1>
-                    <p class="text-slate-400 font-medium mb-10 max-w-md" data-aos="fade-up" data-aos-duration="800" data-aos-delay="250">
-                        {{ __('Pioneer in Agility Assessment & National Soft Skill Certification. We work when leadership is ready to face uncomfortable realities.') }}
-                    </p>
-                    <a href="/contact" class="inline-block bg-primary text-[#0D4E50] font-black text-sm uppercase tracking-widest px-8 py-4 hover:bg-white transition-colors relative overflow-hidden group" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
-                        <span class="relative z-10">{{ __('Discover More') }}</span>
-                        <div class="absolute inset-0 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left z-0"></div>
-                    </a>
-                </div>
-
-                <!-- Right Content (Image) -->
-                <div class="w-full lg:w-1/2 relative hidden lg:block h-[600px]" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
-                    <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                         class="absolute right-0 top-1/2 -translate-y-1/2 w-[500px] h-[650px] object-cover filter grayscale contrast-125"
-                         alt="Professionals" 
-                         style="clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);">
-                </div>
-            </div>
-        </section>
-
-        <!-- ==============================================
-             2. ABOUT / SOLUTIONS SECTION (White)
-             ============================================== -->
-        <section class="py-16 md:py-32 bg-white relative">
-            <div class="container mx-auto px-6 max-w-7xl">
-                <div class="flex flex-col lg:flex-row gap-16 items-center">
-                    
-                    <!-- Left Images -->
-                    <div class="w-full lg:w-1/2 relative h-auto lg:h-[500px] mb-8 lg:mb-0" data-aos="fade-right" data-aos-duration="800">
-                        <div class="relative w-full h-[320px] sm:h-[400px] lg:h-full block">
-                            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
-                                 class="absolute top-0 left-0 w-3/4 h-[220px] sm:h-[300px] lg:h-[400px] object-cover grayscale hover:grayscale-0 transition-all duration-500 shadow-2xl" alt="Team">
-                            <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
-                                 class="absolute bottom-8 lg:bottom-10 right-0 w-[65%] lg:w-1/2 h-[160px] sm:h-[220px] lg:h-[250px] object-cover grayscale hover:grayscale-0 transition-all duration-500 shadow-2xl border-[6px] lg:border-8 border-white" alt="Meeting">
-                        </div>
-                        
-                        <!-- Floating Yellow Stat Box -->
-                        <div class="relative -mt-12 sm:-mt-16 lg:mt-0 z-10 lg:absolute lg:-bottom-10 lg:left-10 bg-primary p-6 lg:p-8 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-6 lg:gap-12 shadow-2xl w-full lg:w-max mx-auto w-[90%] sm:w-full">
-                            <div class="flex items-center gap-4">
-                                <svg class="w-12 h-12 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                <div>
-                                    <div class="text-3xl font-black text-accent">10<span class="text-white">+</span></div>
-                                    <div class="text-xs font-bold uppercase tracking-widest text-accent">{{ __('Years Experience') }}</div>
-                                </div>
-                            </div>
-                            <div class="hidden sm:block w-px h-16 bg-secondary/20"></div>
-                            <div class="sm:hidden w-3/4 h-px bg-secondary/20"></div>
-                            <div class="flex items-center gap-4">
-                                <svg class="w-12 h-12 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
-                                <div>
-                                    <div class="text-3xl font-black text-accent">2K<span class="text-white">+</span></div>
-                                    <div class="text-xs font-bold uppercase tracking-widest text-accent">{{ __('Projects Done') }}</div>
-                                </div>
-                            </div>
-                        </div>
+                <div class="w-full md:w-[50%] lg:w-[45%] pt-12">
+                    <div class="flex gap-3 mb-6">
+                        <span class="border border-white/50 rounded-full px-4 py-1 text-[10px] font-black uppercase tracking-widest">ASSESSMENT</span>
+                        <span class="border border-white/50 rounded-full px-4 py-1 text-[10px] font-black uppercase tracking-widest">TRAINING</span>
                     </div>
-
-                    <!-- Right Text -->
-                    <div class="w-full lg:w-1/2 pt-8 lg:pt-0" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
-                        <div class="flex items-center gap-2 mb-4">
-                            <div class="w-4 h-4 bg-primary transform rotate-45"></div>
-                            <span class="text-xs font-bold uppercase tracking-widest text-slate-400">{{ __('About Agency') }}</span>
-                        </div>
-                        <h2 class="text-3xl md:text-4xl lg:text-5xl font-black uppercase text-accent mb-6 leading-tight">
-                            {!! __('Ahead Of<br/>The Curve') !!}
-                        </h2>
-                        <p class="text-slate-500 mb-8 font-medium leading-relaxed">
-                            {{ __('Through the Business Agility Assessment™ and LEGO® Serious Play®, we unlock your team\'s potential to navigate complex challenges and achieve sustainable growth. Kami bukan sekedar lembaga pelatihan — kami adalah mitra transformasi.') }}
-                        </p>
-
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 mb-10">
-                            <div>
-                                <div class="w-12 h-12 bg-secondary rounded-none flex items-center justify-center text-primary mb-4 transform rotate-45">
-                                    <svg class="w-6 h-6 -rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
-                                </div>
-                                <h4 class="font-black text-accent uppercase text-sm mb-2">{{ __('Agile Consulting') }}</h4>
-                                <p class="text-slate-400 text-sm">{{ __('Transformasi strategis untuk organisasi yang adaptif dan tangguh.') }}</p>
-                            </div>
-                            <div>
-                                <div class="w-12 h-12 bg-secondary rounded-none flex items-center justify-center text-primary mb-4 transform rotate-45">
-                                    <svg class="w-6 h-6 -rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
-                                </div>
-                                <h4 class="font-black text-accent uppercase text-sm mb-2">{{ __('BNSP Certified Training') }}</h4>
-                                <p class="text-slate-400 text-sm">{{ __('Program sertifikasi soft skill nasional (Problem Solving, Leadership, Communication).') }}</p>
+                    
+                    <h1 class="text-4xl md:text-5xl lg:text-[4.5rem] font-black tracking-tighter leading-[1.05] mb-6 capitalize">
+                        Mentransformasi<br/>Organisasi<br/>Dengan Agility.
+                    </h1>
+                    
+                    <p class="text-white/90 font-medium mb-10 text-sm leading-relaxed max-w-sm">
+                        {{ __('Pelopor asesmen agility & sertifikasi soft skill nasional. Kami bekerja saat kepemimpinan siap menghadapi realitas yang menantang.') }}
+                    </p>
+                    
+                    <div class="flex items-center gap-6">
+                        <div class="flex flex-col">
+                            <span class="text-xs text-primary font-black uppercase tracking-widest">MULAI DARI</span>
+                            <div class="text-3xl font-black flex items-baseline gap-1">
+                                <span>10+</span> <span class="text-sm font-medium italic text-primary">tahun</span>
                             </div>
                         </div>
-
-                        <!-- Progress Bar -->
-                        <div class="mb-10">
-                            <div class="flex justify-between text-xs font-black uppercase text-accent mb-2">
-                                <span>{{ __('Business Transformation') }}</span>
-                                <span>95%</span>
-                            </div>
-                            <div class="w-full bg-slate-100 h-2">
-                                <div class="bg-primary h-2 w-[95%]"></div>
-                            </div>
-                        </div>
-
-                        <a href="/about" class="inline-block bg-primary text-[#0D4E50] font-black text-sm uppercase tracking-widest px-8 py-4 hover:bg-secondary hover:text-white transition-colors">
-                            {{ __('Discover More') }}
+                        <a href="/services" class="bg-primary text-secondary-dark font-black text-xs uppercase tracking-widest px-8 py-3 rounded-full hover:bg-white transition-colors">
+                            {{ __('Lebih Lanjut') }}
                         </a>
                     </div>
                 </div>
+
             </div>
-        </section>
 
-        <!-- ==============================================
-             3. PARTNERS LOGO STRIP (White)
-             ============================================== -->
-        <section class="py-12 border-t border-slate-100 bg-white overflow-hidden relative"
-                 x-data="{
-                    speed: 1.0,
-                    isDragging: false,
-                    isHovered: false,
-                    startX: 0,
-                    scrollLeft: 0,
-                    init() {
-                        this.$nextTick(() => {
-                            const slider = this.$refs.slider;
-                            const setWidth = slider.scrollWidth / 2;
-                            slider.scrollLeft = setWidth;
-                            
-                            const loop = () => {
-                                if (!this.isDragging && !this.isHovered) {
-                                    slider.scrollLeft -= this.speed;
-                                }
-                                
-                                if (slider.scrollLeft <= 0) {
-                                    slider.scrollLeft += setWidth;
-                                } else if (slider.scrollLeft >= setWidth) {
-                                    slider.scrollLeft -= setWidth;
-                                }
-                                requestAnimationFrame(loop);
-                            };
-                            requestAnimationFrame(loop);
-                        });
-                    },
-                    dragStart(e) {
-                        this.isDragging = true;
-                        this.startX = e.pageX || (e.touches ? e.touches[0].pageX : 0);
-                        this.scrollLeft = this.$refs.slider.scrollLeft;
-                    },
-                    dragMove(e) {
-                        if (!this.isDragging) return;
-                        const x = e.pageX || (e.touches ? e.touches[0].pageX : 0);
-                        const walk = (x - this.startX) * 1.5;
-                        this.$refs.slider.scrollLeft = this.scrollLeft - walk;
-                    },
-                    dragEnd() {
-                        this.isDragging = false;
-                    }
-                 }">
-            <!-- Fade edges -->
-            <div class="absolute top-0 left-0 w-32 h-full bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
-            <div class="absolute top-0 right-0 w-32 h-full bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
-            
-            @php
-                $partners = [
-                    'Heartspeaks Indonesia', 'PDMA-Indonesia', 'AIESEC', 'Praktisi Pengembangan Kompetensi Softskill Indonesia',
-                    'Solopos Media Group', 'Indosat Ooredoo Hutchinson', 'Adicipta Inovasi Teknologi', 'Kemenkes',
-                    'LKPP', 'Biro Klasifikasi Indonesia', 'Otoritas Jasa Keuangan (OJK) Indonesia', 'Pos Indonesia',
-                    'BNI Tbk', 'Asuransi Tugu Pratama Ind Tbk', 'Pelindo Solusi Logistik', 'Widodo Makmur Perkasa Tbk',
-                    'Widodo Makmur Unggas Tbk', 'De Fila Integrated Farm', 'Prisma Surya Gemilang', 'Universitas Muhammadiyah Cirebon',
-                    'PPM Manajemen', 'ITB', 'UNPAD', 'FTUI', 'IKIGAI Consulting', 'BDO Indonesia', 'Al Aaren Food Bahrain', 'DataHen Canada', 'Pertamina'
-                ];
-            @endphp
-            
-            <div x-ref="slider" 
-                 class="flex flex-nowrap w-full overflow-x-hidden cursor-grab active:cursor-grabbing select-none"
-                 @mouseenter="isHovered = true"
-                 @mouseleave="isHovered = false; dragEnd()"
-                 @mousedown="dragStart($event)"
-                 @mousemove="dragMove($event)"
-                 @mouseup="dragEnd()"
-                 @touchstart="dragStart($event)"
-                 @touchmove="dragMove($event)"
-                 @touchend="dragEnd()">
-                <!-- Set 1 -->
-                <div class="flex items-center gap-8 md:gap-16 px-4 md:px-8 w-max shrink-0">
-                    @foreach($partners as $partner)
-                        <span class="text-sm md:text-base font-black tracking-widest uppercase text-slate-300 hover:text-accent transition-colors whitespace-nowrap">{{ $partner }}</span>
-                    @endforeach
-                </div>
-                <!-- Set 2 for seamless loop -->
-                <div class="flex items-center gap-8 md:gap-16 px-4 md:px-8 w-max shrink-0">
-                    @foreach($partners as $partner)
-                        <span class="text-sm md:text-base font-black tracking-widest uppercase text-slate-300 hover:text-accent transition-colors whitespace-nowrap">{{ $partner }}</span>
-                    @endforeach
-                </div>
-            </div>
-        </section>
-
-        <!-- ==============================================
-             4. WHAT WE OFFER (Light Gray)
-             ============================================== -->
-        <section class="py-16 md:py-32 bg-[#F8F9FA] relative">
-            <div class="container mx-auto px-6 max-w-7xl">
-                <div class="text-center mb-16" data-aos="fade-up" data-aos-duration="700">
-                    <div class="flex items-center justify-center gap-2 mb-4">
-                        <div class="w-4 h-4 bg-primary transform rotate-45"></div>
-                        <span class="text-xs font-bold uppercase tracking-widest text-slate-400">{{ __('Our Services') }}</span>
-                    </div>
-                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-black uppercase text-accent">{{ __('What We Offer') }}</h2>
-                </div>
-
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0 max-w-6xl mx-auto shadow-2xl relative z-10">
-                    
-                    @php
-                        $services = [
-                            ['title' => __('Agility Assessment'), 'desc' => __('Menilai kesiapan organisasi menghadapi perubahan melalui Business Agility Assessment™.'), 'icon' => 'M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z', 'highlight' => false],
-                            ['title' => __('LEGO® Serious Play®'), 'desc' => __('Workshop inovatif menggunakan LEGO® untuk strategi, kolaborasi tim, dan inovasi.'), 'icon' => 'M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5', 'highlight' => false],
-                            ['title' => __('Consulting'), 'desc' => __('Pendampingan strategis dari diagnosis masalah hingga implementasi dan evaluasi dampak.'), 'icon' => 'M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z', 'highlight' => false],
-                        ];
-                    @endphp
-
-                    @foreach($services as $idx => $svc)
-                        <div class="border border-slate-100 p-6 md:p-10 hover:bg-secondary hover:text-white transition-colors duration-300 group flex flex-col items-center text-center {{ $svc['highlight'] ? 'bg-secondary text-white' : 'bg-white' }}" data-aos="fade-up" data-aos-duration="600" data-aos-delay="{{ $idx * 100 }}">
-                            <div class="text-slate-200 group-hover:text-primary transition-colors mb-8 {{ $svc['highlight'] ? 'text-primary' : '' }}">
-                                <svg class="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
-                                    <path stroke-linecap="square" stroke-linejoin="miter" d="{{ $svc['icon'] }}"></path>
-                                </svg>
-                            </div>
-                            <h3 class="text-xl font-black uppercase mb-4 {{ $svc['highlight'] ? 'text-white' : 'text-accent group-hover:text-white' }}">{{ $svc['title'] }}</h3>
-                            <p class="text-sm leading-relaxed {{ $svc['highlight'] ? 'text-slate-400' : 'text-slate-500 group-hover:text-slate-400' }}">
-                                {{ $svc['desc'] }}
-                            </p>
+            <!-- Floating White Box (Bottom Overlap) -->
+            <div class="absolute bottom-0 left-0 right-0 z-20 flex justify-center transform translate-y-1/2 px-6">
+                <div class="bg-white rounded-xl shadow-2xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between w-full max-w-5xl gap-6">
+                    <div class="flex items-center gap-4">
+                        <div class="bg-secondary p-3 rounded-lg text-white">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
                         </div>
-                    @endforeach
+                        <div>
+                            <h3 class="text-secondary-dark font-black text-xl uppercase">10+ TAHUN PENGALAMAN</h3>
+                            <p class="text-gray-500 text-xs">Membangun organisasi bertransformasi.</p>
+                        </div>
+                    </div>
                     
-                </div>
-                
-                <div class="text-center mt-12 relative z-20">
-                    <p class="text-xs font-bold uppercase tracking-widest text-slate-500">{{ __('Layanan transformasi organisasi yang dirancang khusus untuk bisnis Anda.') }} <a href="/services" class="text-accent hover:text-primary border-b border-secondary hover:border-primary pb-1 ml-2">{{ __('Temukan Solusi Anda') }}</a></p>
-                </div>
-            </div>
-            
-            <!-- Diagonal background element -->
-            <div class="absolute bottom-0 right-0 w-1/3 h-[400px] bg-slate-200/50 transform -skew-y-12 translate-y-1/2 z-0 pointer-events-none"></div>
-        </section>
+                    <div class="flex-1 w-full max-w-md hidden md:flex items-center gap-4">
+                        <div class="flex-1 border border-gray-200 rounded-md p-3 bg-gray-50">
+                            <span class="block text-[9px] uppercase font-bold text-gray-400 mb-1">Total Proyek</span>
+                            <span class="text-sm font-bold text-gray-800">2,000+ Klien Aktif</span>
+                        </div>
+                        <div class="flex-1 border border-gray-200 rounded-md p-3 bg-gray-50">
+                            <span class="block text-[9px] uppercase font-bold text-gray-400 mb-1">Sertifikasi</span>
+                            <span class="text-sm font-bold text-gray-800">BNSP Nasional</span>
+                        </div>
+                    </div>
 
-        <!-- ==============================================
-             5. GROW WITH COMMUNITY (Dark Pine Green)
-             ============================================== -->
-        <section class="bg-secondary-dark pt-16 md:pt-32 pb-40 md:pb-64 relative">
-            <div class="container mx-auto px-6 max-w-7xl">
-                <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 border-b border-white/10 pb-12">
-                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-black uppercase text-white w-full md:w-2/3 leading-tight" data-aos="fade-right" data-aos-duration="800">
-                        {!! __('Grow With Community &<br/>Experience Endless Possibilities') !!}
-                    </h2>
-                    <a href="/about" class="mt-8 md:mt-0 bg-primary text-[#0D4E50] px-8 py-4 text-xs font-black uppercase tracking-widest hover:bg-white transition-colors">
-                        {{ __('Discover More') }}
+                    <a href="/contact" class="bg-primary text-secondary-dark font-black text-xs uppercase tracking-widest px-8 py-4 rounded-full hover:bg-primary-dark transition-colors whitespace-nowrap">
+                        Pelajari Layanan
                     </a>
                 </div>
-                <div class="flex items-center gap-4 text-slate-400 text-sm font-medium">
-                    <div class="w-2 h-2 bg-primary transform rotate-45"></div>
-                    {{ __('Mitra transformasi organisasi yang bekerja berdampingan hingga hasilnya berkelanjutan.') }}
-                </div>
             </div>
-            
-            <!-- Sharp triangle cut at bottom -->
-            <div class="absolute bottom-0 left-0 w-full h-[150px] bg-[#F8F9FA]" style="clip-path: polygon(0 100%, 100% 100%, 100% 0);"></div>
         </section>
 
-        <!-- White overlapping cards container (Pulled up into Navy section) -->
-        <div class="bg-[#F8F9FA] relative z-20 pb-16 md:pb-32">
-            <div class="container mx-auto px-6 max-w-7xl -mt-40">
+        <!-- ==============================================
+             2. SERVICES SECTION (White bg, circular icons)
+             ============================================== -->
+        <section class="bg-[#F8F9FA] relative z-20 pb-16 md:pb-32 pt-32">
+            <div class="container mx-auto px-6 max-w-7xl">
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-0 shadow-2xl" data-aos="fade-up" data-aos-duration="800">
                     <div class="bg-white p-10 border-r border-slate-100 flex gap-6 hover:bg-slate-50 transition-colors">
                         <div class="w-10 h-10 bg-primary rounded-none flex items-center justify-center shrink-0">
@@ -315,19 +120,44 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
         <!-- ==============================================
-             6. RECENT CLIENT PROJECTS (White)
+             3. BANNER SECTION (Dark Teal + Gold Badge)
              ============================================== -->
-        <section class="py-12 md:py-20 bg-white">
+        <section class="relative flex flex-col md:flex-row min-h-[400px]">
+            <!-- Left Dark Teal -->
+            <div class="w-full md:w-1/2 bg-secondary-dark p-12 md:p-20 flex flex-col justify-center text-white relative">
+                <!-- Gold Badge Overlapping Center -->
+                <div class="absolute -right-16 top-1/2 transform -translate-y-1/2 hidden md:flex items-center justify-center w-32 h-32 rounded-full border-4 border-white bg-primary text-secondary-dark font-black shadow-2xl z-20 text-center text-xs p-4 leading-tight">
+                    Tumbuh<br/>Bersama<br/>Komunitas
+                </div>
+                
+                <h2 class="text-3xl md:text-5xl font-black uppercase mb-6 leading-tight">
+                    Temukan Peluang<br/>Tanpa Batas
+                </h2>
+                <p class="text-gray-400 mb-8 max-w-md">
+                    Mitra transformasi organisasi yang bekerja berdampingan hingga hasilnya berkelanjutan. Kami menerapkan pendekatan berbasis sistem.
+                </p>
+                <a href="/services" class="bg-primary text-secondary-dark font-black text-xs uppercase tracking-widest px-8 py-3 rounded-full hover:bg-white transition-colors w-max">
+                    Lebih Lanjut
+                </a>
+            </div>
+            
+            <!-- Right Image -->
+            <div class="w-full md:w-1/2 min-h-[300px] md:min-h-full">
+                <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1000&auto=format&fit=crop" class="w-full h-full object-cover grayscale" alt="Team Working">
+            </div>
+        </section>
+
+        <!-- ==============================================
+             4. RECENT CLIENT PROJECTS (White Background Grid)
+             ============================================== -->
+        <section class="py-16 md:py-24 bg-white relative">
             <div class="container mx-auto px-6 max-w-7xl">
-                <div class="text-center mb-16" data-aos="fade-up" data-aos-duration="700">
-                    <div class="flex items-center justify-center gap-2 mb-4">
-                        <div class="w-4 h-4 bg-primary transform rotate-45"></div>
-                        <span class="text-xs font-bold uppercase tracking-widest text-slate-400">{{ __('Our Completed Works') }}</span>
-                    </div>
-                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-black uppercase text-accent">{{ __('Recent Client Projects') }}</h2>
+                <div class="text-center mb-16">
+                    <span class="text-[10px] font-black uppercase tracking-widest text-primary mb-2 block">OUR COMPLETED WORKS</span>
+                    <h2 class="text-3xl md:text-4xl font-black text-secondary-dark capitalize mb-6">Recent Client Projects</h2>
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -340,14 +170,11 @@
                         ];
                     @endphp
                     @foreach($projects as $project)
-                    <div class="group relative overflow-hidden h-[350px] cursor-pointer" data-aos="fade-up" data-aos-duration="600" data-aos-delay="{{ $loop->index * 100 }}">
+                    <div class="group relative overflow-hidden h-[300px] rounded-xl shadow-lg cursor-pointer">
                         <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110" alt="Project">
-                        <div class="absolute bottom-0 left-0 right-0 bg-secondary p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform">
-                            <p class="text-primary text-xs font-bold uppercase tracking-widest mb-2">{{ $project['client'] }}</p>
-                            <h4 class="text-white font-black uppercase text-sm leading-tight">{{ $project['title'] }}</h4>
-                        </div>
-                        <div class="absolute bottom-20 right-6 w-10 h-10 bg-primary text-[#0D4E50] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-4 group-hover:translate-y-0">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        <div class="absolute bottom-0 left-0 right-0 bg-white/95 backdrop-blur-sm p-5 border-t-4 border-primary transform translate-y-2 group-hover:translate-y-0 transition-transform">
+                            <p class="text-primary text-[10px] font-black uppercase tracking-widest mb-1">{{ $project['client'] }}</p>
+                            <h4 class="text-secondary-dark font-black text-sm leading-tight">{{ $project['title'] }}</h4>
                         </div>
                     </div>
                     @endforeach
@@ -356,56 +183,9 @@
         </section>
 
         <!-- ==============================================
-             7. FOUNDER MESSAGE (White)
+             5. FOUNDER'S MESSAGE
              ============================================== -->
-        <section class="py-16 md:py-32 bg-[#F8F9FA]">
-            <div class="container mx-auto px-6 max-w-5xl">
-                <div class="flex flex-col md:flex-row items-center gap-16" data-aos="fade-up" data-aos-duration="800">
-                    <div class="w-full md:w-1/3 relative flex justify-center">
-                        <img src="{{ asset('images/founder.png') }}" class="w-48 h-48 rounded-full object-cover" alt="Founder">
-                        <!-- Quote badge -->
-                        <div class="absolute top-0 right-10 w-12 h-12 bg-primary rounded-full flex items-center justify-center text-[#0D4E50]">
-                            <span class="text-3xl font-serif font-black leading-none pt-2">"</span>
-                        </div>
-                    </div>
-                    <div class="w-full md:w-2/3">
-                        <h2 class="text-primary font-black tracking-widest uppercase text-sm mb-4">{{ __('Pesan Founder') }}</h2>
-                        <p class="text-slate-500 font-medium italic leading-relaxed text-base md:text-lg mb-8">
-                            {{ __('"Transformasi tidak akan berhasil jika hanya berfokus pada sistem tanpa menyentuh aspek manusianya. Kami percaya bahwa perubahan sejati dimulai saat kepemimpinan siap menghadapi realitas yang sesungguhnya. Melalui pendekatan Agility, PASSolving hadir bukan sekadar sebagai penyedia pelatihan, melainkan mitra strategis untuk memastikan setiap intervensi memberikan dampak nyata yang berkelanjutan bagi organisasi Anda."') }}
-                        </p>
-                        <div>
-                            <h4 class="font-black text-accent text-base md:text-lg">{{ __('Dr. Ir. Puti Retno Ali, MBA. ASEAN Eng.') }}</h4>
-                            <p class="text-sm text-slate-500 font-bold mt-1">{{ __('Business Coach & Founder PASSolving') }}</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ==============================================
-             8. LET'S START WORKING TOGETHER (Pine Green Banner)
-             ============================================== -->
-        <section class="bg-white py-12 md:py-20 relative overflow-hidden">
-            <div class="container mx-auto px-6 max-w-5xl relative z-10">
-                <div class="bg-secondary-dark relative overflow-hidden shadow-2xl flex flex-col md:flex-row items-center justify-between p-8 md:p-12 lg:p-20" data-aos="zoom-in" data-aos-duration="700">
-                    <!-- Geometric overlay -->
-                    <div class="absolute top-0 right-0 w-64 h-64 bg-white/5 transform rotate-45 translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
-                    
-                    <div class="relative z-10 mb-8 md:mb-0">
-                        <h3 class="text-2xl md:text-3xl lg:text-4xl font-black uppercase tracking-tight text-white mb-2">
-                            <span class="text-white">{!! __('Let\'s Start Working Together.') !!}</span><br/>
-                            <span class="text-white/60">{!! __('Get In Touch With Us!') !!}</span>
-                        </h3>
-                    </div>
-                    <div class="relative z-10 shrink-0">
-                        <a href="/contact" class="inline-block bg-primary text-[#0D4E50] font-black text-sm uppercase tracking-widest px-8 py-4 hover:bg-white transition-colors relative overflow-hidden group">
-                            <span class="relative z-10">Contact Us</span>
-                            <div class="absolute inset-0 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left z-0"></div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <x-founder-message />
 
     </div>
 </x-layouts.app>

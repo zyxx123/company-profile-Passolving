@@ -5,83 +5,72 @@
         bgImage="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
     />
 
-    <section class="py-16 md:py-24 lg:py-32 bg-white relative">
-        <div class="container mx-auto px-6 max-w-7xl relative z-10">
-            <div class="grid lg:grid-cols-5 gap-0 shadow-2xl border-2 md:border-4 border-secondary group/main relative z-10 bg-white">
-                
-                <!-- Decorative background elements -->
-                <div class="absolute -right-6 -bottom-6 w-32 h-32 bg-primary transform rotate-45 -z-10 transition-transform duration-500 group-hover/main:rotate-90 hidden md:block"></div>
-                
-                <!-- Contact Form -->
-                <div class="lg:col-span-3 p-6 md:p-10 lg:p-16 relative" data-aos="fade-right" data-aos-duration="800">
-                    <div class="absolute top-0 left-0 w-2 h-full bg-primary"></div>
-                    
-                    <div class="mb-8 md:mb-12">
-                        <h2 class="text-2xl md:text-3xl lg:text-4xl font-black text-accent mb-3 md:mb-4 tracking-tight uppercase">{{ __('Solving What Matters') }}</h2>
-                        <p class="text-slate-500 text-sm md:text-lg font-medium border-l-4 border-secondary/20 pl-4">{{ __('Hubungi kami untuk sesi Discovery, rancangan program kontekstual, hingga uji kelayakan dampak awal.') }}</p>
+    <!-- The moved Contact Section from Homepage -->
+    <section class="flex flex-col md:flex-row relative bg-secondary text-white min-h-[600px] overflow-hidden">
+        <!-- Left Contact Form -->
+        <div class="w-full md:w-1/2 p-8 md:p-16 lg:p-24 relative z-10 flex flex-col justify-center">
+            <span class="text-[10px] font-black uppercase tracking-widest text-primary mb-2 block">GET YOUR FREE ESTIMATE</span>
+            <h2 class="text-3xl md:text-5xl font-black uppercase mb-12 leading-tight">
+                Let's Start Working<br/>Together
+            </h2>
+            
+            <div class="w-full max-w-lg bg-white p-8 md:p-10 rounded-2xl shadow-2xl text-secondary-dark relative z-20">
+                <h3 class="text-2xl font-black mb-6 uppercase tracking-tight">Drop us a line</h3>
+                <!-- LIVEWIRE CONTACT FORM COMPONENT -->
+                @livewire('contact-form')
+            </div>
+        </div>
+        
+        <!-- Right Image -->
+        <div class="w-full md:w-1/2 min-h-[400px] md:absolute md:top-0 md:right-0 md:bottom-0 z-0">
+            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000&auto=format&fit=crop" class="w-full h-full object-cover filter grayscale" alt="Consultant">
+            <!-- Overlay to blend slightly with the right edge -->
+            <div class="absolute inset-0 bg-secondary/20 mix-blend-multiply hidden md:block"></div>
+        </div>
+        
+        <!-- Wavy separator overlap -->
+        <div class="absolute left-1/2 top-0 bottom-0 w-32 -translate-x-1/2 hidden md:block z-10 pointer-events-none">
+            <svg preserveAspectRatio="none" viewBox="0 0 100 100" class="w-full h-full fill-secondary">
+                <path d="M50,0 C100,20 0,80 50,100 L0,100 L0,0 Z" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- Additional Contact Info -->
+    <section class="py-16 md:py-24 bg-white relative">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-black text-secondary-dark uppercase tracking-widest mb-4">Working With Intent</h2>
+                <div class="w-16 h-1 bg-primary mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Phone -->
+                <div class="text-center p-8 bg-gray-50 rounded-2xl border border-gray-100 hover:border-primary/50 hover:shadow-lg transition-all duration-300 group">
+                    <div class="w-16 h-16 bg-secondary/10 text-secondary rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
                     </div>
-                    
-                    <!-- LIVEWIRE CONTACT FORM COMPONENT -->
-                    <div class="font-bold">
-                        @livewire('contact-form')
-                    </div>
+                    <h4 class="text-sm uppercase tracking-widest font-black text-slate-400 mb-2 group-hover:text-primary transition-colors">WhatsApp</h4>
+                    <p class="text-xl font-bold text-secondary-dark"><a href="https://wa.me/628979515205" target="_blank" class="hover:text-primary transition-colors">+62 897 9515 205</a></p>
                 </div>
-
-                <!-- Contact Info -->
-                <div class="lg:col-span-2 bg-secondary p-6 md:p-10 lg:p-16 h-full flex flex-col justify-center relative overflow-hidden text-white border-l-4 border-secondary lg:border-l-0" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
-                    
-                    <!-- Abstract Background Cut -->
-                    <div class="absolute top-0 right-0 w-40 h-40 bg-primary/10 transform translate-x-1/2 -translate-y-1/2 rotate-45 pointer-events-none"></div>
-
-                    <div class="relative z-10">
-                        <h3 class="text-xl md:text-2xl lg:text-3xl font-black text-white mb-8 md:mb-12 uppercase tracking-widest flex items-center gap-4">
-                            <div class="w-8 h-1 bg-primary"></div>
-                            {{ __('Working With Intent') }}
-                        </h3>
-                        
-                        <div class="space-y-6 md:space-y-10">
-                            <!-- Phone -->
-                            <div class="flex items-start gap-6 group/item cursor-pointer">
-                                <div class="w-16 h-16 bg-white/5 flex items-center justify-center shrink-0 border border-white/20 group-hover/item:bg-primary group-hover/item:border-primary transition-colors duration-300 transform group-hover/item:rotate-12">
-                                    <svg class="w-7 h-7 text-white group-hover/item:text-accent transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
-                                </div>
-                                <div>
-                                    <h4 class="text-sm uppercase tracking-widest font-black text-slate-400 mb-1 group-hover/item:text-primary transition-colors">{{ __('WhatsApp') }}</h4>
-                                    <p class="text-xl font-bold text-white leading-relaxed">
-                                        <a href="https://wa.me/628979515205" target="_blank" class="hover:text-primary transition-colors block">+62 897 9515 205</a>
-                                    </p>
-                                </div>
-                            </div>
-
-                            <!-- Email -->
-                            <div class="flex items-start gap-6 group/item cursor-pointer">
-                                <div class="w-16 h-16 bg-white/5 flex items-center justify-center shrink-0 border border-white/20 group-hover/item:bg-primary group-hover/item:border-primary transition-colors duration-300 transform group-hover/item:rotate-12">
-                                    <svg class="w-7 h-7 text-white group-hover/item:text-accent transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                                </div>
-                                <div>
-                                    <h4 class="text-sm uppercase tracking-widest font-black text-slate-400 mb-1 group-hover/item:text-primary transition-colors">{{ __('Email') }}</h4>
-                                    <p class="text-xl font-bold text-white leading-relaxed">
-                                        <a href="mailto:bersama@passolving.com" class="hover:text-primary transition-colors block">bersama@passolving.com</a>
-                                    </p>
-                                </div>
-                            </div>
-
-                            <!-- Instagram -->
-                            <div class="flex items-start gap-6 group/item cursor-pointer">
-                                <div class="w-16 h-16 bg-white/5 flex items-center justify-center shrink-0 border border-white/20 group-hover/item:bg-primary group-hover/item:border-primary transition-colors duration-300 transform group-hover/item:rotate-12">
-                                    <svg class="w-7 h-7 text-white group-hover/item:text-accent transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="0" ry="0"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
-                                </div>
-                                <div>
-                                    <h4 class="text-sm uppercase tracking-widest font-black text-slate-400 mb-1 group-hover/item:text-primary transition-colors">{{ __('Instagram') }}</h4>
-                                    <p class="text-xl font-bold text-white leading-relaxed">
-                                        <a href="https://www.instagram.com/passolving?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="hover:text-primary transition-colors block">@passolving</a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                
+                <!-- Email -->
+                <div class="text-center p-8 bg-gray-50 rounded-2xl border border-gray-100 hover:border-primary/50 hover:shadow-lg transition-all duration-300 group">
+                    <div class="w-16 h-16 bg-secondary/10 text-secondary rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                     </div>
+                    <h4 class="text-sm uppercase tracking-widest font-black text-slate-400 mb-2 group-hover:text-primary transition-colors">Email</h4>
+                    <p class="text-xl font-bold text-secondary-dark"><a href="mailto:bersama@passolving.com" class="hover:text-primary transition-colors">bersama@passolving.com</a></p>
                 </div>
-
+                
+                <!-- Instagram -->
+                <div class="text-center p-8 bg-gray-50 rounded-2xl border border-gray-100 hover:border-primary/50 hover:shadow-lg transition-all duration-300 group">
+                    <div class="w-16 h-16 bg-secondary/10 text-secondary rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="0" ry="0"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
+                    </div>
+                    <h4 class="text-sm uppercase tracking-widest font-black text-slate-400 mb-2 group-hover:text-primary transition-colors">Instagram</h4>
+                    <p class="text-xl font-bold text-secondary-dark"><a href="https://www.instagram.com/passolving?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="hover:text-primary transition-colors">@passolving</a></p>
+                </div>
             </div>
         </div>
     </section>

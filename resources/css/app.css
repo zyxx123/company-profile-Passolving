@@ -8,11 +8,17 @@
 
 @theme {
     --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
-    --color-primary: #F5B700; /* Yellow */
-    --color-primary-dark: #D4A000;
-    --color-secondary: #009A9A; /* Bright Teal */
-    --color-secondary-dark: #0D4E50; /* Deep Pine Green */
-    --color-accent: #009A9A; /* Bright Teal for headings/text */
+    
+    /* User's Accent (Yellow) mapped to our primary variables for buttons/highlights */
+    --color-primary: #F4B400; 
+    --color-primary-dark: #D99800; 
+    
+    /* User's Primary (Teal) mapped to our secondary variables for backgrounds */
+    --color-secondary: #0F9FA4; 
+    --color-secondary-dark: #0A6D71; 
+    
+    /* User's Primary (Teal) mapped to our accent for headings/text */
+    --color-accent: #0F9FA4;
 
     --animate-floating: floating 6s ease-in-out infinite;
     --animate-gradient-x: gradient-x 15s ease infinite;
