@@ -7,18 +7,17 @@
         <section class="relative min-h-[70vh] md:min-h-[90vh] bg-secondary text-white flex items-center pt-16 md:pt-20 overflow-hidden">
             <!-- Geometric Background Shapes -->
             <div class="absolute top-0 right-0 w-full h-full pointer-events-none overflow-hidden z-0">
-                <!-- Large Top Right Mustard Triangle -->
-                <div class="absolute -top-20 -right-20 w-[600px] h-[600px] bg-primary transform rotate-45 translate-x-1/4 -translate-y-1/4"></div>
-                <!-- Darker Navy Triangle Overlapping it -->
-                <div class="absolute -top-10 -right-10 w-[600px] h-[600px] bg-secondary-light transform rotate-45 translate-x-1/3 -translate-y-1/4"></div>
-                <!-- Bottom Left Mustard Sharp Line -->
-                <div class="absolute -bottom-40 -left-20 w-[800px] h-[200px] bg-primary transform -rotate-45"></div>
+                <!-- Large Top Right Pine Green Triangle -->
+                <div class="absolute -top-20 -right-20 w-[600px] h-[600px] bg-secondary-dark transform rotate-45 translate-x-1/4 -translate-y-1/4 opacity-90"></div>
+                <!-- Darker Triangle Overlapping it -->
+                <div class="absolute -top-10 -right-10 w-[600px] h-[600px] bg-secondary-dark transform rotate-45 translate-x-1/3 -translate-y-1/4 opacity-70"></div>
+                <!-- Bottom Left Pine Green Sharp Line -->
+                <div class="absolute -bottom-40 -left-20 w-[800px] h-[200px] bg-secondary-dark transform -rotate-45 opacity-90"></div>
             </div>
 
             <div class="container mx-auto px-6 max-w-7xl relative z-10 flex flex-col lg:flex-row items-center">
                 <!-- Left Content -->
                 <div class="w-full lg:w-1/2 pt-10 md:pt-20 pb-20 md:pb-32">
-                    <div class="w-16 h-1 bg-primary mb-8 transform -skew-x-12" data-aos="fade-right" data-aos-duration="600"></div>
                     <h1 class="text-4xl md:text-5xl lg:text-7xl font-black uppercase tracking-tighter leading-[1] mb-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
                         {!! __('Transforming<br/>Organizations<br/>With Agility') !!}
                     </h1>
@@ -388,25 +387,24 @@
         </section>
 
         <!-- ==============================================
-             8. LET'S START WORKING TOGETHER (Mustard Banner)
+             8. LET'S START WORKING TOGETHER (Pine Green Banner)
              ============================================== -->
         <section class="bg-white py-12 md:py-20 relative overflow-hidden">
-            <div class="container mx-auto px-6 max-w-7xl">
-                <div class="bg-primary relative overflow-hidden shadow-2xl flex flex-col md:flex-row items-center justify-between p-8 md:p-12 lg:p-20" data-aos="zoom-in" data-aos-duration="700">
-                    <!-- Left Text -->
-                    <div class="relative z-10 w-full md:w-2/3">
-                        <h2 class="text-3xl md:text-4xl lg:text-6xl font-black uppercase leading-[1.1]">
-                            <span class="text-accent">{!! __('Let\'s Start Working Together.') !!}</span><br/>
-                            <span class="text-accent/60">{!! __('Get In Touch With Us!') !!}</span>
-                        </h2>
+            <div class="container mx-auto px-6 max-w-5xl relative z-10">
+                <div class="bg-secondary-dark relative overflow-hidden shadow-2xl flex flex-col md:flex-row items-center justify-between p-8 md:p-12 lg:p-20" data-aos="zoom-in" data-aos-duration="700">
+                    <!-- Geometric overlay -->
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-white/5 transform rotate-45 translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
+                    
+                    <div class="relative z-10 mb-8 md:mb-0">
+                        <h3 class="text-2xl md:text-3xl lg:text-4xl font-black uppercase tracking-tight text-white mb-2">
+                            <span class="text-white">{!! __('Let\'s Start Working Together.') !!}</span><br/>
+                            <span class="text-white/60">{!! __('Get In Touch With Us!') !!}</span>
+                        </h3>
                     </div>
-                    
-                    <!-- Sharp Navy shape on the right -->
-                    <div class="absolute right-0 top-0 h-full w-full md:w-1/2 bg-secondary transform skew-x-[-20deg] origin-bottom translate-x-32 z-0 hidden md:block"></div>
-                    
-                    <div class="relative z-10 w-full md:w-1/3 flex justify-start md:justify-end mt-8 md:mt-0">
-                        <a href="/contact" class="w-16 h-16 border-2 border-white flex items-center justify-center text-white hover:bg-white hover:text-accent transition-colors group">
-                            <svg class="w-6 h-6 transform rotate-45 group-hover:rotate-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    <div class="relative z-10 shrink-0">
+                        <a href="/contact" class="inline-block bg-primary text-[#0D4E50] font-black text-sm uppercase tracking-widest px-8 py-4 hover:bg-white transition-colors relative overflow-hidden group">
+                            <span class="relative z-10">Contact Us</span>
+                            <div class="absolute inset-0 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left z-0"></div>
                         </a>
                     </div>
                 </div>
