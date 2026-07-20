@@ -362,7 +362,7 @@
         </section>
 
         <!-- ==============================================
-             7. TESTIMONIAL (White)
+             7. FOUNDER MESSAGE (White)
              ============================================== -->
         <section class="py-16 md:py-32 bg-[#F8F9FA]">
             <div class="container mx-auto px-6 max-w-5xl">
@@ -375,13 +375,9 @@
                         </div>
                     </div>
                     <div class="w-full md:w-2/3">
-                        <div class="flex gap-1 mb-6 text-primary">
-                            @for($i=0; $i<5; $i++)
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                            @endfor
-                        </div>
+                        <h2 class="text-primary font-black tracking-widest uppercase text-sm mb-4">{{ __('Pesan Founder') }}</h2>
                         <p class="text-slate-500 font-medium italic leading-relaxed text-base md:text-lg mb-8">
-                            {{ __('"Apa yang harus dilakukan, langsung dipraktekkan! Agile-Design Thinking dari PASS berbeda dari yang biasanya. Tim PASS berisi profesional berpengalaman dengan solusi implementatif yang langsung berdampak."') }}
+                            {{ __('"Transformasi tidak akan berhasil jika hanya berfokus pada sistem tanpa menyentuh aspek manusianya. Kami percaya bahwa perubahan sejati dimulai saat kepemimpinan siap menghadapi realitas yang sesungguhnya. Melalui pendekatan Agility, PASSolving hadir bukan sekadar sebagai penyedia pelatihan, melainkan mitra strategis untuk memastikan setiap intervensi memberikan dampak nyata yang berkelanjutan bagi organisasi Anda."') }}
                         </p>
                         <div>
                             <h4 class="font-black text-secondary uppercase tracking-widest text-sm">{{ __('Business Coach & Founder') }}</h4>
