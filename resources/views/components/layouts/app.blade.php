@@ -7,6 +7,7 @@
     <!-- SEO Optimization -->
     <title>PASSolving | Transforming Organization</title>
     <meta name="description" content="Pioneer in Agility Assessment & National Soft Skill Certification. We work when leadership is ready to face uncomfortable realities.">
+    <link rel="icon" type="image/jpeg" href="/passolving_logo.jpg">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
