@@ -25,7 +25,7 @@
                     <p class="text-slate-400 font-medium mb-10 max-w-md" data-aos="fade-up" data-aos-duration="800" data-aos-delay="250">
                         {{ __('Pioneer in Agility Assessment & National Soft Skill Certification. We work when leadership is ready to face uncomfortable realities.') }}
                     </p>
-                    <a href="/contact" class="inline-block bg-primary text-secondary font-black text-sm uppercase tracking-widest px-8 py-4 hover:bg-white transition-colors relative overflow-hidden group" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+                    <a href="/contact" class="inline-block bg-primary text-slate-900 font-black text-sm uppercase tracking-widest px-8 py-4 hover:bg-white transition-colors relative overflow-hidden group" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
                         <span class="relative z-10">{{ __('Discover More') }}</span>
                         <div class="absolute inset-0 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left z-0"></div>
                     </a>
@@ -122,7 +122,7 @@
                             </div>
                         </div>
 
-                        <a href="/about" class="inline-block bg-primary text-secondary font-black text-sm uppercase tracking-widest px-8 py-4 hover:bg-secondary hover:text-white transition-colors">
+                        <a href="/about" class="inline-block bg-primary text-slate-900 font-black text-sm uppercase tracking-widest px-8 py-4 hover:bg-secondary hover:text-white transition-colors">
                             {{ __('Discover More') }}
                         </a>
                     </div>
@@ -273,7 +273,7 @@
                     <h2 class="text-3xl md:text-4xl lg:text-5xl font-black uppercase text-white w-full md:w-2/3 leading-tight" data-aos="fade-right" data-aos-duration="800">
                         {!! __('Grow With Community &<br/>Experience Endless Possibilities') !!}
                     </h2>
-                    <a href="/about" class="mt-8 md:mt-0 bg-primary text-secondary px-8 py-4 text-xs font-black uppercase tracking-widest hover:bg-white transition-colors">
+                    <a href="/about" class="mt-8 md:mt-0 bg-primary text-slate-900 px-8 py-4 text-xs font-black uppercase tracking-widest hover:bg-white transition-colors">
                         {{ __('Discover More') }}
                     </a>
                 </div>
@@ -351,7 +351,7 @@
                             <p class="text-primary text-xs font-bold uppercase tracking-widest mb-2">{{ $project['client'] }}</p>
                             <h4 class="text-white font-black uppercase text-sm leading-tight">{{ $project['title'] }}</h4>
                         </div>
-                        <div class="absolute bottom-20 right-6 w-10 h-10 bg-primary text-secondary flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-4 group-hover:translate-y-0">
+                        <div class="absolute bottom-20 right-6 w-10 h-10 bg-primary text-slate-900 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-4 group-hover:translate-y-0">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                         </div>
                     </div>
@@ -369,7 +369,7 @@
                     <div class="w-full md:w-1/3 relative flex justify-center">
                         <img src="{{ asset('images/founder.png') }}" class="w-48 h-48 rounded-full object-cover" alt="Founder">
                         <!-- Quote badge -->
-                        <div class="absolute top-0 right-10 w-12 h-12 bg-primary rounded-full flex items-center justify-center text-secondary">
+                        <div class="absolute top-0 right-10 w-12 h-12 bg-primary rounded-full flex items-center justify-center text-slate-900">
                             <span class="text-3xl font-serif font-black leading-none pt-2">"</span>
                         </div>
                     </div>

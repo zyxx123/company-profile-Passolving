@@ -14,30 +14,30 @@
                     <div class="absolute -right-20 -top-20 w-64 h-64 border-4 border-primary/20 transform rotate-45 pointer-events-none group-hover:rotate-90 transition-transform duration-1000"></div>
                     
                     <div class="relative z-10 text-center max-w-4xl mx-auto">
-                        <div class="inline-flex items-center gap-2 px-6 py-2 bg-primary text-secondary text-sm font-black mb-8 uppercase tracking-widest">
+                        <div class="inline-flex items-center gap-2 px-6 py-2 bg-primary text-slate-900 text-sm font-black mb-8 uppercase tracking-widest">
                             Assessment Platform
                         </div>
                         <h3 class="text-2xl md:text-4xl lg:text-5xl font-black text-white mb-6 md:mb-8 tracking-tight uppercase">{{ __('The Business Agility Assessment™') }}</h3>
-                        <p class="text-base md:text-xl text-slate-300 leading-relaxed mb-8 md:mb-12 font-medium">
+                        <p class="text-base md:text-xl text-white/90 leading-relaxed mb-8 md:mb-12 font-medium">
                             {{ __('Digunakan untuk memahami kesiapan organisasi dalam menghadapi perubahan dan menentukan prioritas strategis. Hasilnya menjadi dasar pengambilan keputusan sebelum inisiatif perubahan ditetapkan.') }}
                         </p>
                         
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-0 text-left relative z-20 border-t border-l border-white/10">
                             <div class="bg-secondary p-8 border-b border-r border-white/10 hover:bg-primary group/card transition-colors duration-300">
-                                <h4 class="text-xl font-black text-white mb-2 group-hover/card:text-secondary transition-colors">{{ __('1. Transformation Agility') }}</h4>
-                                <p class="text-slate-400 font-medium group-hover/card:text-secondary/80">{{ __('Kepemimpinan, Budaya & Arah Strategis') }}</p>
+                                <h4 class="text-xl font-black text-white mb-2 group-hover/card:text-slate-900 transition-colors">{{ __('1. Transformation Agility') }}</h4>
+                                <p class="text-white/80 font-medium group-hover/card:text-slate-900/80">{{ __('Kepemimpinan, Budaya & Arah Strategis') }}</p>
                             </div>
                             <div class="bg-secondary p-8 border-b border-r border-white/10 hover:bg-primary group/card transition-colors duration-300">
-                                <h4 class="text-xl font-black text-white mb-2 group-hover/card:text-secondary transition-colors">{{ __('2. R&D Agility') }}</h4>
-                                <p class="text-slate-400 font-medium group-hover/card:text-secondary/80">{{ __('Inovasi, Pelanggan & Perbaikan Berkelanjutan') }}</p>
+                                <h4 class="text-xl font-black text-white mb-2 group-hover/card:text-slate-900 transition-colors">{{ __('2. R&D Agility') }}</h4>
+                                <p class="text-white/80 font-medium group-hover/card:text-slate-900/80">{{ __('Inovasi, Pelanggan & Perbaikan Berkelanjutan') }}</p>
                             </div>
                             <div class="bg-secondary p-8 border-b border-r border-white/10 hover:bg-primary group/card transition-colors duration-300">
-                                <h4 class="text-xl font-black text-white mb-2 group-hover/card:text-secondary transition-colors">{{ __('3. Strategy Agility') }}</h4>
-                                <p class="text-slate-400 font-medium group-hover/card:text-secondary/80">{{ __('Penyelarasan Enterprise & Tata Kelola') }}</p>
+                                <h4 class="text-xl font-black text-white mb-2 group-hover/card:text-slate-900 transition-colors">{{ __('3. Strategy Agility') }}</h4>
+                                <p class="text-white/80 font-medium group-hover/card:text-slate-900/80">{{ __('Penyelarasan Enterprise & Tata Kelola') }}</p>
                             </div>
                             <div class="bg-secondary p-8 border-b border-r border-white/10 hover:bg-primary group/card transition-colors duration-300">
-                                <h4 class="text-xl font-black text-white mb-2 group-hover/card:text-secondary transition-colors">{{ __('4. Operational Agility') }}</h4>
-                                <p class="text-slate-400 font-medium group-hover/card:text-secondary/80">{{ __('Kesiapan Tim & Praktik Operasional') }}</p>
+                                <h4 class="text-xl font-black text-white mb-2 group-hover/card:text-slate-900 transition-colors">{{ __('4. Operational Agility') }}</h4>
+                                <p class="text-white/80 font-medium group-hover/card:text-slate-900/80">{{ __('Kesiapan Tim & Praktik Operasional') }}</p>
                             </div>
                         </div>
                     </div>

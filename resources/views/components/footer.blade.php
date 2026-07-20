@@ -22,7 +22,7 @@
             <!-- Company -->
             <div>
                 <h4 class="text-xs font-black mb-8 uppercase tracking-widest text-white">{{ __('Company') }}</h4>
-                <ul class="space-y-4 font-bold text-slate-400 text-sm">
+                <ul class="space-y-4 font-bold text-white/80 text-sm">
                     <li><a href="/about" class="hover:text-primary transition-colors flex items-center gap-2"><div class="w-1.5 h-1.5 bg-primary"></div> {{ __('About Us') }}</a></li>
                     <li><a href="/services" class="hover:text-primary transition-colors flex items-center gap-2"><div class="w-1.5 h-1.5 bg-primary"></div> {{ __('Our Services') }}</a></li>
                     <li><a href="/portfolio" class="hover:text-primary transition-colors flex items-center gap-2"><div class="w-1.5 h-1.5 bg-primary"></div> {{ __('Case Studies') }}</a></li>
@@ -33,7 +33,7 @@
             <!-- Support -->
             <div>
                 <h4 class="text-xs font-black mb-8 uppercase tracking-widest text-white">{{ __('Support') }}</h4>
-                <ul class="space-y-4 font-bold text-slate-400 text-sm">
+                <ul class="space-y-4 font-bold text-white/80 text-sm">
                     <li><a href="/contact" class="hover:text-primary transition-colors">{{ __('Help Center') }}</a></li>
                     <li><a href="/contact" class="hover:text-primary transition-colors">{{ __('FAQ') }}</a></li>
                     <li><a href="/" class="hover:text-primary transition-colors">{{ __('Privacy Policy') }}</a></li>
@@ -53,10 +53,10 @@
             <!-- Newsletter -->
             <div class="col-span-2 md:col-span-1">
                 <h4 class="text-xs font-black mb-6 uppercase tracking-widest text-white">{{ __('Subscribe to our newsletter') }}</h4>
-                <p class="text-xs font-medium text-slate-400 mb-6 leading-relaxed">{{ __('Stay updated with the latest news, updates, and exclusive offers.') }}</p>
+                <p class="text-xs font-medium text-white/80 mb-6 leading-relaxed">{{ __('Stay updated with the latest news, updates, and exclusive offers.') }}</p>
                 
                 <div class="bg-transparent border-b-2 border-white/20 pb-2 flex gap-2 w-full focus-within:border-primary transition-colors group">
-                    <input type="email" placeholder="{{ __('Enter your email') }}" class="bg-transparent text-white px-2 py-2 outline-none flex-1 placeholder:text-slate-600 font-bold text-sm">
+                    <input type="email" placeholder="{{ __('Enter your email') }}" class="bg-transparent text-white px-2 py-2 outline-none flex-1 placeholder:text-white/60 font-bold text-sm">
                     <button class="text-white font-black group-hover:text-primary transition-colors">
                         <svg class="w-6 h-6 transform -rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                     </button>
@@ -64,7 +64,7 @@
             </div>
         </div>
 
-        <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 font-bold text-slate-500 text-xs">
+        <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 font-bold text-white/60 text-xs">
             <p>&copy; {{ date('Y') }} PASSolving. {{ __('All rights reserved.') }}</p>
             <div class="flex gap-4">
                 <!-- Instagram -->

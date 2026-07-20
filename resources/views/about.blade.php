@@ -49,7 +49,7 @@
                         </h3>
                         
                         <blockquote class="border-l-4 border-primary pl-6 py-2 mb-12">
-                            <p class="text-xl text-slate-300 font-light leading-relaxed">
+                            <p class="text-xl text-white/90 font-light leading-relaxed">
                                 {{ __('"Kami bukan sekedar lembaga pelatihan — kami adalah mitra transformasi yang bekerja berdampingan dengan klien hingga hasilnya berkelanjutan dengan pendekatan utama Agility."') }}
                             </p>
                         </blockquote>

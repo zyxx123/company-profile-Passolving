@@ -35,7 +35,7 @@
                     </a>
                 @endforeach
                 <!-- CTA Button -->
-                <a href="/contact" class="bg-primary text-secondary px-8 py-3 text-xs font-black uppercase tracking-widest hover:bg-white transition-colors relative overflow-hidden group">
+                <a href="/contact" class="bg-primary text-slate-900 px-8 py-3 text-xs font-black uppercase tracking-widest hover:bg-white transition-colors relative overflow-hidden group">
                     <span class="relative z-10">Contact</span>
                     <!-- Diagonal hover effect -->
                     <div class="absolute inset-0 bg-white transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out z-0"></div>

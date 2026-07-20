@@ -10,8 +10,8 @@
     --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
     --color-primary: #F3B62A; /* Mustard Yellow for highlights and accents */
     --color-primary-dark: #D9A01C;
-    --color-secondary: #2B2261; /* Deep Navy Purple for dark sections and text */
-    --color-secondary-light: #3D327D;
+    --color-secondary: #009CA6; /* Teal/Cyan color for sections and text */
+    --color-secondary-light: #00B5C1;
     --color-accent: #0F172A; /* Slate 900 (Fallback) */
 
     --animate-floating: floating 6s ease-in-out infinite;
@@ -52,12 +52,12 @@
 
 @layer utilities {
     .bg-grid-pattern {
-        background-image: radial-gradient(rgba(43, 34, 97, 0.04) 1px, transparent 1px);
+        background-image: radial-gradient(rgba(0, 156, 166, 0.06) 1px, transparent 1px);
         background-size: 24px 24px;
     }
     .bg-grid-lines {
-        background-image: linear-gradient(to right, rgba(43, 34, 97, 0.02) 1px, transparent 1px),
-                          linear-gradient(to bottom, rgba(43, 34, 97, 0.02) 1px, transparent 1px);
+        background-image: linear-gradient(to right, rgba(0, 156, 166, 0.04) 1px, transparent 1px),
+                          linear-gradient(to bottom, rgba(0, 156, 166, 0.04) 1px, transparent 1px);
         background-size: 48px 48px;
     }
 }
