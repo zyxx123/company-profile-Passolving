@@ -229,13 +229,12 @@
                     <h2 class="text-3xl md:text-4xl lg:text-5xl font-black uppercase text-secondary">{{ __('What We Offer') }}</h2>
                 </div>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0 max-w-6xl mx-auto shadow-2xl relative z-10">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0 max-w-6xl mx-auto shadow-2xl relative z-10">
                     
                     @php
                         $services = [
                             ['title' => __('Agility Assessment'), 'desc' => __('Menilai kesiapan organisasi menghadapi perubahan melalui Business Agility Assessment™.'), 'icon' => 'M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z', 'highlight' => false],
                             ['title' => __('LEGO® Serious Play®'), 'desc' => __('Workshop inovatif menggunakan LEGO® untuk strategi, kolaborasi tim, dan inovasi.'), 'icon' => 'M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5', 'highlight' => false],
-                            ['title' => __('Soft Skill Cert.'), 'desc' => __('Sertifikasi BNSP di bidang Problem Solving, Kepemimpinan, dan Komunikasi Efektif.'), 'icon' => 'M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z', 'highlight' => false],
                             ['title' => __('Consulting'), 'desc' => __('Pendampingan strategis dari diagnosis masalah hingga implementasi dan evaluasi dampak.'), 'icon' => 'M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z', 'highlight' => false],
                         ];
                     @endphp
