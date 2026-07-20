@@ -380,8 +380,8 @@
                             {{ __('"Transformasi tidak akan berhasil jika hanya berfokus pada sistem tanpa menyentuh aspek manusianya. Kami percaya bahwa perubahan sejati dimulai saat kepemimpinan siap menghadapi realitas yang sesungguhnya. Melalui pendekatan Agility, PASSolving hadir bukan sekadar sebagai penyedia pelatihan, melainkan mitra strategis untuk memastikan setiap intervensi memberikan dampak nyata yang berkelanjutan bagi organisasi Anda."') }}
                         </p>
                         <div>
-                            <h4 class="font-black text-secondary uppercase tracking-widest text-base">{{ __('Dr. Ir. Puti Retno Ali, MBA. ASEAN Eng.') }}</h4>
-                            <p class="text-xs text-slate-400 font-bold uppercase tracking-widest mt-1">{{ __('Business Coach & Founder PASSolving') }}</p>
+                            <h4 class="font-black text-secondary text-base md:text-lg">{{ __('Dr. Ir. Puti Retno Ali, MBA. ASEAN Eng.') }}</h4>
+                            <p class="text-sm text-slate-500 font-bold mt-1">{{ __('Business Coach & Founder PASSolving') }}</p>
                         </div>
                     </div>
                 </div>
