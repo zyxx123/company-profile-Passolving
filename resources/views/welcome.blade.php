@@ -2,33 +2,111 @@
     <!-- 1. HERO SECTION -->
     <!-- Full screen (100vh) adjustment: using min-h-[calc(100vh-88px)] assuming header is 88px, or just min-h-screen with flex -->
     <section class="relative min-h-[calc(100vh-88px)] flex items-center overflow-hidden bg-primary py-20">
-        <!-- Subtle dot pattern overlay or shapes -->
-        <!-- Subtle pattern removed as per request for flat design -->
+        <!-- 1. Background Grid -->
+        <div class="absolute inset-0 z-0 opacity-[0.07]" style="background-image: linear-gradient(rgba(255,255,255,.3) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.3) 1px, transparent 1px); background-size: 80px 80px; background-position: center center;"></div>
+        
+        <!-- 2. Yellow Glow Behind Image -->
+        <div class="absolute top-1/2 right-0 -translate-y-1/2 w-[800px] h-[800px] bg-cta rounded-full blur-[120px] opacity-30 z-0 pointer-events-none translate-x-1/4"></div>
+
+        <!-- 3. Top Left Dots -->
+        <div class="absolute top-10 left-10 z-0 opacity-40">
+            <svg width="120" height="120" fill="none" viewBox="0 0 120 120">
+                <pattern id="dots" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+                    <circle cx="2" cy="2" r="2" fill="#fff"/>
+                </pattern>
+                <rect width="120" height="120" fill="url(#dots)"/>
+            </svg>
+        </div>
+
+        <!-- 4. Bottom Right Dots -->
+        <div class="absolute bottom-10 right-10 z-0 opacity-40">
+            <svg width="160" height="120" fill="none" viewBox="0 0 160 120">
+                <pattern id="dots-bottom" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+                    <circle cx="2" cy="2" r="2" fill="#fff"/>
+                </pattern>
+                <rect width="160" height="120" fill="url(#dots-bottom)"/>
+            </svg>
+        </div>
+
+        <!-- 5. Curved Lines (Arcs) -->
+        <!-- Top subtle circle -->
+        <svg class="absolute -top-40 left-1/3 z-0 opacity-10 pointer-events-none" width="600" height="600" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="300" cy="300" r="299" stroke="white" stroke-width="1"/>
+        </svg>
+        
+        <!-- Right side yellow arc -->
+        <svg class="absolute -top-20 -right-20 z-0 opacity-60 pointer-events-none" width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="200" cy="200" r="199" stroke="#f5c242" stroke-width="1.5"/>
+        </svg>
+        
+        <!-- Dotted curve line with arrow -->
+        <svg class="absolute top-[10%] left-[45%] z-0 opacity-60 w-[250px] pointer-events-none" viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 0 200 Q 150 0 300 50" stroke="white" stroke-width="1.5" stroke-dasharray="6 6" fill="none"/>
+            <path d="M 290 40 L 300 50 L 285 55" stroke="white" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
+        </svg>
+        
+        <!-- Bottom curve line -->
+        <svg class="absolute -bottom-20 left-0 z-0 opacity-30 w-[600px] pointer-events-none" viewBox="0 0 600 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 0 100 Q 300 200 600 50" stroke="white" stroke-width="1" stroke-dasharray="4 4" fill="none"/>
+            <circle cx="250" cy="175" r="4" fill="#f5c242" />
+        </svg>
 
         <div class="container mx-auto px-6 max-w-[1320px] relative z-10">
             <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
                 <!-- Text Content -->
                 <div class="w-full lg:w-[55%]">
                     <p class="text-cta font-bold tracking-widest uppercase text-sm mb-4">Pioneer in Agility Assesment & National Soft Skill Certification</p>
-                    <h1 class="text-4xl lg:text-[60px] font-black leading-[1.1] text-primary-dark mb-6 uppercase">
+                    <h1 class="text-4xl lg:text-[60px] font-black leading-[1.1] text-white mb-6 uppercase">
                         AGILITY &<br/>TRANSFORMATION
                     </h1>
-                    <p class="text-lg text-primary-dark/80 mb-10 leading-relaxed max-w-lg">
+                    <p class="text-lg text-white/90 mb-10 leading-relaxed max-w-lg">
                         Determine for Execution Deliveries. Kami hadir untuk membantu organisasi Anda menghadapi realitas yang menantang dengan solusi berbasis data dan sistem yang adaptif.
                     </p>
                     <div class="flex flex-wrap items-center gap-4">
                         <x-ui.button href="/services" variant="primary">
                             Explore Services
                         </x-ui.button>
-                        <x-ui.button href="/contact" variant="outline" :icon="false">
+                        <!-- Ensure outline button looks good on dark bg -->
+                        <a href="/contact" class="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-bold transition-all duration-300 hover:bg-white hover:text-primary-dark hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-white/50 text-[16px] rounded-[14px]">
                             Contact Us
-                        </x-ui.button>
+                        </a>
+                    </div>
+
+                    <!-- Stats / Achievements -->
+                    <div class="mt-16 flex flex-wrap items-center gap-6 lg:gap-10 text-white">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center bg-white/5">
+                                <x-icon name="lucide-users" class="w-6 h-6 text-cta" />
+                            </div>
+                            <div>
+                                <h4 class="text-2xl font-bold leading-none mb-1">500+</h4>
+                                <p class="text-xs text-white/70 leading-tight">Organizations<br/>Empowered</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center bg-white/5">
+                                <x-icon name="lucide-bar-chart-2" class="w-6 h-6 text-cta" />
+                            </div>
+                            <div>
+                                <h4 class="text-2xl font-bold leading-none mb-1">20+</h4>
+                                <p class="text-xs text-white/70 leading-tight">Years of<br/>Experience</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center bg-white/5">
+                                <x-icon name="lucide-star" class="w-6 h-6 text-cta" />
+                            </div>
+                            <div>
+                                <h4 class="text-2xl font-bold leading-none mb-1">98%</h4>
+                                <p class="text-xs text-white/70 leading-tight">Client<br/>Satisfaction</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Image -->
                 <div class="w-full lg:w-[45%]">
-                    <div class="relative w-full aspect-[4/3] rounded-[48px] rounded-tl-none overflow-hidden shadow-2xl">
+                    <div class="relative w-full aspect-[4/3] rounded-[48px] rounded-tl-none overflow-hidden shadow-2xl border-[4px] border-white/10">
                         <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80" alt="Tim Profesional" class="w-full h-full object-cover">
                     </div>
                 </div>

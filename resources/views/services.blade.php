@@ -1,49 +1,132 @@
 <x-layouts.app>
     <!-- 1. PAGE HEADER (HERO) -->
-    <section class="pt-[140px] pb-[80px] bg-primary text-primary-dark">
-        <div class="container mx-auto px-6 max-w-[1320px] text-center">
-            <h1 class="text-4xl lg:text-[56px] font-black leading-[1.2] mb-6 max-w-4xl mx-auto uppercase">
+    <section class="relative pt-[120px] pb-[200px] bg-primary overflow-hidden">
+        <!-- Top Left Dots -->
+        <div class="absolute top-10 left-10 z-0 opacity-40">
+            <svg width="120" height="120" fill="none" viewBox="0 0 120 120">
+                <pattern id="dots-hero" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+                    <circle cx="2" cy="2" r="2" fill="#fff"/>
+                </pattern>
+                <rect width="120" height="120" fill="url(#dots-hero)"/>
+            </svg>
+        </div>
+        
+        <!-- Large Right Circle/Planet -->
+        <div class="absolute -top-20 -right-20 w-[600px] h-[600px] rounded-full bg-white/5 opacity-50 blur-sm pointer-events-none z-0"></div>
+        <div class="absolute top-[10%] right-[-5%] w-[400px] h-[400px] rounded-full border border-white/10 opacity-30 pointer-events-none z-0"></div>
+        
+        <!-- Bottom Left Arc -->
+        <div class="absolute -bottom-40 -left-20 w-[500px] h-[500px] rounded-full bg-white/5 opacity-50 blur-sm pointer-events-none z-0"></div>
+
+        <!-- Paper Plane 1 (Left) -->
+        <svg class="absolute top-[40%] left-[10%] opacity-80 w-[200px] h-[200px] pointer-events-none z-0" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 0 200 Q 50 150 150 50" stroke="white" stroke-width="1.5" stroke-dasharray="6 6" fill="none" />
+            <path d="M145 65 L175 35 L155 75 Z" fill="#f5c242"/>
+            <path d="M175 35 L145 65 L155 55 Z" fill="#dfb038"/>
+        </svg>
+
+        <!-- Paper Plane 2 (Right) -->
+        <svg class="absolute bottom-[20%] right-[5%] opacity-80 w-[300px] h-[200px] pointer-events-none z-0" viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Curved dotted line resembling a loop -->
+            <path d="M 0 150 C 100 180, 200 250, 250 50" stroke="white" stroke-width="1.5" stroke-dasharray="6 6" fill="none" />
+            <path d="M245 65 L275 35 L255 75 Z" fill="#f5c242"/>
+            <path d="M275 35 L245 65 L255 55 Z" fill="#dfb038"/>
+        </svg>
+        
+        <!-- Skyline Placeholder Overlay (Optional subtle visual texture) -->
+        <div class="absolute bottom-0 left-0 w-full h-[150px] opacity-10 pointer-events-none z-0" style="background: linear-gradient(to top, rgba(255,255,255,0.2), transparent);"></div>
+
+        <div class="container mx-auto px-6 max-w-[1320px] text-center relative z-10">
+            <h1 class="text-4xl lg:text-[56px] font-black leading-[1.2] mb-3 max-w-4xl mx-auto uppercase text-white">
                 Our Services
             </h1>
-            <p class="text-primary-dark/80 max-w-2xl mx-auto leading-relaxed text-xl">
+            <!-- Yellow underline -->
+            <div class="w-20 h-1.5 bg-cta mx-auto mb-6 rounded-full"></div>
+            
+            <p class="text-white/90 max-w-2xl mx-auto leading-relaxed text-xl">
                 Helping organizations transform through integrated Training, Consulting, and Research.
             </p>
         </div>
     </section>
 
     <!-- 2. SERVICE OVERVIEW (3 PILAR UTAMA) -->
-    <section class="py-20 -mt-16 z-10 relative">
-        <div class="container mx-auto px-6 max-w-[1320px]">
+    <section class="py-20 bg-[#F8FAFB] relative z-10">
+        <!-- Dot Pattern Background -->
+        <div class="absolute inset-0 z-0 opacity-60">
+            <svg width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <pattern id="service-dots" x="0" y="0" width="32" height="32" patternUnits="userSpaceOnUse">
+                    <circle cx="2" cy="2" r="1.5" fill="#CBD5E1"/>
+                </pattern>
+                <rect width="100%" height="100%" fill="url(#service-dots)"/>
+            </svg>
+        </div>
+
+        <div class="container mx-auto px-6 max-w-[1320px] relative z-10">
             <div class="grid md:grid-cols-3 gap-8">
-                <!-- Training -->
-                <div class="bg-white p-10 rounded-[32px] shadow-[0_10px_40px_rgba(0,0,0,0.08)] border border-gray-100 flex flex-col items-center text-center group hover:-translate-y-2 transition-transform duration-300">
-                    <div class="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-primary-dark transition-colors">
-                        <x-icon name="lucide-graduation-cap" class="w-10 h-10 text-primary group-hover:text-primary-dark transition-colors" stroke-width="1.5" />
+                <!-- Training Card -->
+                <div class="bg-white px-8 pt-12 pb-20 rounded-[32px] shadow-[0_15px_40px_rgba(0,0,0,0.06)] flex flex-col items-center text-center group hover:-translate-y-2 transition-transform duration-300 relative overflow-hidden border-none">
+                    <div class="w-20 h-20 bg-[#E8F5F5] rounded-3xl flex items-center justify-center mb-6 relative">
+                        <x-icon name="lucide-graduation-cap" class="w-10 h-10 text-primary" stroke-width="2" />
+                        <div class="absolute top-2 right-2 w-2 h-2 rounded-full bg-cta"></div>
                     </div>
-                    <h3 class="text-2xl font-black text-[#141414] mb-4">Training</h3>
-                    <p class="text-[#585857] leading-relaxed">
-                        Mengembangkan kompetensi individu dan tim melalui pembelajaran yang aplikatif dan interaktif.
+                    <h3 class="text-[26px] font-black text-primary-dark mb-4">Training</h3>
+                    <p class="text-[#6B7280] leading-relaxed text-sm px-2">
+                        Mengembangkan kompetensi individu dan tim melalui pembelajaran yang aplikatif dan berorientasi pada hasil.
                     </p>
+                    
+                    <!-- Decorative Corner -->
+                    <div class="absolute -bottom-8 -left-8 w-32 h-32 rounded-full bg-primary/20 pointer-events-none"></div>
+                    <div class="absolute -bottom-4 -left-4 w-24 h-24 rounded-full bg-[#3FB5B5] pointer-events-none"></div>
+                    
+                    <!-- Arrow Button -->
+                    <div class="absolute bottom-6 left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-[#E8F5F5] flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors cursor-pointer">
+                        <x-icon name="lucide-arrow-right" class="w-5 h-5" stroke-width="2.5" />
+                    </div>
                 </div>
-                <!-- Consulting -->
-                <div class="bg-white p-10 rounded-[32px] shadow-[0_10px_40px_rgba(0,0,0,0.08)] border border-gray-100 flex flex-col items-center text-center group hover:-translate-y-2 transition-transform duration-300">
-                    <div class="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-primary-dark transition-colors">
-                        <x-icon name="lucide-briefcase" class="w-10 h-10 text-primary group-hover:text-primary-dark transition-colors" stroke-width="1.5" />
+
+                <!-- Consulting Card -->
+                <div class="bg-white px-8 pt-12 pb-20 rounded-[32px] shadow-[0_15px_40px_rgba(0,0,0,0.06)] flex flex-col items-center text-center group hover:-translate-y-2 transition-transform duration-300 relative overflow-hidden border-none">
+                    <div class="w-20 h-20 bg-[#E8F5F5] rounded-3xl flex items-center justify-center mb-6 relative">
+                        <x-icon name="lucide-briefcase" class="w-10 h-10 text-primary" stroke-width="2" />
+                        <div class="absolute top-2 right-2 w-2 h-2 rounded-full bg-cta"></div>
                     </div>
-                    <h3 class="text-2xl font-black text-[#141414] mb-4">Consulting</h3>
-                    <p class="text-[#585857] leading-relaxed">
-                        Membantu organisasi menerjemahkan strategi menjadi eksekusi yang nyata dan sistematis.
+                    <h3 class="text-[26px] font-black text-primary-dark mb-4">Consulting</h3>
+                    <p class="text-[#6B7280] leading-relaxed text-sm px-2">
+                        Membantu organisasi menerjemahkan strategi menjadi eksekusi yang nyata dan berdampak.
                     </p>
+                    
+                    <!-- Decorative Corner Dotted -->
+                    <div class="absolute -bottom-4 -right-4 w-32 h-32 opacity-40 pointer-events-none">
+                         <svg width="100%" height="100%" fill="none" viewBox="0 0 100 100">
+                            <pattern id="card-dots" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
+                                <circle cx="2" cy="2" r="2" fill="#00a6a6"/>
+                            </pattern>
+                            <circle cx="100" cy="100" r="100" fill="url(#card-dots)"/>
+                         </svg>
+                    </div>
+
+                    <div class="absolute bottom-6 left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-[#E8F5F5] flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors cursor-pointer">
+                        <x-icon name="lucide-arrow-right" class="w-5 h-5" stroke-width="2.5" />
+                    </div>
                 </div>
-                <!-- Research -->
-                <div class="bg-white p-10 rounded-[32px] shadow-[0_10px_40px_rgba(0,0,0,0.08)] border border-gray-100 flex flex-col items-center text-center group hover:-translate-y-2 transition-transform duration-300">
-                    <div class="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-primary-dark transition-colors">
-                        <x-icon name="lucide-line-chart" class="w-10 h-10 text-primary group-hover:text-primary-dark transition-colors" stroke-width="1.5" />
+
+                <!-- Research Card -->
+                <div class="bg-white px-8 pt-12 pb-20 rounded-[32px] shadow-[0_15px_40px_rgba(0,0,0,0.06)] flex flex-col items-center text-center group hover:-translate-y-2 transition-transform duration-300 relative overflow-hidden border-none">
+                    <div class="w-20 h-20 bg-[#E8F5F5] rounded-3xl flex items-center justify-center mb-6 relative">
+                        <x-icon name="lucide-line-chart" class="w-10 h-10 text-primary" stroke-width="2" />
+                        <div class="absolute top-2 right-2 w-2 h-2 rounded-full bg-cta"></div>
                     </div>
-                    <h3 class="text-2xl font-black text-[#141414] mb-4">Research</h3>
-                    <p class="text-[#585857] leading-relaxed">
-                        Memberikan diagnosis organisasi berbasis data untuk mendukung keputusan strategis.
+                    <h3 class="text-[26px] font-black text-primary-dark mb-4">Research</h3>
+                    <p class="text-[#6B7280] leading-relaxed text-sm px-2">
+                        Memberikan diagnosis organisasi berbasis data untuk mendukung keputusan strategis yang berkelanjutan.
                     </p>
+                    
+                    <!-- Decorative Corner Solid -->
+                    <div class="absolute -bottom-10 -right-10 w-40 h-40 rounded-full bg-[#A7DFDF] pointer-events-none"></div>
+
+                    <div class="absolute bottom-6 left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-[#E8F5F5] flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors cursor-pointer">
+                        <x-icon name="lucide-arrow-right" class="w-5 h-5" stroke-width="2.5" />
+                    </div>
                 </div>
             </div>
         </div>
