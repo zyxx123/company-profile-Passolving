@@ -1,108 +1,136 @@
-<header 
-    x-data="{ scrolled: false, mobileMenuOpen: false }" 
-    @scroll.window="scrolled = (window.pageYOffset > 50)"
-    class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white shadow-md"
->
-    <!-- Top Bar (Dark Teal) -->
-    <div class="bg-secondary-dark text-white">
-        <div class="container mx-auto px-6 max-w-7xl flex justify-between items-center h-16 md:h-20 gap-8 text-xs font-bold tracking-wide">
+<!-- TOP BAR -->
+<div class="bg-primary-dark text-white/90 py-2 hidden md:block text-xs font-medium border-b border-white/10">
+    <div class="container mx-auto px-6 max-w-[1320px] flex justify-between items-center">
+        <div class="flex items-center gap-6">
+            <div class="flex items-center gap-2">
+                <x-icon name="lucide-map-pin" class="w-4 h-4" />
+                <span>Jl. P.P.A No.24, Ceger, Cipayung, Jakarta Timur 13820</span>
+            </div>
+        </div>
+        <div class="flex items-center gap-6">
+            <div class="flex items-center gap-2 hover:text-white transition-colors">
+                <x-icon name="lucide-phone" class="w-4 h-4" />
+                <a href="tel:+622112345678">+62 21 1234 5678</a>
+            </div>
+            <div class="flex items-center gap-2 hover:text-white transition-colors">
+                <x-icon name="lucide-mail" class="w-4 h-4" />
+                <a href="mailto:info@passolving.com">info@passolving.com</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- HEADER -->
+<header x-data="{ scrolled: false, mobileMenuOpen: false }"
+        @scroll.window="scrolled = (window.pageYOffset > 40)"
+        :class="{ 'fixed top-0 shadow-md bg-white/95 backdrop-blur-md z-50': scrolled, 'relative bg-white z-40': !scrolled }"
+        class="w-full transition-all duration-300 h-[88px] flex items-center border-b border-gray-100">
+    
+    <div class="container mx-auto px-6 max-w-[1320px]">
+        <div class="flex items-center justify-between">
             
             <!-- Logo -->
-            <a href="/" class="flex items-center">
-                <img src="{{ asset('logo-white.png') }}" alt="PASSolving Logo" class="h-8 md:h-12">
+            <a href="/" class="flex flex-col shrink-0">
+                <span class="text-[28px] font-black text-primary tracking-tighter leading-none flex items-center gap-1">
+                    <x-icon name="lucide-zap" class="w-6 h-6 text-cta" fill="currentColor" /> PASSOLVING
+                </span>
             </a>
 
-            <!-- Right side Desktop -->
-            <div class="hidden md:flex items-center justify-end gap-8 flex-1">
-                <div class="flex items-center gap-2">
-                    <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                    <span>info@passolving.com</span>
-                </div>
-                <div class="flex items-center gap-2">
-                    <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
-                    <span>+62 897 951 5205</span>
-                </div>
-                <a href="/contact" class="bg-primary text-secondary-dark px-6 py-2 rounded-full uppercase tracking-widest hover:bg-primary-dark transition-colors">
-                    CONTACT US
-                </a>
-                
-                <!-- Language Switcher -->
-                <div class="relative" x-data="{ langOpen: false }" @click.away="langOpen = false">
-                    <button @click="langOpen = !langOpen" class="flex items-center gap-1 uppercase hover:text-primary transition-colors focus:outline-none">
-                        <span x-text="'{{ strtoupper(app()->getLocale()) }}'"></span>
-                        <svg class="w-3 h-3 transition-transform duration-200" :class="langOpen ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </button>
-                    <div x-show="langOpen" x-cloak class="absolute top-full right-0 mt-2 w-20 bg-white text-gray-800 shadow-lg py-1 z-50 rounded">
-                        <a href="/lang/id" class="block px-4 py-2 hover:bg-gray-100 transition-colors {{ app()->getLocale() == 'id' ? 'text-secondary-dark font-black' : '' }}">ID</a>
-                        <a href="/lang/en" class="block px-4 py-2 hover:bg-gray-100 transition-colors {{ app()->getLocale() == 'en' ? 'text-secondary-dark font-black' : '' }}">EN</a>
-                    </div>
-                </div>
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center space-x-8">
+                <x-ui.nav-link href="/" :active="request()->is('/')">Home</x-ui.nav-link>
+                <x-ui.nav-link href="/services" :active="request()->is('services*')">Service</x-ui.nav-link>
+                <x-ui.nav-link href="/portfolio" :active="request()->is('portfolio*')">Portfolio</x-ui.nav-link>
+                <x-ui.nav-link href="/about" :active="request()->is('about*')">About</x-ui.nav-link>
+                <x-ui.nav-link href="/contact" :active="request()->is('contact*')">Contact</x-ui.nav-link>
+            </nav>
+
+            <!-- Desktop Actions -->
+            <div class="hidden md:flex items-center gap-6">
+                <button class="text-[#141414] hover:text-primary transition-colors">
+                    <x-icon name="lucide-search" class="w-5 h-5" stroke-width="2.5" />
+                </button>
+                <x-ui.button href="/contact" variant="primary">
+                    Get in Touch
+                </x-ui.button>
             </div>
 
             <!-- Mobile Menu Button -->
-            <button 
-                @click="mobileMenuOpen = !mobileMenuOpen" 
-                class="md:hidden p-2 text-white hover:text-primary transition-colors focus:outline-none"
-            >
-                <svg x-show="!mobileMenuOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-                <svg x-show="mobileMenuOpen" x-cloak class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            <button @click="mobileMenuOpen = true" class="md:hidden p-2 text-[#141414] hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary rounded-lg">
+                <x-icon name="lucide-menu" class="w-8 h-8" />
             </button>
         </div>
     </div>
 
-    <!-- Bottom Bar (White Nav) -->
-    <div class="hidden md:block bg-white border-b border-gray-100">
-        <div class="container mx-auto px-6 max-w-7xl h-14 flex items-center justify-center">
-            <!-- Desktop Navigation (Centered) -->
-            <nav class="flex items-center justify-center flex-1 gap-12">
-                @php
-                    $links = [
-                        ['name' => 'Home', 'url' => '/'],
-                        ['name' => 'Services', 'url' => '/services'],
-                        ['name' => 'Portfolio', 'url' => '/portfolio'],
-                        ['name' => 'About', 'url' => '/about']
-                    ];
-                @endphp
-                
-                @foreach($links as $link)
-                    <a 
-                        href="{{ $link['url'] }}" 
-                        class="text-[11px] font-black uppercase tracking-[0.2em] transition-colors hover:text-secondary {{ request()->is(ltrim($link['url'], '/')) || (request()->is('/') && $link['url'] == '/') ? 'text-secondary' : 'text-gray-800' }}"
-                    >
-                        {{ $link['name'] }}
-                    </a>
-                @endforeach
-            </nav>
-        </div>
-    </div>
+    <!-- Mobile Slide-in Menu -->
+    <div x-show="mobileMenuOpen" 
+         style="display: none;"
+         class="fixed inset-0 z-[100] md:hidden"
+         aria-labelledby="slide-over-title" role="dialog" aria-modal="true">
+        
+        <!-- Background overlay -->
+        <div x-show="mobileMenuOpen"
+             x-transition:enter="ease-in-out duration-300"
+             x-transition:enter-start="opacity-0"
+             x-transition:enter-end="opacity-100"
+             x-transition:leave="ease-in-out duration-300"
+             x-transition:leave-start="opacity-100"
+             x-transition:leave-end="opacity-0"
+             class="fixed inset-0 bg-black/60 transition-opacity" 
+             @click="mobileMenuOpen = false"></div>
 
-    <!-- Mobile Navigation Menu -->
-    <div 
-        x-show="mobileMenuOpen" 
-        x-cloak
-        x-transition:enter="transition ease-out duration-200"
-        x-transition:enter-start="opacity-0 -translate-y-4"
-        x-transition:enter-end="opacity-100 translate-y-0"
-        x-transition:leave="transition ease-in duration-150"
-        x-transition:leave-start="opacity-100 translate-y-0"
-        x-transition:leave-end="opacity-0 -translate-y-4"
-        class="absolute top-full left-0 w-full bg-white border-t border-gray-100 shadow-xl md:hidden"
-    >
-        <div class="flex flex-col px-6 py-4 space-y-2">
-            @foreach($links as $link)
-                <a 
-                    href="{{ $link['url'] }}" 
-                    class="text-xs font-black uppercase tracking-[0.2em] py-3 border-b border-gray-50 {{ request()->is(ltrim($link['url'], '/')) || (request()->is('/') && $link['url'] == '/') ? 'text-secondary' : 'text-gray-600' }}"
-                >
-                    {{ $link['name'] }}
-                </a>
-            @endforeach
-            <a href="/contact" class="text-xs font-black uppercase tracking-[0.2em] py-3 border-b border-gray-50 text-primary">Contact Us</a>
-            
-            <div class="py-3 flex gap-4 text-xs font-black uppercase tracking-[0.2em]">
-                <a href="/lang/id" class="{{ app()->getLocale() == 'id' ? 'text-secondary' : 'text-gray-400' }}">ID</a>
-                <span class="text-gray-300">|</span>
-                <a href="/lang/en" class="{{ app()->getLocale() == 'en' ? 'text-secondary' : 'text-gray-400' }}">EN</a>
+        <div class="fixed inset-0 overflow-hidden">
+            <div class="absolute inset-0 overflow-hidden">
+                <div class="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
+                    
+                    <!-- Slide-in panel -->
+                    <div x-show="mobileMenuOpen"
+                         x-transition:enter="transform transition ease-in-out duration-300"
+                         x-transition:enter-start="translate-x-full"
+                         x-transition:enter-end="translate-x-0"
+                         x-transition:leave="transform transition ease-in-out duration-300"
+                         x-transition:leave-start="translate-x-0"
+                         x-transition:leave-end="translate-x-full"
+                         class="pointer-events-auto relative w-screen max-w-md">
+                        
+                        <div class="flex h-full flex-col overflow-y-scroll bg-white shadow-xl">
+                            <div class="px-6 pt-6 pb-4 flex items-center justify-between border-b border-gray-100">
+                                <a href="/" class="flex flex-col shrink-0">
+                                    <span class="text-[24px] font-black text-primary tracking-tighter leading-none flex items-center gap-1">
+                                        <x-icon name="lucide-zap" class="w-5 h-5 text-cta" fill="currentColor" /> PASSOLVING
+                                    </span>
+                                </a>
+                                <button type="button" @click="mobileMenuOpen = false" class="rounded-md text-gray-400 hover:text-gray-600 focus:outline-none focus:ring-2 focus:ring-primary">
+                                    <span class="sr-only">Close panel</span>
+                                    <x-icon name="lucide-x" class="w-8 h-8" />
+                                </button>
+                            </div>
+                            
+                            <div class="relative mt-6 flex-1 px-6 sm:px-6">
+                                <nav class="space-y-6 flex flex-col mt-4">
+                                    <a href="/" class="text-xl font-bold {{ request()->is('/') ? 'text-primary' : 'text-[#141414]' }} hover:text-primary transition-colors">Home</a>
+                                    <a href="/services" class="text-xl font-bold {{ request()->is('services*') ? 'text-primary' : 'text-[#141414]' }} hover:text-primary transition-colors flex items-center justify-between">Service <x-icon name="lucide-chevron-right" class="w-5 h-5 text-gray-400"/></a>
+                                    <a href="/portfolio" class="text-xl font-bold {{ request()->is('portfolio*') ? 'text-primary' : 'text-[#141414]' }} hover:text-primary transition-colors">Portfolio</a>
+                                    <a href="/about" class="text-xl font-bold {{ request()->is('about*') ? 'text-primary' : 'text-[#141414]' }} hover:text-primary transition-colors">About</a>
+                                    <a href="/contact" class="text-xl font-bold {{ request()->is('contact*') ? 'text-primary' : 'text-[#141414]' }} hover:text-primary transition-colors">Contact Us</a>
+                                    
+                                    <div class="pt-8">
+                                        <x-ui.button href="/contact" variant="primary" class="w-full justify-center">
+                                            GET IN TOUCH
+                                        </x-ui.button>
+                                    </div>
+                                </nav>
+                            </div>
+                            
+                            <!-- Socials Mobile -->
+                            <div class="p-6 bg-gray-50 border-t border-gray-100 flex items-center justify-center gap-6 text-[#585857]">
+                                <a href="#" class="hover:text-primary transition-colors"><x-icon name="lucide-linkedin" class="w-5 h-5" /></a>
+                                <a href="#" class="hover:text-primary transition-colors"><x-icon name="lucide-instagram" class="w-5 h-5" /></a>
+                                <a href="#" class="hover:text-primary transition-colors"><x-icon name="lucide-youtube" class="w-5 h-5" /></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

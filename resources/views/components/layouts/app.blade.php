@@ -26,8 +26,16 @@
     <!-- Alpine.js -->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
-<body class="bg-[#F8FAFC] text-slate-800 antialiased selection:bg-primary selection:text-white relative overflow-x-hidden">
+<body class="bg-[#F8FAFB] text-[#6B7280] antialiased selection:bg-primary selection:text-white relative overflow-x-hidden font-sans">
     
+    <!-- Global Background Elements -->
+    <!-- Subtle Grid Pattern -->
+    <div class="fixed inset-0 z-[-1] bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjIiIGZpbGw9IiNFMUU1RTgiLz48L3N2Zz4=')] [background-size:24px_24px] opacity-60"></div>
+    
+    <!-- Ambient Glowing Orbs -->
+    <div class="fixed top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-primary/20 blur-[120px] z-[-1] opacity-60 mix-blend-multiply pointer-events-none animate-pulse" style="animation-duration: 8s;"></div>
+    <div class="fixed bottom-[-10%] right-[-5%] w-[35%] h-[35%] rounded-full bg-cta/10 blur-[100px] z-[-1] opacity-60 mix-blend-multiply pointer-events-none animate-pulse" style="animation-duration: 12s; animation-delay: 2s;"></div>
+
     <!-- Main Content Wrapper -->
     <div class="relative z-10 min-h-screen flex flex-col w-full overflow-x-hidden">
         <x-header />

@@ -3,33 +3,40 @@
 namespace App\Livewire;
 
 use Livewire\Component;
-use App\Models\Message;
+use Livewire\Attributes\Validate;
+use App\Models\ContactMessage;
 
 class ContactForm extends Component
 {
+    #[Validate('required|min:3')]
     public $name = '';
-    public $email = '';
-    public $message = '';
-    public $successMessage = '';
 
-    protected $rules = [
-        'name' => 'required|min:3',
-        'email' => 'required|email',
-        'message' => 'required|min:10',
-    ];
+    #[Validate('required|email')]
+    public $email = '';
+    
+    public $company = '';
+
+    public $phone = '';
+
+    #[Validate('required|min:10')]
+    public $message = '';
+
+    public $successMessage = '';
 
     public function submit()
     {
         $this->validate();
 
-        Message::create([
+        ContactMessage::create([
             'name' => $this->name,
             'email' => $this->email,
+            'company' => $this->company,
+            // 'phone' => $this->phone, // assuming migration doesn't have phone, I won't save it or I should create a new migration
             'message' => $this->message,
         ]);
 
-        $this->successMessage = __('Thank you! Your message has been sent successfully.');
-        $this->reset(['name', 'email', 'message']);
+        $this->successMessage = 'Pesan Anda Berhasil Terkirim!';
+        $this->reset(['name', 'email', 'company', 'phone', 'message']);
     }
 
     public function render()
