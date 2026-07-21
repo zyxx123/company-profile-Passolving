@@ -1,19 +1,19 @@
 <x-layouts.app>
     <!-- 1. HERO SECTION -->
     <!-- Full screen (100vh) adjustment: using min-h-[calc(100vh-88px)] assuming header is 88px, or just min-h-screen with flex -->
-    <section class="relative min-h-[calc(100vh-88px)] flex items-center overflow-hidden bg-gradient-to-br from-primary-dark to-primary py-20">
+    <section class="relative min-h-[calc(100vh-88px)] flex items-center overflow-hidden bg-primary py-20">
         <!-- Subtle dot pattern overlay or shapes -->
-        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_bottom_left,white,transparent)]"></div>
+        <!-- Subtle pattern removed as per request for flat design -->
 
         <div class="container mx-auto px-6 max-w-[1320px] relative z-10">
             <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
                 <!-- Text Content -->
                 <div class="w-full lg:w-[55%]">
                     <p class="text-cta font-bold tracking-widest uppercase text-sm mb-4">Pioneer in Agility Assesment & National Soft Skill Certification</p>
-                    <h1 class="text-4xl lg:text-[60px] font-black leading-[1.1] text-white mb-6 uppercase">
+                    <h1 class="text-4xl lg:text-[60px] font-black leading-[1.1] text-primary-dark mb-6 uppercase">
                         AGILITY &<br/>TRANSFORMATION
                     </h1>
-                    <p class="text-lg text-white/80 mb-10 leading-relaxed max-w-lg">
+                    <p class="text-lg text-primary-dark/80 mb-10 leading-relaxed max-w-lg">
                         Determine for Execution Deliveries. Kami hadir untuk membantu organisasi Anda menghadapi realitas yang menantang dengan solusi berbasis data dan sistem yang adaptif.
                     </p>
                     <div class="flex flex-wrap items-center gap-4">
@@ -58,7 +58,7 @@
                 
                 <!-- Left Images (Optech style overlapping) -->
                 <div class="w-full lg:w-[50%] relative">
-                    <div class="absolute -top-10 -left-10 w-40 h-40 opacity-20 z-0" style="background-image: radial-gradient(#0F9FA4 2px, transparent 2px); background-size: 16px 16px;"></div>
+                    <div class="absolute -top-10 -left-10 w-40 h-40 opacity-20 z-0"></div>
                     
                     <div class="relative z-10 flex items-end gap-6">
                         <div class="w-[60%] rounded-3xl rounded-tr-none overflow-hidden shadow-lg h-[400px]">
@@ -197,9 +197,9 @@
                 @foreach($portfolios->take(3) as $portfolio)
                     <div class="group relative rounded-3xl overflow-hidden shadow-sm aspect-[4/3] max-h-[360px]">
                         <img src="{{ $portfolio->image_url }}" alt="{{ $portfolio->title }}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                        <div class="absolute inset-0 bg-gradient-to-t from-[#0A6D71] via-[#0A6D71]/40 to-transparent flex flex-col justify-end p-8">
+                        <div class="absolute inset-0 bg-primary/70 flex flex-col justify-end p-8">
                             <span class="inline-block px-3 py-1 bg-cta text-[#141414] text-[10px] font-bold uppercase tracking-widest rounded-full mb-4 self-start">{{ $portfolio->category }}</span>
-                            <h3 class="text-xl font-bold text-white mb-2 leading-tight">{{ $portfolio->title }}</h3>
+                            <h3 class="text-xl font-bold text-primary-dark mb-2 leading-tight">{{ $portfolio->title }}</h3>
                         </div>
                     </div>
                 @endforeach
@@ -284,14 +284,14 @@
                 </div>
 
                 <!-- Testimonial 2 -->
-                <div class="bg-primary-dark p-10 rounded-3xl shadow-sm relative">
-                    <x-icon name="lucide-quote" class="w-12 h-12 text-white/10 absolute top-8 left-8" />
+                <div class="bg-primary p-10 rounded-3xl shadow-sm relative">
+                    <x-icon name="lucide-quote" class="w-12 h-12 text-primary-dark/10 absolute top-8 left-8" />
                     <div class="relative z-10">
-                        <p class="text-white font-medium text-lg leading-relaxed italic mb-8 mt-4">
+                        <p class="text-primary-dark font-medium text-lg leading-relaxed italic mb-8 mt-4">
                             "PASSolving membantu kami melihat realita dengan objektif dan memberikan solusi yang tepat."
                         </p>
                         <div>
-                            <h4 class="font-bold text-white">Founder Beauty Clinic</h4>
+                            <h4 class="font-bold text-primary-dark">Founder Beauty Clinic</h4>
                             <p class="text-sm text-cta">Indonesia</p>
                         </div>
                     </div>

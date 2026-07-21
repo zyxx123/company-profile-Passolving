@@ -1,19 +1,19 @@
 <x-layouts.app>
     <!-- PAGE HEADER -->
-    <section class="pt-[140px] pb-[80px] bg-gradient-to-br from-primary-dark to-primary text-white">
+    <section class="pt-[140px] pb-[80px] bg-primary text-primary-dark">
         <div class="container mx-auto px-6 max-w-[1320px]">
-            <a href="/portfolio" class="inline-flex items-center gap-2 text-white/70 hover:text-white transition-colors mb-8 font-medium">
+            <a href="/portfolio" class="inline-flex items-center gap-2 text-primary-dark/70 hover:text-primary-dark transition-colors mb-8 font-medium">
                 <x-icon name="lucide-arrow-left" class="w-4 h-4" />
                 Kembali ke Portfolio
             </a>
             
-            <span class="inline-block px-4 py-1.5 bg-white/20 text-white text-xs font-bold uppercase tracking-widest rounded-full mb-6">
+            <span class="inline-block px-4 py-1.5 bg-white/20 text-primary-dark text-xs font-bold uppercase tracking-widest rounded-full mb-6">
                 {{ $portfolio['category'] }}
             </span>
             <h1 class="text-4xl lg:text-[56px] font-bold leading-[1.1] mb-6 max-w-4xl">
                 {{ $portfolio['title'] }}
             </h1>
-            <p class="text-white/80 text-xl font-medium max-w-2xl">
+            <p class="text-primary-dark/80 text-xl font-medium max-w-2xl">
                 Client: {{ $portfolio['client'] }}
             </p>
         </div>

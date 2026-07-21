@@ -1,11 +1,11 @@
 <x-layouts.app>
     <!-- PAGE HEADER -->
-    <section class="pt-[140px] pb-[80px] bg-gradient-to-br from-primary-dark to-primary text-white">
+    <section class="pt-[140px] pb-[80px] bg-primary text-primary-dark">
         <div class="container mx-auto px-6 max-w-[1320px] text-center">
             <h1 class="text-4xl lg:text-[48px] font-bold leading-[1.2] mb-6 max-w-4xl mx-auto">
                 Mari Berkolaborasi untuk Masa Depan yang Lebih Baik
             </h1>
-            <p class="text-white/80 max-w-2xl mx-auto leading-relaxed text-lg">
+            <p class="text-primary-dark/80 max-w-2xl mx-auto leading-relaxed text-lg">
                 Punya pertanyaan atau ingin berdiskusi lebih lanjut? Kami siap membantu Anda.
             </p>
         </div>
@@ -24,7 +24,7 @@
                         <div class="space-y-6">
                             <div class="flex items-start gap-4 group">
                                 <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center shrink-0 shadow-sm group-hover:bg-primary transition-colors">
-                                    <x-icon name="lucide-map-pin" class="w-4 h-4 text-primary group-hover:text-white transition-colors" />
+                                    <x-icon name="lucide-map-pin" class="w-4 h-4 text-primary group-hover:text-primary-dark transition-colors" />
                                 </div>
                                 <div>
                                     <h4 class="text-sm font-bold text-[#141414] mb-1">Kantor Pusat</h4>
@@ -33,7 +33,7 @@
                             </div>
                             <div class="flex items-start gap-4 group">
                                 <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center shrink-0 shadow-sm group-hover:bg-primary transition-colors">
-                                    <x-icon name="lucide-mail" class="w-4 h-4 text-primary group-hover:text-white transition-colors" />
+                                    <x-icon name="lucide-mail" class="w-4 h-4 text-primary group-hover:text-primary-dark transition-colors" />
                                 </div>
                                 <div>
                                     <h4 class="text-sm font-bold text-[#141414] mb-1">Email</h4>
@@ -42,7 +42,7 @@
                             </div>
                             <div class="flex items-start gap-4 group">
                                 <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center shrink-0 shadow-sm group-hover:bg-primary transition-colors">
-                                    <x-icon name="lucide-phone" class="w-4 h-4 text-primary group-hover:text-white transition-colors" />
+                                    <x-icon name="lucide-phone" class="w-4 h-4 text-primary group-hover:text-primary-dark transition-colors" />
                                 </div>
                                 <div>
                                     <h4 class="text-sm font-bold text-[#141414] mb-1">Telepon</h4>
@@ -51,7 +51,7 @@
                             </div>
                             <div class="flex items-start gap-4 group">
                                 <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center shrink-0 shadow-sm group-hover:bg-primary transition-colors">
-                                    <x-icon name="lucide-clock" class="w-4 h-4 text-primary group-hover:text-white transition-colors" />
+                                    <x-icon name="lucide-clock" class="w-4 h-4 text-primary group-hover:text-primary-dark transition-colors" />
                                 </div>
                                 <div>
                                     <h4 class="text-sm font-bold text-[#141414] mb-1">Jam Operasional</h4>

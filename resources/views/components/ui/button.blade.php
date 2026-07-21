@@ -6,7 +6,7 @@
     $variantClasses = match($variant) {
         'primary' => 'bg-cta text-[#1F2937] hover:bg-cta-hover focus:ring-cta/50 shadow-sm',
         'secondary' => 'bg-white text-primary hover:bg-gray-50 focus:ring-primary/50 shadow-sm',
-        'outline' => 'border-2 border-white text-white hover:bg-white hover:text-primary focus:ring-white/50',
+        'outline' => 'border-2 border-white text-primary-dark hover:bg-white hover:text-primary focus:ring-white/50',
         default => 'bg-cta text-[#1F2937] hover:bg-cta-hover focus:ring-cta/50',
     };
     

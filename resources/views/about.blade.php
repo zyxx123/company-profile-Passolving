@@ -1,10 +1,10 @@
 <x-layouts.app>
     <!-- 1. HERO SECTION -->
-    <section class="relative pt-[140px] pb-[100px] lg:pt-[180px] lg:pb-[140px] bg-primary-dark text-white overflow-hidden">
+    <section class="relative pt-[140px] pb-[100px] lg:pt-[180px] lg:pb-[140px] bg-primary text-primary-dark overflow-hidden">
         <!-- Background Image with Overlay -->
         <div class="absolute inset-0 z-0">
             <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1920&q=80" alt="Team Workshop" class="w-full h-full object-cover opacity-20 mix-blend-overlay">
-            <div class="absolute inset-0 bg-gradient-to-r from-primary-dark via-primary-dark/90 to-primary-dark/40"></div>
+            <div class="absolute inset-0 bg-primary/60"></div>
         </div>
 
         <div class="container mx-auto px-6 max-w-[1320px] relative z-10">
@@ -12,7 +12,7 @@
                 <h1 class="text-4xl lg:text-[64px] font-black leading-[1.1] mb-6 uppercase">
                     About PASS
                 </h1>
-                <p class="text-white/80 leading-relaxed text-xl lg:text-2xl font-light">
+                <p class="text-primary-dark/80 leading-relaxed text-xl lg:text-2xl font-light">
                     Empowering organizations to achieve measurable transformation through agility, leadership, and strategic execution.
                 </p>
             </div>
@@ -61,48 +61,48 @@
     </section>
 
     <!-- 4. VISION & MISSION -->
-    <section class="py-20 bg-primary-dark text-white">
+    <section class="py-20 bg-primary text-primary-dark">
         <div class="container mx-auto px-6 max-w-[1320px]">
             <div class="grid lg:grid-cols-2 gap-16 lg:gap-24">
                 <!-- Vision -->
                 <div>
-                    <h2 class="text-3xl font-black text-white/10 uppercase tracking-widest mb-2">01. Vision</h2>
+                    <h2 class="text-3xl font-black text-primary-dark/10 uppercase tracking-widest mb-2">01. Vision</h2>
                     <h3 class="text-3xl lg:text-4xl font-bold mb-6 text-cta">Menjadi mitra transformasi terpercaya.</h3>
-                    <p class="text-white/80 leading-relaxed text-lg">
+                    <p class="text-primary-dark/80 leading-relaxed text-lg">
                         Membantu organisasi di seluruh Indonesia dan Asia Tenggara untuk berkembang secara adaptif, tangguh, dan berkelanjutan dalam menghadapi era disrupsi.
                     </p>
                 </div>
                 
                 <!-- Mission -->
                 <div>
-                    <h2 class="text-3xl font-black text-white/10 uppercase tracking-widest mb-6">02. Mission</h2>
+                    <h2 class="text-3xl font-black text-primary-dark/10 uppercase tracking-widest mb-6">02. Mission</h2>
                     <ul class="space-y-6">
                         <li class="flex gap-4">
                             <div class="mt-1"><x-icon name="lucide-check-circle-2" class="w-6 h-6 text-cta" /></div>
                             <div>
-                                <h4 class="text-lg font-bold text-white mb-1">Solusi Berbasis Data</h4>
-                                <p class="text-white/70 text-sm">Menghasilkan keputusan strategis melalui diagnosis dan riset yang terukur.</p>
+                                <h4 class="text-lg font-bold text-primary-dark mb-1">Solusi Berbasis Data</h4>
+                                <p class="text-primary-dark/70 text-sm">Menghasilkan keputusan strategis melalui diagnosis dan riset yang terukur.</p>
                             </div>
                         </li>
                         <li class="flex gap-4">
                             <div class="mt-1"><x-icon name="lucide-check-circle-2" class="w-6 h-6 text-cta" /></div>
                             <div>
-                                <h4 class="text-lg font-bold text-white mb-1">Kepemimpinan Adaptif</h4>
-                                <p class="text-white/70 text-sm">Mengembangkan pemimpin yang tangkas (agile) di berbagai level manajemen.</p>
+                                <h4 class="text-lg font-bold text-primary-dark mb-1">Kepemimpinan Adaptif</h4>
+                                <p class="text-primary-dark/70 text-sm">Mengembangkan pemimpin yang tangkas (agile) di berbagai level manajemen.</p>
                             </div>
                         </li>
                         <li class="flex gap-4">
                             <div class="mt-1"><x-icon name="lucide-check-circle-2" class="w-6 h-6 text-cta" /></div>
                             <div>
-                                <h4 class="text-lg font-bold text-white mb-1">Perubahan Terukur</h4>
-                                <p class="text-white/70 text-sm">Mendorong inisiatif transformasi yang memberikan dampak bisnis nyata (ROI).</p>
+                                <h4 class="text-lg font-bold text-primary-dark mb-1">Perubahan Terukur</h4>
+                                <p class="text-primary-dark/70 text-sm">Mendorong inisiatif transformasi yang memberikan dampak bisnis nyata (ROI).</p>
                             </div>
                         </li>
                         <li class="flex gap-4">
                             <div class="mt-1"><x-icon name="lucide-check-circle-2" class="w-6 h-6 text-cta" /></div>
                             <div>
-                                <h4 class="text-lg font-bold text-white mb-1">Pendampingan Implementasi</h4>
-                                <p class="text-white/70 text-sm">Berjalan berdampingan dengan klien hingga eksekusi benar-benar terwujud.</p>
+                                <h4 class="text-lg font-bold text-primary-dark mb-1">Pendampingan Implementasi</h4>
+                                <p class="text-primary-dark/70 text-sm">Berjalan berdampingan dengan klien hingga eksekusi benar-benar terwujud.</p>
                             </div>
                         </li>
                     </ul>
@@ -125,35 +125,35 @@
                 <!-- Value 1 -->
                 <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm text-center group hover:-translate-y-2 transition-transform duration-300">
                     <div class="w-16 h-16 mx-auto bg-primary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
-                        <x-icon name="lucide-brain" class="w-8 h-8 text-primary group-hover:text-white transition-colors" />
+                        <x-icon name="lucide-brain" class="w-8 h-8 text-primary group-hover:text-primary-dark transition-colors" />
                     </div>
                     <h4 class="font-bold text-[#141414] mb-2">Empathy</h4>
                 </div>
                 <!-- Value 2 -->
                 <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm text-center group hover:-translate-y-2 transition-transform duration-300">
                     <div class="w-16 h-16 mx-auto bg-primary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
-                        <x-icon name="lucide-cog" class="w-8 h-8 text-primary group-hover:text-white transition-colors" />
+                        <x-icon name="lucide-cog" class="w-8 h-8 text-primary group-hover:text-primary-dark transition-colors" />
                     </div>
                     <h4 class="font-bold text-[#141414] mb-2">System Thinking</h4>
                 </div>
                 <!-- Value 3 -->
                 <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm text-center group hover:-translate-y-2 transition-transform duration-300">
                     <div class="w-16 h-16 mx-auto bg-primary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
-                        <x-icon name="lucide-trending-up" class="w-8 h-8 text-primary group-hover:text-white transition-colors" />
+                        <x-icon name="lucide-trending-up" class="w-8 h-8 text-primary group-hover:text-primary-dark transition-colors" />
                     </div>
                     <h4 class="font-bold text-[#141414] mb-2">Result Oriented</h4>
                 </div>
                 <!-- Value 4 -->
                 <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm text-center group hover:-translate-y-2 transition-transform duration-300">
                     <div class="w-16 h-16 mx-auto bg-primary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
-                        <x-icon name="lucide-users" class="w-8 h-8 text-primary group-hover:text-white transition-colors" />
+                        <x-icon name="lucide-users" class="w-8 h-8 text-primary group-hover:text-primary-dark transition-colors" />
                     </div>
                     <h4 class="font-bold text-[#141414] mb-2">Collaboration</h4>
                 </div>
                 <!-- Value 5 -->
                 <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm text-center group hover:-translate-y-2 transition-transform duration-300 col-span-2 md:col-span-1 lg:col-span-1">
                     <div class="w-16 h-16 mx-auto bg-primary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
-                        <x-icon name="lucide-rocket" class="w-8 h-8 text-primary group-hover:text-white transition-colors" />
+                        <x-icon name="lucide-rocket" class="w-8 h-8 text-primary group-hover:text-primary-dark transition-colors" />
                     </div>
                     <h4 class="font-bold text-[#141414] mb-2">Continuous Improvement</h4>
                 </div>
@@ -182,14 +182,14 @@
                     <div class="flex flex-col md:flex-row justify-between items-center gap-6 relative">
                         
                         <!-- Line Connect (Desktop) -->
-                        <div class="hidden md:block absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-primary/30 to-cta/30 -z-10 -translate-y-1/2"></div>
+                        <div class="hidden md:block absolute top-1/2 left-0 w-full h-1 bg-primary/20 -z-10 -translate-y-1/2"></div>
                         
                         <!-- Line Connect (Mobile) -->
-                        <div class="md:hidden absolute left-1/2 top-0 h-full w-1 bg-gradient-to-b from-primary/30 to-cta/30 -z-10 -translate-x-1/2"></div>
+                        <div class="md:hidden absolute left-1/2 top-0 h-full w-1 bg-primary/20 -z-10 -translate-x-1/2"></div>
 
                         <!-- Empathy -->
                         <div class="bg-white p-8 rounded-full md:rounded-3xl border border-gray-100 shadow-[0_10px_30px_rgba(0,0,0,0.05)] text-center w-48 h-48 md:w-auto md:h-auto flex flex-col justify-center items-center z-10">
-                            <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center mb-3 mx-auto">
+                            <div class="w-12 h-12 bg-primary text-primary-dark rounded-full flex items-center justify-center mb-3 mx-auto">
                                 <span class="font-black text-xl">1</span>
                             </div>
                             <h4 class="font-bold text-[#141414] text-lg">Empathy</h4>
@@ -200,7 +200,7 @@
                         
                         <!-- System -->
                         <div class="bg-white p-8 rounded-full md:rounded-3xl border border-gray-100 shadow-[0_10px_30px_rgba(0,0,0,0.05)] text-center w-48 h-48 md:w-auto md:h-auto flex flex-col justify-center items-center z-10">
-                            <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center mb-3 mx-auto">
+                            <div class="w-12 h-12 bg-primary text-primary-dark rounded-full flex items-center justify-center mb-3 mx-auto">
                                 <span class="font-black text-xl">2</span>
                             </div>
                             <h4 class="font-bold text-[#141414] text-lg">System</h4>
@@ -211,10 +211,10 @@
 
                         <!-- Result -->
                         <div class="bg-white p-8 rounded-full md:rounded-3xl border-cta border-2 shadow-[0_10px_30px_rgba(244,180,0,0.15)] text-center w-48 h-48 md:w-auto md:h-auto flex flex-col justify-center items-center z-10 relative">
-                            <div class="absolute -top-3 -right-3 bg-cta text-white p-2 rounded-full animate-pulse">
+                            <div class="absolute -top-3 -right-3 bg-cta text-primary-dark p-2 rounded-full animate-pulse">
                                 <x-icon name="lucide-star" class="w-4 h-4 fill-white" />
                             </div>
-                            <div class="w-12 h-12 bg-cta text-white rounded-full flex items-center justify-center mb-3 mx-auto">
+                            <div class="w-12 h-12 bg-cta text-primary-dark rounded-full flex items-center justify-center mb-3 mx-auto">
                                 <span class="font-black text-xl">3</span>
                             </div>
                             <h4 class="font-bold text-[#141414] text-lg">Result</h4>
@@ -301,7 +301,7 @@
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- Point 1 -->
                 <div class="bg-[#F8FAFB] p-8 rounded-3xl border border-gray-100 group">
-                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mb-6 shadow-sm text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mb-6 shadow-sm text-primary group-hover:bg-primary group-hover:text-primary-dark transition-colors">
                         <x-icon name="lucide-users" class="w-6 h-6" />
                     </div>
                     <h4 class="font-bold text-[#141414] mb-3 text-lg">Human-Centered Transformation</h4>
@@ -309,7 +309,7 @@
                 </div>
                 <!-- Point 2 -->
                 <div class="bg-[#F8FAFB] p-8 rounded-3xl border border-gray-100 group">
-                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mb-6 shadow-sm text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mb-6 shadow-sm text-primary group-hover:bg-primary group-hover:text-primary-dark transition-colors">
                         <x-icon name="lucide-bar-chart-2" class="w-6 h-6" />
                     </div>
                     <h4 class="font-bold text-[#141414] mb-3 text-lg">Data-Driven Decisions</h4>
@@ -317,7 +317,7 @@
                 </div>
                 <!-- Point 3 -->
                 <div class="bg-[#F8FAFB] p-8 rounded-3xl border border-gray-100 group">
-                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mb-6 shadow-sm text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mb-6 shadow-sm text-primary group-hover:bg-primary group-hover:text-primary-dark transition-colors">
                         <x-icon name="lucide-network" class="w-6 h-6" />
                     </div>
                     <h4 class="font-bold text-[#141414] mb-3 text-lg">Cross-Industry Experience</h4>
@@ -325,7 +325,7 @@
                 </div>
                 <!-- Point 4 -->
                 <div class="bg-[#F8FAFB] p-8 rounded-3xl border border-gray-100 group">
-                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mb-6 shadow-sm text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mb-6 shadow-sm text-primary group-hover:bg-primary group-hover:text-primary-dark transition-colors">
                         <x-icon name="lucide-target" class="w-6 h-6" />
                     </div>
                     <h4 class="font-bold text-[#141414] mb-3 text-lg">Measurable Business Impact</h4>
@@ -356,12 +356,12 @@
     <!-- 10. CTA BAR -->
     <section class="py-24 bg-[#F8FAFB] text-center">
         <div class="container mx-auto px-6 max-w-[1320px]">
-            <div class="bg-gradient-to-br from-primary-dark to-primary rounded-[40px] p-16 md:p-24 relative overflow-hidden shadow-xl">
+            <div class="bg-primary rounded-[40px] p-16 md:p-24 relative overflow-hidden shadow-xl">
                 <!-- Decorative elements -->
-                <div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_bottom_left,white,transparent)]"></div>
+                <!-- Radial pattern removed for flat design -->
                 
                 <div class="relative z-10">
-                    <h2 class="text-3xl lg:text-[48px] font-bold mb-10 text-white max-w-3xl mx-auto leading-tight">
+                    <h2 class="text-3xl lg:text-[48px] font-bold mb-10 text-primary-dark max-w-3xl mx-auto leading-tight">
                         Let's Create Meaningful Transformation Together
                     </h2>
                     <div class="flex flex-wrap justify-center items-center gap-4">

@@ -26,7 +26,7 @@
     <!-- Alpine.js -->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
-<body class="bg-[#F8FAFB] text-[#6B7280] antialiased selection:bg-primary selection:text-white relative overflow-x-hidden font-sans">
+<body class="bg-[#F8FAFB] text-[#6B7280] antialiased selection:bg-primary selection:text-primary-dark relative overflow-x-hidden font-sans">
     
     <!-- Global Background Elements -->
     <!-- Subtle Grid Pattern -->

@@ -1,37 +1,17 @@
-<!-- TOP BAR -->
-<div class="bg-primary-dark text-white/90 py-2 hidden md:block text-xs font-medium border-b border-white/10">
-    <div class="container mx-auto px-6 max-w-[1320px] flex justify-between items-center">
-        <div class="flex items-center gap-6">
-            <div class="flex items-center gap-2">
-                <x-icon name="lucide-map-pin" class="w-4 h-4" />
-                <span>Jl. P.P.A No.24, Ceger, Cipayung, Jakarta Timur 13820</span>
-            </div>
-        </div>
-        <div class="flex items-center gap-6">
-            <div class="flex items-center gap-2 hover:text-white transition-colors">
-                <x-icon name="lucide-phone" class="w-4 h-4" />
-                <a href="tel:+622112345678">+62 21 1234 5678</a>
-            </div>
-            <div class="flex items-center gap-2 hover:text-white transition-colors">
-                <x-icon name="lucide-mail" class="w-4 h-4" />
-                <a href="mailto:info@passolving.com">info@passolving.com</a>
-            </div>
-        </div>
-    </div>
-</div>
+
 
 <!-- HEADER -->
 <header x-data="{ scrolled: false, mobileMenuOpen: false }"
         @scroll.window="scrolled = (window.pageYOffset > 40)"
-        :class="{ 'fixed top-0 shadow-md bg-white/95 backdrop-blur-md z-50': scrolled, 'relative bg-white z-40': !scrolled }"
-        class="w-full transition-all duration-300 h-[88px] flex items-center border-b border-gray-100">
+        :class="{ 'fixed top-0 shadow-md bg-white/95 backdrop-blur-md z-50 text-[#141414] border-gray-100': scrolled, 'relative bg-primary z-40 text-primary-dark border-transparent': !scrolled }"
+        class="w-full transition-all duration-300 h-[88px] flex items-center border-b">
     
     <div class="container mx-auto px-6 max-w-[1320px]">
         <div class="flex items-center justify-between">
             
             <!-- Logo -->
             <a href="/" class="flex flex-col shrink-0">
-                <img src="{{ asset('logo-black-trimmed.png') }}" alt="Passolving Logo" class="h-10 w-auto object-contain">
+                <img :src="scrolled ? '{{ asset('logo-black-trimmed.png') }}' : '{{ asset('logo-white-trimmed.png') }}'" alt="Passolving Logo" class="h-10 w-auto object-contain">
             </a>
 
             <!-- Desktop Nav -->
@@ -45,7 +25,7 @@
 
             <!-- Desktop Actions -->
             <div class="hidden md:flex items-center gap-6">
-                <button class="text-[#141414] hover:text-primary transition-colors">
+                <button class="hover:opacity-80 transition-opacity">
                     <x-icon name="lucide-search" class="w-5 h-5" stroke-width="2.5" />
                 </button>
                 <x-ui.button href="/contact" variant="primary">
@@ -54,7 +34,7 @@
             </div>
 
             <!-- Mobile Menu Button -->
-            <button @click="mobileMenuOpen = true" class="md:hidden p-2 text-[#141414] hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary rounded-lg">
+            <button @click="mobileMenuOpen = true" class="md:hidden p-2 hover:opacity-80 focus:outline-none focus:ring-2 focus:ring-primary rounded-lg">
                 <x-icon name="lucide-menu" class="w-8 h-8" />
             </button>
         </div>

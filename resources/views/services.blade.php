@@ -1,11 +1,11 @@
 <x-layouts.app>
     <!-- 1. PAGE HEADER (HERO) -->
-    <section class="pt-[140px] pb-[80px] bg-gradient-to-br from-primary-dark to-primary text-white">
+    <section class="pt-[140px] pb-[80px] bg-primary text-primary-dark">
         <div class="container mx-auto px-6 max-w-[1320px] text-center">
             <h1 class="text-4xl lg:text-[56px] font-black leading-[1.2] mb-6 max-w-4xl mx-auto uppercase">
                 Our Services
             </h1>
-            <p class="text-white/80 max-w-2xl mx-auto leading-relaxed text-xl">
+            <p class="text-primary-dark/80 max-w-2xl mx-auto leading-relaxed text-xl">
                 Helping organizations transform through integrated Training, Consulting, and Research.
             </p>
         </div>
@@ -38,7 +38,7 @@
                 <!-- Research -->
                 <div class="bg-white p-10 rounded-[32px] shadow-[0_10px_40px_rgba(0,0,0,0.08)] border border-gray-100 flex flex-col items-center text-center group hover:-translate-y-2 transition-transform duration-300">
                     <div class="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-primary-dark transition-colors">
-                        <x-icon name="lucide-line-chart" class="w-10 h-10 text-primary group-hover:text-white transition-colors" stroke-width="1.5" />
+                        <x-icon name="lucide-line-chart" class="w-10 h-10 text-primary group-hover:text-primary-dark transition-colors" stroke-width="1.5" />
                     </div>
                     <h3 class="text-2xl font-black text-[#141414] mb-4">Research</h3>
                     <p class="text-[#585857] leading-relaxed">
@@ -169,45 +169,45 @@
     </section>
 
     <!-- 4. PASS ENGAGEMENT PROCESS -->
-    <section class="py-20 lg:py-28 bg-primary-dark text-white">
+    <section class="py-20 lg:py-28 bg-primary text-primary-dark">
         <div class="container mx-auto px-6 max-w-[1320px]">
             <div class="text-center mb-16">
                 <h2 class="text-3xl lg:text-[44px] font-bold leading-[1.2] max-w-2xl mx-auto">
                     PASS Engagement Process
                 </h2>
-                <p class="text-white/70 mt-4 max-w-2xl mx-auto">Setiap fase disesuaikan dengan konteks organisasi dan tingkat kesiapan perubahan.</p>
+                <p class="text-primary-dark/70 mt-4 max-w-2xl mx-auto">Setiap fase disesuaikan dengan konteks organisasi dan tingkat kesiapan perubahan.</p>
             </div>
 
             <div class="grid md:grid-cols-4 gap-6">
                 <!-- SCAN -->
                 <div class="bg-white/5 border border-white/10 p-8 rounded-3xl relative">
-                    <div class="text-5xl font-black text-white/10 absolute top-6 right-6">01</div>
+                    <div class="text-5xl font-black text-primary-dark/10 absolute top-6 right-6">01</div>
                     <h3 class="text-2xl font-black text-cta mb-4 uppercase tracking-wider relative z-10">Scan</h3>
-                    <p class="text-white/80 leading-relaxed text-sm relative z-10">
+                    <p class="text-primary-dark/80 leading-relaxed text-sm relative z-10">
                         Memahami kondisi dan tantangan organisasi. Memberikan kejelasan objective atas masalah nyata sebelum keputusan strategis diambil.
                     </p>
                 </div>
                 <!-- SHIFT -->
                 <div class="bg-white/5 border border-white/10 p-8 rounded-3xl relative">
-                    <div class="text-5xl font-black text-white/10 absolute top-6 right-6">02</div>
+                    <div class="text-5xl font-black text-primary-dark/10 absolute top-6 right-6">02</div>
                     <h3 class="text-2xl font-black text-cta mb-4 uppercase tracking-wider relative z-10">Shift</h3>
-                    <p class="text-white/80 leading-relaxed text-sm relative z-10">
+                    <p class="text-primary-dark/80 leading-relaxed text-sm relative z-10">
                         Mengubah cara kerja dan kepemimpinan agar organisasi mampu mengambil keputusan adaptif terhadap prioritas.
                     </p>
                 </div>
                 <!-- SCALE -->
                 <div class="bg-white/5 border border-white/10 p-8 rounded-3xl relative">
-                    <div class="text-5xl font-black text-white/10 absolute top-6 right-6">03</div>
+                    <div class="text-5xl font-black text-primary-dark/10 absolute top-6 right-6">03</div>
                     <h3 class="text-2xl font-black text-cta mb-4 uppercase tracking-wider relative z-10">Scale</h3>
-                    <p class="text-white/80 leading-relaxed text-sm relative z-10">
+                    <p class="text-primary-dark/80 leading-relaxed text-sm relative z-10">
                         Memastikan perubahan tidak berhenti di inisiatif, tetapi menjadi sistem kerja dan budaya organisasi yang berkelanjutan.
                     </p>
                 </div>
                 <!-- SCRIBE -->
                 <div class="bg-white/5 border border-white/10 p-8 rounded-3xl relative">
-                    <div class="text-5xl font-black text-white/10 absolute top-6 right-6">04</div>
+                    <div class="text-5xl font-black text-primary-dark/10 absolute top-6 right-6">04</div>
                     <h3 class="text-2xl font-black text-cta mb-4 uppercase tracking-wider relative z-10">Scribe</h3>
-                    <p class="text-white/80 leading-relaxed text-sm relative z-10">
+                    <p class="text-primary-dark/80 leading-relaxed text-sm relative z-10">
                         Mendokumentasikan dampak dan menyusun story of impact untuk pembelajaran dan pemangku kepentingan.
                     </p>
                 </div>
@@ -233,7 +233,7 @@
                     <!-- Step 1 -->
                     <div class="relative z-10 text-center">
                         <div class="w-24 h-24 mx-auto bg-primary rounded-2xl flex items-center justify-center mb-6 shadow-[0_10px_30px_rgba(15,159,164,0.3)]">
-                            <x-icon name="lucide-search" class="w-10 h-10 text-white" />
+                            <x-icon name="lucide-search" class="w-10 h-10 text-primary-dark" />
                         </div>
                         <h4 class="text-lg font-black text-[#141414] mb-3">Problem Identification</h4>
                         <p class="text-sm text-[#585857]">Identifikasi masalah dan kebutuhan training peserta/organisasi melalui sesi empathize.</p>
@@ -241,7 +241,7 @@
                     <!-- Step 2 -->
                     <div class="relative z-10 text-center">
                         <div class="w-24 h-24 mx-auto bg-primary rounded-2xl flex items-center justify-center mb-6 shadow-[0_10px_30px_rgba(15,159,164,0.3)]">
-                            <x-icon name="lucide-pen-tool" class="w-10 h-10 text-white" />
+                            <x-icon name="lucide-pen-tool" class="w-10 h-10 text-primary-dark" />
                         </div>
                         <h4 class="text-lg font-black text-[#141414] mb-3">Action Development</h4>
                         <p class="text-sm text-[#585857]">Penyusunan modul materi, metode, serta aktivitas training secara sistematis.</p>
@@ -249,7 +249,7 @@
                     <!-- Step 3 -->
                     <div class="relative z-10 text-center">
                         <div class="w-24 h-24 mx-auto bg-primary rounded-2xl flex items-center justify-center mb-6 shadow-[0_10px_30px_rgba(15,159,164,0.3)]">
-                            <x-icon name="lucide-play-circle" class="w-10 h-10 text-white" />
+                            <x-icon name="lucide-play-circle" class="w-10 h-10 text-primary-dark" />
                         </div>
                         <h4 class="text-lg font-black text-[#141414] mb-3">Program Implementation</h4>
                         <p class="text-sm text-[#585857]">Implementasi interaktif & partisipatif (learning by doing), penekanan pada praktik dan refleksi.</p>
@@ -257,7 +257,7 @@
                     <!-- Step 4 -->
                     <div class="relative z-10 text-center">
                         <div class="w-24 h-24 mx-auto bg-primary rounded-2xl flex items-center justify-center mb-6 shadow-[0_10px_30px_rgba(15,159,164,0.3)]">
-                            <x-icon name="lucide-clipboard-check" class="w-10 h-10 text-white" />
+                            <x-icon name="lucide-clipboard-check" class="w-10 h-10 text-primary-dark" />
                         </div>
                         <h4 class="text-lg font-black text-[#141414] mb-3">Evaluation</h4>
                         <p class="text-sm text-[#585857]">Mengukur efektivitas melalui pre/post test, feedback evaluation, coaching, dan report.</p>
@@ -324,50 +324,50 @@
 
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
                 <div class="flex flex-col items-center gap-4 group">
-                    <div class="w-20 h-20 rounded-full bg-primary flex items-center justify-center group-hover:bg-primary-dark shadow-sm transition-all duration-300 group-hover:-translate-y-2">
-                        <x-icon name="lucide-building" class="w-8 h-8 text-white transition-colors" />
+                    <div class="w-20 h-20 rounded-full bg-primary flex items-center justify-center group-hover:bg-primary shadow-sm transition-all duration-300 group-hover:-translate-y-2">
+                        <x-icon name="lucide-building" class="w-8 h-8 text-primary-dark transition-colors" />
                     </div>
                     <span class="font-bold text-[#141414]">Government</span>
                 </div>
                 <div class="flex flex-col items-center gap-4 group">
-                    <div class="w-20 h-20 rounded-full bg-primary flex items-center justify-center group-hover:bg-primary-dark shadow-sm transition-all duration-300 group-hover:-translate-y-2">
-                        <x-icon name="lucide-factory" class="w-8 h-8 text-white transition-colors" />
+                    <div class="w-20 h-20 rounded-full bg-primary flex items-center justify-center group-hover:bg-primary shadow-sm transition-all duration-300 group-hover:-translate-y-2">
+                        <x-icon name="lucide-factory" class="w-8 h-8 text-primary-dark transition-colors" />
                     </div>
                     <span class="font-bold text-[#141414]">Manufacturing</span>
                 </div>
                 <div class="flex flex-col items-center gap-4 group">
-                    <div class="w-20 h-20 rounded-full bg-primary flex items-center justify-center group-hover:bg-primary-dark shadow-sm transition-all duration-300 group-hover:-translate-y-2">
-                        <x-icon name="lucide-radio-receiver" class="w-8 h-8 text-white transition-colors" />
+                    <div class="w-20 h-20 rounded-full bg-primary flex items-center justify-center group-hover:bg-primary shadow-sm transition-all duration-300 group-hover:-translate-y-2">
+                        <x-icon name="lucide-radio-receiver" class="w-8 h-8 text-primary-dark transition-colors" />
                     </div>
                     <span class="font-bold text-[#141414]">Telecommunication</span>
                 </div>
                 <div class="flex flex-col items-center gap-4 group">
-                    <div class="w-20 h-20 rounded-full bg-primary flex items-center justify-center group-hover:bg-primary-dark shadow-sm transition-all duration-300 group-hover:-translate-y-2">
-                        <x-icon name="lucide-landmark" class="w-8 h-8 text-white transition-colors" />
+                    <div class="w-20 h-20 rounded-full bg-primary flex items-center justify-center group-hover:bg-primary shadow-sm transition-all duration-300 group-hover:-translate-y-2">
+                        <x-icon name="lucide-landmark" class="w-8 h-8 text-primary-dark transition-colors" />
                     </div>
                     <span class="font-bold text-[#141414]">Banking & Finance</span>
                 </div>
                 <div class="flex flex-col items-center gap-4 group">
-                    <div class="w-20 h-20 rounded-full bg-primary flex items-center justify-center group-hover:bg-primary-dark shadow-sm transition-all duration-300 group-hover:-translate-y-2">
-                        <x-icon name="lucide-stethoscope" class="w-8 h-8 text-white transition-colors" />
+                    <div class="w-20 h-20 rounded-full bg-primary flex items-center justify-center group-hover:bg-primary shadow-sm transition-all duration-300 group-hover:-translate-y-2">
+                        <x-icon name="lucide-stethoscope" class="w-8 h-8 text-primary-dark transition-colors" />
                     </div>
                     <span class="font-bold text-[#141414]">Healthcare</span>
                 </div>
                 <div class="flex flex-col items-center gap-4 group">
-                    <div class="w-20 h-20 rounded-full bg-primary flex items-center justify-center group-hover:bg-primary-dark shadow-sm transition-all duration-300 group-hover:-translate-y-2">
-                        <x-icon name="lucide-graduation-cap" class="w-8 h-8 text-white transition-colors" />
+                    <div class="w-20 h-20 rounded-full bg-primary flex items-center justify-center group-hover:bg-primary shadow-sm transition-all duration-300 group-hover:-translate-y-2">
+                        <x-icon name="lucide-graduation-cap" class="w-8 h-8 text-primary-dark transition-colors" />
                     </div>
                     <span class="font-bold text-[#141414]">Education</span>
                 </div>
                 <div class="flex flex-col items-center gap-4 group">
-                    <div class="w-20 h-20 rounded-full bg-primary flex items-center justify-center group-hover:bg-primary-dark shadow-sm transition-all duration-300 group-hover:-translate-y-2">
-                        <x-icon name="lucide-sprout" class="w-8 h-8 text-white transition-colors" />
+                    <div class="w-20 h-20 rounded-full bg-primary flex items-center justify-center group-hover:bg-primary shadow-sm transition-all duration-300 group-hover:-translate-y-2">
+                        <x-icon name="lucide-sprout" class="w-8 h-8 text-primary-dark transition-colors" />
                     </div>
                     <span class="font-bold text-[#141414]">Agriculture</span>
                 </div>
                 <div class="flex flex-col items-center gap-4 group">
-                    <div class="w-20 h-20 rounded-full bg-primary flex items-center justify-center group-hover:bg-primary-dark shadow-sm transition-all duration-300 group-hover:-translate-y-2">
-                        <x-icon name="lucide-shopping-cart" class="w-8 h-8 text-white transition-colors" />
+                    <div class="w-20 h-20 rounded-full bg-primary flex items-center justify-center group-hover:bg-primary shadow-sm transition-all duration-300 group-hover:-translate-y-2">
+                        <x-icon name="lucide-shopping-cart" class="w-8 h-8 text-primary-dark transition-colors" />
                     </div>
                     <span class="font-bold text-[#141414]">Retail</span>
                 </div>
