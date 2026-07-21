@@ -17,8 +17,8 @@
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- Training -->
                 <div class="bg-white p-10 rounded-[32px] shadow-[0_10px_40px_rgba(0,0,0,0.08)] border border-gray-100 flex flex-col items-center text-center group hover:-translate-y-2 transition-transform duration-300">
-                    <div class="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
-                        <x-icon name="lucide-graduation-cap" class="w-10 h-10 text-primary group-hover:text-white transition-colors" stroke-width="1.5" />
+                    <div class="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-primary-dark transition-colors">
+                        <x-icon name="lucide-graduation-cap" class="w-10 h-10 text-primary group-hover:text-primary-dark transition-colors" stroke-width="1.5" />
                     </div>
                     <h3 class="text-2xl font-black text-[#141414] mb-4">Training</h3>
                     <p class="text-[#585857] leading-relaxed">
@@ -27,8 +27,8 @@
                 </div>
                 <!-- Consulting -->
                 <div class="bg-white p-10 rounded-[32px] shadow-[0_10px_40px_rgba(0,0,0,0.08)] border border-gray-100 flex flex-col items-center text-center group hover:-translate-y-2 transition-transform duration-300">
-                    <div class="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
-                        <x-icon name="lucide-briefcase" class="w-10 h-10 text-primary group-hover:text-white transition-colors" stroke-width="1.5" />
+                    <div class="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-primary-dark transition-colors">
+                        <x-icon name="lucide-briefcase" class="w-10 h-10 text-primary group-hover:text-primary-dark transition-colors" stroke-width="1.5" />
                     </div>
                     <h3 class="text-2xl font-black text-[#141414] mb-4">Consulting</h3>
                     <p class="text-[#585857] leading-relaxed">
@@ -37,7 +37,7 @@
                 </div>
                 <!-- Research -->
                 <div class="bg-white p-10 rounded-[32px] shadow-[0_10px_40px_rgba(0,0,0,0.08)] border border-gray-100 flex flex-col items-center text-center group hover:-translate-y-2 transition-transform duration-300">
-                    <div class="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                    <div class="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-primary-dark transition-colors">
                         <x-icon name="lucide-line-chart" class="w-10 h-10 text-primary group-hover:text-white transition-colors" stroke-width="1.5" />
                     </div>
                     <h3 class="text-2xl font-black text-[#141414] mb-4">Research</h3>

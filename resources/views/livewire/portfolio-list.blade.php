@@ -3,31 +3,31 @@
     <div class="flex flex-wrap items-center justify-center gap-4 mb-12">
         <button 
             wire:click="setCategory('')" 
-            class="px-8 py-3 text-sm font-bold transition-all {{ $category === '' ? 'bg-primary text-white border border-primary' : 'bg-white text-[#585857] border border-gray-200 hover:border-primary hover:text-primary' }}"
+            class="px-8 py-3 text-sm font-bold transition-all {{ $category === '' ? 'bg-primary text-primary-dark border border-primary' : 'bg-white text-[#585857] border border-gray-200 hover:border-primary hover:text-primary' }}"
         >
             Semua
         </button>
         <button 
             wire:click="setCategory('Training')" 
-            class="px-8 py-3 text-sm font-bold transition-all {{ $category === 'Training' ? 'bg-primary text-white border border-primary' : 'bg-white text-[#585857] border border-gray-200 hover:border-primary hover:text-primary' }}"
+            class="px-8 py-3 text-sm font-bold transition-all {{ $category === 'Training' ? 'bg-primary text-primary-dark border border-primary' : 'bg-white text-[#585857] border border-gray-200 hover:border-primary hover:text-primary' }}"
         >
             Training
         </button>
         <button 
             wire:click="setCategory('Assessment')" 
-            class="px-8 py-3 text-sm font-bold transition-all {{ $category === 'Assessment' ? 'bg-primary text-white border border-primary' : 'bg-white text-[#585857] border border-gray-200 hover:border-primary hover:text-primary' }}"
+            class="px-8 py-3 text-sm font-bold transition-all {{ $category === 'Assessment' ? 'bg-primary text-primary-dark border border-primary' : 'bg-white text-[#585857] border border-gray-200 hover:border-primary hover:text-primary' }}"
         >
             Assessment
         </button>
         <button 
             wire:click="setCategory('Certification')" 
-            class="px-8 py-3 text-sm font-bold transition-all {{ $category === 'Certification' ? 'bg-primary text-white border border-primary' : 'bg-white text-[#585857] border border-gray-200 hover:border-primary hover:text-primary' }}"
+            class="px-8 py-3 text-sm font-bold transition-all {{ $category === 'Certification' ? 'bg-primary text-primary-dark border border-primary' : 'bg-white text-[#585857] border border-gray-200 hover:border-primary hover:text-primary' }}"
         >
             Certification
         </button>
         <button 
             wire:click="setCategory('Consulting')" 
-            class="px-8 py-3 text-sm font-bold transition-all {{ $category === 'Consulting' ? 'bg-primary text-white border border-primary' : 'bg-white text-[#585857] border border-gray-200 hover:border-primary hover:text-primary' }}"
+            class="px-8 py-3 text-sm font-bold transition-all {{ $category === 'Consulting' ? 'bg-primary text-primary-dark border border-primary' : 'bg-white text-[#585857] border border-gray-200 hover:border-primary hover:text-primary' }}"
         >
             Consulting
         </button>

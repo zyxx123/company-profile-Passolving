@@ -10,11 +10,11 @@
     --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
     
     /* Passolving Colors System */
-    --color-primary: #0F9FA4; 
-    --color-primary-dark: #173b56; /* Updated to navy blue combination */
-    --color-accent: #0F9FA4; /* Optech uses primary color for highlights like active tabs */
-    --color-cta: #F4B400;
-    --color-cta-hover: #D99800; 
+    --color-primary: #00a6a6; 
+    --color-primary-dark: #081f5b; /* Updated to biru tua */
+    --color-accent: #00a6a6; /* Optech uses primary color for highlights like active tabs */
+    --color-cta: #f5c242; /* Updated to kuning */
+    --color-cta-hover: #dfb038; 
 
     
     --color-neutral-heading: #1F2937;
@@ -71,13 +71,13 @@
 
 @layer components {
     .btn-primary {
-        @apply inline-flex items-center justify-center px-8 py-4 bg-cta text-[#1F2937] font-bold transition-all duration-300 hover:bg-cta-hover hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-cta/50 text-[16px];
+        @apply inline-flex items-center justify-center px-8 py-4 bg-cta text-primary-dark font-bold transition-all duration-300 hover:bg-cta-hover hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-cta/50 text-[16px];
         border-radius: var(--radius-btn);
         box-shadow: var(--shadow-btn);
     }
     
     .btn-secondary {
-        @apply inline-flex items-center justify-center px-8 py-4 border-2 border-primary text-primary font-bold transition-all duration-300 hover:bg-primary hover:text-white hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-primary/50 text-[16px];
+        @apply inline-flex items-center justify-center px-8 py-4 border-2 border-primary text-primary font-bold transition-all duration-300 hover:bg-primary hover:text-primary-dark hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-primary/50 text-[16px];
         border-radius: var(--radius-btn);
     }
     

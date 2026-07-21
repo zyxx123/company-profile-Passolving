@@ -5,8 +5,7 @@
             <!-- Column 1: Brand & About -->
             <div class="flex flex-col">
                 <a href="/" class="flex flex-col shrink-0 mb-4">
-                    <span class="text-xl font-black text-white tracking-tight leading-none">PASSOLVING</span>
-                    <span class="text-[9px] text-accent tracking-widest font-bold uppercase mt-1">Pass Forward</span>
+                    <img src="{{ asset('logo-white-trimmed.png') }}" alt="Passolving Logo" class="h-12 w-auto object-contain">
                 </a>
                 <p class="text-white/80 leading-relaxed mb-6 pr-4">
                     Partner strategis Anda dalam mewujudkan kelincahan (agility) dan efektivitas tim yang berkelanjutan di era transformasi.

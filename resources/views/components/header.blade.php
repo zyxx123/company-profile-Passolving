@@ -31,9 +31,7 @@
             
             <!-- Logo -->
             <a href="/" class="flex flex-col shrink-0">
-                <span class="text-[28px] font-black text-primary tracking-tighter leading-none flex items-center gap-1">
-                    <x-icon name="lucide-zap" class="w-6 h-6 text-cta" fill="currentColor" /> PASSOLVING
-                </span>
+                <img src="{{ asset('logo-black-trimmed.png') }}" alt="Passolving Logo" class="h-10 w-auto object-contain">
             </a>
 
             <!-- Desktop Nav -->
@@ -96,9 +94,7 @@
                         <div class="flex h-full flex-col overflow-y-scroll bg-white shadow-xl">
                             <div class="px-6 pt-6 pb-4 flex items-center justify-between border-b border-gray-100">
                                 <a href="/" class="flex flex-col shrink-0">
-                                    <span class="text-[24px] font-black text-primary tracking-tighter leading-none flex items-center gap-1">
-                                        <x-icon name="lucide-zap" class="w-5 h-5 text-cta" fill="currentColor" /> PASSOLVING
-                                    </span>
+                                    <img src="{{ asset('logo-black-trimmed.png') }}" alt="Passolving Logo" class="h-8 w-auto object-contain">
                                 </a>
                                 <button type="button" @click="mobileMenuOpen = false" class="rounded-md text-gray-400 hover:text-gray-600 focus:outline-none focus:ring-2 focus:ring-primary">
                                     <span class="sr-only">Close panel</span>
