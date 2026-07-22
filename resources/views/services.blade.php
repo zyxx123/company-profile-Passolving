@@ -78,10 +78,7 @@
                     <div class="absolute -bottom-8 -left-8 w-32 h-32 rounded-full bg-primary/20 pointer-events-none"></div>
                     <div class="absolute -bottom-4 -left-4 w-24 h-24 rounded-full bg-[#3FB5B5] pointer-events-none"></div>
                     
-                    <!-- Arrow Button -->
-                    <div class="absolute bottom-6 left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-[#E8F5F5] flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors cursor-pointer">
-                        <x-icon name="lucide-arrow-right" class="w-5 h-5" stroke-width="2.5" />
-                    </div>
+
                 </div>
 
                 <!-- Consulting Card -->
@@ -105,9 +102,7 @@
                          </svg>
                     </div>
 
-                    <div class="absolute bottom-6 left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-[#E8F5F5] flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors cursor-pointer">
-                        <x-icon name="lucide-arrow-right" class="w-5 h-5" stroke-width="2.5" />
-                    </div>
+
                 </div>
 
                 <!-- Research Card -->
@@ -124,9 +119,7 @@
                     <!-- Decorative Corner Solid -->
                     <div class="absolute -bottom-10 -right-10 w-40 h-40 rounded-full bg-[#A7DFDF] pointer-events-none"></div>
 
-                    <div class="absolute bottom-6 left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-[#E8F5F5] flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors cursor-pointer">
-                        <x-icon name="lucide-arrow-right" class="w-5 h-5" stroke-width="2.5" />
-                    </div>
+
                 </div>
             </div>
         </div>
