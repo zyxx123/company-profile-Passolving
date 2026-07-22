@@ -13,11 +13,16 @@ return new class extends Migration
     {
         Schema::create('portfolios', function (Blueprint $table) {
             $table->id();
+            $table->string('slug')->unique();
             $table->string('title');
             $table->string('client')->nullable();
-            $table->enum('category', ['Training', 'Assessment', 'Certification', 'Consulting']);
-            $table->text('description');
+            $table->enum('category', ['Training', 'Assessment', 'Certification', 'Consulting', 'Transformation']);
+            $table->text('description')->nullable();
             $table->string('image_url')->nullable();
+            $table->text('context')->nullable();
+            $table->string('focus')->nullable();
+            $table->string('role')->nullable();
+            $table->json('impact')->nullable();
             $table->timestamps();
         });
     }
