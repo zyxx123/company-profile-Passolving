@@ -175,57 +175,19 @@
             <div class="container mx-auto px-6 max-w-[1320px]">
                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                     
-                    <!-- Project 1 -->
-                    <a href="/portfolio/bni" x-show="filter === 'All' || filter === 'Training'" class="group bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 hover:-translate-y-2 transition-all duration-300 block">
-                        <div class="h-48 overflow-hidden relative">
-                            <div class="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors z-10"></div>
-                            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80" alt="BNI" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                            <span class="absolute top-4 right-4 z-20 bg-cta text-primary-dark text-xs font-bold px-3 py-1 rounded-full">Training</span>
-                        </div>
-                        <div class="p-6">
-                            <h4 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">PT Bank Negara Indonesia</h4>
-                            <h3 class="text-xl font-bold text-[#141414] group-hover:text-primary transition-colors">BNI Corporate University</h3>
-                        </div>
-                    </a>
-
-                    <!-- Project 2 -->
-                    <a href="/portfolio/indosat" x-show="filter === 'All' || filter === 'Consulting'" class="group bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 hover:-translate-y-2 transition-all duration-300 block">
-                        <div class="h-48 overflow-hidden relative">
-                            <div class="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors z-10"></div>
-                            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80" alt="Indosat" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                            <span class="absolute top-4 right-4 z-20 bg-cta text-primary-dark text-xs font-bold px-3 py-1 rounded-full">Consulting</span>
-                        </div>
-                        <div class="p-6">
-                            <h4 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">Indosat Ooredoo Hutchison</h4>
-                            <h3 class="text-xl font-bold text-[#141414] group-hover:text-primary transition-colors">People Transformation</h3>
-                        </div>
-                    </a>
-
-                    <!-- Project 3 -->
-                    <a href="/portfolio/lkpp" x-show="filter === 'All' || filter === 'Training'" class="group bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 hover:-translate-y-2 transition-all duration-300 block">
-                        <div class="h-48 overflow-hidden relative">
-                            <div class="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors z-10"></div>
-                            <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=80" alt="LKPP" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                            <span class="absolute top-4 right-4 z-20 bg-cta text-primary-dark text-xs font-bold px-3 py-1 rounded-full">Training</span>
-                        </div>
-                        <div class="p-6">
-                            <h4 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">Lembaga Pengadaan Barang</h4>
-                            <h3 class="text-xl font-bold text-[#141414] group-hover:text-primary transition-colors">Agile Team Leadership</h3>
-                        </div>
-                    </a>
-
-                    <!-- Project 4 -->
-                    <a href="/portfolio/doi" x-show="filter === 'All' || filter === 'Transformation'" class="group bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 hover:-translate-y-2 transition-all duration-300 block">
-                        <div class="h-48 overflow-hidden relative">
-                            <div class="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors z-10"></div>
-                            <img src="https://images.unsplash.com/photo-1515169067868-5387ec356754?auto=format&fit=crop&w=800&q=80" alt="DOI" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                            <span class="absolute top-4 right-4 z-20 bg-cta text-primary-dark text-xs font-bold px-3 py-1 rounded-full">Transformation</span>
-                        </div>
-                        <div class="p-6">
-                            <h4 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">Digital Optima Integra</h4>
-                            <h3 class="text-xl font-bold text-[#141414] group-hover:text-primary transition-colors">Collaborative Agility</h3>
-                        </div>
-                    </a>
+                    @foreach($portfolios as $port)
+                        <a href="/portfolio/{{ $port->slug ?? '' }}" x-show="filter === 'All' || filter === '{{ $port->category }}'" class="group bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 hover:-translate-y-2 transition-all duration-300 block">
+                            <div class="h-48 overflow-hidden relative">
+                                <div class="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors z-10"></div>
+                                <img src="{{ Str::startsWith($port->image_url, 'http') ? $port->image_url : Storage::url($port->image_url) }}" alt="{{ $port->title }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <span class="absolute top-4 right-4 z-20 bg-cta text-primary-dark text-xs font-bold px-3 py-1 rounded-full">{{ $port->category }}</span>
+                            </div>
+                            <div class="p-6">
+                                <h4 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">{{ $port->client }}</h4>
+                                <h3 class="text-xl font-bold text-[#141414] group-hover:text-primary transition-colors">{{ $port->title }}</h3>
+                            </div>
+                        </a>
+                    @endforeach
 
                 </div>
             </div>

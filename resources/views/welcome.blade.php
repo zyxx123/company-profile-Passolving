@@ -1,7 +1,7 @@
 <x-layouts.app>
     <!-- 1. HERO SECTION -->
     <!-- Full screen (100vh) adjustment: using min-h-[calc(100vh-88px)] assuming header is 88px, or just min-h-screen with flex -->
-    <section class="relative min-h-[calc(100vh-88px)] flex items-center overflow-hidden bg-primary py-20">
+    <section class="relative min-h-[calc(100vh-88px)] flex items-center overflow-hidden bg-primary py-12 lg:py-16 xl:py-20">
         <!-- 1. Background Grid -->
         <div class="absolute inset-0 z-0 opacity-[0.07]" style="background-image: linear-gradient(rgba(255,255,255,.3) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.3) 1px, transparent 1px); background-size: 80px 80px; background-position: center center;"></div>
         
@@ -55,11 +55,11 @@
             <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
                 <!-- Text Content -->
                 <div class="w-full lg:w-[55%]">
-                    <p class="text-cta font-bold tracking-widest uppercase text-sm mb-4">Pioneer in Agility Assesment & National Soft Skill Certification</p>
-                    <h1 class="text-4xl lg:text-[60px] font-black leading-[1.1] text-white mb-6 uppercase">
+                    <p class="text-cta font-bold tracking-widest uppercase text-xs lg:text-sm mb-3 lg:mb-4 xl:mb-6">Pioneer in Agility Assesment & National Soft Skill Certification</p>
+                    <h1 class="text-4xl lg:text-5xl xl:text-[60px] font-black leading-[1.1] text-white mb-4 lg:mb-6 uppercase">
                         AGILITY &<br/>TRANSFORMATION
                     </h1>
-                    <p class="text-lg text-white/90 mb-10 leading-relaxed max-w-lg">
+                    <p class="text-base lg:text-lg text-white/90 mb-6 lg:mb-8 xl:mb-10 leading-relaxed max-w-lg">
                         Determine for Execution Deliveries. Kami hadir untuk membantu organisasi Anda menghadapi realitas yang menantang dengan solusi berbasis data dan sistem yang adaptif.
                     </p>
                     <div class="flex flex-wrap items-center gap-4">
@@ -67,13 +67,13 @@
                             Explore Services
                         </x-ui.button>
                         <!-- Ensure outline button looks good on dark bg -->
-                        <a href="/contact" class="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-bold transition-all duration-300 hover:bg-white hover:text-primary-dark hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-white/50 text-[16px] rounded-[14px]">
+                        <a href="/contact" class="inline-flex items-center justify-center px-6 py-3 lg:px-8 lg:py-4 border-2 border-white text-white font-bold transition-all duration-300 hover:bg-white hover:text-primary-dark hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-white/50 text-sm lg:text-[16px] rounded-[14px]">
                             Contact Us
                         </a>
                     </div>
 
                     <!-- Stats / Achievements -->
-                    <div class="mt-16 flex flex-wrap items-center gap-6 lg:gap-10 text-white">
+                    <div class="mt-8 lg:mt-10 xl:mt-16 flex flex-wrap items-center gap-6 lg:gap-10 text-white">
                         <div class="flex items-center gap-4">
                             <div class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center bg-white/5">
                                 <x-icon name="lucide-users" class="w-6 h-6 text-cta" />
@@ -400,7 +400,7 @@
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
                 @foreach($portfolios->take(3) as $portfolio)
                     <div class="group relative rounded-3xl overflow-hidden shadow-sm aspect-[4/3] max-h-[360px]">
-                        <img src="{{ $portfolio->image_url }}" alt="{{ $portfolio->title }}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <img src="{{ Str::startsWith($portfolio->image_url, 'http') ? $portfolio->image_url : Storage::url($portfolio->image_url) }}" alt="{{ $portfolio->title }}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
                         <div class="absolute inset-0 bg-primary/70 flex flex-col justify-end p-8">
                             <span class="inline-block px-3 py-1 bg-cta text-[#141414] text-[10px] font-bold uppercase tracking-widest rounded-full mb-4 self-start">{{ $portfolio->category }}</span>
                             <h3 class="text-xl font-bold text-primary-dark mb-2 leading-tight">{{ $portfolio->title }}</h3>
