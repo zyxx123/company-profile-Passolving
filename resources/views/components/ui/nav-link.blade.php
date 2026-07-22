@@ -1,11 +1,11 @@
 @props(['href', 'active' => false])
 
-@php
-    $classes = $active
-                ? 'inline-flex items-center px-1 pt-1 border-b-2 border-accent text-accent text-xs font-bold uppercase tracking-widest'
-                : 'inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-xs font-bold hover:text-accent hover:border-accent transition-colors duration-200 uppercase tracking-widest';
-@endphp
-
-<a href="{{ $href }}" {{ $attributes->merge(['class' => $classes]) }}>
+<a href="{{ $href }}" 
+   :class="{
+       'inline-flex items-center px-1 pt-1 border-b-[3px] text-xs font-bold uppercase tracking-widest transition-colors duration-200': true,
+       '{{ $active ? 'border-cta text-white' : 'border-transparent text-primary-dark hover:text-white hover:border-white/50' }}': !scrolled,
+       '{{ $active ? 'border-accent text-accent' : 'border-transparent text-gray-500 hover:text-accent hover:border-accent/50' }}': scrolled
+   }"
+   {{ $attributes->merge(['class' => '']) }}>
     {{ $slot }}
 </a>

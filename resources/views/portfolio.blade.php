@@ -1,39 +1,153 @@
 <x-layouts.app>
     <!-- 1. HERO SECTION -->
-    <section class="pt-[140px] pb-[100px] bg-primary text-primary-dark">
-        <div class="container mx-auto px-6 max-w-[1320px] text-center">
-            <h1 class="text-4xl lg:text-[56px] font-black leading-[1.2] mb-6 max-w-4xl mx-auto uppercase">
-                Portfolio
+    <section class="relative pt-[160px] pb-[160px] bg-primary text-primary-dark overflow-hidden z-0">
+        
+        <!-- DECORATIONS -->
+        <!-- Top Left Planet Shadow -->
+        <div class="absolute -top-40 -left-40 w-[500px] h-[500px] bg-white/5 rounded-full blur-[80px] z-0 pointer-events-none"></div>
+
+        <!-- Top Left Dots -->
+        <div class="absolute top-[100px] left-10 z-0 opacity-20 pointer-events-none">
+            <svg width="120" height="120" fill="none" viewBox="0 0 100 100">
+                <pattern id="dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                    <circle fill="#ffffff" cx="2" cy="2" r="2"></circle>
+                </pattern>
+                <rect x="0" y="0" width="100" height="100" fill="url(#dots)"></rect>
+            </svg>
+        </div>
+
+        <!-- Right Planet Shadow & Dots -->
+        <div class="absolute top-20 -right-40 w-[600px] h-[600px] bg-white/5 rounded-full blur-[80px] z-0 pointer-events-none"></div>
+        <div class="absolute bottom-[20%] right-10 z-0 opacity-20 pointer-events-none hidden lg:block">
+            <svg width="120" height="120" fill="none" viewBox="0 0 100 100">
+                <pattern id="dots-right" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                    <circle fill="#ffffff" cx="2" cy="2" r="2"></circle>
+                </pattern>
+                <rect x="0" y="0" width="100" height="100" fill="url(#dots-right)"></rect>
+            </svg>
+        </div>
+
+        <!-- Paper Plane and Dashed Line -->
+        <div class="absolute top-[40%] left-[5%] z-0 hidden lg:block pointer-events-none">
+            <svg width="300" height="150" viewBox="0 0 300 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Dashed trajectory -->
+                <path d="M10 140 Q 120 180, 200 80 T 260 30" stroke="#ffffff" stroke-width="2" stroke-dasharray="6 6" fill="none" opacity="0.6"/>
+                <!-- Paper Plane -->
+                <g transform="translate(240, 10) rotate(25)">
+                    <path d="M40 0 L0 15 L15 20 L40 0 Z" fill="#FBBF24"/>
+                    <path d="M15 20 L12 30 L22 23 L15 20 Z" fill="#F59E0B"/>
+                    <path d="M40 0 L15 20 L22 23 L40 0 Z" fill="#FCD34D"/>
+                </g>
+            </svg>
+        </div>
+
+        <!-- Cityscape Silhouette Bottom -->
+        <div class="absolute bottom-0 left-0 w-full h-[250px] z-0 opacity-[0.15] pointer-events-none" 
+             style="background-image: url('https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center bottom; mask-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0)); -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0)); mix-blend-mode: luminosity;">
+        </div>
+        
+        <div class="container relative z-10 mx-auto px-6 max-w-[1320px] text-center">
+            <h1 class="text-5xl lg:text-[72px] font-black leading-[1.2] mb-4 max-w-4xl mx-auto uppercase text-[#0B2545]">
+                PORTFOLIO
             </h1>
-            <p class="text-primary-dark/80 max-w-2xl mx-auto leading-relaxed text-xl">
+            
+            <!-- Yellow Underline -->
+            <div class="flex justify-center items-center gap-2 mb-8">
+                <div class="w-10 h-1 bg-cta rounded-full"></div>
+                <div class="w-2 h-1 bg-cta rounded-full"></div>
+            </div>
+
+            <p class="text-[#0B2545]/80 max-w-2xl mx-auto leading-relaxed text-lg lg:text-xl">
                 Discover how PASS has helped organizations achieve measurable transformation across industries.
             </p>
         </div>
     </section>
 
-    <!-- 2. PORTFOLIO OVERVIEW & FILTER -->
-    <section class="py-12 bg-white border-b border-gray-100 z-10 relative shadow-sm">
-        <div class="container mx-auto px-6 max-w-[1320px]">
-            <div class="flex flex-col lg:flex-row justify-between items-center gap-8">
-                <!-- Stats Overview -->
-                <div class="flex items-center gap-8 text-[#141414]">
-                    <div class="text-center">
-                        <span class="block text-3xl font-black text-primary">100+</span>
+    <!-- 2. PORTFOLIO OVERVIEW & STATS -->
+    <section class="relative z-20 -mt-[60px]">
+        <div class="container mx-auto max-w-[1400px]">
+            <div class="bg-white rounded-t-[48px] lg:rounded-t-[64px] pt-12 pb-12 px-6 lg:px-16 shadow-[0_-10px_40px_rgba(0,0,0,0.05)] relative overflow-hidden flex flex-col lg:flex-row justify-between items-center gap-12">
+                
+                <!-- Background Dotted Pattern (Right side) -->
+                <div class="absolute bottom-0 right-0 z-0 opacity-10 pointer-events-none w-[300px] h-[300px]">
+                    <svg width="100%" height="100%" fill="none" viewBox="0 0 100 100" preserveAspectRatio="none">
+                        <pattern id="dots-wave" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse">
+                            <circle fill="#00a6a6" cx="2" cy="2" r="2"></circle>
+                        </pattern>
+                        <path d="M0,100 C30,50 70,80 100,0 L100,100 Z" fill="url(#dots-wave)" />
+                    </svg>
+                </div>
+
+                <!-- Left Stats (Projects & Organizations) -->
+                <div class="flex items-center justify-center lg:justify-start gap-12 lg:gap-16 w-full lg:w-auto relative z-10">
+                    <!-- Projects -->
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 rounded-full bg-[#E5F5F5] border border-primary/20 flex items-center justify-center mb-4 text-primary">
+                            <x-icon name="lucide-briefcase" class="w-8 h-8" />
+                        </div>
+                        <span class="block text-4xl lg:text-[44px] font-black text-primary leading-none mb-2">100+</span>
                         <span class="text-xs font-bold text-[#585857] uppercase tracking-widest">Projects</span>
+                        <div class="w-8 h-1 bg-primary mt-4 rounded-full"></div>
                     </div>
-                    <div class="w-px h-10 bg-gray-200"></div>
-                    <div class="text-center">
-                        <span class="block text-3xl font-black text-primary">50+</span>
+                    
+                    <!-- Divider line -->
+                    <div class="w-px h-32 bg-gray-200"></div>
+                    
+                    <!-- Organizations -->
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 rounded-full bg-[#E5F5F5] border border-primary/20 flex items-center justify-center mb-4 text-primary">
+                            <x-icon name="lucide-users" class="w-8 h-8" />
+                        </div>
+                        <span class="block text-4xl lg:text-[44px] font-black text-primary leading-none mb-2">50+</span>
                         <span class="text-xs font-bold text-[#585857] uppercase tracking-widest">Organizations</span>
-                    </div>
-                    <div class="hidden md:flex w-px h-10 bg-gray-200"></div>
-                    <div class="hidden md:flex text-sm font-medium text-[#585857]">
-                        Government &bull; Private &bull; Education &bull; Healthcare
+                        <div class="w-8 h-1 bg-primary mt-4 rounded-full"></div>
                     </div>
                 </div>
 
-                <!-- AlpineJS Filter Context Starts Here for the rest of the page -->
-                <!-- Note: To make Alpine work across sections, we can wrap the main content in x-data -->
+                <!-- Divider between Stats and Sectors (Desktop only) -->
+                <div class="hidden lg:block w-px h-24 bg-gray-200 relative z-10"></div>
+
+                <!-- Right Sectors -->
+                <div class="flex flex-wrap lg:flex-nowrap justify-center items-center gap-4 lg:gap-8 w-full lg:w-auto relative z-10">
+                    <!-- Government -->
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 lg:w-12 lg:h-12 rounded-full bg-[#E5F5F5] flex items-center justify-center text-primary border border-primary/20">
+                            <x-icon name="lucide-landmark" class="w-5 h-5 lg:w-6 lg:h-6" />
+                        </div>
+                        <span class="text-sm font-bold text-[#585857]">Government</span>
+                    </div>
+                    
+                    <div class="w-1.5 h-1.5 rounded-full bg-primary/40 hidden md:block"></div>
+                    
+                    <!-- Private -->
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 lg:w-12 lg:h-12 rounded-full bg-[#E5F5F5] flex items-center justify-center text-primary border border-primary/20">
+                            <x-icon name="lucide-graduation-cap" class="w-5 h-5 lg:w-6 lg:h-6" />
+                        </div>
+                        <span class="text-sm font-bold text-[#585857]">Private</span>
+                    </div>
+                    
+                    <div class="w-1.5 h-1.5 rounded-full bg-primary/40 hidden md:block"></div>
+
+                    <!-- Education -->
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 lg:w-12 lg:h-12 rounded-full bg-[#E5F5F5] flex items-center justify-center text-primary border border-primary/20">
+                            <x-icon name="lucide-book-open" class="w-5 h-5 lg:w-6 lg:h-6" />
+                        </div>
+                        <span class="text-sm font-bold text-[#585857]">Education</span>
+                    </div>
+                    
+                    <div class="w-1.5 h-1.5 rounded-full bg-primary/40 hidden md:block"></div>
+
+                    <!-- Healthcare -->
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 lg:w-12 lg:h-12 rounded-full bg-[#E5F5F5] flex items-center justify-center text-primary border border-primary/20">
+                            <x-icon name="lucide-plus-circle" class="w-5 h-5 lg:w-6 lg:h-6" />
+                        </div>
+                        <span class="text-sm font-bold text-[#585857]">Healthcare</span>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>

@@ -115,16 +115,142 @@
     </section>
 
     <!-- 2. TRUSTED BY -->
-    <section class="py-12 bg-white border-b border-gray-100">
-        <div class="container mx-auto px-6 max-w-[1320px]">
-            <p class="text-center text-xs font-bold text-gray-400 uppercase tracking-widest mb-8">Dipercaya Oleh Organisasi Berkinerja Tinggi</p>
-            <div class="flex flex-wrap justify-center items-center gap-12 lg:gap-20 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
-                <h3 class="text-2xl font-black text-gray-500 italic">PERTAMINA</h3>
-                <h3 class="text-2xl font-black text-gray-500">Kemenkes</h3>
-                <h3 class="text-2xl font-black text-gray-500 italic">BAPPENAS</h3>
-                <h3 class="text-2xl font-black text-gray-500">OJK</h3>
-                <h3 class="text-2xl font-black text-gray-500">BNI</h3>
-                <h3 class="text-2xl font-black text-gray-500">UNDP</h3>
+    <section class="py-12 bg-white border-b border-gray-100 overflow-hidden" x-data="dragScroll()" x-init="initMarquee()">
+        <style>
+            .no-scrollbar::-webkit-scrollbar {
+                display: none;
+            }
+            .no-scrollbar {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+        </style>
+        
+        <script>
+            function dragScroll() {
+                return {
+                    isDown: false,
+                    startX: 0,
+                    scrollLeft: 0,
+                    speed: 1,
+                    velocity: 0,
+                    lastX: 0,
+                    isHovered: false,
+                    rafId: null,
+                    
+                    initMarquee() {
+                        this.rafId = requestAnimationFrame(() => this.animate());
+                    },
+                    animate() {
+                        let slider = this.$refs.slider;
+                        if (slider && !this.isDown) {
+                            // Apply inertia (momentum)
+                            if (Math.abs(this.velocity) > 0.1) {
+                                slider.scrollLeft -= this.velocity;
+                                this.velocity *= 0.95; // Friction multiplier
+                            } else {
+                                this.velocity = 0;
+                                // Auto scroll when not hovered
+                                if (!this.isHovered) {
+                                    slider.scrollLeft += this.speed;
+                                }
+                            }
+                            
+                            // Infinite loop handling
+                            if (slider.scrollLeft <= 0) {
+                                slider.scrollLeft += slider.scrollWidth / 2;
+                            } else if (slider.scrollLeft >= slider.scrollWidth / 2) {
+                                slider.scrollLeft -= slider.scrollWidth / 2;
+                            }
+                        }
+                        this.rafId = requestAnimationFrame(() => this.animate());
+                    },
+                    mouseenter() {
+                        this.isHovered = true;
+                    },
+                    mouseleave() {
+                        this.isHovered = false;
+                        this.isDown = false;
+                    },
+                    mousedown(e) {
+                        this.isDown = true;
+                        this.startX = e.pageX - this.$refs.slider.offsetLeft;
+                        this.scrollLeft = this.$refs.slider.scrollLeft;
+                        this.lastX = e.pageX;
+                        this.velocity = 0;
+                    },
+                    mouseup() {
+                        this.isDown = false;
+                    },
+                    mousemove(e) {
+                        if (!this.isDown) return;
+                        e.preventDefault();
+                        
+                        // Calculate velocity for momentum
+                        this.velocity = e.pageX - this.lastX;
+                        this.lastX = e.pageX;
+                        
+                        const x = e.pageX - this.$refs.slider.offsetLeft;
+                        const walk = (x - this.startX);
+                        let slider = this.$refs.slider;
+                        slider.scrollLeft = this.scrollLeft - walk;
+                        
+                        // Handle infinite loop during drag
+                        if (slider.scrollLeft <= 0) {
+                            slider.scrollLeft += slider.scrollWidth / 2;
+                            this.scrollLeft = slider.scrollLeft;
+                            this.startX = x;
+                        } else if (slider.scrollLeft >= slider.scrollWidth / 2) {
+                            slider.scrollLeft -= slider.scrollWidth / 2;
+                            this.scrollLeft = slider.scrollLeft;
+                            this.startX = x;
+                        }
+                    }
+                }
+            }
+        </script>
+
+        <div class="container mx-auto px-6 max-w-[1320px] mb-8">
+            <p class="text-center text-xs font-bold text-gray-400 uppercase tracking-widest">Dipercaya Oleh Organisasi Berkinerja Tinggi</p>
+        </div>
+
+        <div class="relative w-full max-w-full">
+            <!-- Gradient Fades -->
+            <div class="absolute inset-y-0 left-0 w-24 lg:w-48 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
+            <div class="absolute inset-y-0 right-0 w-24 lg:w-48 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
+            
+            <!-- Scrolling Content -->
+            <div x-ref="slider"
+                 @mouseenter="mouseenter()" 
+                 @mouseleave="mouseleave()"
+                 @mousedown="mousedown($event)" 
+                 @mouseup="mouseup()" 
+                 @mousemove="mousemove($event)"
+                 class="no-scrollbar flex items-center gap-12 lg:gap-16 opacity-60 hover:opacity-100 transition-opacity duration-300 overflow-x-hidden cursor-grab active:cursor-grabbing w-full select-none"
+                 style="display: flex; flex-wrap: nowrap;">
+                @php
+                    $organizations = [
+                        'Heartspeaks Indonesia', 'PDMA-Indonesia', 'AIESEC', 
+                        'Praktisi Pengembangan Kompetensi Softskill Indonesia', 'Solopos Media Group',
+                        'Indosat Ooredoo Hutchinson', 'Adicipta Inovasi Teknologi', 'Kemenkes',
+                        'LKPP', 'Biro Klasifikasi Indonesia', 'Otoritas Jasa Keuangan (OJK) Indonesia',
+                        'Pos Indonesia', 'BNI Tbk', 'Asuransi Tugu Pratama Ind Tbk',
+                        'Pelindo Solusi Logistik', 'Widodo Makmur Perkasa Tbk', 'Widodo Makmur Unggas Tbk',
+                        'De Fila Integrated Farm', 'Prisma Surya Gemilang', 'Universitas Muhammadiyah Cirebon',
+                        'PPM Manajemen', 'ITB', 'UNPAD', 'FTUI', 'IKIGAI Consulting',
+                        'BDO Indonesia', 'Al Aaren Food Bahrain', 'DataHen Canada'
+                    ];
+                @endphp
+                
+                <!-- Set 1 -->
+                @foreach($organizations as $org)
+                    <h3 class="text-xl lg:text-2xl font-black text-gray-500 whitespace-nowrap">{{ $org }}</h3>
+                @endforeach
+                
+                <!-- Set 2 (Duplicate for infinite scroll loop) -->
+                @foreach($organizations as $org)
+                    <h3 class="text-xl lg:text-2xl font-black text-gray-500 whitespace-nowrap">{{ $org }}</h3>
+                @endforeach
             </div>
         </div>
     </section>
