@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
+
+/* Base Typography */
+body {
+    font-family: 'Inter', sans-serif !important;
+}
+
+/* Headings use Outfit for a premium corporate look */
+h1, h2, h3, h4, h5, h6, 
+.fi-header-heading, 
+.fi-ta-header-heading, 
+.fi-modal-heading {
+    font-family: 'Outfit', sans-serif !important;
+    letter-spacing: -0.02em;
+}
+
+/* Core Containers: Cards, Modals, Forms */
+.fi-wi-widget, 
+.fi-ta-content, 
+.fi-fo-content, 
+.fi-modal-window,
+.fi-section {
+    border-radius: 24px !important; /* Extremely smooth rounded corners */
+    border: 1px solid rgba(0, 0, 0, 0.04) !important; /* Subtle border instead of harsh gray */
+    box-shadow: 0 12px 40px -12px rgba(0, 0, 0, 0.05), 0 2px 6px rgba(0, 0, 0, 0.02) !important; /* Soft, diffused premium shadow */
+    transition: box-shadow 0.3s ease;
+}
+
+/* Buttons: Pill shape and interactive */
+.fi-btn {
+    border-radius: 9999px !important;
+    font-family: 'Outfit', sans-serif !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.01em;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.fi-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Inputs: Rounded and soft focus */
+.fi-input-wrp, .fi-select-input {
+    border-radius: 16px !important;
+    transition: all 0.3s ease !important;
+    border-color: #e2e8f0 !important;
+}
+
+.fi-input-wrp:focus-within, .fi-select-input:focus-within {
+    box-shadow: 0 0 0 4px rgba(0, 166, 166, 0.15) !important;
+    border-color: #00a6a6 !important;
+}
+
+/* Table enhancements */
+.fi-ta-record {
+    transition: all 0.2s ease;
+}
+
+.fi-ta-record:hover {
+    background-color: #f8fafc !important; 
+    transform: scale(1.002);
+}
+
+/* Custom Sidebar Styling */
+.fi-sidebar {
+    background-color: #00a6a6 !important;
+    border-right: none !important;
+}
+
+/* Sidebar Text & Icons */
+.fi-sidebar-item-label, 
+.fi-sidebar-group-label {
+    color: #f5c242 !important;
+    font-weight: 600 !important;
+}
+
+.fi-sidebar-item-icon {
+    color: #f5c242 !important;
+}
+
+/* Sidebar Item Hover & Active states */
+.fi-sidebar-item-button:hover {
+    background-color: rgba(245, 194, 66, 0.15) !important;
+}
+
+.fi-sidebar-item-button[aria-current="page"] {
+    background-color: rgba(245, 194, 66, 0.25) !important;
+}
+
+.fi-sidebar-item-button[aria-current="page"] .fi-sidebar-item-label,
+.fi-sidebar-item-button[aria-current="page"] .fi-sidebar-item-icon {
+    color: #ffffff !important;
+}
+
+/* Invert Logo to white on dark teal background */
+.fi-sidebar .fi-logo img {
+    filter: brightness(0) invert(1) !important;
+}
+
+/* General Layout spacing */
+.fi-main {
+    background-color: #FAFAFA !important; /* Very clean, premium off-white background */
+}
