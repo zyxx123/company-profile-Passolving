@@ -111,7 +111,7 @@
                                 </div>
                                 <div>
                                     <h4 class="text-sm font-bold text-[#141414] mb-1">Jam Operasional</h4>
-                                    <p class="text-xs text-[#585857]">Senin - Jumat, 08:00 - 17:00 WIB</p>
+                                    <p class="text-xs text-[#585857]">Senin - Jumat, 09:00 - 17:00 WIB</p>
                                 </div>
                             </div>
                         </div>
