@@ -31,9 +31,6 @@
 
             <!-- Desktop Actions -->
             <div class="hidden lg:flex items-center gap-4 xl:gap-6">
-                <button class="hover:opacity-80 transition-opacity w-11 h-11 flex items-center justify-center">
-                    <x-icon name="lucide-search" class="w-5 h-5" stroke-width="2.5" />
-                </button>
                 <x-ui.button href="/contact" variant="primary">
                     Get in Touch
                 </x-ui.button>
