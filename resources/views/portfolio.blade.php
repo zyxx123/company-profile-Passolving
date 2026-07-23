@@ -46,7 +46,7 @@
              style="background-image: url('https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center bottom; mask-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0)); -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0)); mix-blend-mode: luminosity;">
         </div>
         
-        <div class="container relative z-10 mx-auto px-6 max-w-[1320px] text-center">
+        <div class="container relative z-10 mx-auto px-6 max-w-[1320px] text-center" data-aos="fade-up">
             <h1 class="text-[clamp(2.5rem,7vw,4.5rem)] font-black leading-[1.2] mb-4 max-w-4xl mx-auto uppercase text-[#0B2545]">
                 PORTFOLIO
             </h1>
@@ -66,7 +66,7 @@
     <!-- 2. PORTFOLIO OVERVIEW & STATS -->
     <section class="relative z-20 -mt-10 md:-mt-16 lg:-mt-[80px]">
         <div class="container mx-auto max-w-[1400px]">
-            <div class="bg-white rounded-t-[40px] lg:rounded-t-[64px] pt-12 pb-12 px-6 lg:px-16 shadow-[0_-10px_40px_rgba(0,0,0,0.05)] relative overflow-hidden flex flex-col lg:flex-row justify-between items-center gap-10 lg:gap-12">
+            <div class="bg-white rounded-t-[40px] lg:rounded-t-[64px] pt-12 pb-12 px-6 lg:px-16 shadow-[0_-10px_40px_rgba(0,0,0,0.05)] relative overflow-hidden flex flex-col lg:flex-row justify-between items-center gap-10 lg:gap-12" data-aos="fade-up" data-aos-delay="200">
                 
                 <!-- Background Dotted Pattern (Right side) -->
                 <div class="absolute bottom-0 right-0 z-0 opacity-10 pointer-events-none w-[300px] h-[300px]">
@@ -158,7 +158,7 @@
         <!-- Filter Bar -->
         <section class="pt-12 bg-[#F8FAFB]">
             <div class="container mx-auto px-6 max-w-[1320px]">
-                <div class="flex flex-wrap items-center justify-center gap-3">
+                <div class="flex flex-wrap items-center justify-center gap-3" data-aos="fade-in">
                     <template x-for="cat in ['All', 'Training', 'Consulting', 'Transformation', 'Research']" :key="cat">
                         <button @click="filter = cat"
                                 :class="filter === cat ? 'bg-primary text-primary-dark shadow-md' : 'bg-white text-[#585857] hover:bg-gray-50 border border-gray-200'"
@@ -176,10 +176,10 @@
                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                     
                     @foreach($portfolios as $port)
-                        <a href="/portfolio/{{ $port->slug ?? '' }}" x-show="filter === 'All' || filter === '{{ $port->category }}'" class="group bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 hover:-translate-y-2 transition-all duration-300 block">
+                        <a href="/portfolio/{{ $port->slug ?? '' }}" x-show="filter === 'All' || filter === '{{ $port->category }}'" class="group bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 hover:-translate-y-2 transition-all duration-300 block" data-aos="fade-up" data-aos-delay="{{ $loop->index * 50 }}">
                             <div class="h-48 overflow-hidden relative">
                                 <div class="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors z-10"></div>
-                                <img src="{{ Str::startsWith($port->image_url, 'http') ? $port->image_url : Storage::url($port->image_url) }}" alt="{{ $port->title }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <img src="{{ Str::startsWith($port->image_url, 'http') ? $port->image_url : Storage::url($port->image_url) }}" alt="{{ $port->title }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
                                 <span class="absolute top-4 right-4 z-20 bg-cta text-primary-dark text-xs font-bold px-3 py-1 rounded-full">{{ $port->category }}</span>
                             </div>
                             <div class="p-6">
@@ -197,7 +197,7 @@
     <!-- 5. TRANSFORMATION CASE STUDIES (THE BIG WINS) -->
     <section class="py-20 lg:py-28 bg-primary text-primary-dark">
         <div class="container mx-auto px-6 max-w-[1320px]">
-            <div class="text-center mb-16">
+            <div class="text-center mb-16" data-aos="fade-up">
                 <h2 class="text-3xl lg:text-[44px] font-bold leading-[1.2] max-w-2xl mx-auto mb-4">
                     Transformation Case Studies
                 </h2>
@@ -206,7 +206,7 @@
 
             <div class="grid lg:grid-cols-3 gap-8">
                 <!-- Case 1 -->
-                <div class="bg-white/5 border border-white/10 rounded-3xl p-8 lg:p-10 relative flex flex-col h-full">
+                <div class="bg-white/5 border border-white/10 rounded-3xl p-8 lg:p-10 relative flex flex-col h-full" data-aos="fade-up" data-aos-delay="0">
                     <span class="text-cta font-bold uppercase tracking-widest text-xs mb-3">Healthcare Transformation</span>
                     <h3 class="text-2xl font-black mb-8 text-primary-dark">Medical Centre</h3>
                     
@@ -233,7 +233,7 @@
                 </div>
 
                 <!-- Case 2 -->
-                <div class="bg-white/5 border border-white/10 rounded-3xl p-8 lg:p-10 relative flex flex-col h-full">
+                <div class="bg-white/5 border border-white/10 rounded-3xl p-8 lg:p-10 relative flex flex-col h-full" data-aos="fade-up" data-aos-delay="100">
                     <span class="text-cta font-bold uppercase tracking-widest text-xs mb-3">Agriculture & Supply Chain</span>
                     <h3 class="text-2xl font-black mb-8 text-primary-dark">Agribusiness</h3>
                     
@@ -259,7 +259,7 @@
                 </div>
 
                 <!-- Case 3 -->
-                <div class="bg-white/5 border border-white/10 rounded-3xl p-8 lg:p-10 relative flex flex-col h-full">
+                <div class="bg-white/5 border border-white/10 rounded-3xl p-8 lg:p-10 relative flex flex-col h-full" data-aos="fade-up" data-aos-delay="200">
                     <span class="text-cta font-bold uppercase tracking-widest text-xs mb-3">Logistics</span>
                     <h3 class="text-2xl font-black mb-8 text-primary-dark">Warehouse Opt.</h3>
                     
@@ -291,9 +291,9 @@
 
     <!-- 6. CLIENT LOGOS (TRUSTED BY) -->
     <section class="py-20 bg-white border-b border-gray-100">
-        <div class="container mx-auto px-6 max-w-[1320px] text-center">
+        <div class="container mx-auto px-6 max-w-[1320px] text-center" data-aos="fade-up">
             <h4 class="text-sm font-bold text-gray-400 uppercase tracking-widest mb-10">Trusted By Industry Leaders</h4>
-            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-70 grayscale">
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16" data-aos="fade-in" data-aos-delay="200">
                 <!-- Using Text placeholders for logos as per instruction -->
                 <h2 class="text-3xl font-black text-gray-800">BNI</h2>
                 <h2 class="text-3xl font-black text-gray-800">OJK</h2>
@@ -310,7 +310,7 @@
     <!-- 7. TESTIMONIALS -->
     <section class="py-16 bg-primary text-primary-dark">
         <div class="container mx-auto px-6 max-w-[1320px]">
-            <div class="text-center mb-12">
+            <div class="text-center mb-12" data-aos="fade-up">
                 <x-icon name="lucide-quote" class="w-8 h-8 text-primary-dark/20 mx-auto mb-3" stroke-width="1.5" />
                 <h2 class="text-2xl lg:text-3xl font-bold leading-[1.2]">
                     What Our Clients Say
@@ -320,7 +320,7 @@
             <div class="grid lg:grid-cols-3 gap-6 items-start">
                 
                 <!-- Column 1 -->
-                <div class="bg-[#0B9B9A] p-8 rounded-3xl shadow-sm text-center flex flex-col gap-6">
+                <div class="bg-[#0B9B9A] p-8 rounded-3xl shadow-sm text-center flex flex-col gap-6" data-aos="fade-up" data-aos-delay="0">
                     <div>
                         <span class="inline-block bg-[#141414]/30 text-primary-dark text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-3">Manager Retail Chain (Indonesia)</span>
                         <p class="text-primary-dark text-base font-medium leading-relaxed italic">
@@ -352,7 +352,7 @@
                 </div>
 
                 <!-- Column 2 -->
-                <div class="bg-[#0B9B9A] p-8 rounded-3xl shadow-sm text-center flex flex-col gap-6">
+                <div class="bg-[#0B9B9A] p-8 rounded-3xl shadow-sm text-center flex flex-col gap-6" data-aos="fade-up" data-aos-delay="100">
                     <div>
                         <span class="inline-block bg-[#141414]/30 text-primary-dark text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-3">Founder Beauty Clinic (Indonesia)</span>
                         <p class="text-primary-dark text-base font-medium leading-relaxed italic">
@@ -373,7 +373,7 @@
                 </div>
 
                 <!-- Column 3 -->
-                <div class="bg-[#0B9B9A] p-8 rounded-3xl shadow-sm text-center flex flex-col gap-6">
+                <div class="bg-[#0B9B9A] p-8 rounded-3xl shadow-sm text-center flex flex-col gap-6" data-aos="fade-up" data-aos-delay="200">
                     <div>
                         <span class="inline-block bg-[#141414]/30 text-primary-dark text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-3">Founder Integrated Farm (Indonesia)</span>
                         <p class="text-primary-dark text-base font-medium leading-relaxed italic">
@@ -398,7 +398,7 @@
 
             </div>
             
-            <div class="mt-12 text-center flex flex-col md:flex-row items-center justify-center gap-6">
+            <div class="mt-12 text-center flex flex-col md:flex-row items-center justify-center gap-6" data-aos="fade-up" data-aos-delay="300">
                 <p class="text-xl font-bold text-primary-dark">What leaders consistently experience</p>
                 <div class="w-12 h-12 bg-white text-primary-dark rounded-full flex items-center justify-center">
                     <x-icon name="lucide-arrow-right" class="w-6 h-6" />

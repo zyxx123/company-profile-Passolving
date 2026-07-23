@@ -54,7 +54,7 @@
         <div class="container mx-auto px-6 max-w-[1320px] relative z-10">
             <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
                 <!-- Text Content -->
-                <div class="w-full lg:w-[55%]">
+                <div class="w-full lg:w-[55%]" data-aos="fade-right">
                     <p class="text-cta font-bold tracking-widest uppercase text-[clamp(0.75rem,2vw,0.875rem)] mb-4 lg:mb-6">Pioneer in Agility Assesment & National Soft Skill Certification</p>
                     <h1 class="text-[clamp(2.5rem,6vw,3.75rem)] font-black leading-[1.1] text-white mb-4 lg:mb-6 uppercase">
                         AGILITY &<br/>TRANSFORMATION
@@ -74,7 +74,7 @@
 
                     <!-- Stats / Achievements -->
                     <div class="mt-8 lg:mt-10 xl:mt-16 flex flex-wrap items-center gap-6 lg:gap-10 text-white">
-                        <div class="flex items-center gap-4">
+                        <div class="flex items-center gap-4" data-aos="fade-up" data-aos-delay="100">
                             <div class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center bg-white/5">
                                 <x-icon name="lucide-users" class="w-6 h-6 text-cta" />
                             </div>
@@ -83,7 +83,7 @@
                                 <p class="text-xs text-white/70 leading-tight">Organizations<br/>Empowered</p>
                             </div>
                         </div>
-                        <div class="flex items-center gap-4">
+                        <div class="flex items-center gap-4" data-aos="fade-up" data-aos-delay="200">
                             <div class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center bg-white/5">
                                 <x-icon name="lucide-bar-chart-2" class="w-6 h-6 text-cta" />
                             </div>
@@ -92,7 +92,7 @@
                                 <p class="text-xs text-white/70 leading-tight">Years of<br/>Experience</p>
                             </div>
                         </div>
-                        <div class="flex items-center gap-4">
+                        <div class="flex items-center gap-4" data-aos="fade-up" data-aos-delay="300">
                             <div class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center bg-white/5">
                                 <x-icon name="lucide-star" class="w-6 h-6 text-cta" />
                             </div>
@@ -105,9 +105,9 @@
                 </div>
 
                 <!-- Image -->
-                <div class="w-full lg:w-[45%]">
+                <div class="w-full lg:w-[45%]" data-aos="fade-left" data-aos-delay="200">
                     <div class="relative w-full aspect-[4/3] rounded-[48px] rounded-tl-none overflow-hidden shadow-2xl border-[4px] border-white/10">
-                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80" alt="Tim Profesional" class="w-full h-full object-cover">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=70" alt="Tim Profesional" class="w-full h-full object-cover" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -174,9 +174,10 @@
                     },
                     mousedown(e) {
                         this.isDown = true;
-                        this.startX = e.pageX - this.$refs.slider.offsetLeft;
+                        const pageX = e.type.includes('touch') ? e.touches[0].pageX : e.pageX;
+                        this.startX = pageX - this.$refs.slider.offsetLeft;
                         this.scrollLeft = this.$refs.slider.scrollLeft;
-                        this.lastX = e.pageX;
+                        this.lastX = pageX;
                         this.velocity = 0;
                     },
                     mouseup() {
@@ -184,13 +185,14 @@
                     },
                     mousemove(e) {
                         if (!this.isDown) return;
-                        e.preventDefault();
+                        
+                        const pageX = e.type.includes('touch') ? e.touches[0].pageX : e.pageX;
                         
                         // Calculate velocity for momentum
-                        this.velocity = e.pageX - this.lastX;
-                        this.lastX = e.pageX;
+                        this.velocity = pageX - this.lastX;
+                        this.lastX = pageX;
                         
-                        const x = e.pageX - this.$refs.slider.offsetLeft;
+                        const x = pageX - this.$refs.slider.offsetLeft;
                         const walk = (x - this.startX);
                         let slider = this.$refs.slider;
                         slider.scrollLeft = this.scrollLeft - walk;
@@ -210,11 +212,11 @@
             }
         </script>
 
-        <div class="container mx-auto px-6 max-w-[1320px] mb-8">
+        <div class="container mx-auto px-6 max-w-[1320px] mb-8" data-aos="fade-up">
             <p class="text-center text-xs font-bold text-gray-400 uppercase tracking-widest">Dipercaya Oleh Organisasi Berkinerja Tinggi</p>
         </div>
 
-        <div class="relative w-full max-w-full">
+        <div class="relative w-full max-w-full" data-aos="fade-in" data-aos-delay="200">
             <!-- Gradient Fades -->
             <div class="absolute inset-y-0 left-0 w-24 lg:w-48 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
             <div class="absolute inset-y-0 right-0 w-24 lg:w-48 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
@@ -226,14 +228,16 @@
                  @mousedown="mousedown($event)" 
                  @mouseup="mouseup()" 
                  @mousemove="mousemove($event)"
-                 class="no-scrollbar flex items-center gap-12 lg:gap-16 opacity-60 hover:opacity-100 transition-opacity duration-300 overflow-x-hidden cursor-grab active:cursor-grabbing w-full select-none"
+                 @touchstart="mousedown($event)"
+                 @touchend="mouseup()"
+                 @touchmove="mousemove($event)"
+                 class="no-scrollbar flex items-center gap-12 lg:gap-16 overflow-x-hidden cursor-grab active:cursor-grabbing w-full select-none"
                  style="display: flex; flex-wrap: nowrap;">
                 @php
                     $organizations = [
                         ['name' => 'Heartspeaks Indonesia', 'logo' => 'Heartspeaks Indonesia.png'], 
                         ['name' => 'PDMA-Indonesia', 'logo' => 'PDMA-Indonesia.jpg'], 
                         ['name' => 'AIESEC', 'logo' => 'AIESEC-Logo.png'], 
-                        ['name' => 'Praktisi Pengembangan Kompetensi Softskill Indonesia', 'logo' => null], 
                         ['name' => 'Solopos Media Group', 'logo' => 'Solopos Media Group.jpg'],
                         ['name' => 'Indosat Ooredoo Hutchinson', 'logo' => 'Indosat Ooredoo.png'], 
                         ['name' => 'Adicipta Inovasi Teknologi', 'logo' => 'Adicipta Inovasi Teknologi.png'], 
@@ -247,7 +251,6 @@
                         ['name' => 'Pelindo Solusi Logistik', 'logo' => 'PT PELINDO SOLUSI LOGISTIK.webp'], 
                         ['name' => 'Widodo Makmur Perkasa Tbk', 'logo' => 'Widodo Makmur Perkasa.png'], 
                         ['name' => 'Widodo Makmur Unggas Tbk', 'logo' => 'Widodo Makmur Unggas.png'],
-                        ['name' => 'De Fila Integrated Farm', 'logo' => null], 
                         ['name' => 'Prisma Surya Gemilang', 'logo' => 'Prisma Surya Gemilang.png'], 
                         ['name' => 'Universitas Muhammadiyah Cirebon', 'logo' => 'Universitas Muhammadiya Cirebon.png'],
                         ['name' => 'PPM Manajemen', 'logo' => 'PPM Manajemen.png'], 
@@ -264,7 +267,7 @@
                 <!-- Set 1 -->
                 @foreach($organizations as $org)
                     @if($org['logo'] && file_exists(public_path('images/clients/' . $org['logo'])))
-                        <img src="{{ asset('images/clients/' . $org['logo']) }}" alt="{{ $org['name'] }}" class="h-10 lg:h-12 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300" title="{{ $org['name'] }}">
+                        <img src="{{ asset('images/clients/' . $org['logo']) }}" alt="{{ $org['name'] }}" class="h-10 lg:h-12 w-auto object-contain" title="{{ $org['name'] }}" loading="lazy">
                     @else
                         <h3 class="text-xl lg:text-2xl font-black text-gray-500 whitespace-nowrap" title="{{ $org['name'] }}">{{ $org['name'] }}</h3>
                     @endif
@@ -273,7 +276,7 @@
                 <!-- Set 2 (Duplicate for infinite scroll loop) -->
                 @foreach($organizations as $org)
                     @if($org['logo'] && file_exists(public_path('images/clients/' . $org['logo'])))
-                        <img src="{{ asset('images/clients/' . $org['logo']) }}" alt="{{ $org['name'] }}" class="h-10 lg:h-12 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300" title="{{ $org['name'] }}">
+                        <img src="{{ asset('images/clients/' . $org['logo']) }}" alt="{{ $org['name'] }}" class="h-10 lg:h-12 w-auto object-contain" title="{{ $org['name'] }}" loading="lazy">
                     @else
                         <h3 class="text-xl lg:text-2xl font-black text-gray-500 whitespace-nowrap" title="{{ $org['name'] }}">{{ $org['name'] }}</h3>
                     @endif
@@ -288,21 +291,21 @@
             <div class="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
                 
                 <!-- Left Images (Optech style overlapping) -->
-                <div class="w-full lg:w-[50%] relative hidden sm:block">
+                <div class="w-full lg:w-[50%] relative hidden sm:block" data-aos="fade-right">
                     <div class="absolute -top-10 -left-10 w-40 h-40 opacity-20 z-0"></div>
                     
                     <div class="relative z-10 flex items-end gap-4 md:gap-6">
                         <div class="w-[60%] rounded-3xl rounded-tr-none overflow-hidden shadow-lg h-[250px] md:h-[400px]">
-                            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80" alt="Office 1" class="w-full h-full object-cover">
+                            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=70" alt="Office 1" class="w-full h-full object-cover" loading="lazy">
                         </div>
                         <div class="w-[40%] rounded-3xl rounded-bl-none overflow-hidden shadow-lg h-[180px] md:h-[280px] -mb-8 md:-mb-12">
-                            <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=600&q=80" alt="Office 2" class="w-full h-full object-cover">
+                            <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=600&q=70" alt="Office 2" class="w-full h-full object-cover" loading="lazy">
                         </div>
                     </div>
                 </div>
                 
                 <!-- Right Text -->
-                <div class="w-full lg:w-[50%]">
+                <div class="w-full lg:w-[50%]" data-aos="fade-left">
                     <h2 class="text-3xl lg:text-[44px] font-bold text-[#141414] leading-[1.2] mb-6">
                         PASS at a Glance
                     </h2>
@@ -327,7 +330,7 @@
     <!-- 4. FEATURED SERVICES -->
     <section class="py-20 lg:py-28 bg-[#F8FAFB]">
         <div class="container mx-auto px-6 max-w-[1320px]">
-            <div class="text-center mb-16">
+            <div class="text-center mb-16" data-aos="fade-up">
                 <h2 class="text-3xl lg:text-[44px] font-bold text-[#141414] leading-[1.2] max-w-2xl mx-auto">
                     Featured Services
                 </h2>
@@ -336,7 +339,7 @@
             
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 @foreach($services->take(4) as $service)
-                    <div class="bg-white rounded-2xl p-8 hover:-translate-y-2 transition-transform duration-300 shadow-sm border border-gray-100 flex flex-col h-full">
+                    <div class="bg-white rounded-2xl p-8 hover:-translate-y-2 transition-transform duration-300 shadow-sm border border-gray-100 flex flex-col h-full" data-aos="fade-up" data-aos-delay="{{ $loop->index * 100 }}">
                         <div class="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 shrink-0">
                             <x-icon name="{{ $service->icon_name ?? 'lucide-monitor' }}" class="w-8 h-8 text-primary" stroke-width="1.5" />
                         </div>
@@ -357,7 +360,7 @@
     <section class="py-20 lg:py-28 bg-white">
         <div class="container mx-auto px-6 max-w-[1320px]">
             <div class="flex flex-col lg:flex-row items-start gap-16 lg:gap-24">
-                <div class="w-full lg:w-[40%]">
+                <div class="w-full lg:w-[40%]" data-aos="fade-right">
                     <h2 class="text-3xl lg:text-[44px] font-bold text-[#141414] leading-[1.2] mb-6">
                         Mengapa PASS?
                     </h2>
@@ -371,7 +374,7 @@
 
                 <div class="w-full lg:w-[60%] grid md:grid-cols-2 gap-8">
                     <!-- Point 1 -->
-                    <div class="bg-[#F8FAFB] p-8 rounded-2xl border border-gray-100">
+                    <div class="bg-[#F8FAFB] p-8 rounded-2xl border border-gray-100" data-aos="fade-up" data-aos-delay="0">
                         <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                             <x-icon name="lucide-globe" class="w-6 h-6 text-primary" stroke-width="2" />
                         </div>
@@ -380,7 +383,7 @@
                     </div>
 
                     <!-- Point 2 -->
-                    <div class="bg-[#F8FAFB] p-8 rounded-2xl border border-gray-100">
+                    <div class="bg-[#F8FAFB] p-8 rounded-2xl border border-gray-100" data-aos="fade-up" data-aos-delay="100">
                         <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                             <x-icon name="lucide-database" class="w-6 h-6 text-primary" stroke-width="2" />
                         </div>
@@ -389,7 +392,7 @@
                     </div>
 
                     <!-- Point 3 -->
-                    <div class="bg-[#F8FAFB] p-8 rounded-2xl border border-gray-100">
+                    <div class="bg-[#F8FAFB] p-8 rounded-2xl border border-gray-100" data-aos="fade-up" data-aos-delay="200">
                         <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                             <x-icon name="lucide-target" class="w-6 h-6 text-primary" stroke-width="2" />
                         </div>
@@ -398,7 +401,7 @@
                     </div>
 
                     <!-- Point 4 -->
-                    <div class="bg-[#F8FAFB] p-8 rounded-2xl border border-gray-100">
+                    <div class="bg-[#F8FAFB] p-8 rounded-2xl border border-gray-100" data-aos="fade-up" data-aos-delay="300">
                         <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                             <x-icon name="lucide-heart" class="w-6 h-6 text-primary" stroke-width="2" />
                         </div>
@@ -413,7 +416,7 @@
     <!-- 6. FEATURED PROJECTS -->
     <section class="py-20 lg:py-28 bg-[#F8FAFB]">
         <div class="container mx-auto px-6 max-w-[1320px]">
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6" data-aos="fade-up">
                 <div>
                     <h2 class="text-3xl lg:text-[44px] font-bold text-[#141414] leading-[1.2]">
                         Featured Projects
@@ -426,8 +429,8 @@
             
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
                 @foreach($portfolios->take(3) as $portfolio)
-                    <div class="group relative rounded-3xl overflow-hidden shadow-sm aspect-[4/3] max-h-[360px]">
-                        <img src="{{ Str::startsWith($portfolio->image_url, 'http') ? $portfolio->image_url : Storage::url($portfolio->image_url) }}" alt="{{ $portfolio->title }}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="group relative rounded-3xl overflow-hidden shadow-sm aspect-[4/3] max-h-[360px]" data-aos="fade-up" data-aos-delay="{{ $loop->index * 100 }}">
+                        <img src="{{ Str::startsWith($portfolio->image_url, 'http') ? $portfolio->image_url : Storage::url($portfolio->image_url) }}" alt="{{ $portfolio->title }}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
                         <div class="absolute inset-0 bg-primary/70 flex flex-col justify-end p-8">
                             <span class="inline-block px-3 py-1 bg-cta text-[#141414] text-[10px] font-bold uppercase tracking-widest rounded-full mb-4 self-start">{{ $portfolio->category }}</span>
                             <h3 class="text-xl font-bold text-primary-dark mb-2 leading-tight">{{ $portfolio->title }}</h3>
@@ -441,7 +444,7 @@
     <!-- 7. COMPANY STATISTICS -->
     <section class="py-20 bg-primary/5">
         <div class="container mx-auto px-6 max-w-[1320px]">
-            <div class="bg-white rounded-[32px] p-12 shadow-sm border border-primary/10">
+            <div class="bg-white rounded-[32px] p-12 shadow-sm border border-primary/10" data-aos="zoom-in">
                 <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:divide-x divide-gray-100">
                     
                     <!-- Stat 1 -->
@@ -492,7 +495,7 @@
     <!-- 8. TESTIMONIALS -->
     <section class="py-20 lg:py-28 bg-[#F8FAFB]">
         <div class="container mx-auto px-6 max-w-[1320px]">
-            <div class="text-center mb-16">
+            <div class="text-center mb-16" data-aos="fade-up">
                 <h2 class="text-3xl lg:text-[44px] font-bold text-[#141414] leading-[1.2] max-w-2xl mx-auto">
                     What Leaders Say about PASS
                 </h2>
@@ -501,7 +504,7 @@
 
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- Testimonial 1 -->
-                <div class="bg-white p-10 rounded-3xl shadow-sm border border-gray-100 relative">
+                <div class="bg-white p-10 rounded-3xl shadow-sm border border-gray-100 relative" data-aos="fade-up" data-aos-delay="0">
                     <x-icon name="lucide-quote" class="w-12 h-12 text-primary/10 absolute top-8 left-8" />
                     <div class="relative z-10">
                         <p class="text-[#141414] font-medium text-lg leading-relaxed italic mb-8 mt-4">
@@ -515,7 +518,7 @@
                 </div>
 
                 <!-- Testimonial 2 -->
-                <div class="bg-primary p-10 rounded-3xl shadow-sm relative">
+                <div class="bg-primary p-10 rounded-3xl shadow-sm relative" data-aos="fade-up" data-aos-delay="100">
                     <x-icon name="lucide-quote" class="w-12 h-12 text-primary-dark/10 absolute top-8 left-8" />
                     <div class="relative z-10">
                         <p class="text-primary-dark font-medium text-lg leading-relaxed italic mb-8 mt-4">
@@ -529,7 +532,7 @@
                 </div>
 
                 <!-- Testimonial 3 -->
-                <div class="bg-white p-10 rounded-3xl shadow-sm border border-gray-100 relative">
+                <div class="bg-white p-10 rounded-3xl shadow-sm border border-gray-100 relative" data-aos="fade-up" data-aos-delay="200">
                     <x-icon name="lucide-quote" class="w-12 h-12 text-primary/10 absolute top-8 left-8" />
                     <div class="relative z-10">
                         <p class="text-[#141414] font-medium text-lg leading-relaxed italic mb-8 mt-4">
@@ -543,7 +546,7 @@
                 </div>
             </div>
             
-            <div class="text-center mt-12">
+            <div class="text-center mt-12" data-aos="fade-up" data-aos-delay="300">
                 <a href="/portfolio" class="inline-flex items-center text-[#141414] font-bold hover:text-primary transition-colors group">
                     View More Testimonials <span class="ml-2 transition-transform group-hover:translate-x-1">→</span>
                 </a>
