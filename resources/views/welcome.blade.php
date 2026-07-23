@@ -286,39 +286,94 @@
     </section>
 
     <!-- 3. COMPANY OVERVIEW (ABOUT PREVIEW) -->
-    <section class="py-20 lg:py-28 bg-white">
-        <div class="container mx-auto px-6 max-w-[1320px]">
-            <div class="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+    <section class="py-20 lg:py-28 bg-white relative overflow-hidden">
+        <!-- Decorative dotted pattern bottom right -->
+        <div class="absolute -bottom-16 -right-16 w-64 h-64 opacity-[0.15] z-0 bg-[radial-gradient(#14b8a6_3px,transparent_3px)] [background-size:20px_20px] hidden lg:block"></div>
+        
+        <div class="container mx-auto px-6 max-w-[1320px] relative z-10">
+            <div class="flex flex-col lg:flex-row items-center gap-16 lg:gap-20">
                 
-                <!-- Left Images (Optech style overlapping) -->
-                <div class="w-full lg:w-[50%] relative hidden sm:block" data-aos="fade-right">
-                    <div class="absolute -top-10 -left-10 w-40 h-40 opacity-20 z-0"></div>
+                <!-- Left Images -->
+                <div class="w-full lg:w-[45%] relative" data-aos="fade-right">
                     
-                    <div class="relative z-10 flex items-end gap-4 md:gap-6">
-                        <div class="w-[60%] rounded-3xl rounded-tr-none overflow-hidden shadow-lg h-[250px] md:h-[400px]">
+                    <!-- Dotted pattern top-left -->
+                    <div class="absolute -top-10 -left-10 w-40 h-40 opacity-[0.15] z-0 bg-[radial-gradient(#14b8a6_3px,transparent_3px)] [background-size:20px_20px]"></div>
+
+                    <!-- Light grey/blue background shape -->
+                    <div class="absolute top-[10%] -left-8 w-[75%] h-[85%] bg-[#EEF3F7] rounded-3xl z-0 hidden md:block"></div>
+                    
+                    <!-- Teal border shape -->
+                    <div class="absolute top-[35%] -right-4 w-[60%] h-[40%] border-[2px] border-primary rounded-[30px] rounded-tr-[50px] z-0 hidden md:block"></div>
+                    
+                    <!-- Images Container -->
+                    <div class="relative z-10 md:pt-4 md:pl-4 pb-16 md:pb-28">
+                        <!-- Main Image -->
+                        <div class="w-[85%] md:w-[80%] h-[340px] md:h-[480px] rounded-3xl overflow-hidden shadow-sm relative z-10">
                             <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=70" alt="Office 1" class="w-full h-full object-cover" loading="lazy">
                         </div>
-                        <div class="w-[40%] rounded-3xl rounded-bl-none overflow-hidden shadow-lg h-[180px] md:h-[280px] -mb-8 md:-mb-12">
-                            <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=600&q=70" alt="Office 2" class="w-full h-full object-cover" loading="lazy">
+                        
+                        <!-- Overlapping Image -->
+                        <div class="absolute bottom-0 right-0 w-[65%] md:w-[60%] h-[200px] md:h-[300px] rounded-3xl overflow-hidden shadow-2xl border-[6px] md:border-[10px] border-white bg-white z-20">
+                            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=70" alt="Teamwork" class="w-full h-full object-cover" loading="lazy">
                         </div>
                     </div>
                 </div>
                 
                 <!-- Right Text -->
-                <div class="w-full lg:w-[50%]" data-aos="fade-left">
-                    <h2 class="text-3xl lg:text-[44px] font-bold text-[#141414] leading-[1.2] mb-6">
+                <div class="w-full lg:w-[55%]" data-aos="fade-left">
+                    <h4 class="text-sm font-black text-primary uppercase tracking-widest mb-3">PASS At A Glance</h4>
+                    <h2 class="text-3xl lg:text-[46px] font-bold text-[#141414] leading-[1.15] mb-6">
                         PASS at a Glance
                     </h2>
-                    <p class="text-lg font-medium text-primary mb-6">
+                    <p class="text-[17px] font-bold text-primary mb-6 leading-relaxed">
                         Not every organization needs PASS. PASS works when leadership is ready to face uncomfortable realities.
                     </p>
-                    <p class="text-[#585857] leading-relaxed mb-4">
-                        PASS bekerja bersama pimpinan organisasi untuk memastikan strategi benar-benar diterjemahkan menjadi hasil nyata. Memadukan disiplin engineering, management dan human learning dalam tiga pilar utama : Training, Consulting, dan Research.
+                    <p class="text-[#585857] leading-relaxed mb-8">
+                        PASS bekerja bersama pimpinan organisasi untuk memastikan strategi benar-benar diterjemahkan menjadi hasil nyata. Memadukan disiplin engineering, management dan human learning dalam tiga pilar utama :
                     </p>
-                    <p class="text-[#585857] leading-relaxed mb-10">
+
+                    <!-- 3 Pillars Grid -->
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10">
+                        <!-- Pillar 1 -->
+                        <div class="flex sm:flex-col lg:flex-row items-center sm:items-start lg:items-center gap-4">
+                            <div class="w-[50px] h-[50px] rounded-full bg-[#E5F4F2] flex items-center justify-center shrink-0">
+                                <x-icon name="lucide-graduation-cap" class="w-6 h-6 text-primary" stroke-width="2" />
+                            </div>
+                            <div class="text-left">
+                                <h5 class="font-bold text-[#141414] text-[15px] mb-1">Training</h5>
+                                <p class="text-[13px] text-[#585857] leading-snug">Pengembangan kapabilitas individu dan tim.</p>
+                            </div>
+                        </div>
+                        <!-- Pillar 2 -->
+                        <div class="flex sm:flex-col lg:flex-row items-center sm:items-start lg:items-center gap-4">
+                            <div class="w-[50px] h-[50px] rounded-full bg-[#E5F4F2] flex items-center justify-center shrink-0">
+                                <x-icon name="lucide-users" class="w-6 h-6 text-primary" stroke-width="2" />
+                            </div>
+                            <div class="text-left">
+                                <h5 class="font-bold text-[#141414] text-[15px] mb-1">Consulting</h5>
+                                <p class="text-[13px] text-[#585857] leading-snug">Pendampingan strategi dan solusi bisnis.</p>
+                            </div>
+                        </div>
+                        <!-- Pillar 3 -->
+                        <div class="flex sm:flex-col lg:flex-row items-center sm:items-start lg:items-center gap-4">
+                            <div class="w-[50px] h-[50px] rounded-full bg-[#E5F4F2] flex items-center justify-center shrink-0">
+                                <x-icon name="lucide-search" class="w-6 h-6 text-primary" stroke-width="2" />
+                            </div>
+                            <div class="text-left">
+                                <h5 class="font-bold text-[#141414] text-[15px] mb-1">Research</h5>
+                                <p class="text-[13px] text-[#585857] leading-snug">Riset terapan untuk menjawab tantangan nyata.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Divider -->
+                    <div class="h-px w-full bg-gray-200 mb-8"></div>
+
+                    <p class="text-[#585857] leading-relaxed mb-8">
                         Dengan metodologi dan tools yang dirancang secara ekslusif, PASS menghasilkan solusi yang relevan, terukur dan berkelanjutan, yang aplikatif.
                     </p>
-                    <x-ui.button href="/about" variant="primary" :icon="false" class="rounded-lg">
+                    
+                    <x-ui.button href="/about" variant="primary" :icon="false" class="rounded-lg font-bold">
                         Learn More →
                     </x-ui.button>
                 </div>
