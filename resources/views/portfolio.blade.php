@@ -47,7 +47,7 @@
         </div>
         
         <div class="container relative z-10 mx-auto px-6 max-w-[1320px] text-center" data-aos="fade-up">
-            <h1 class="text-[clamp(2.5rem,7vw,4.5rem)] font-black leading-[1.2] mb-4 max-w-4xl mx-auto uppercase text-[#0B2545]">
+            <h1 class="text-[clamp(2.5rem,7vw,4.5rem)] font-black leading-[1.2] mb-4 max-w-4xl mx-auto uppercase text-white">
                 PORTFOLIO
             </h1>
             
@@ -57,7 +57,7 @@
                 <div class="w-2 h-1 bg-cta rounded-full"></div>
             </div>
 
-            <p class="text-[#0B2545]/80 max-w-2xl mx-auto leading-relaxed text-[clamp(1rem,3vw,1.25rem)]">
+            <p class="text-white/90 max-w-2xl mx-auto leading-relaxed text-[clamp(1rem,3vw,1.25rem)]">
                 Discover how PASS has helped organizations achieve measurable transformation across industries.
             </p>
         </div>
@@ -289,21 +289,139 @@
         </div>
     </section>
 
-    <!-- 6. CLIENT LOGOS (TRUSTED BY) -->
-    <section class="py-20 bg-white border-b border-gray-100">
+    <!-- 6. CLIENTS & PARTNERS -->
+    <section class="py-24 bg-white relative z-20 border-b border-gray-100">
         <div class="container mx-auto px-6 max-w-[1320px] text-center" data-aos="fade-up">
-            <h4 class="text-sm font-bold text-gray-400 uppercase tracking-widest mb-10">Trusted By Industry Leaders</h4>
-            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16" data-aos="fade-in" data-aos-delay="200">
-                <!-- Using Text placeholders for logos as per instruction -->
-                <h2 class="text-3xl font-black text-gray-800">BNI</h2>
-                <h2 class="text-3xl font-black text-gray-800">OJK</h2>
-                <h2 class="text-3xl font-black text-gray-800">KEMENKES</h2>
-                <h2 class="text-3xl font-black text-gray-800">PELINDO</h2>
-                <h2 class="text-3xl font-black text-gray-800">INDOSAT</h2>
-                <h2 class="text-3xl font-black text-gray-800">LKPP</h2>
-                <h2 class="text-3xl font-black text-gray-800">ITB</h2>
-                <h2 class="text-3xl font-black text-gray-800">UNPAD</h2>
+            
+            <div class="flex items-center justify-center gap-6 mb-16">
+                <div class="w-12 h-[1px] bg-primary/30"></div>
+                <h4 class="text-[14px] font-black text-primary uppercase tracking-[0.2em]">{{ __('Clients & Partners') }}</h4>
+                <div class="w-12 h-[1px] bg-primary/30"></div>
             </div>
+            
+            <style>
+                .hide-scroll::-webkit-scrollbar {
+                    display: none;
+                }
+                .hide-scroll {
+                    -ms-overflow-style: none;
+                    scrollbar-width: none;
+                }
+            </style>
+            
+            <div class="relative w-full">
+                <!-- Fade Gradients -->
+                <div class="absolute inset-y-0 left-0 w-16 md:w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
+                <div class="absolute inset-y-0 right-0 w-16 md:w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
+                
+                <!-- Scrollable Container -->
+                <div id="clients-scroll" class="flex items-center gap-12 md:gap-24 overflow-x-auto hide-scroll snap-x snap-mandatory pb-4 px-8" style="cursor: grab;" onmousedown="this.style.cursor='grabbing'" onmouseup="this.style.cursor='grab'" onmouseleave="this.style.cursor='grab'">
+                    @php
+                        $organizations = [
+                            ['name' => 'BNI Tbk', 'logo' => 'BNI Tbk.webp'], 
+                            ['name' => 'Otoritas Jasa Keuangan (OJK) Indonesia', 'logo' => 'Otoritas Jasa Keuangan.webp'],
+                            ['name' => 'Kemenkes', 'logo' => 'Kemenkes.webp'],
+                            ['name' => 'Pelindo Solusi Logistik', 'logo' => 'PT PELINDO SOLUSI LOGISTIK.webp'], 
+                            ['name' => 'Indosat Ooredoo Hutchinson', 'logo' => 'Indosat Ooredoo.webp'], 
+                            ['name' => 'LKPP', 'logo' => 'LKPP.webp'], 
+                            ['name' => 'ITB', 'logo' => 'ITB.webp'], 
+                            ['name' => 'UNPAD', 'logo' => 'UNPAD.webp'], 
+                            ['name' => 'Heartspeaks Indonesia', 'logo' => 'Heartspeaks Indonesia.webp'], 
+                            ['name' => 'PDMA-Indonesia', 'logo' => 'PDMA-Indonesia.webp'], 
+                            ['name' => 'AIESEC', 'logo' => 'AIESEC-Logo.webp'], 
+                            ['name' => 'Solopos Media Group', 'logo' => 'Solopos Media Group.webp'],
+                            ['name' => 'Adicipta Inovasi Teknologi', 'logo' => 'Adicipta Inovasi Teknologi.webp'], 
+                            ['name' => 'Biro Klasifikasi Indonesia', 'logo' => 'Biro Klasifikasi Indonesia.webp'], 
+                            ['name' => 'Pos Indonesia', 'logo' => 'Pos Indonesia.webp'], 
+                            ['name' => 'Asuransi Tugu Pratama Ind Tbk', 'logo' => 'Asuransi Tugu Pratama.webp'],
+                            ['name' => 'Widodo Makmur Perkasa Tbk', 'logo' => 'Widodo Makmur Perkasa.webp'], 
+                            ['name' => 'Widodo Makmur Unggas Tbk', 'logo' => 'Widodo Makmur Unggas.webp'],
+                            ['name' => 'Prisma Surya Gemilang', 'logo' => 'Prisma Surya Gemilang.webp'], 
+                            ['name' => 'Universitas Muhammadiyah Cirebon', 'logo' => 'Universitas Muhammadiya Cirebon.webp'],
+                            ['name' => 'PPM Manajemen', 'logo' => 'PPM Manajemen.webp'], 
+                            ['name' => 'FTUI', 'logo' => 'FTUI.webp'], 
+                            ['name' => 'IKIGAI Consulting', 'logo' => 'IKIGAI Consulting.webp'],
+                            ['name' => 'BDO Indonesia', 'logo' => 'BDO Indonesia.webp'], 
+                            ['name' => 'Al Aaren Food Bahrain', 'logo' => 'Al Aaren Food Bahrain.webp'], 
+                            ['name' => 'DataHen Canada', 'logo' => 'DataHen Canada.webp']
+                        ];
+                    @endphp
+                    
+                    <!-- Space placeholder at start for scrolling padding -->
+                    <div class="shrink-0 w-4 md:w-16 snap-start"></div>
+                    
+                    @foreach($organizations as $org)
+                        <div class="shrink-0 flex items-center justify-center snap-center hover:scale-110 transition-transform duration-300 py-4">
+                            @if($org['logo'] && file_exists(public_path('images/clients/' . $org['logo'])))
+                                <img src="{{ asset('images/clients/' . $org['logo']) }}" alt="{{ $org['name'] }}" class="h-10 md:h-14 lg:h-16 w-auto object-contain transition-all duration-300" title="{{ $org['name'] }}" loading="lazy">
+                            @else
+                                <h3 class="text-xl md:text-2xl font-black text-[#141414] whitespace-nowrap" title="{{ $org['name'] }}">{{ $org['name'] }}</h3>
+                            @endif
+                        </div>
+                    @endforeach
+                    
+                    <!-- Space placeholder at end -->
+                    <div class="shrink-0 w-4 md:w-16 snap-end"></div>
+                </div>
+            </div>
+            
+            <!-- Pagination Dots Decoration -->
+            <div id="clients-dots" class="flex items-center justify-center gap-2 mt-12">
+                <!-- Dots injected by JS -->
+            </div>
+
+            <script>
+                (function() {
+                    const initDots = () => {
+                        const scrollContainer = document.getElementById('clients-scroll');
+                        const dotsContainer = document.getElementById('clients-dots');
+                        if (!scrollContainer || !dotsContainer) return;
+
+                        const dotCount = 6; // Matching the design
+                        
+                        // Create dots
+                        dotsContainer.innerHTML = '';
+                        for (let i = 0; i < dotCount; i++) {
+                            const dot = document.createElement('div');
+                            dot.className = `w-2.5 h-2.5 rounded-full transition-colors duration-300 cursor-pointer ${i === 0 ? 'bg-primary' : 'bg-gray-200'}`;
+                            
+                            // Click dot to scroll to position
+                            dot.addEventListener('click', () => {
+                                const maxScroll = scrollContainer.scrollWidth - scrollContainer.clientWidth;
+                                scrollContainer.scrollTo({
+                                    left: (maxScroll / (dotCount - 1)) * i,
+                                    behavior: 'smooth'
+                                });
+                            });
+                            
+                            dotsContainer.appendChild(dot);
+                        }
+
+                        // Update active dot on scroll
+                        scrollContainer.addEventListener('scroll', () => {
+                            const maxScroll = scrollContainer.scrollWidth - scrollContainer.clientWidth;
+                            if (maxScroll <= 0) return;
+                            
+                            const scrollPercentage = scrollContainer.scrollLeft / maxScroll;
+                            const activeIndex = Math.min(dotCount - 1, Math.max(0, Math.round(scrollPercentage * (dotCount - 1))));
+                            
+                            Array.from(dotsContainer.children).forEach((dot, index) => {
+                                if (index === activeIndex) {
+                                    dot.className = 'w-2.5 h-2.5 rounded-full transition-colors duration-300 cursor-pointer bg-primary';
+                                } else {
+                                    dot.className = 'w-2.5 h-2.5 rounded-full transition-colors duration-300 cursor-pointer bg-gray-200';
+                                }
+                            });
+                        });
+                    };
+                    
+                    if (document.readyState === 'loading') {
+                        document.addEventListener('DOMContentLoaded', initDots);
+                    } else {
+                        initDots();
+                    }
+                })();
+            </script>
         </div>
     </section>
 
