@@ -78,7 +78,7 @@
 
 | Property         | Value                                                           |
 |------------------|-----------------------------------------------------------------|
-| Primary Font     | `Plus Jakarta Sans`                                             |
+| Primary Font     | `Poppins`                                             |
 | Fallback Stack   | `ui-sans-serif, system-ui, sans-serif`                          |
 | CSS Variable     | `--font-sans`                                                   |
 | Loaded Weights   | 300 (light), 400 (regular), 500 (medium), 600 (semibold), 700 (bold), 800 (extrabold) |
@@ -127,7 +127,7 @@
 | Stat labels              | `tracking-widest`      | `uppercase`    |
 | Category badges          | `tracking-widest`      | `uppercase`    |
 | Client labels            | `tracking-widest`      | `uppercase`    |
-| Engagement process titles | `tracking-wider`      | `uppercase`    |
+| Engagement process titles| `tracking-wider`      | `uppercase`    |
 | Hero sub-label           | `tracking-widest`      | `uppercase`    |
 | Hero H1 (Home)           | default                | `uppercase`    |
 

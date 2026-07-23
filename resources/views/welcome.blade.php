@@ -230,26 +230,53 @@
                  style="display: flex; flex-wrap: nowrap;">
                 @php
                     $organizations = [
-                        'Heartspeaks Indonesia', 'PDMA-Indonesia', 'AIESEC', 
-                        'Praktisi Pengembangan Kompetensi Softskill Indonesia', 'Solopos Media Group',
-                        'Indosat Ooredoo Hutchinson', 'Adicipta Inovasi Teknologi', 'Kemenkes',
-                        'LKPP', 'Biro Klasifikasi Indonesia', 'Otoritas Jasa Keuangan (OJK) Indonesia',
-                        'Pos Indonesia', 'BNI Tbk', 'Asuransi Tugu Pratama Ind Tbk',
-                        'Pelindo Solusi Logistik', 'Widodo Makmur Perkasa Tbk', 'Widodo Makmur Unggas Tbk',
-                        'De Fila Integrated Farm', 'Prisma Surya Gemilang', 'Universitas Muhammadiyah Cirebon',
-                        'PPM Manajemen', 'ITB', 'UNPAD', 'FTUI', 'IKIGAI Consulting',
-                        'BDO Indonesia', 'Al Aaren Food Bahrain', 'DataHen Canada'
+                        ['name' => 'Heartspeaks Indonesia', 'logo' => 'Heartspeaks Indonesia.png'], 
+                        ['name' => 'PDMA-Indonesia', 'logo' => 'PDMA-Indonesia.jpg'], 
+                        ['name' => 'AIESEC', 'logo' => 'AIESEC-Logo.png'], 
+                        ['name' => 'Praktisi Pengembangan Kompetensi Softskill Indonesia', 'logo' => null], 
+                        ['name' => 'Solopos Media Group', 'logo' => 'Solopos Media Group.jpg'],
+                        ['name' => 'Indosat Ooredoo Hutchinson', 'logo' => 'Indosat Ooredoo.png'], 
+                        ['name' => 'Adicipta Inovasi Teknologi', 'logo' => 'Adicipta Inovasi Teknologi.png'], 
+                        ['name' => 'Kemenkes', 'logo' => 'Kemenkes.png'],
+                        ['name' => 'LKPP', 'logo' => 'LKPP.png'], 
+                        ['name' => 'Biro Klasifikasi Indonesia', 'logo' => 'Biro Klasifikasi Indonesia.png'], 
+                        ['name' => 'Otoritas Jasa Keuangan (OJK) Indonesia', 'logo' => 'Otoritas Jasa Keuangan.png'],
+                        ['name' => 'Pos Indonesia', 'logo' => 'Pos Indonesia.png'], 
+                        ['name' => 'BNI Tbk', 'logo' => 'BNI Tbk.png'], 
+                        ['name' => 'Asuransi Tugu Pratama Ind Tbk', 'logo' => 'Asuransi Tugu Pratama.png'],
+                        ['name' => 'Pelindo Solusi Logistik', 'logo' => 'PT PELINDO SOLUSI LOGISTIK.webp'], 
+                        ['name' => 'Widodo Makmur Perkasa Tbk', 'logo' => 'Widodo Makmur Perkasa.png'], 
+                        ['name' => 'Widodo Makmur Unggas Tbk', 'logo' => 'Widodo Makmur Unggas.png'],
+                        ['name' => 'De Fila Integrated Farm', 'logo' => null], 
+                        ['name' => 'Prisma Surya Gemilang', 'logo' => 'Prisma Surya Gemilang.png'], 
+                        ['name' => 'Universitas Muhammadiyah Cirebon', 'logo' => 'Universitas Muhammadiya Cirebon.png'],
+                        ['name' => 'PPM Manajemen', 'logo' => 'PPM Manajemen.png'], 
+                        ['name' => 'ITB', 'logo' => 'ITB.jpg'], 
+                        ['name' => 'UNPAD', 'logo' => 'UNPAD.jpg'], 
+                        ['name' => 'FTUI', 'logo' => 'FTUI.png'], 
+                        ['name' => 'IKIGAI Consulting', 'logo' => 'IKIGAI Consulting.png'],
+                        ['name' => 'BDO Indonesia', 'logo' => 'BDO Indonesia.png'], 
+                        ['name' => 'Al Aaren Food Bahrain', 'logo' => 'Al Aaren Food Bahrain.png'], 
+                        ['name' => 'DataHen Canada', 'logo' => 'DataHen Canada.png']
                     ];
                 @endphp
                 
                 <!-- Set 1 -->
                 @foreach($organizations as $org)
-                    <h3 class="text-xl lg:text-2xl font-black text-gray-500 whitespace-nowrap">{{ $org }}</h3>
+                    @if($org['logo'] && file_exists(public_path('images/clients/' . $org['logo'])))
+                        <img src="{{ asset('images/clients/' . $org['logo']) }}" alt="{{ $org['name'] }}" class="h-10 lg:h-12 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300" title="{{ $org['name'] }}">
+                    @else
+                        <h3 class="text-xl lg:text-2xl font-black text-gray-500 whitespace-nowrap" title="{{ $org['name'] }}">{{ $org['name'] }}</h3>
+                    @endif
                 @endforeach
                 
                 <!-- Set 2 (Duplicate for infinite scroll loop) -->
                 @foreach($organizations as $org)
-                    <h3 class="text-xl lg:text-2xl font-black text-gray-500 whitespace-nowrap">{{ $org }}</h3>
+                    @if($org['logo'] && file_exists(public_path('images/clients/' . $org['logo'])))
+                        <img src="{{ asset('images/clients/' . $org['logo']) }}" alt="{{ $org['name'] }}" class="h-10 lg:h-12 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300" title="{{ $org['name'] }}">
+                    @else
+                        <h3 class="text-xl lg:text-2xl font-black text-gray-500 whitespace-nowrap" title="{{ $org['name'] }}">{{ $org['name'] }}</h3>
+                    @endif
                 @endforeach
             </div>
         </div>

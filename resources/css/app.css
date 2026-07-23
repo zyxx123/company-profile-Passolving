@@ -7,7 +7,7 @@
 @source '../../app/Livewire/**/*.php';
 
 @theme {
-    --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+    --font-sans: 'Poppins', ui-sans-serif, system-ui, sans-serif;
     
     /* Passolving Colors System */
     --color-primary: #00a6a6; 

@@ -80,7 +80,7 @@ class AdminPanelProvider extends PanelProvider
                     
                     /* Typography & Font Colors */
                     html, body, .fi-body, .fi-main, h1, h2, h3, h4, h5, h6, p, span, a, input, button, textarea, select {
-                        font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+                        font-family: "Poppins", ui-sans-serif, system-ui, sans-serif !important;
                     }
 
                     /* Background & General Text */
