@@ -164,7 +164,7 @@
                         </ul>
                     </div>
                     <div class="w-full lg:w-1/2" data-aos="fade-left">
-                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=70" alt="Training" class="rounded-[24px] shadow-lg w-full aspect-[4/3] object-cover" loading="lazy">
+                        <img src="{{ asset('images/foto_utama/halaman_service-1.webp') }}" alt="Training" class="rounded-[24px] shadow-lg w-full aspect-[4/3] object-cover" loading="lazy">
                     </div>
                 </div>
 
@@ -202,7 +202,7 @@
                         </ul>
                     </div>
                     <div class="w-full lg:w-1/2" data-aos="fade-right">
-                        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=70" alt="Consulting" class="rounded-[24px] shadow-lg w-full aspect-[4/3] object-cover" loading="lazy">
+                        <img src="{{ asset('images/foto_utama/halaman_service-2.webp') }}" alt="Consulting" class="rounded-[24px] shadow-lg w-full aspect-[4/3] object-cover" loading="lazy">
                     </div>
                 </div>
 
@@ -236,7 +236,7 @@
                         </ul>
                     </div>
                     <div class="w-full lg:w-1/2" data-aos="fade-left">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=70" alt="Research" class="rounded-[24px] shadow-lg w-full aspect-[4/3] object-cover" loading="lazy">
+                        <img src="{{ asset('images/foto_utama/halaman_service-3.webp') }}" alt="Research" class="rounded-[24px] shadow-lg w-full aspect-[4/3] object-cover" loading="lazy">
                     </div>
                 </div>
 

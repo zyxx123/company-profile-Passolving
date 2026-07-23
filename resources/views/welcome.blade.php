@@ -107,7 +107,7 @@
                 <!-- Image -->
                 <div class="w-full lg:w-[45%]" data-aos="fade-left" data-aos-delay="200">
                     <div class="relative w-full aspect-[4/3] rounded-[48px] rounded-tl-none overflow-hidden shadow-2xl border-[4px] border-white/10">
-                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=70" alt="Tim Profesional" class="w-full h-full object-cover" loading="lazy">
+                        <img src="{{ asset('images/foto_utama/halaman_awal.webp') }}" alt="Tim Profesional" class="w-full h-full object-cover" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -303,12 +303,12 @@
                     <div class="relative z-10 md:pt-4 md:pl-4 pb-16 md:pb-28">
                         <!-- Main Image -->
                         <div class="w-[85%] md:w-[80%] h-[340px] md:h-[480px] rounded-3xl overflow-hidden shadow-sm relative z-10">
-                            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=70" alt="Office 1" class="w-full h-full object-cover" loading="lazy">
+                            <img src="{{ asset('images/foto_utama/halaman_awal-2.webp') }}" alt="Office 1" class="w-full h-full object-cover" loading="lazy">
                         </div>
                         
                         <!-- Overlapping Image -->
                         <div class="absolute bottom-0 right-0 w-[65%] md:w-[60%] h-[200px] md:h-[300px] rounded-3xl overflow-hidden shadow-2xl border-[6px] md:border-[10px] border-white bg-white z-20">
-                            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=70" alt="Teamwork" class="w-full h-full object-cover" loading="lazy">
+                            <img src="{{ asset('images/foto_utama/halaman_awal-3.webp') }}" alt="Teamwork" class="w-full h-full object-cover" loading="lazy">
                         </div>
                     </div>
                 </div>
