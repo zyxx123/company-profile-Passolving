@@ -3,7 +3,7 @@
 <div class="card-hover overflow-hidden flex flex-col h-full bg-white group border border-gray-100 shadow-sm">
     <!-- Thumbnail -->
     <div class="relative h-[200px] overflow-hidden">
-        <img src="{{ Str::startsWith($portfolio->image_url, 'http') ? $portfolio->image_url : Storage::url($portfolio->image_url) }}" alt="{{ $portfolio->title }}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+        <img src="{{ Str::startsWith($portfolio->image_url, 'http') ? $portfolio->image_url : Storage::url($portfolio->image_url) }}" alt="{{ $portfolio->title }}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
     </div>
     
     <!-- Content -->

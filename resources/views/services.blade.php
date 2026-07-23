@@ -36,7 +36,7 @@
         <!-- Skyline Placeholder Overlay (Optional subtle visual texture) -->
         <div class="absolute bottom-0 left-0 w-full h-[150px] opacity-10 pointer-events-none z-0" style="background: linear-gradient(to top, rgba(255,255,255,0.2), transparent);"></div>
 
-        <div class="container mx-auto px-6 max-w-[1320px] text-center relative z-10">
+        <div class="container mx-auto px-6 max-w-[1320px] text-center relative z-10" data-aos="fade-up">
             <h1 class="text-[clamp(2.25rem,5vw,3.5rem)] font-black leading-[1.2] mb-3 max-w-4xl mx-auto uppercase text-white">
                 Our Services
             </h1>
@@ -64,7 +64,7 @@
         <div class="container mx-auto px-6 max-w-[1320px] relative z-10">
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- Training Card -->
-                <div class="bg-white px-8 pt-12 pb-20 rounded-[32px] shadow-[0_15px_40px_rgba(0,0,0,0.06)] flex flex-col items-center text-center group hover:-translate-y-2 transition-transform duration-300 relative overflow-hidden border-none">
+                <div class="bg-white px-8 pt-12 pb-20 rounded-[32px] shadow-[0_15px_40px_rgba(0,0,0,0.06)] flex flex-col items-center text-center group hover:-translate-y-2 transition-transform duration-300 relative overflow-hidden border-none" data-aos="fade-up" data-aos-delay="0">
                     <div class="w-20 h-20 bg-[#E8F5F5] rounded-3xl flex items-center justify-center mb-6 relative">
                         <x-icon name="lucide-graduation-cap" class="w-10 h-10 text-primary" stroke-width="2" />
                         <div class="absolute top-2 right-2 w-2 h-2 rounded-full bg-cta"></div>
@@ -82,7 +82,7 @@
                 </div>
 
                 <!-- Consulting Card -->
-                <div class="bg-white px-8 pt-12 pb-20 rounded-[32px] shadow-[0_15px_40px_rgba(0,0,0,0.06)] flex flex-col items-center text-center group hover:-translate-y-2 transition-transform duration-300 relative overflow-hidden border-none">
+                <div class="bg-white px-8 pt-12 pb-20 rounded-[32px] shadow-[0_15px_40px_rgba(0,0,0,0.06)] flex flex-col items-center text-center group hover:-translate-y-2 transition-transform duration-300 relative overflow-hidden border-none" data-aos="fade-up" data-aos-delay="100">
                     <div class="w-20 h-20 bg-[#E8F5F5] rounded-3xl flex items-center justify-center mb-6 relative">
                         <x-icon name="lucide-briefcase" class="w-10 h-10 text-primary" stroke-width="2" />
                         <div class="absolute top-2 right-2 w-2 h-2 rounded-full bg-cta"></div>
@@ -106,7 +106,7 @@
                 </div>
 
                 <!-- Research Card -->
-                <div class="bg-white px-8 pt-12 pb-20 rounded-[32px] shadow-[0_15px_40px_rgba(0,0,0,0.06)] flex flex-col items-center text-center group hover:-translate-y-2 transition-transform duration-300 relative overflow-hidden border-none">
+                <div class="bg-white px-8 pt-12 pb-20 rounded-[32px] shadow-[0_15px_40px_rgba(0,0,0,0.06)] flex flex-col items-center text-center group hover:-translate-y-2 transition-transform duration-300 relative overflow-hidden border-none" data-aos="fade-up" data-aos-delay="200">
                     <div class="w-20 h-20 bg-[#E8F5F5] rounded-3xl flex items-center justify-center mb-6 relative">
                         <x-icon name="lucide-line-chart" class="w-10 h-10 text-primary" stroke-width="2" />
                         <div class="absolute top-2 right-2 w-2 h-2 rounded-full bg-cta"></div>
@@ -132,7 +132,7 @@
                 
                 <!-- Training Detail -->
                 <div class="flex flex-col lg:flex-row items-center gap-12">
-                    <div class="w-full lg:w-1/2">
+                    <div class="w-full lg:w-1/2" data-aos="fade-right">
                         <span class="text-cta font-bold tracking-widest uppercase text-sm mb-3 block">Pilar 01</span>
                         <h2 class="text-3xl lg:text-4xl font-bold text-[#141414] leading-[1.2] mb-4">
                             Training & Development
@@ -163,14 +163,14 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="w-full lg:w-1/2">
-                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80" alt="Training" class="rounded-[24px] shadow-lg w-full aspect-[4/3] object-cover">
+                    <div class="w-full lg:w-1/2" data-aos="fade-left">
+                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=70" alt="Training" class="rounded-[24px] shadow-lg w-full aspect-[4/3] object-cover" loading="lazy">
                     </div>
                 </div>
 
                 <!-- Consulting Detail -->
                 <div class="flex flex-col lg:flex-row-reverse items-center gap-12">
-                    <div class="w-full lg:w-1/2">
+                    <div class="w-full lg:w-1/2" data-aos="fade-left">
                         <span class="text-cta font-bold tracking-widest uppercase text-sm mb-3 block">Pilar 02</span>
                         <h2 class="text-3xl lg:text-4xl font-bold text-[#141414] leading-[1.2] mb-4">
                             Consulting Services
@@ -201,14 +201,14 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="w-full lg:w-1/2">
-                        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=80" alt="Consulting" class="rounded-[24px] shadow-lg w-full aspect-[4/3] object-cover">
+                    <div class="w-full lg:w-1/2" data-aos="fade-right">
+                        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=70" alt="Consulting" class="rounded-[24px] shadow-lg w-full aspect-[4/3] object-cover" loading="lazy">
                     </div>
                 </div>
 
                 <!-- Research Detail -->
                 <div class="flex flex-col lg:flex-row items-center gap-12">
-                    <div class="w-full lg:w-1/2">
+                    <div class="w-full lg:w-1/2" data-aos="fade-right">
                         <span class="text-cta font-bold tracking-widest uppercase text-sm mb-3 block">Pilar 03</span>
                         <h2 class="text-3xl lg:text-4xl font-bold text-[#141414] leading-[1.2] mb-4">
                             Research & Assessment
@@ -235,8 +235,8 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="w-full lg:w-1/2">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Research" class="rounded-[24px] shadow-lg w-full aspect-[4/3] object-cover">
+                    <div class="w-full lg:w-1/2" data-aos="fade-left">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=70" alt="Research" class="rounded-[24px] shadow-lg w-full aspect-[4/3] object-cover" loading="lazy">
                     </div>
                 </div>
 
@@ -247,7 +247,7 @@
     <!-- 4. PASS ENGAGEMENT PROCESS -->
     <section class="py-20 lg:py-28 bg-primary text-primary-dark">
         <div class="container mx-auto px-6 max-w-[1320px]">
-            <div class="text-center mb-16">
+            <div class="text-center mb-16" data-aos="fade-up">
                 <h2 class="text-3xl lg:text-[44px] font-bold leading-[1.2] max-w-2xl mx-auto">
                     PASS Engagement Process
                 </h2>
@@ -256,7 +256,7 @@
 
             <div class="grid md:grid-cols-4 gap-6">
                 <!-- SCAN -->
-                <div class="bg-white/5 border border-white/10 p-8 rounded-3xl relative">
+                <div class="bg-white/5 border border-white/10 p-8 rounded-3xl relative" data-aos="fade-up" data-aos-delay="0">
                     <div class="text-5xl font-black text-primary-dark/10 absolute top-6 right-6">01</div>
                     <h3 class="text-2xl font-black text-cta mb-4 uppercase tracking-wider relative z-10">Scan</h3>
                     <p class="text-primary-dark/80 leading-relaxed text-sm relative z-10">
@@ -264,7 +264,7 @@
                     </p>
                 </div>
                 <!-- SHIFT -->
-                <div class="bg-white/5 border border-white/10 p-8 rounded-3xl relative">
+                <div class="bg-white/5 border border-white/10 p-8 rounded-3xl relative" data-aos="fade-up" data-aos-delay="100">
                     <div class="text-5xl font-black text-primary-dark/10 absolute top-6 right-6">02</div>
                     <h3 class="text-2xl font-black text-cta mb-4 uppercase tracking-wider relative z-10">Shift</h3>
                     <p class="text-primary-dark/80 leading-relaxed text-sm relative z-10">
@@ -272,7 +272,7 @@
                     </p>
                 </div>
                 <!-- SCALE -->
-                <div class="bg-white/5 border border-white/10 p-8 rounded-3xl relative">
+                <div class="bg-white/5 border border-white/10 p-8 rounded-3xl relative" data-aos="fade-up" data-aos-delay="200">
                     <div class="text-5xl font-black text-primary-dark/10 absolute top-6 right-6">03</div>
                     <h3 class="text-2xl font-black text-cta mb-4 uppercase tracking-wider relative z-10">Scale</h3>
                     <p class="text-primary-dark/80 leading-relaxed text-sm relative z-10">
@@ -280,7 +280,7 @@
                     </p>
                 </div>
                 <!-- SCRIBE -->
-                <div class="bg-white/5 border border-white/10 p-8 rounded-3xl relative">
+                <div class="bg-white/5 border border-white/10 p-8 rounded-3xl relative" data-aos="fade-up" data-aos-delay="300">
                     <div class="text-5xl font-black text-primary-dark/10 absolute top-6 right-6">04</div>
                     <h3 class="text-2xl font-black text-cta mb-4 uppercase tracking-wider relative z-10">Scribe</h3>
                     <p class="text-primary-dark/80 leading-relaxed text-sm relative z-10">
@@ -294,7 +294,7 @@
     <!-- 5. TRAINING METHODOLOGY -->
     <section class="py-20 lg:py-28 bg-white">
         <div class="container mx-auto px-6 max-w-[1320px]">
-            <div class="text-center mb-16">
+            <div class="text-center mb-16" data-aos="fade-up">
                 <h2 class="text-3xl lg:text-[44px] font-bold text-[#141414] leading-[1.2] max-w-2xl mx-auto">
                     Training Methodology
                 </h2>
@@ -307,7 +307,7 @@
 
                 <div class="grid lg:grid-cols-4 gap-8">
                     <!-- Step 1 -->
-                    <div class="relative z-10 text-center">
+                    <div class="relative z-10 text-center" data-aos="fade-up" data-aos-delay="0">
                         <div class="w-24 h-24 mx-auto bg-primary rounded-2xl flex items-center justify-center mb-6 shadow-[0_10px_30px_rgba(15,159,164,0.3)]">
                             <x-icon name="lucide-search" class="w-10 h-10 text-primary-dark" />
                         </div>
@@ -315,7 +315,7 @@
                         <p class="text-sm text-[#585857]">Identifikasi masalah dan kebutuhan training peserta/organisasi melalui sesi empathize.</p>
                     </div>
                     <!-- Step 2 -->
-                    <div class="relative z-10 text-center">
+                    <div class="relative z-10 text-center" data-aos="fade-up" data-aos-delay="100">
                         <div class="w-24 h-24 mx-auto bg-primary rounded-2xl flex items-center justify-center mb-6 shadow-[0_10px_30px_rgba(15,159,164,0.3)]">
                             <x-icon name="lucide-pen-tool" class="w-10 h-10 text-primary-dark" />
                         </div>
@@ -323,7 +323,7 @@
                         <p class="text-sm text-[#585857]">Penyusunan modul materi, metode, serta aktivitas training secara sistematis.</p>
                     </div>
                     <!-- Step 3 -->
-                    <div class="relative z-10 text-center">
+                    <div class="relative z-10 text-center" data-aos="fade-up" data-aos-delay="200">
                         <div class="w-24 h-24 mx-auto bg-primary rounded-2xl flex items-center justify-center mb-6 shadow-[0_10px_30px_rgba(15,159,164,0.3)]">
                             <x-icon name="lucide-play-circle" class="w-10 h-10 text-primary-dark" />
                         </div>
@@ -331,7 +331,7 @@
                         <p class="text-sm text-[#585857]">Implementasi interaktif & partisipatif (learning by doing), penekanan pada praktik dan refleksi.</p>
                     </div>
                     <!-- Step 4 -->
-                    <div class="relative z-10 text-center">
+                    <div class="relative z-10 text-center" data-aos="fade-up" data-aos-delay="300">
                         <div class="w-24 h-24 mx-auto bg-primary rounded-2xl flex items-center justify-center mb-6 shadow-[0_10px_30px_rgba(15,159,164,0.3)]">
                             <x-icon name="lucide-clipboard-check" class="w-10 h-10 text-primary-dark" />
                         </div>
@@ -346,7 +346,7 @@
     <!-- 6. FEATURED PROGRAMS -->
     <section class="py-20 lg:py-28 bg-[#F8FAFB]">
         <div class="container mx-auto px-6 max-w-[1320px]">
-            <div class="text-center mb-16">
+            <div class="text-center mb-16" data-aos="fade-up">
                 <h2 class="text-3xl lg:text-[44px] font-bold text-[#141414] leading-[1.2] max-w-2xl mx-auto">
                     Featured Programs
                 </h2>
@@ -355,32 +355,32 @@
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Program 1 -->
-                <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow group">
+                <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow group" data-aos="fade-up" data-aos-delay="0">
                     <h3 class="text-xl font-bold text-[#141414] mb-2 group-hover:text-primary transition-colors">Leadership Agility</h3>
                     <p class="text-sm text-[#585857]">Strategic execution in complex organizations, adaptive leadership, building feedback culture.</p>
                 </div>
                 <!-- Program 2 -->
-                <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow group">
+                <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow group" data-aos="fade-up" data-aos-delay="100">
                     <h3 class="text-xl font-bold text-[#141414] mb-2 group-hover:text-primary transition-colors">Business Agility</h3>
                     <p class="text-sm text-[#585857]">Fundamentals for business, cross-functional collaboration, translating strategy into action.</p>
                 </div>
                 <!-- Program 3 -->
-                <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow group">
+                <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow group" data-aos="fade-up" data-aos-delay="200">
                     <h3 class="text-xl font-bold text-[#141414] mb-2 group-hover:text-primary transition-colors">Design Thinking</h3>
                     <p class="text-sm text-[#585857]">Humanity-centered innovation, solving complex problems with system & design thinking.</p>
                 </div>
                 <!-- Program 4 -->
-                <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow group">
+                <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow group" data-aos="fade-up" data-aos-delay="300">
                     <h3 class="text-xl font-bold text-[#141414] mb-2 group-hover:text-primary transition-colors">Communication</h3>
                     <p class="text-sm text-[#585857]">Communication for execution, cross-team collaboration, managing self and others.</p>
                 </div>
                 <!-- Program 5 -->
-                <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow group">
+                <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow group" data-aos="fade-up" data-aos-delay="400">
                     <h3 class="text-xl font-bold text-[#141414] mb-2 group-hover:text-primary transition-colors">Productivity</h3>
                     <p class="text-sm text-[#585857]">Agility sprint, learning by transforming, consistent performance management.</p>
                 </div>
                 <!-- Program 6 -->
-                <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow group">
+                <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow group" data-aos="fade-up" data-aos-delay="500">
                     <h3 class="text-xl font-bold text-[#141414] mb-2 group-hover:text-primary transition-colors">Soft Skill Certification</h3>
                     <p class="text-sm text-[#585857]">Sertifikasi BNSP Skema Pemecahan Masalah, Kepemimpinan, dan Komunikasi Efektif.</p>
                 </div>
@@ -391,7 +391,7 @@
     <!-- 7. INDUSTRIES WE SERVE -->
     <section class="py-20 lg:py-28 bg-white border-b border-gray-100">
         <div class="container mx-auto px-6 max-w-[1320px]">
-            <div class="text-center mb-16">
+            <div class="text-center mb-16" data-aos="fade-up">
                 <h2 class="text-3xl lg:text-[44px] font-bold text-[#141414] leading-[1.2] max-w-2xl mx-auto">
                     Industries We Serve
                 </h2>
@@ -399,49 +399,49 @@
             </div>
 
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-                <div class="flex flex-col items-center gap-4 group">
+                <div class="flex flex-col items-center gap-4 group" data-aos="fade-up" data-aos-delay="0">
                     <div class="w-20 h-20 rounded-full bg-primary flex items-center justify-center group-hover:bg-primary shadow-sm transition-all duration-300 group-hover:-translate-y-2">
                         <x-icon name="lucide-building" class="w-8 h-8 text-primary-dark transition-colors" />
                     </div>
                     <span class="font-bold text-[#141414]">Government</span>
                 </div>
-                <div class="flex flex-col items-center gap-4 group">
+                <div class="flex flex-col items-center gap-4 group" data-aos="fade-up" data-aos-delay="50">
                     <div class="w-20 h-20 rounded-full bg-primary flex items-center justify-center group-hover:bg-primary shadow-sm transition-all duration-300 group-hover:-translate-y-2">
                         <x-icon name="lucide-factory" class="w-8 h-8 text-primary-dark transition-colors" />
                     </div>
                     <span class="font-bold text-[#141414]">Manufacturing</span>
                 </div>
-                <div class="flex flex-col items-center gap-4 group">
+                <div class="flex flex-col items-center gap-4 group" data-aos="fade-up" data-aos-delay="100">
                     <div class="w-20 h-20 rounded-full bg-primary flex items-center justify-center group-hover:bg-primary shadow-sm transition-all duration-300 group-hover:-translate-y-2">
                         <x-icon name="lucide-radio-receiver" class="w-8 h-8 text-primary-dark transition-colors" />
                     </div>
                     <span class="font-bold text-[#141414]">Telecommunication</span>
                 </div>
-                <div class="flex flex-col items-center gap-4 group">
+                <div class="flex flex-col items-center gap-4 group" data-aos="fade-up" data-aos-delay="150">
                     <div class="w-20 h-20 rounded-full bg-primary flex items-center justify-center group-hover:bg-primary shadow-sm transition-all duration-300 group-hover:-translate-y-2">
                         <x-icon name="lucide-landmark" class="w-8 h-8 text-primary-dark transition-colors" />
                     </div>
                     <span class="font-bold text-[#141414]">Banking & Finance</span>
                 </div>
-                <div class="flex flex-col items-center gap-4 group">
+                <div class="flex flex-col items-center gap-4 group" data-aos="fade-up" data-aos-delay="200">
                     <div class="w-20 h-20 rounded-full bg-primary flex items-center justify-center group-hover:bg-primary shadow-sm transition-all duration-300 group-hover:-translate-y-2">
                         <x-icon name="lucide-stethoscope" class="w-8 h-8 text-primary-dark transition-colors" />
                     </div>
                     <span class="font-bold text-[#141414]">Healthcare</span>
                 </div>
-                <div class="flex flex-col items-center gap-4 group">
+                <div class="flex flex-col items-center gap-4 group" data-aos="fade-up" data-aos-delay="250">
                     <div class="w-20 h-20 rounded-full bg-primary flex items-center justify-center group-hover:bg-primary shadow-sm transition-all duration-300 group-hover:-translate-y-2">
                         <x-icon name="lucide-graduation-cap" class="w-8 h-8 text-primary-dark transition-colors" />
                     </div>
                     <span class="font-bold text-[#141414]">Education</span>
                 </div>
-                <div class="flex flex-col items-center gap-4 group">
+                <div class="flex flex-col items-center gap-4 group" data-aos="fade-up" data-aos-delay="300">
                     <div class="w-20 h-20 rounded-full bg-primary flex items-center justify-center group-hover:bg-primary shadow-sm transition-all duration-300 group-hover:-translate-y-2">
                         <x-icon name="lucide-sprout" class="w-8 h-8 text-primary-dark transition-colors" />
                     </div>
                     <span class="font-bold text-[#141414]">Agriculture</span>
                 </div>
-                <div class="flex flex-col items-center gap-4 group">
+                <div class="flex flex-col items-center gap-4 group" data-aos="fade-up" data-aos-delay="350">
                     <div class="w-20 h-20 rounded-full bg-primary flex items-center justify-center group-hover:bg-primary shadow-sm transition-all duration-300 group-hover:-translate-y-2">
                         <x-icon name="lucide-shopping-cart" class="w-8 h-8 text-primary-dark transition-colors" />
                     </div>
@@ -455,7 +455,7 @@
     <section class="py-20 lg:py-28 bg-[#F8FAFB]">
         <div class="container mx-auto px-6 max-w-[1320px]">
             <div class="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
-                <div class="w-full lg:w-[40%]">
+                <div class="w-full lg:w-[40%]" data-aos="fade-right">
                     <h2 class="text-3xl lg:text-[44px] font-bold text-[#141414] leading-[1.2] mb-6">
                         Why Choose PASS
                     </h2>
@@ -466,7 +466,7 @@
 
                 <div class="w-full lg:w-[60%] grid md:grid-cols-2 gap-8">
                     <!-- Point 1 -->
-                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100" data-aos="fade-up" data-aos-delay="0">
                         <h4 class="text-lg font-bold text-primary mb-2 flex items-center gap-3">
                             <x-icon name="lucide-database" class="w-6 h-6 text-cta" stroke-width="2" />
                             Data-Driven Approach
@@ -475,7 +475,7 @@
                     </div>
 
                     <!-- Point 2 -->
-                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100" data-aos="fade-up" data-aos-delay="100">
                         <h4 class="text-lg font-bold text-primary mb-2 flex items-center gap-3">
                             <x-icon name="lucide-users" class="w-6 h-6 text-cta" stroke-width="2" />
                             Human-Centered
@@ -484,7 +484,7 @@
                     </div>
 
                     <!-- Point 3 -->
-                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100" data-aos="fade-up" data-aos-delay="200">
                         <h4 class="text-lg font-bold text-primary mb-2 flex items-center gap-3">
                             <x-icon name="lucide-globe" class="w-6 h-6 text-cta" stroke-width="2" />
                             Cross-Industry Experience
@@ -493,7 +493,7 @@
                     </div>
 
                     <!-- Point 4 -->
-                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100" data-aos="fade-up" data-aos-delay="300">
                         <h4 class="text-lg font-bold text-primary mb-2 flex items-center gap-3">
                             <x-icon name="lucide-target" class="w-6 h-6 text-cta" stroke-width="2" />
                             Measurable Results

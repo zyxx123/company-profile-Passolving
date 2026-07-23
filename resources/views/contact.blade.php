@@ -46,7 +46,7 @@
              style="background-image: url('https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center bottom; mask-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0)); -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0)); mix-blend-mode: luminosity;">
         </div>
 
-        <div class="container relative z-10 mx-auto px-6 max-w-[1320px] text-center">
+        <div class="container relative z-10 mx-auto px-6 max-w-[1320px] text-center" data-aos="fade-up">
             <h1 class="text-[clamp(2.5rem,7vw,3.5rem)] font-black leading-[1.2] mb-4 max-w-4xl mx-auto uppercase text-[#0B2545]">
                 CONTACT US
             </h1>
@@ -69,10 +69,10 @@
     <!-- CONTACT HERO & FORM -->
     <section class="relative z-20 -mt-10 md:-mt-16 lg:-mt-[60px]">
         <div class="container mx-auto max-w-[1400px]">
-            <div class="bg-white rounded-t-[40px] lg:rounded-t-[64px] pt-12 pb-20 lg:pt-16 lg:pb-24 px-6 lg:px-16 shadow-[0_-10px_40px_rgba(0,0,0,0.05)] relative overflow-hidden">
+            <div class="bg-white rounded-t-[40px] lg:rounded-t-[64px] pt-12 pb-20 lg:pt-16 lg:pb-24 px-6 lg:px-16 shadow-[0_-10px_40px_rgba(0,0,0,0.05)] relative overflow-hidden" data-aos="fade-up" data-aos-delay="200">
                 <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 relative z-10">
                 <!-- Left: Info & Map -->
-                <div class="flex flex-col gap-6">
+                <div class="flex flex-col gap-6" data-aos="fade-right" data-aos-delay="300">
                     <!-- Info Card -->
                     <div class="bg-[#F8FAFB] p-6 lg:p-8 rounded-3xl border border-gray-100 shadow-sm">
                         <h2 class="text-xl font-bold text-[#141414] mb-6">Informasi Kontak</h2>
@@ -124,7 +124,7 @@
                 </div>
 
                 <!-- Right: Form -->
-                <div>
+                <div data-aos="fade-left" data-aos-delay="400">
                     <livewire:contact-form />
                 </div>
             </div>

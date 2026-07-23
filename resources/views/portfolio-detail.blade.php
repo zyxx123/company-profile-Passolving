@@ -25,7 +25,7 @@
             
             <!-- Hero Image overlap -->
             <div class="-mt-[160px] mb-20 relative z-10 rounded-[40px] overflow-hidden shadow-2xl border-4 border-white">
-                <img src="{{ Str::startsWith($portfolio->image_url, 'http') ? $portfolio->image_url : Storage::url($portfolio->image_url) }}" alt="{{ $portfolio->title }}" class="w-full h-[400px] lg:h-[600px] object-cover">
+                <img src="{{ Str::startsWith($portfolio->image_url, 'http') ? $portfolio->image_url : Storage::url($portfolio->image_url) }}" alt="{{ $portfolio->title }}" class="w-full h-[400px] lg:h-[600px] object-cover" fetchpriority="high">
             </div>
 
             <!-- Content Grid -->
