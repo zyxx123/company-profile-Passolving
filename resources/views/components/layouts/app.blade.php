@@ -36,7 +36,7 @@
     <div class="fixed bottom-[-10%] right-[-5%] w-[35%] h-[35%] rounded-full bg-cta/10 blur-[100px] z-[-1] opacity-60 mix-blend-multiply pointer-events-none animate-pulse" style="animation-duration: 12s; animation-delay: 2s;"></div>
 
     <!-- Main Content Wrapper -->
-    <div class="relative z-10 min-h-screen flex flex-col w-full overflow-x-hidden">
+    <div class="relative z-10 min-h-screen flex flex-col w-full">
         <x-header />
 
         <!-- Page Content -->

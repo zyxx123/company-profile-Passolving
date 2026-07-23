@@ -69,7 +69,7 @@
                          x-transition:leave="transform transition ease-in-out duration-300"
                          x-transition:leave-start="translate-x-0"
                          x-transition:leave-end="translate-x-full"
-                         class="pointer-events-auto relative w-screen max-w-md">
+                         class="pointer-events-auto relative w-screen max-w-md h-full">
                         
                         <div class="flex h-full flex-col overflow-y-scroll bg-white shadow-xl">
                             <div class="px-6 pt-6 pb-4 flex items-center justify-between border-b border-gray-100">
