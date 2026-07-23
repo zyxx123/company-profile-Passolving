@@ -128,115 +128,249 @@
     <!-- 3. DETAIL SERVICE -->
     <section class="py-16 lg:py-24 bg-[#F8FAFB]">
         <div class="container mx-auto px-6 max-w-[1320px]">
-            <div class="space-y-20">
+            <div class="space-y-24">
                 
                 <!-- Training Detail -->
-                <div class="flex flex-col lg:flex-row items-center gap-12">
-                    <div class="w-full lg:w-1/2" data-aos="fade-right">
-                        <span class="text-cta font-bold tracking-widest uppercase text-sm mb-3 block">Pilar 01</span>
-                        <h2 class="text-3xl lg:text-4xl font-bold text-[#141414] leading-[1.2] mb-4">
-                            Training & Development
-                        </h2>
-                        <p class="text-[#585857] leading-relaxed mb-6">
-                            Program pelatihan kami didesain dengan metodologi "learning by doing" untuk memastikan materi langsung dapat diaplikasikan. Meliputi:
-                        </p>
-                        <ul class="space-y-3">
-                            <li class="flex items-start gap-4">
-                                <div class="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center shrink-0 mt-0.5"><x-icon name="lucide-check" class="w-4 h-4 text-primary" stroke-width="3" /></div>
-                                <div><span class="font-bold text-[#141414]">Leadership Agility:</span> <span class="text-[#585857]">Menciptakan pemimpin yang adaptif.</span></div>
-                            </li>
-                            <li class="flex items-start gap-4">
-                                <div class="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center shrink-0 mt-0.5"><x-icon name="lucide-check" class="w-4 h-4 text-primary" stroke-width="3" /></div>
-                                <div><span class="font-bold text-[#141414]">Design Thinking:</span> <span class="text-[#585857]">Solusi berpusat pada manusia.</span></div>
-                            </li>
-                            <li class="flex items-start gap-4">
-                                <div class="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center shrink-0 mt-0.5"><x-icon name="lucide-check" class="w-4 h-4 text-primary" stroke-width="3" /></div>
-                                <div><span class="font-bold text-[#141414]">Business Agility:</span> <span class="text-[#585857]">Kesiapan organisasi menghadapi perubahan.</span></div>
-                            </li>
-                            <li class="flex items-start gap-4">
-                                <div class="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center shrink-0 mt-0.5"><x-icon name="lucide-check" class="w-4 h-4 text-primary" stroke-width="3" /></div>
-                                <div><span class="font-bold text-[#141414]">Soft Skill Certification:</span> <span class="text-[#585857]">Sertifikasi BNSP & keahlian khusus.</span></div>
-                            </li>
-                            <li class="flex items-start gap-4">
-                                <div class="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center shrink-0 mt-0.5"><x-icon name="lucide-check" class="w-4 h-4 text-primary" stroke-width="3" /></div>
-                                <div><span class="font-bold text-[#141414]">LEGO® Serious Play®:</span> <span class="text-[#585857]">Fasilitasi strategi melalui bermain yang serius.</span></div>
-                            </li>
-                        </ul>
+                <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20 relative">
+                    <!-- Decor Left -->
+                    <div class="absolute -left-10 bottom-0 w-32 h-32 bg-[#A7DFDF]/40 rounded-full blur-2xl z-0"></div>
+                    <div class="absolute -left-20 top-1/2 -translate-y-1/2 w-40 h-40 opacity-30 z-0 pointer-events-none hidden lg:block">
+                        <svg width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <pattern id="dots-left-1" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="2" fill="#00a6a6"/></pattern>
+                            <rect width="100%" height="100%" fill="url(#dots-left-1)"/>
+                        </svg>
                     </div>
-                    <div class="w-full lg:w-1/2" data-aos="fade-left">
-                        <img src="{{ asset('images/foto_utama/halaman_service-1.webp') }}" alt="Training" class="rounded-[24px] shadow-lg w-full aspect-[4/3] object-cover" loading="lazy">
+
+                    <div class="w-full lg:w-1/2 relative z-10" data-aos="fade-right">
+                        <span class="text-primary font-bold tracking-widest uppercase text-sm mb-3 block">Pilar 01</span>
+                        <h2 class="text-4xl lg:text-5xl font-black text-[#141414] leading-[1.2] mb-6">
+                            Training & <br/><span class="text-primary">Development</span>
+                        </h2>
+                        <p class="text-[#585857] leading-relaxed mb-10 text-lg">
+                            Program pelatihan kami didesain dengan metodologi "learning by doing" untuk memastikan materi langsung dapat diaplikasikan.
+                        </p>
+                        
+                        <div class="flex items-center gap-4 mb-6">
+                            <h4 class="text-sm font-bold text-primary tracking-widest uppercase">Fokus Program Kami</h4>
+                            <div class="flex-1 h-[1px] bg-gray-200"></div>
+                        </div>
+                        
+                        <div class="bg-white rounded-[24px] border border-gray-100 shadow-[0_10px_40px_rgba(0,0,0,0.04)] overflow-hidden">
+                            <ul class="divide-y divide-gray-100 p-2">
+                                <li class="flex items-center gap-4 p-4 hover:bg-gray-50 transition-colors rounded-xl">
+                                    <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center shrink-0">
+                                        <x-icon name="lucide-users" class="w-5 h-5 text-white" stroke-width="2" />
+                                    </div>
+                                    <div><span class="font-bold text-[#141414]">Leadership Agility</span> <span class="text-[#585857] text-sm ml-2">Menciptakan pemimpin yang adaptif.</span></div>
+                                </li>
+                                <li class="flex items-center gap-4 p-4 hover:bg-gray-50 transition-colors rounded-xl">
+                                    <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center shrink-0">
+                                        <x-icon name="lucide-lightbulb" class="w-5 h-5 text-white" stroke-width="2" />
+                                    </div>
+                                    <div><span class="font-bold text-[#141414]">Design Thinking</span> <span class="text-[#585857] text-sm ml-2">Solusi berpusat pada manusia.</span></div>
+                                </li>
+                                <li class="flex items-center gap-4 p-4 hover:bg-gray-50 transition-colors rounded-xl">
+                                    <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center shrink-0">
+                                        <x-icon name="lucide-trending-up" class="w-5 h-5 text-white" stroke-width="2" />
+                                    </div>
+                                    <div><span class="font-bold text-[#141414]">Business Agility</span> <span class="text-[#585857] text-sm ml-2">Kesiapan organisasi menghadapi perubahan.</span></div>
+                                </li>
+                                <li class="flex items-center gap-4 p-4 hover:bg-gray-50 transition-colors rounded-xl">
+                                    <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center shrink-0">
+                                        <x-icon name="lucide-award" class="w-5 h-5 text-white" stroke-width="2" />
+                                    </div>
+                                    <div><span class="font-bold text-[#141414]">Soft Skill Certification</span> <span class="text-[#585857] text-sm ml-2">Sertifikasi BNSP & keahlian khusus.</span></div>
+                                </li>
+                                <li class="flex items-center gap-4 p-4 hover:bg-gray-50 transition-colors rounded-xl">
+                                    <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center shrink-0">
+                                        <x-icon name="lucide-puzzle" class="w-5 h-5 text-white" stroke-width="2" />
+                                    </div>
+                                    <div><span class="font-bold text-[#141414]">LEGO® Serious Play®</span> <span class="text-[#585857] text-sm ml-2">Fasilitasi strategi melalui bermain yang serius.</span></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="w-full lg:w-1/2 relative" data-aos="fade-left">
+                        <!-- Top Right Dots -->
+                        <div class="absolute -top-10 -right-10 w-32 h-32 opacity-40 z-0 pointer-events-none hidden lg:block">
+                            <svg width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <pattern id="dots-right-1" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="2" fill="#00a6a6"/></pattern>
+                                <rect width="100%" height="100%" fill="url(#dots-right-1)"/>
+                            </svg>
+                        </div>
+                        
+                        <img src="{{ asset('images/foto_utama/halaman_service-1.webp') }}" alt="Training" class="rounded-[32px] shadow-2xl w-full aspect-[4/3] object-cover relative z-10" loading="lazy">
+                        
+                        <!-- Floating Card -->
+                        <div class="absolute -bottom-6 -left-6 lg:left-auto lg:-right-10 lg:-bottom-10 bg-primary text-white p-6 rounded-[24px] shadow-xl z-20 max-w-sm flex items-center gap-4 border border-white/10">
+                            <div class="w-12 h-12 rounded-full border border-white/30 flex items-center justify-center shrink-0">
+                                <x-icon name="lucide-target" class="w-6 h-6 text-white" stroke-width="2" />
+                            </div>
+                            <p class="text-sm leading-relaxed">Pembelajaran yang interaktif, aplikatif, dan berdampak nyata.</p>
+                        </div>
                     </div>
                 </div>
+
+                <div class="w-full h-[1px] bg-gray-200 my-4 lg:my-10"></div>
 
                 <!-- Consulting Detail -->
-                <div class="flex flex-col lg:flex-row-reverse items-center gap-12">
-                    <div class="w-full lg:w-1/2" data-aos="fade-left">
-                        <span class="text-cta font-bold tracking-widest uppercase text-sm mb-3 block">Pilar 02</span>
-                        <h2 class="text-3xl lg:text-4xl font-bold text-[#141414] leading-[1.2] mb-4">
-                            Consulting Services
+                <div class="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-20 relative">
+                    <!-- Decor Right -->
+                    <div class="absolute -right-10 bottom-0 w-32 h-32 bg-[#A7DFDF]/40 rounded-full blur-2xl z-0"></div>
+                    <div class="absolute -right-20 top-1/2 -translate-y-1/2 w-40 h-40 opacity-30 z-0 pointer-events-none hidden lg:block">
+                        <svg width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <pattern id="dots-right-2" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="2" fill="#00a6a6"/></pattern>
+                            <rect width="100%" height="100%" fill="url(#dots-right-2)"/>
+                        </svg>
+                    </div>
+
+                    <div class="w-full lg:w-1/2 relative z-10" data-aos="fade-left">
+                        <span class="text-primary font-bold tracking-widest uppercase text-sm mb-3 block">Pilar 02</span>
+                        <h2 class="text-4xl lg:text-5xl font-black text-[#141414] leading-[1.2] mb-6">
+                            Consulting <br/><span class="text-primary">Services</span>
                         </h2>
-                        <p class="text-[#585857] leading-relaxed mb-6">
+                        <p class="text-[#585857] leading-relaxed mb-10 text-lg">
                             Bermitra dengan kami untuk mengawal perubahan dari akar hingga pucuk kepemimpinan. Fokus layanan konsultasi kami mencakup:
                         </p>
-                        <ul class="space-y-3">
-                            <li class="flex items-start gap-4">
-                                <div class="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center shrink-0 mt-0.5"><x-icon name="lucide-check" class="w-4 h-4 text-primary" stroke-width="3" /></div>
-                                <div><span class="font-bold text-[#141414]">Business Transformation:</span> <span class="text-[#585857]">Mengelola transformasi skala besar.</span></div>
-                            </li>
-                            <li class="flex items-start gap-4">
-                                <div class="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center shrink-0 mt-0.5"><x-icon name="lucide-check" class="w-4 h-4 text-primary" stroke-width="3" /></div>
-                                <div><span class="font-bold text-[#141414]">Change Management:</span> <span class="text-[#585857]">Memastikan adopsi perubahan yang mulus.</span></div>
-                            </li>
-                            <li class="flex items-start gap-4">
-                                <div class="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center shrink-0 mt-0.5"><x-icon name="lucide-check" class="w-4 h-4 text-primary" stroke-width="3" /></div>
-                                <div><span class="font-bold text-[#141414]">Organizational Development:</span> <span class="text-[#585857]">Pembangunan struktur & budaya.</span></div>
-                            </li>
-                            <li class="flex items-start gap-4">
-                                <div class="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center shrink-0 mt-0.5"><x-icon name="lucide-check" class="w-4 h-4 text-primary" stroke-width="3" /></div>
-                                <div><span class="font-bold text-[#141414]">Strategy Execution:</span> <span class="text-[#585857]">Penerjemahan strategi menjadi KPI dan tindakan.</span></div>
-                            </li>
-                            <li class="flex items-start gap-4">
-                                <div class="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center shrink-0 mt-0.5"><x-icon name="lucide-check" class="w-4 h-4 text-primary" stroke-width="3" /></div>
-                                <div><span class="font-bold text-[#141414]">Business Process Improvement:</span> <span class="text-[#585857]">Optimalisasi dan efisiensi alur kerja.</span></div>
-                            </li>
-                        </ul>
+                        
+                        <div class="flex items-center gap-4 mb-6">
+                            <h4 class="text-sm font-bold text-primary tracking-widest uppercase">Fokus Program Kami</h4>
+                            <div class="flex-1 h-[1px] bg-gray-200"></div>
+                        </div>
+                        
+                        <div class="bg-white rounded-[24px] border border-gray-100 shadow-[0_10px_40px_rgba(0,0,0,0.04)] overflow-hidden">
+                            <ul class="divide-y divide-gray-100 p-2">
+                                <li class="flex items-center gap-4 p-4 hover:bg-gray-50 transition-colors rounded-xl">
+                                    <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center shrink-0">
+                                        <x-icon name="lucide-briefcase" class="w-5 h-5 text-white" stroke-width="2" />
+                                    </div>
+                                    <div><span class="font-bold text-[#141414]">Business Transformation</span> <span class="text-[#585857] text-sm ml-2">Mengelola transformasi skala besar.</span></div>
+                                </li>
+                                <li class="flex items-center gap-4 p-4 hover:bg-gray-50 transition-colors rounded-xl">
+                                    <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center shrink-0">
+                                        <x-icon name="lucide-refresh-cw" class="w-5 h-5 text-white" stroke-width="2" />
+                                    </div>
+                                    <div><span class="font-bold text-[#141414]">Change Management</span> <span class="text-[#585857] text-sm ml-2">Memastikan adopsi perubahan yang mulus.</span></div>
+                                </li>
+                                <li class="flex items-center gap-4 p-4 hover:bg-gray-50 transition-colors rounded-xl">
+                                    <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center shrink-0">
+                                        <x-icon name="lucide-building" class="w-5 h-5 text-white" stroke-width="2" />
+                                    </div>
+                                    <div><span class="font-bold text-[#141414]">Organizational Development</span> <span class="text-[#585857] text-sm ml-2">Pembangunan struktur & budaya.</span></div>
+                                </li>
+                                <li class="flex items-center gap-4 p-4 hover:bg-gray-50 transition-colors rounded-xl">
+                                    <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center shrink-0">
+                                        <x-icon name="lucide-target" class="w-5 h-5 text-white" stroke-width="2" />
+                                    </div>
+                                    <div><span class="font-bold text-[#141414]">Strategy Execution</span> <span class="text-[#585857] text-sm ml-2">Penerjemahan strategi menjadi KPI.</span></div>
+                                </li>
+                                <li class="flex items-center gap-4 p-4 hover:bg-gray-50 transition-colors rounded-xl">
+                                    <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center shrink-0">
+                                        <x-icon name="lucide-git-merge" class="w-5 h-5 text-white" stroke-width="2" />
+                                    </div>
+                                    <div><span class="font-bold text-[#141414]">Process Improvement</span> <span class="text-[#585857] text-sm ml-2">Optimalisasi dan efisiensi alur kerja.</span></div>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="w-full lg:w-1/2" data-aos="fade-right">
-                        <img src="{{ asset('images/foto_utama/halaman_service-2.webp') }}" alt="Consulting" class="rounded-[24px] shadow-lg w-full aspect-[4/3] object-cover" loading="lazy">
+                    
+                    <div class="w-full lg:w-1/2 relative" data-aos="fade-right">
+                        <!-- Top Left Dots -->
+                        <div class="absolute -top-10 -left-10 w-32 h-32 opacity-40 z-0 pointer-events-none hidden lg:block">
+                            <svg width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <pattern id="dots-left-2" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="2" fill="#00a6a6"/></pattern>
+                                <rect width="100%" height="100%" fill="url(#dots-left-2)"/>
+                            </svg>
+                        </div>
+                        
+                        <img src="{{ asset('images/foto_utama/halaman_service-2.webp') }}" alt="Consulting" class="rounded-[32px] shadow-2xl w-full aspect-[4/3] object-cover relative z-10" loading="lazy">
+                        
+                        <!-- Floating Card -->
+                        <div class="absolute -bottom-6 -right-6 lg:right-auto lg:-left-10 lg:-bottom-10 bg-primary text-white p-6 rounded-[24px] shadow-xl z-20 max-w-sm flex items-center gap-4 border border-white/10">
+                            <div class="w-12 h-12 rounded-full border border-white/30 flex items-center justify-center shrink-0">
+                                <x-icon name="lucide-compass" class="w-6 h-6 text-white" stroke-width="2" />
+                            </div>
+                            <p class="text-sm leading-relaxed">Eksekusi strategi yang mulus dan berdampak jangka panjang.</p>
+                        </div>
                     </div>
                 </div>
 
+                <div class="w-full h-[1px] bg-gray-200 my-4 lg:my-10"></div>
+
                 <!-- Research Detail -->
-                <div class="flex flex-col lg:flex-row items-center gap-12">
-                    <div class="w-full lg:w-1/2" data-aos="fade-right">
-                        <span class="text-cta font-bold tracking-widest uppercase text-sm mb-3 block">Pilar 03</span>
-                        <h2 class="text-3xl lg:text-4xl font-bold text-[#141414] leading-[1.2] mb-4">
-                            Research & Assessment
-                        </h2>
-                        <p class="text-[#585857] leading-relaxed mb-6">
-                            Sebelum organisasi menjalankan transformasi, diagnosis mendalam wajib dilakukan. Kami menyediakan:
-                        </p>
-                        <ul class="space-y-3">
-                            <li class="flex items-start gap-4">
-                                <div class="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center shrink-0 mt-0.5"><x-icon name="lucide-check" class="w-4 h-4 text-primary" stroke-width="3" /></div>
-                                <div><span class="font-bold text-[#141414]">Organization Assessment:</span> <span class="text-[#585857]">Mengukur tingkat kematangan kapabilitas.</span></div>
-                            </li>
-                            <li class="flex items-start gap-4">
-                                <div class="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center shrink-0 mt-0.5"><x-icon name="lucide-check" class="w-4 h-4 text-primary" stroke-width="3" /></div>
-                                <div><span class="font-bold text-[#141414]">Business Agility Assessment:</span> <span class="text-[#585857]">Analisis kecepatan adaptasi perusahaan.</span></div>
-                            </li>
-                            <li class="flex items-start gap-4">
-                                <div class="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center shrink-0 mt-0.5"><x-icon name="lucide-check" class="w-4 h-4 text-primary" stroke-width="3" /></div>
-                                <div><span class="font-bold text-[#141414]">Organizational Diagnosis:</span> <span class="text-[#585857]">Mengidentifikasi akar masalah tersembunyi.</span></div>
-                            </li>
-                            <li class="flex items-start gap-4">
-                                <div class="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center shrink-0 mt-0.5"><x-icon name="lucide-check" class="w-4 h-4 text-primary" stroke-width="3" /></div>
-                                <div><span class="font-bold text-[#141414]">Strategic Recommendation:</span> <span class="text-[#585857]">Panduan perbaikan berbasis data objektif.</span></div>
-                            </li>
-                        </ul>
+                <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20 relative">
+                    <!-- Decor Left -->
+                    <div class="absolute -left-10 bottom-0 w-32 h-32 bg-[#A7DFDF]/40 rounded-full blur-2xl z-0"></div>
+                    <div class="absolute -left-20 top-1/2 -translate-y-1/2 w-40 h-40 opacity-30 z-0 pointer-events-none hidden lg:block">
+                        <svg width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <pattern id="dots-left-3" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="2" fill="#00a6a6"/></pattern>
+                            <rect width="100%" height="100%" fill="url(#dots-left-3)"/>
+                        </svg>
                     </div>
-                    <div class="w-full lg:w-1/2" data-aos="fade-left">
-                        <img src="{{ asset('images/foto_utama/halaman_service-3.webp') }}" alt="Research" class="rounded-[24px] shadow-lg w-full aspect-[4/3] object-cover" loading="lazy">
+
+                    <div class="w-full lg:w-1/2 relative z-10" data-aos="fade-right">
+                        <span class="text-primary font-bold tracking-widest uppercase text-sm mb-3 block">Pilar 03</span>
+                        <h2 class="text-4xl lg:text-5xl font-black text-[#141414] leading-[1.2] mb-6">
+                            Research & <br/><span class="text-primary">Assessment</span>
+                        </h2>
+                        <p class="text-[#585857] leading-relaxed mb-10 text-lg">
+                            Sebelum organisasi menjalankan transformasi, diagnosis mendalam wajib dilakukan. Kami menyediakan alat ukur objektif.
+                        </p>
+                        
+                        <div class="flex items-center gap-4 mb-6">
+                            <h4 class="text-sm font-bold text-primary tracking-widest uppercase">Fokus Program Kami</h4>
+                            <div class="flex-1 h-[1px] bg-gray-200"></div>
+                        </div>
+                        
+                        <div class="bg-white rounded-[24px] border border-gray-100 shadow-[0_10px_40px_rgba(0,0,0,0.04)] overflow-hidden">
+                            <ul class="divide-y divide-gray-100 p-2">
+                                <li class="flex items-center gap-4 p-4 hover:bg-gray-50 transition-colors rounded-xl">
+                                    <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center shrink-0">
+                                        <x-icon name="lucide-clipboard-check" class="w-5 h-5 text-white" stroke-width="2" />
+                                    </div>
+                                    <div><span class="font-bold text-[#141414]">Organization Assessment</span> <span class="text-[#585857] text-sm ml-2">Mengukur kematangan kapabilitas.</span></div>
+                                </li>
+                                <li class="flex items-center gap-4 p-4 hover:bg-gray-50 transition-colors rounded-xl">
+                                    <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center shrink-0">
+                                        <x-icon name="lucide-activity" class="w-5 h-5 text-white" stroke-width="2" />
+                                    </div>
+                                    <div><span class="font-bold text-[#141414]">Agility Assessment</span> <span class="text-[#585857] text-sm ml-2">Analisis kecepatan adaptasi.</span></div>
+                                </li>
+                                <li class="flex items-center gap-4 p-4 hover:bg-gray-50 transition-colors rounded-xl">
+                                    <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center shrink-0">
+                                        <x-icon name="lucide-search" class="w-5 h-5 text-white" stroke-width="2" />
+                                    </div>
+                                    <div><span class="font-bold text-[#141414]">Organizational Diagnosis</span> <span class="text-[#585857] text-sm ml-2">Identifikasi akar masalah.</span></div>
+                                </li>
+                                <li class="flex items-center gap-4 p-4 hover:bg-gray-50 transition-colors rounded-xl">
+                                    <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center shrink-0">
+                                        <x-icon name="lucide-bar-chart-2" class="w-5 h-5 text-white" stroke-width="2" />
+                                    </div>
+                                    <div><span class="font-bold text-[#141414]">Strategic Recommendation</span> <span class="text-[#585857] text-sm ml-2">Panduan perbaikan berbasis data.</span></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="w-full lg:w-1/2 relative" data-aos="fade-left">
+                        <!-- Top Right Dots -->
+                        <div class="absolute -top-10 -right-10 w-32 h-32 opacity-40 z-0 pointer-events-none hidden lg:block">
+                            <svg width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <pattern id="dots-right-3" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="2" fill="#00a6a6"/></pattern>
+                                <rect width="100%" height="100%" fill="url(#dots-right-3)"/>
+                            </svg>
+                        </div>
+                        
+                        <img src="{{ asset('images/foto_utama/halaman_service-3.webp') }}" alt="Research" class="rounded-[32px] shadow-2xl w-full aspect-[4/3] object-cover relative z-10" loading="lazy">
+                        
+                        <!-- Floating Card -->
+                        <div class="absolute -bottom-6 -left-6 lg:left-auto lg:-right-10 lg:-bottom-10 bg-primary text-white p-6 rounded-[24px] shadow-xl z-20 max-w-sm flex items-center gap-4 border border-white/10">
+                            <div class="w-12 h-12 rounded-full border border-white/30 flex items-center justify-center shrink-0">
+                                <x-icon name="lucide-database" class="w-6 h-6 text-white" stroke-width="2" />
+                            </div>
+                            <p class="text-sm leading-relaxed">Diagnosis yang akurat untuk transformasi yang sukses.</p>
+                        </div>
                     </div>
                 </div>
 
