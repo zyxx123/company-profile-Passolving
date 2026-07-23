@@ -2,14 +2,14 @@ const fs = require('fs');
 const path = require('path');
 const sharp = require('sharp');
 
-const dir = path.join(__dirname, 'public/images/clients');
+const dir = path.join(__dirname, 'public/images/foto_utama');
 
 async function processImages() {
     const files = fs.readdirSync(dir);
     let totalSaved = 0;
 
     for (const file of files) {
-        if (file.toLowerCase().endsWith('.png') || file.toLowerCase().endsWith('.jpg') || file.toLowerCase().endsWith('.jpeg')) {
+        if (file.toLowerCase().endsWith('.png') || file.toLowerCase().endsWith('.jpg') || file.toLowerCase().endsWith('.jpeg') || file.toLowerCase().endsWith('.heic')) {
             const inputPath = path.join(dir, file);
             const ext = path.extname(file);
             const base = path.basename(file, ext);
