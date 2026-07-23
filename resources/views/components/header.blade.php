@@ -1,10 +1,16 @@
 
 
-<!-- HEADER -->
-<header x-data="{ scrolled: false, mobileMenuOpen: false }"
-        @scroll.window="scrolled = (window.pageYOffset > 40)"
-        :class="{ 'fixed top-0 shadow-md bg-white/95 backdrop-blur-md z-50 text-[#141414] border-gray-100': scrolled, 'relative bg-primary z-40 text-primary-dark border-transparent': !scrolled }"
-        class="w-full transition-all duration-300 h-[88px] flex items-center border-b">
+<!-- HEADER WRAPPER -->
+<div x-data="{ scrolled: false, mobileMenuOpen: false }"
+     @scroll.window="scrolled = (window.pageYOffset > 40)"
+     class="w-full">
+
+    <!-- Spacer to prevent layout shift -->
+    <div x-show="scrolled" style="display: none;" class="h-[88px] w-full"></div>
+
+    <!-- HEADER -->
+    <header :class="{ 'fixed top-0 shadow-md bg-white/95 backdrop-blur-md z-50 text-[#141414] border-gray-100': scrolled, 'relative bg-primary z-40 text-primary-dark border-transparent': !scrolled }"
+            class="w-full transition-all duration-300 h-[88px] flex items-center border-b">
     
     <div class="container mx-auto px-6 max-w-[1320px]">
         <div class="flex items-center justify-between">
@@ -39,6 +45,7 @@
             </button>
         </div>
     </div>
+</header>
 
     <!-- Mobile Slide-in Menu -->
     <div x-show="mobileMenuOpen" 
@@ -110,4 +117,4 @@
             </div>
         </div>
     </div>
-</header>
+</div>
