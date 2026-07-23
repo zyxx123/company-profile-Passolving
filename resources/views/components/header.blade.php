@@ -22,18 +22,40 @@
 
             <!-- Desktop Nav -->
             <nav class="hidden lg:flex items-center space-x-6 xl:space-x-8">
-                <x-ui.nav-link href="/" :active="request()->is('/')">Home</x-ui.nav-link>
-                <x-ui.nav-link href="/services" :active="request()->is('services*')">Service</x-ui.nav-link>
-                <x-ui.nav-link href="/portfolio" :active="request()->is('portfolio*')">Portfolio</x-ui.nav-link>
-                <x-ui.nav-link href="/about" :active="request()->is('about*')">About</x-ui.nav-link>
-                <x-ui.nav-link href="/contact" :active="request()->is('contact*')">Contact</x-ui.nav-link>
+                <x-ui.nav-link href="/" :active="request()->is('/')">{{ __('Home') }}</x-ui.nav-link>
+                <x-ui.nav-link href="/services" :active="request()->is('services*')">{{ __('Service') }}</x-ui.nav-link>
+                <x-ui.nav-link href="/portfolio" :active="request()->is('portfolio*')">{{ __('Portfolio') }}</x-ui.nav-link>
+                <x-ui.nav-link href="/about" :active="request()->is('about*')">{{ __('About') }}</x-ui.nav-link>
+                <x-ui.nav-link href="/contact" :active="request()->is('contact*')">{{ __('Contact') }}</x-ui.nav-link>
             </nav>
 
             <!-- Desktop Actions -->
             <div class="hidden lg:flex items-center gap-4 xl:gap-6">
                 <x-ui.button href="/contact" variant="primary">
-                    Get in Touch
+                    {{ __('Get in Touch') }}
                 </x-ui.button>
+                
+                <!-- Language Switcher -->
+                <div class="relative group flex items-center">
+                    <button :class="scrolled || {{ request()->is('/') ? 'false' : 'true' }} ? 'text-[#141414]' : 'text-white'" class="flex items-center gap-1.5 font-bold text-[15px] hover:text-accent-hover transition-colors py-2">
+                        <img src="https://flagcdn.com/w20/{{ app()->getLocale() == 'en' ? 'gb' : 'id' }}.png" class="w-5 h-auto rounded-[2px] shadow-sm border border-black/5" alt="{{ app()->getLocale() }}">
+                        {{ strtoupper(app()->getLocale()) }}
+                        <x-icon name="lucide-chevron-down" class="w-4 h-4" />
+                    </button>
+                    <!-- Dropdown Container with Hover Bridge -->
+                    <div class="absolute right-0 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                        <div class="w-36 bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden flex flex-col p-1.5">
+                            <a href="/lang/en" class="lang-switch-btn flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-bold transition-colors {{ app()->getLocale() == 'en' ? 'bg-primary/10 text-primary' : 'text-[#141414] hover:bg-gray-50' }}">
+                                <img src="https://flagcdn.com/w20/gb.png" class="w-5 h-auto rounded-[2px] shadow-sm border border-black/5" alt="EN">
+                                English
+                            </a>
+                            <a href="/lang/id" class="lang-switch-btn flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-bold transition-colors {{ app()->getLocale() == 'id' ? 'bg-primary/10 text-primary' : 'text-[#141414] hover:bg-gray-50' }}">
+                                <img src="https://flagcdn.com/w20/id.png" class="w-5 h-auto rounded-[2px] shadow-sm border border-black/5" alt="ID">
+                                Indonesia
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <!-- Mobile Menu Button -->
@@ -88,15 +110,27 @@
                             
                             <div class="relative mt-6 flex-1 px-6 sm:px-6">
                                 <nav class="space-y-6 flex flex-col mt-4">
-                                    <a href="/" class="text-xl font-bold {{ request()->is('/') ? 'text-primary' : 'text-[#141414]' }} hover:text-primary transition-colors">Home</a>
-                                    <a href="/services" class="text-xl font-bold {{ request()->is('services*') ? 'text-primary' : 'text-[#141414]' }} hover:text-primary transition-colors flex items-center justify-between">Service <x-icon name="lucide-chevron-right" class="w-5 h-5 text-gray-400"/></a>
-                                    <a href="/portfolio" class="text-xl font-bold {{ request()->is('portfolio*') ? 'text-primary' : 'text-[#141414]' }} hover:text-primary transition-colors">Portfolio</a>
-                                    <a href="/about" class="text-xl font-bold {{ request()->is('about*') ? 'text-primary' : 'text-[#141414]' }} hover:text-primary transition-colors">About</a>
-                                    <a href="/contact" class="text-xl font-bold {{ request()->is('contact*') ? 'text-primary' : 'text-[#141414]' }} hover:text-primary transition-colors">Contact Us</a>
+                                    <a href="/" class="text-xl font-bold {{ request()->is('/') ? 'text-primary' : 'text-[#141414]' }} hover:text-primary transition-colors">{{ __('Home') }}</a>
+                                    <a href="/services" class="text-xl font-bold {{ request()->is('services*') ? 'text-primary' : 'text-[#141414]' }} hover:text-primary transition-colors flex items-center justify-between">{{ __('Service') }} <x-icon name="lucide-chevron-right" class="w-5 h-5 text-gray-400"/></a>
+                                    <a href="/portfolio" class="text-xl font-bold {{ request()->is('portfolio*') ? 'text-primary' : 'text-[#141414]' }} hover:text-primary transition-colors">{{ __('Portfolio') }}</a>
+                                    <a href="/about" class="text-xl font-bold {{ request()->is('about*') ? 'text-primary' : 'text-[#141414]' }} hover:text-primary transition-colors">{{ __('About') }}</a>
+                                    <a href="/contact" class="text-xl font-bold {{ request()->is('contact*') ? 'text-primary' : 'text-[#141414]' }} hover:text-primary transition-colors">{{ __('Contact') }}</a>
                                     
-                                    <div class="pt-8">
+                                    <div class="pt-4 flex items-center justify-between border-t border-gray-100">
+                                        <span class="text-sm font-bold text-gray-500">Language</span>
+                                        <div class="flex items-center gap-2">
+                                            <a href="/lang/en" class="lang-switch-btn flex items-center gap-2 px-3 py-1.5 rounded-md text-sm font-bold transition-colors {{ app()->getLocale() == 'en' ? 'bg-primary text-white' : 'bg-gray-100 text-gray-600' }}">
+                                                <img src="https://flagcdn.com/w20/gb.png" class="w-4 h-auto rounded-[2px]" alt="EN"> EN
+                                            </a>
+                                            <a href="/lang/id" class="lang-switch-btn flex items-center gap-2 px-3 py-1.5 rounded-md text-sm font-bold transition-colors {{ app()->getLocale() == 'id' ? 'bg-primary text-white' : 'bg-gray-100 text-gray-600' }}">
+                                                <img src="https://flagcdn.com/w20/id.png" class="w-4 h-auto rounded-[2px]" alt="ID"> ID
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="pt-4">
                                         <x-ui.button href="/contact" variant="primary" class="w-full justify-center">
-                                            GET IN TOUCH
+                                            {{ __('Get in Touch') }}
                                         </x-ui.button>
                                     </div>
                                 </nav>
@@ -119,3 +153,51 @@
         </div>
     </div>
 </div>
+
+<!-- AJAX Language Switcher Script -->
+<script>
+    if (!window.langSwitcherInitialized) {
+        window.langSwitcherInitialized = true;
+        
+        document.body.addEventListener('click', async (e) => {
+            const btn = e.target.closest('.lang-switch-btn');
+            if (!btn) return;
+            
+            e.preventDefault();
+            const url = btn.getAttribute('href');
+            
+            // Add fade effect
+            document.body.style.transition = 'opacity 0.3s ease';
+            document.body.style.opacity = '0.3';
+            
+            try {
+                const response = await fetch(url);
+                const html = await response.text();
+                
+                const parser = new DOMParser();
+                const newDoc = parser.parseFromString(html, 'text/html');
+                
+                const currentWrapper = document.querySelector('.min-h-screen');
+                const newWrapper = newDoc.querySelector('.min-h-screen');
+                
+                if (currentWrapper && newWrapper) {
+                    currentWrapper.innerHTML = newWrapper.innerHTML;
+                    
+                    if (typeof AOS !== 'undefined') {
+                        setTimeout(() => {
+                            AOS.refreshHard();
+                        }, 100);
+                    }
+                } else {
+                    window.location.href = url;
+                    return;
+                }
+            } catch (error) {
+                console.error('Language switch failed:', error);
+                window.location.href = url;
+            } finally {
+                document.body.style.opacity = '1';
+            }
+        });
+    }
+</script>
