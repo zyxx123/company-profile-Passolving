@@ -19,14 +19,14 @@
         <div class="absolute -bottom-40 -left-20 w-[500px] h-[500px] rounded-full bg-white/5 opacity-50 blur-sm pointer-events-none z-0"></div>
 
         <!-- Paper Plane 1 (Left) -->
-        <svg class="absolute top-[40%] left-[10%] opacity-80 w-[200px] h-[200px] pointer-events-none z-0" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="absolute top-[40%] left-[10%] opacity-80 w-[200px] h-[200px] pointer-events-none z-0 hidden md:block" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M 0 200 Q 50 150 150 50" stroke="white" stroke-width="1.5" stroke-dasharray="6 6" fill="none" />
             <path d="M145 65 L175 35 L155 75 Z" fill="#f5c242"/>
             <path d="M175 35 L145 65 L155 55 Z" fill="#dfb038"/>
         </svg>
 
         <!-- Paper Plane 2 (Right) -->
-        <svg class="absolute bottom-[20%] right-[5%] opacity-80 w-[300px] h-[200px] pointer-events-none z-0" viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="absolute bottom-[20%] right-[5%] opacity-80 w-[300px] h-[200px] pointer-events-none z-0 hidden md:block" viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
             <!-- Curved dotted line resembling a loop -->
             <path d="M 0 150 C 100 180, 200 250, 250 50" stroke="white" stroke-width="1.5" stroke-dasharray="6 6" fill="none" />
             <path d="M245 65 L275 35 L255 75 Z" fill="#f5c242"/>
@@ -37,13 +37,13 @@
         <div class="absolute bottom-0 left-0 w-full h-[150px] opacity-10 pointer-events-none z-0" style="background: linear-gradient(to top, rgba(255,255,255,0.2), transparent);"></div>
 
         <div class="container mx-auto px-6 max-w-[1320px] text-center relative z-10">
-            <h1 class="text-4xl lg:text-[56px] font-black leading-[1.2] mb-3 max-w-4xl mx-auto uppercase text-white">
+            <h1 class="text-[clamp(2.25rem,5vw,3.5rem)] font-black leading-[1.2] mb-3 max-w-4xl mx-auto uppercase text-white">
                 Our Services
             </h1>
             <!-- Yellow underline -->
             <div class="w-20 h-1.5 bg-cta mx-auto mb-6 rounded-full"></div>
             
-            <p class="text-white/90 max-w-2xl mx-auto leading-relaxed text-xl">
+            <p class="text-white/90 max-w-2xl mx-auto leading-relaxed text-[clamp(1rem,3vw,1.25rem)]">
                 Helping organizations transform through integrated Training, Consulting, and Research.
             </p>
         </div>

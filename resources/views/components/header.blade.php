@@ -11,11 +11,11 @@
             
             <!-- Logo -->
             <a href="/" class="flex flex-col shrink-0">
-                <img :src="scrolled ? '{{ asset('logo-black-trimmed.png') }}' : '{{ asset('logo-white-trimmed.png') }}'" alt="Passolving Logo" class="h-10 w-auto object-contain">
+                <img :src="scrolled ? '{{ asset('logo-black-trimmed.png') }}' : '{{ asset('logo-white-trimmed.png') }}'" alt="Passolving Logo" class="h-8 md:h-10 w-auto object-contain">
             </a>
 
             <!-- Desktop Nav -->
-            <nav class="hidden md:flex items-center space-x-8">
+            <nav class="hidden lg:flex items-center space-x-6 xl:space-x-8">
                 <x-ui.nav-link href="/" :active="request()->is('/')">Home</x-ui.nav-link>
                 <x-ui.nav-link href="/services" :active="request()->is('services*')">Service</x-ui.nav-link>
                 <x-ui.nav-link href="/portfolio" :active="request()->is('portfolio*')">Portfolio</x-ui.nav-link>
@@ -24,8 +24,8 @@
             </nav>
 
             <!-- Desktop Actions -->
-            <div class="hidden md:flex items-center gap-6">
-                <button class="hover:opacity-80 transition-opacity">
+            <div class="hidden lg:flex items-center gap-4 xl:gap-6">
+                <button class="hover:opacity-80 transition-opacity w-11 h-11 flex items-center justify-center">
                     <x-icon name="lucide-search" class="w-5 h-5" stroke-width="2.5" />
                 </button>
                 <x-ui.button href="/contact" variant="primary">
@@ -34,8 +34,8 @@
             </div>
 
             <!-- Mobile Menu Button -->
-            <button @click="mobileMenuOpen = true" class="md:hidden p-2 hover:opacity-80 focus:outline-none focus:ring-2 focus:ring-primary rounded-lg">
-                <x-icon name="lucide-menu" class="w-8 h-8" />
+            <button @click="mobileMenuOpen = true" class="lg:hidden w-11 h-11 flex items-center justify-center hover:opacity-80 focus:outline-none focus:ring-2 focus:ring-primary rounded-lg">
+                <x-icon name="lucide-menu" class="w-7 h-7" />
             </button>
         </div>
     </div>

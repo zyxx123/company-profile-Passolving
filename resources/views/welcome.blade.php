@@ -55,11 +55,11 @@
             <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
                 <!-- Text Content -->
                 <div class="w-full lg:w-[55%]">
-                    <p class="text-cta font-bold tracking-widest uppercase text-xs lg:text-sm mb-3 lg:mb-4 xl:mb-6">Pioneer in Agility Assesment & National Soft Skill Certification</p>
-                    <h1 class="text-4xl lg:text-5xl xl:text-[60px] font-black leading-[1.1] text-white mb-4 lg:mb-6 uppercase">
+                    <p class="text-cta font-bold tracking-widest uppercase text-[clamp(0.75rem,2vw,0.875rem)] mb-4 lg:mb-6">Pioneer in Agility Assesment & National Soft Skill Certification</p>
+                    <h1 class="text-[clamp(2.5rem,6vw,3.75rem)] font-black leading-[1.1] text-white mb-4 lg:mb-6 uppercase">
                         AGILITY &<br/>TRANSFORMATION
                     </h1>
-                    <p class="text-base lg:text-lg text-white/90 mb-6 lg:mb-8 xl:mb-10 leading-relaxed max-w-lg">
+                    <p class="text-[clamp(1rem,3vw,1.125rem)] text-white/90 mb-6 lg:mb-8 xl:mb-10 leading-relaxed max-w-lg">
                         Determine for Execution Deliveries. Kami hadir untuk membantu organisasi Anda menghadapi realitas yang menantang dengan solusi berbasis data dan sistem yang adaptif.
                     </p>
                     <div class="flex flex-wrap items-center gap-4">
@@ -288,14 +288,14 @@
             <div class="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
                 
                 <!-- Left Images (Optech style overlapping) -->
-                <div class="w-full lg:w-[50%] relative">
+                <div class="w-full lg:w-[50%] relative hidden sm:block">
                     <div class="absolute -top-10 -left-10 w-40 h-40 opacity-20 z-0"></div>
                     
-                    <div class="relative z-10 flex items-end gap-6">
-                        <div class="w-[60%] rounded-3xl rounded-tr-none overflow-hidden shadow-lg h-[400px]">
+                    <div class="relative z-10 flex items-end gap-4 md:gap-6">
+                        <div class="w-[60%] rounded-3xl rounded-tr-none overflow-hidden shadow-lg h-[250px] md:h-[400px]">
                             <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80" alt="Office 1" class="w-full h-full object-cover">
                         </div>
-                        <div class="w-[40%] rounded-3xl rounded-bl-none overflow-hidden shadow-lg h-[280px] -mb-12">
+                        <div class="w-[40%] rounded-3xl rounded-bl-none overflow-hidden shadow-lg h-[180px] md:h-[280px] -mb-8 md:-mb-12">
                             <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=600&q=80" alt="Office 2" class="w-full h-full object-cover">
                         </div>
                     </div>

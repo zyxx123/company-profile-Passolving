@@ -47,7 +47,7 @@
         </div>
         
         <div class="container relative z-10 mx-auto px-6 max-w-[1320px] text-center">
-            <h1 class="text-5xl lg:text-[72px] font-black leading-[1.2] mb-4 max-w-4xl mx-auto uppercase text-[#0B2545]">
+            <h1 class="text-[clamp(2.5rem,7vw,4.5rem)] font-black leading-[1.2] mb-4 max-w-4xl mx-auto uppercase text-[#0B2545]">
                 PORTFOLIO
             </h1>
             
@@ -57,16 +57,16 @@
                 <div class="w-2 h-1 bg-cta rounded-full"></div>
             </div>
 
-            <p class="text-[#0B2545]/80 max-w-2xl mx-auto leading-relaxed text-lg lg:text-xl">
+            <p class="text-[#0B2545]/80 max-w-2xl mx-auto leading-relaxed text-[clamp(1rem,3vw,1.25rem)]">
                 Discover how PASS has helped organizations achieve measurable transformation across industries.
             </p>
         </div>
     </section>
 
     <!-- 2. PORTFOLIO OVERVIEW & STATS -->
-    <section class="relative z-20 -mt-[60px]">
+    <section class="relative z-20 -mt-10 md:-mt-16 lg:-mt-[80px]">
         <div class="container mx-auto max-w-[1400px]">
-            <div class="bg-white rounded-t-[48px] lg:rounded-t-[64px] pt-12 pb-12 px-6 lg:px-16 shadow-[0_-10px_40px_rgba(0,0,0,0.05)] relative overflow-hidden flex flex-col lg:flex-row justify-between items-center gap-12">
+            <div class="bg-white rounded-t-[40px] lg:rounded-t-[64px] pt-12 pb-12 px-6 lg:px-16 shadow-[0_-10px_40px_rgba(0,0,0,0.05)] relative overflow-hidden flex flex-col lg:flex-row justify-between items-center gap-10 lg:gap-12">
                 
                 <!-- Background Dotted Pattern (Right side) -->
                 <div class="absolute bottom-0 right-0 z-0 opacity-10 pointer-events-none w-[300px] h-[300px]">
@@ -79,7 +79,7 @@
                 </div>
 
                 <!-- Left Stats (Projects & Organizations) -->
-                <div class="flex items-center justify-center lg:justify-start gap-12 lg:gap-16 w-full lg:w-auto relative z-10">
+                <div class="flex items-center justify-center lg:justify-start gap-8 md:gap-12 lg:gap-16 w-full lg:w-auto relative z-10">
                     <!-- Projects -->
                     <div class="flex flex-col items-center">
                         <div class="w-16 h-16 rounded-full bg-[#E5F5F5] border border-primary/20 flex items-center justify-center mb-4 text-primary">
@@ -91,7 +91,7 @@
                     </div>
                     
                     <!-- Divider line -->
-                    <div class="w-px h-32 bg-gray-200"></div>
+                    <div class="w-px h-24 md:h-32 bg-gray-200"></div>
                     
                     <!-- Organizations -->
                     <div class="flex flex-col items-center">

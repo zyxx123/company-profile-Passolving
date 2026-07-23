@@ -47,7 +47,7 @@
         </div>
 
         <div class="container relative z-10 mx-auto px-6 max-w-[1320px] text-center">
-            <h1 class="text-4xl lg:text-[56px] font-black leading-[1.2] mb-4 max-w-4xl mx-auto uppercase text-[#0B2545]">
+            <h1 class="text-[clamp(2.5rem,7vw,3.5rem)] font-black leading-[1.2] mb-4 max-w-4xl mx-auto uppercase text-[#0B2545]">
                 CONTACT US
             </h1>
             
@@ -67,10 +67,10 @@
     </section>
 
     <!-- CONTACT HERO & FORM -->
-    <section class="relative z-20 -mt-[60px]">
+    <section class="relative z-20 -mt-10 md:-mt-16 lg:-mt-[60px]">
         <div class="container mx-auto max-w-[1400px]">
-            <div class="bg-white rounded-t-[48px] lg:rounded-t-[64px] pt-16 pb-24 px-6 lg:px-16 shadow-[0_-10px_40px_rgba(0,0,0,0.05)] relative overflow-hidden">
-                <div class="grid lg:grid-cols-2 gap-16 relative z-10">
+            <div class="bg-white rounded-t-[40px] lg:rounded-t-[64px] pt-12 pb-20 lg:pt-16 lg:pb-24 px-6 lg:px-16 shadow-[0_-10px_40px_rgba(0,0,0,0.05)] relative overflow-hidden">
+                <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 relative z-10">
                 <!-- Left: Info & Map -->
                 <div class="flex flex-col gap-6">
                     <!-- Info Card -->

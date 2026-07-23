@@ -9,10 +9,10 @@
 
         <div class="container mx-auto px-6 max-w-[1320px] relative z-10">
             <div class="max-w-3xl">
-                <h1 class="text-4xl lg:text-[64px] font-black leading-[1.1] mb-6 uppercase">
+                <h1 class="text-[clamp(2.5rem,7vw,4rem)] font-black leading-[1.1] mb-6 uppercase">
                     About PASS
                 </h1>
-                <p class="text-primary-dark/80 leading-relaxed text-xl lg:text-2xl font-light">
+                <p class="text-primary-dark/80 leading-relaxed text-[clamp(1rem,3vw,1.5rem)] font-light">
                     Empowering organizations to achieve measurable transformation through agility, leadership, and strategic execution.
                 </p>
             </div>
@@ -123,28 +123,28 @@
 
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
                 <!-- Value 1 -->
-                <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm text-center group hover:-translate-y-2 transition-transform duration-300">
+                <div class="bg-white p-6 lg:p-8 rounded-3xl border border-gray-100 shadow-sm text-center group hover:-translate-y-2 transition-transform duration-300">
                     <div class="w-16 h-16 mx-auto bg-primary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
                         <x-icon name="lucide-brain" class="w-8 h-8 text-primary group-hover:text-primary-dark transition-colors" />
                     </div>
                     <h4 class="font-bold text-[#141414] mb-2">Empathy</h4>
                 </div>
                 <!-- Value 2 -->
-                <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm text-center group hover:-translate-y-2 transition-transform duration-300">
+                <div class="bg-white p-6 lg:p-8 rounded-3xl border border-gray-100 shadow-sm text-center group hover:-translate-y-2 transition-transform duration-300">
                     <div class="w-16 h-16 mx-auto bg-primary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
                         <x-icon name="lucide-cog" class="w-8 h-8 text-primary group-hover:text-primary-dark transition-colors" />
                     </div>
                     <h4 class="font-bold text-[#141414] mb-2">System Thinking</h4>
                 </div>
                 <!-- Value 3 -->
-                <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm text-center group hover:-translate-y-2 transition-transform duration-300">
+                <div class="bg-white p-6 lg:p-8 rounded-3xl border border-gray-100 shadow-sm text-center group hover:-translate-y-2 transition-transform duration-300">
                     <div class="w-16 h-16 mx-auto bg-primary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
                         <x-icon name="lucide-trending-up" class="w-8 h-8 text-primary group-hover:text-primary-dark transition-colors" />
                     </div>
                     <h4 class="font-bold text-[#141414] mb-2">Result Oriented</h4>
                 </div>
                 <!-- Value 4 -->
-                <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm text-center group hover:-translate-y-2 transition-transform duration-300">
+                <div class="bg-white p-6 lg:p-8 rounded-3xl border border-gray-100 shadow-sm text-center group hover:-translate-y-2 transition-transform duration-300">
                     <div class="w-16 h-16 mx-auto bg-primary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
                         <x-icon name="lucide-users" class="w-8 h-8 text-primary group-hover:text-primary-dark transition-colors" />
                     </div>
