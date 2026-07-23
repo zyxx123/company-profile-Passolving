@@ -3,6 +3,22 @@ import laravel from 'laravel-vite-plugin';
 import { bunny } from 'laravel-vite-plugin/fonts';
 import tailwindcss from '@tailwindcss/vite';
 
+import os from 'os';
+
+function getLocalIP() {
+    const interfaces = os.networkInterfaces();
+    for (const name of Object.keys(interfaces)) {
+        for (const iface of interfaces[name]) {
+            if (iface.family === 'IPv4' && !iface.internal) {
+                return iface.address;
+            }
+        }
+    }
+    return '127.0.0.1';
+}
+
+const localIp = getLocalIP();
+
 export default defineConfig({
     plugins: [
         laravel({
@@ -19,7 +35,7 @@ export default defineConfig({
     server: {
         host: '0.0.0.0',
         hmr: {
-            host: '192.168.1.110',
+            host: localIp,
         },
         watch: {
             ignored: ['**/storage/framework/views/**'],
