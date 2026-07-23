@@ -4,7 +4,7 @@
             
             <!-- Column 1: Brand & About -->
             <div class="flex flex-col">
-                <a href="/" class="flex flex-col shrink-0 mb-4 -ml-1">
+                <a href="/" wire:navigate class="flex flex-col shrink-0 mb-4 -ml-1">
                     <img src="{{ asset('logo-white-trimmed.png') }}" alt="Passolving Logo" class="h-12 w-auto object-contain object-left">
                 </a>
                 <p class="text-primary-dark/80 leading-relaxed mb-6 pr-4">
@@ -33,11 +33,11 @@
             <div>
                 <h4 class="font-bold text-base mb-4 text-primary-dark/90">Navigasi</h4>
                 <ul class="space-y-3">
-                    <li><a href="/" class="text-primary-dark/80 hover:text-cta transition-colors flex items-center group"><span class="mr-2 text-cta transition-transform group-hover:translate-x-1">›</span> Home</a></li>
-                    <li><a href="/services" class="text-primary-dark/80 hover:text-cta transition-colors flex items-center group"><span class="mr-2 text-cta transition-transform group-hover:translate-x-1">›</span> Service</a></li>
-                    <li><a href="/portfolio" class="text-primary-dark/80 hover:text-cta transition-colors flex items-center group"><span class="mr-2 text-cta transition-transform group-hover:translate-x-1">›</span> Portfolio</a></li>
-                    <li><a href="/about" class="text-primary-dark/80 hover:text-cta transition-colors flex items-center group"><span class="mr-2 text-cta transition-transform group-hover:translate-x-1">›</span> About</a></li>
-                    <li><a href="/contact" class="text-primary-dark/80 hover:text-cta transition-colors flex items-center group"><span class="mr-2 text-cta transition-transform group-hover:translate-x-1">›</span> Contact</a></li>
+                    <li><a href="/" wire:navigate class="text-primary-dark/80 hover:text-cta transition-colors flex items-center group"><span class="mr-2 text-cta transition-transform group-hover:translate-x-1">›</span> Home</a></li>
+                    <li><a href="/services" wire:navigate class="text-primary-dark/80 hover:text-cta transition-colors flex items-center group"><span class="mr-2 text-cta transition-transform group-hover:translate-x-1">›</span> Service</a></li>
+                    <li><a href="/portfolio" wire:navigate class="text-primary-dark/80 hover:text-cta transition-colors flex items-center group"><span class="mr-2 text-cta transition-transform group-hover:translate-x-1">›</span> Portfolio</a></li>
+                    <li><a href="/about" wire:navigate class="text-primary-dark/80 hover:text-cta transition-colors flex items-center group"><span class="mr-2 text-cta transition-transform group-hover:translate-x-1">›</span> About</a></li>
+                    <li><a href="/contact" wire:navigate class="text-primary-dark/80 hover:text-cta transition-colors flex items-center group"><span class="mr-2 text-cta transition-transform group-hover:translate-x-1">›</span> Contact</a></li>
                 </ul>
             </div>
 
@@ -45,11 +45,11 @@
             <div>
                 <h4 class="font-bold text-base mb-4 text-primary-dark/90">Layanan</h4>
                 <ul class="space-y-3">
-                    <li><a href="/services" class="text-primary-dark/80 hover:text-cta transition-colors flex items-center group"><span class="mr-2 text-cta transition-transform group-hover:translate-x-1">›</span> Asesmen Agility</a></li>
-                    <li><a href="/services" class="text-primary-dark/80 hover:text-cta transition-colors flex items-center group"><span class="mr-2 text-cta transition-transform group-hover:translate-x-1">›</span> Sertifikasi Soft Skill</a></li>
-                    <li><a href="/services" class="text-primary-dark/80 hover:text-cta transition-colors flex items-center group"><span class="mr-2 text-cta transition-transform group-hover:translate-x-1">›</span> Training & Workshop</a></li>
-                    <li><a href="/services" class="text-primary-dark/80 hover:text-cta transition-colors flex items-center group"><span class="mr-2 text-cta transition-transform group-hover:translate-x-1">›</span> Konsultasi Organisasi</a></li>
-                    <li><a href="/services" class="text-primary-dark/80 hover:text-cta transition-colors flex items-center group"><span class="mr-2 text-cta transition-transform group-hover:translate-x-1">›</span> Research & Insight</a></li>
+                    <li><a href="/services" wire:navigate class="text-primary-dark/80 hover:text-cta transition-colors flex items-center group"><span class="mr-2 text-cta transition-transform group-hover:translate-x-1">›</span> Asesmen Agility</a></li>
+                    <li><a href="/services" wire:navigate class="text-primary-dark/80 hover:text-cta transition-colors flex items-center group"><span class="mr-2 text-cta transition-transform group-hover:translate-x-1">›</span> Sertifikasi Soft Skill</a></li>
+                    <li><a href="/services" wire:navigate class="text-primary-dark/80 hover:text-cta transition-colors flex items-center group"><span class="mr-2 text-cta transition-transform group-hover:translate-x-1">›</span> Training & Workshop</a></li>
+                    <li><a href="/services" wire:navigate class="text-primary-dark/80 hover:text-cta transition-colors flex items-center group"><span class="mr-2 text-cta transition-transform group-hover:translate-x-1">›</span> Konsultasi Organisasi</a></li>
+                    <li><a href="/services" wire:navigate class="text-primary-dark/80 hover:text-cta transition-colors flex items-center group"><span class="mr-2 text-cta transition-transform group-hover:translate-x-1">›</span> Research & Insight</a></li>
                 </ul>
             </div>
 

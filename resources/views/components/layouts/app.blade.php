@@ -54,14 +54,40 @@
     <!-- AOS Animation JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+        // Konfigurasi AOS
+        var aosConfig = {
+            duration: 800,
+            once: true,
+            offset: 100,
+            easing: 'ease-out-cubic'
+        };
+
+        // Inisialisasi AOS saat halaman pertama kali dimuat
         document.addEventListener('DOMContentLoaded', function() {
-            AOS.init({
-                duration: 800,
-                once: true,
-                offset: 100,
-                easing: 'ease-out-cubic'
+            if (typeof AOS !== 'undefined') {
+                AOS.init(aosConfig);
+            }
+        });
+
+        // Jalankan ulang setelah navigasi SPA (wire:navigate)
+        document.addEventListener('livewire:navigated', function() {
+            // Hapus semua atribut & kelas AOS dari elemen lama
+            document.querySelectorAll('[data-aos]').forEach(function(el) {
+                el.classList.remove('aos-animate');
+                el.removeAttribute('data-aos-animate');
+                // Reset inline style yang ditambahkan AOS
+                el.style.transitionDelay = '';
+                el.style.transitionDuration = '';
             });
+
+            // Destroy dan re-init AOS dari nol
+            setTimeout(function() {
+                if (typeof AOS !== 'undefined') {
+                    AOS.init(aosConfig);
+                }
+            }, 50);
         });
     </script>
 </body>
 </html>
+

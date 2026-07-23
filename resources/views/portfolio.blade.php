@@ -366,62 +366,33 @@
             </div>
             
             <!-- Pagination Dots Decoration -->
-            <div id="clients-dots" class="flex items-center justify-center gap-2 mt-12">
-                <!-- Dots injected by JS -->
+            <div x-data="{
+                activeIndex: 0,
+                dotCount: 6,
+                scrollTo(i) {
+                    const sc = document.getElementById('clients-scroll');
+                    if (!sc) return;
+                    const maxScroll = sc.scrollWidth - sc.clientWidth;
+                    sc.scrollTo({ left: (maxScroll / (this.dotCount - 1)) * i, behavior: 'smooth' });
+                },
+                init() {
+                    const sc = document.getElementById('clients-scroll');
+                    if (!sc) return;
+                    sc.addEventListener('scroll', () => {
+                        const maxScroll = sc.scrollWidth - sc.clientWidth;
+                        if (maxScroll <= 0) return;
+                        const pct = sc.scrollLeft / maxScroll;
+                        this.activeIndex = Math.min(this.dotCount - 1, Math.max(0, Math.round(pct * (this.dotCount - 1))));
+                    });
+                }
+            }" class="flex items-center justify-center gap-2 mt-12">
+                <template x-for="i in dotCount" :key="i">
+                    <div @click="scrollTo(i - 1)"
+                         :class="activeIndex === (i - 1) ? 'bg-primary' : 'bg-gray-200'"
+                         class="w-2.5 h-2.5 rounded-full transition-colors duration-300 cursor-pointer">
+                    </div>
+                </template>
             </div>
-
-            <script>
-                (function() {
-                    const initDots = () => {
-                        const scrollContainer = document.getElementById('clients-scroll');
-                        const dotsContainer = document.getElementById('clients-dots');
-                        if (!scrollContainer || !dotsContainer) return;
-
-                        const dotCount = 6; // Matching the design
-                        
-                        // Create dots
-                        dotsContainer.innerHTML = '';
-                        for (let i = 0; i < dotCount; i++) {
-                            const dot = document.createElement('div');
-                            dot.className = `w-2.5 h-2.5 rounded-full transition-colors duration-300 cursor-pointer ${i === 0 ? 'bg-primary' : 'bg-gray-200'}`;
-                            
-                            // Click dot to scroll to position
-                            dot.addEventListener('click', () => {
-                                const maxScroll = scrollContainer.scrollWidth - scrollContainer.clientWidth;
-                                scrollContainer.scrollTo({
-                                    left: (maxScroll / (dotCount - 1)) * i,
-                                    behavior: 'smooth'
-                                });
-                            });
-                            
-                            dotsContainer.appendChild(dot);
-                        }
-
-                        // Update active dot on scroll
-                        scrollContainer.addEventListener('scroll', () => {
-                            const maxScroll = scrollContainer.scrollWidth - scrollContainer.clientWidth;
-                            if (maxScroll <= 0) return;
-                            
-                            const scrollPercentage = scrollContainer.scrollLeft / maxScroll;
-                            const activeIndex = Math.min(dotCount - 1, Math.max(0, Math.round(scrollPercentage * (dotCount - 1))));
-                            
-                            Array.from(dotsContainer.children).forEach((dot, index) => {
-                                if (index === activeIndex) {
-                                    dot.className = 'w-2.5 h-2.5 rounded-full transition-colors duration-300 cursor-pointer bg-primary';
-                                } else {
-                                    dot.className = 'w-2.5 h-2.5 rounded-full transition-colors duration-300 cursor-pointer bg-gray-200';
-                                }
-                            });
-                        });
-                    };
-                    
-                    if (document.readyState === 'loading') {
-                        document.addEventListener('DOMContentLoaded', initDots);
-                    } else {
-                        initDots();
-                    }
-                })();
-            </script>
         </div>
     </section>
 
