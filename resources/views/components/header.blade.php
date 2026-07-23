@@ -16,7 +16,7 @@
         <div class="flex items-center justify-between">
             
             <!-- Logo -->
-            <a href="/" wire:navigate class="flex flex-col shrink-0">
+            <a href="/" class="flex flex-col shrink-0">
                 <img :src="scrolled ? '{{ asset('logo-black-trimmed.png') }}' : '{{ asset('logo-white-trimmed.png') }}'" alt="Passolving Logo" class="h-8 md:h-10 w-auto object-contain">
             </a>
 
@@ -99,7 +99,7 @@
                         
                         <div class="flex h-full flex-col overflow-y-scroll bg-white shadow-xl">
                             <div class="px-6 pt-6 pb-4 flex items-center justify-between border-b border-gray-100">
-                                <a href="/" wire:navigate class="flex flex-col shrink-0">
+                                <a href="/" class="flex flex-col shrink-0">
                                     <img src="{{ asset('logo-black-trimmed.png') }}" alt="Passolving Logo" class="h-8 w-auto object-contain">
                                 </a>
                                 <button type="button" @click="mobileMenuOpen = false" class="rounded-md text-gray-400 hover:text-gray-600 focus:outline-none focus:ring-2 focus:ring-primary">
@@ -110,11 +110,11 @@
                             
                             <div class="relative mt-6 flex-1 px-6 sm:px-6">
                                 <nav class="space-y-6 flex flex-col mt-4">
-                                    <a href="/" wire:navigate class="text-xl font-bold {{ request()->is('/') ? 'text-primary' : 'text-[#141414]' }} hover:text-primary transition-colors">{{ __('Home') }}</a>
-                                    <a href="/services" wire:navigate class="text-xl font-bold {{ request()->is('services*') ? 'text-primary' : 'text-[#141414]' }} hover:text-primary transition-colors flex items-center justify-between">{{ __('Service') }} <x-icon name="lucide-chevron-right" class="w-5 h-5 text-gray-400"/></a>
-                                    <a href="/portfolio" wire:navigate class="text-xl font-bold {{ request()->is('portfolio*') ? 'text-primary' : 'text-[#141414]' }} hover:text-primary transition-colors">{{ __('Portfolio') }}</a>
-                                    <a href="/about" wire:navigate class="text-xl font-bold {{ request()->is('about*') ? 'text-primary' : 'text-[#141414]' }} hover:text-primary transition-colors">{{ __('About') }}</a>
-                                    <a href="/contact" wire:navigate class="text-xl font-bold {{ request()->is('contact*') ? 'text-primary' : 'text-[#141414]' }} hover:text-primary transition-colors">{{ __('Contact') }}</a>
+                                    <a href="/" class="text-xl font-bold {{ request()->is('/') ? 'text-primary' : 'text-[#141414]' }} hover:text-primary transition-colors">{{ __('Home') }}</a>
+                                    <a href="/services" class="text-xl font-bold {{ request()->is('services*') ? 'text-primary' : 'text-[#141414]' }} hover:text-primary transition-colors flex items-center justify-between">{{ __('Service') }} <x-icon name="lucide-chevron-right" class="w-5 h-5 text-gray-400"/></a>
+                                    <a href="/portfolio" class="text-xl font-bold {{ request()->is('portfolio*') ? 'text-primary' : 'text-[#141414]' }} hover:text-primary transition-colors">{{ __('Portfolio') }}</a>
+                                    <a href="/about" class="text-xl font-bold {{ request()->is('about*') ? 'text-primary' : 'text-[#141414]' }} hover:text-primary transition-colors">{{ __('About') }}</a>
+                                    <a href="/contact" class="text-xl font-bold {{ request()->is('contact*') ? 'text-primary' : 'text-[#141414]' }} hover:text-primary transition-colors">{{ __('Contact') }}</a>
                                     
                                     <div class="pt-4 flex items-center justify-between border-t border-gray-100">
                                         <span class="text-sm font-bold text-gray-500">Language</span>
