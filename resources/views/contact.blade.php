@@ -47,7 +47,7 @@
         </div>
 
         <div class="container relative z-10 mx-auto px-6 max-w-[1320px] text-center" data-aos="fade-up">
-            <h1 class="text-[clamp(2.5rem,7vw,3.5rem)] font-black leading-[1.2] mb-4 max-w-4xl mx-auto uppercase text-[#0B2545]">
+            <h1 class="text-[clamp(2.5rem,7vw,3.5rem)] font-black leading-[1.2] mb-4 max-w-4xl mx-auto uppercase text-white">
                 CONTACT US
             </h1>
             
@@ -57,10 +57,10 @@
                 <div class="w-2 h-1 bg-cta rounded-full"></div>
             </div>
 
-            <p class="text-[#0B2545]/90 max-w-2xl mx-auto leading-relaxed text-lg lg:text-xl font-bold">
+            <p class="text-white max-w-2xl mx-auto leading-relaxed text-lg lg:text-xl font-bold">
                 Mari Berkolaborasi untuk Masa Depan yang Lebih Baik
             </p>
-            <p class="text-[#0B2545]/70 max-w-2xl mx-auto leading-relaxed mt-2 text-base">
+            <p class="text-white/80 max-w-2xl mx-auto leading-relaxed mt-2 text-base">
                 Punya pertanyaan atau ingin berdiskusi lebih lanjut? Kami siap membantu Anda.
             </p>
         </div>
