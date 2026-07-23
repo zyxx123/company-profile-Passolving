@@ -11,6 +11,8 @@
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- AOS Animation CSS -->
@@ -22,8 +24,7 @@
     <!-- Livewire Styles -->
     @livewireStyles
     
-    <!-- Alpine.js -->
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- Alpine.js sudah dibawa oleh Livewire 4, TIDAK perlu dimuat lagi dari CDN -->
 </head>
 <body class="bg-[#F8FAFB] text-[#6B7280] antialiased selection:bg-primary selection:text-primary-dark relative overflow-x-hidden font-sans">
     
