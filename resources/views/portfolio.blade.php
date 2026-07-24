@@ -58,7 +58,7 @@
             </div>
 
             <p class="text-white/90 max-w-2xl mx-auto leading-relaxed text-[clamp(1rem,3vw,1.25rem)]">
-                Discover how PASS has helped organizations achieve measurable transformation across industries.
+                {{ __('Discover how PASS has helped organizations achieve measurable transformation across industries.') }}
             </p>
         </div>
     </section>
@@ -86,7 +86,7 @@
                             <x-icon name="lucide-briefcase" class="w-8 h-8" />
                         </div>
                         <span class="block text-4xl lg:text-[44px] font-black text-primary leading-none mb-2">100+</span>
-                        <span class="text-xs font-bold text-[#585857] uppercase tracking-widest">Projects</span>
+                        <span class="text-xs font-bold text-[#585857] uppercase tracking-widest">{{ __('Projects') }}</span>
                         <div class="w-8 h-1 bg-primary mt-4 rounded-full"></div>
                     </div>
                     
@@ -99,7 +99,7 @@
                             <x-icon name="lucide-users" class="w-8 h-8" />
                         </div>
                         <span class="block text-4xl lg:text-[44px] font-black text-primary leading-none mb-2">50+</span>
-                        <span class="text-xs font-bold text-[#585857] uppercase tracking-widest">Organizations</span>
+                        <span class="text-xs font-bold text-[#585857] uppercase tracking-widest">{{ __('Organizations') }}</span>
                         <div class="w-8 h-1 bg-primary mt-4 rounded-full"></div>
                     </div>
                 </div>
@@ -114,7 +114,7 @@
                         <div class="w-10 h-10 lg:w-12 lg:h-12 rounded-full bg-[#E5F5F5] flex items-center justify-center text-primary border border-primary/20">
                             <x-icon name="lucide-landmark" class="w-5 h-5 lg:w-6 lg:h-6" />
                         </div>
-                        <span class="text-sm font-bold text-[#585857]">Government</span>
+                        <span class="text-sm font-bold text-[#585857]">{{ __('Government') }}</span>
                     </div>
                     
                     <div class="w-1.5 h-1.5 rounded-full bg-primary/40 hidden md:block"></div>
@@ -124,7 +124,7 @@
                         <div class="w-10 h-10 lg:w-12 lg:h-12 rounded-full bg-[#E5F5F5] flex items-center justify-center text-primary border border-primary/20">
                             <x-icon name="lucide-graduation-cap" class="w-5 h-5 lg:w-6 lg:h-6" />
                         </div>
-                        <span class="text-sm font-bold text-[#585857]">Private</span>
+                        <span class="text-sm font-bold text-[#585857]">{{ __('Private') }}</span>
                     </div>
                     
                     <div class="w-1.5 h-1.5 rounded-full bg-primary/40 hidden md:block"></div>
@@ -134,7 +134,7 @@
                         <div class="w-10 h-10 lg:w-12 lg:h-12 rounded-full bg-[#E5F5F5] flex items-center justify-center text-primary border border-primary/20">
                             <x-icon name="lucide-book-open" class="w-5 h-5 lg:w-6 lg:h-6" />
                         </div>
-                        <span class="text-sm font-bold text-[#585857]">Education</span>
+                        <span class="text-sm font-bold text-[#585857]">{{ __('Education') }}</span>
                     </div>
                     
                     <div class="w-1.5 h-1.5 rounded-full bg-primary/40 hidden md:block"></div>
@@ -144,7 +144,7 @@
                         <div class="w-10 h-10 lg:w-12 lg:h-12 rounded-full bg-[#E5F5F5] flex items-center justify-center text-primary border border-primary/20">
                             <x-icon name="lucide-plus-circle" class="w-5 h-5 lg:w-6 lg:h-6" />
                         </div>
-                        <span class="text-sm font-bold text-[#585857]">Healthcare</span>
+                        <span class="text-sm font-bold text-[#585857]">{{ __('Healthcare') }}</span>
                     </div>
                 </div>
 
@@ -158,12 +158,12 @@
         <!-- Filter Bar -->
         <section class="pt-12 bg-[#F8FAFB]">
             <div class="container mx-auto px-6 max-w-[1320px]">
-                <div class="flex flex-wrap items-center justify-center gap-3" data-aos="fade-in">
-                    <template x-for="cat in ['All', 'Training', 'Consulting', 'Transformation', 'Research']" :key="cat">
+                <div x-data="{ categories: { 'All': '{{ __('All') }}', 'Training': '{{ __('Training') }}', 'Consulting': '{{ __('Consulting') }}', 'Transformation': '{{ __('Transformation') }}', 'Research': '{{ __('Research') }}' } }" class="flex flex-wrap items-center justify-center gap-3" data-aos="fade-in">
+                    <template x-for="cat in Object.keys(categories)" :key="cat">
                         <button @click="filter = cat"
                                 :class="filter === cat ? 'bg-primary text-primary-dark shadow-md' : 'bg-white text-[#585857] hover:bg-gray-50 border border-gray-200'"
                                 class="px-6 py-2.5 rounded-full text-sm font-bold transition-all duration-300">
-                            <span x-text="cat"></span>
+                            <span x-text="categories[cat]"></span>
                         </button>
                     </template>
                 </div>
@@ -195,97 +195,127 @@
     </div> <!-- End x-data filter -->
 
     <!-- 5. TRANSFORMATION CASE STUDIES (THE BIG WINS) -->
-    <section class="py-20 lg:py-28 bg-primary text-primary-dark">
-        <div class="container mx-auto px-6 max-w-[1320px]">
+    <section class="py-24 bg-[#FAFAFA] relative overflow-hidden">
+        <div class="container mx-auto px-6 max-w-[1320px] relative z-10">
             <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-3xl lg:text-[44px] font-bold leading-[1.2] max-w-2xl mx-auto mb-4">
-                    Transformation Case Studies
+                <span class="inline-block text-primary text-xs font-bold uppercase tracking-[0.2em] mb-4">{{ __('Our Impact') }}</span>
+                <h2 class="text-3xl lg:text-[44px] font-bold leading-[1.2] mb-4 text-[#141414]">
+                    {!! __('Transformation <span class="text-primary">Case Studies</span>') !!}
                 </h2>
-                <p class="text-primary-dark/70 max-w-2xl mx-auto">Kami tidak menjanjikan sekadar perubahan, tapi kepastian dampak numerik (*Return on Investment*).</p>
+                <p class="text-gray-600 max-w-2xl mx-auto">{!! __('Kami tidak menjanjikan sekadar perubahan,<br class="hidden md:block">tapi kepastian dampak numerik (<span class="italic">Return on Investment</span>).') !!}</p>
             </div>
 
-            <div class="grid lg:grid-cols-3 gap-8">
+            <div class="grid lg:grid-cols-3 gap-6 lg:gap-8 mb-10">
                 <!-- Case 1 -->
-                <div class="bg-white/5 border border-white/10 rounded-3xl p-8 lg:p-10 relative flex flex-col h-full" data-aos="fade-up" data-aos-delay="0">
-                    <span class="text-cta font-bold uppercase tracking-widest text-xs mb-3">Healthcare Transformation</span>
-                    <h3 class="text-2xl font-black mb-8 text-primary-dark">Medical Centre</h3>
+                <div class="bg-white rounded-[2rem] shadow-[0_10px_40px_rgba(0,0,0,0.05)] p-8 lg:p-10 flex flex-col h-full border border-gray-100" data-aos="fade-up" data-aos-delay="0">
+                    <span class="text-primary font-bold uppercase tracking-widest text-[10px] mb-2">{{ __('Healthcare Transformation') }}</span>
+                    <h3 class="text-xl lg:text-2xl font-black mb-6 text-[#141414]">{{ __('Medical Centre') }}</h3>
+                    
+                    <hr class="border-gray-100 mb-6">
                     
                     <div class="space-y-6 flex-grow">
                         <div>
-                            <h4 class="text-xs font-bold text-primary-dark/50 uppercase tracking-widest mb-2">Challenge</h4>
-                            <p class="text-primary-dark/90 text-sm">Persaingan tinggi dan proses layanan lambat yang merugikan pasien.</p>
+                            <h4 class="text-[10px] font-bold text-primary uppercase tracking-widest mb-2">{{ __('Challenge') }}</h4>
+                            <p class="text-gray-700 text-sm leading-relaxed">{{ __('Persaingan tinggi dan proses layanan lambat yang merugikan pasien.') }}</p>
                         </div>
-                        <div class="flex justify-center"><x-icon name="lucide-arrow-down" class="w-4 h-4 text-primary-dark/30" /></div>
+                        
+                        <hr class="border-gray-100">
+                        
                         <div>
-                            <h4 class="text-xs font-bold text-primary-dark/50 uppercase tracking-widest mb-2">Solution</h4>
-                            <p class="text-primary-dark/90 text-sm">Redesain proses bisnis (BPI) secara masif dan digitalisasi layanan.</p>
+                            <h4 class="text-[10px] font-bold text-primary uppercase tracking-widest mb-2">{{ __('Solution') }}</h4>
+                            <p class="text-gray-700 text-sm leading-relaxed">{{ __('Redesain proses bisnis (BPI) secara masif dan digitalisasi layanan.') }}</p>
                         </div>
                     </div>
                     
-                    <div class="mt-8 pt-6 border-t border-white/10">
-                        <h4 class="text-sm font-bold text-cta uppercase tracking-widest mb-3">Result</h4>
-                        <ul class="font-medium space-y-2 text-sm text-primary-dark/90">
-                            <li class="flex items-center gap-2"><x-icon name="lucide-check" class="w-4 h-4 text-cta" /> Revenue naik <span class="text-primary-dark font-black">+1000%</span></li>
-                            <li class="flex items-center gap-2"><x-icon name="lucide-check" class="w-4 h-4 text-cta" /> Top 5 Nasional</li>
-                            <li class="flex items-center gap-2"><x-icon name="lucide-check" class="w-4 h-4 text-cta" /> 10.000 pasien/bulan</li>
+                    <div class="mt-8 bg-[#F6FAFA] rounded-2xl p-6 border border-primary/5">
+                        <h4 class="text-[10px] font-bold text-primary uppercase tracking-widest mb-4">{{ __('Result') }}</h4>
+                        <ul class="list-disc list-outside pl-4 space-y-2 text-sm text-gray-700 font-medium marker:text-primary">
+                            <li>{!! __('Revenue naik <span class="text-primary font-black\">+1000%</span>') !!}</li>
+                            <li>{{ __('Top 5 Nasional') }}</li>
+                            <li>{{ __('10.000 pasien/bulan') }}</li>
                         </ul>
                     </div>
                 </div>
 
                 <!-- Case 2 -->
-                <div class="bg-white/5 border border-white/10 rounded-3xl p-8 lg:p-10 relative flex flex-col h-full" data-aos="fade-up" data-aos-delay="100">
-                    <span class="text-cta font-bold uppercase tracking-widest text-xs mb-3">Agriculture & Supply Chain</span>
-                    <h3 class="text-2xl font-black mb-8 text-primary-dark">Agribusiness</h3>
+                <div class="bg-white rounded-[2rem] shadow-[0_10px_40px_rgba(0,0,0,0.05)] p-8 lg:p-10 flex flex-col h-full border border-gray-100" data-aos="fade-up" data-aos-delay="100">
+                    <span class="text-primary font-bold uppercase tracking-widest text-[10px] mb-2">{{ __('Agriculture & Supply Chain') }}</span>
+                    <h3 class="text-xl lg:text-2xl font-black mb-6 text-[#141414]">{{ __('Agribusiness') }}</h3>
+                    
+                    <hr class="border-gray-100 mb-6">
                     
                     <div class="space-y-6 flex-grow">
                         <div>
-                            <h4 class="text-xs font-bold text-primary-dark/50 uppercase tracking-widest mb-2">Challenge</h4>
-                            <p class="text-primary-dark/90 text-sm">Pembengkakan anggaran SDM tanpa korelasi langsung pada output panen.</p>
+                            <h4 class="text-[10px] font-bold text-primary uppercase tracking-widest mb-2">{{ __('Challenge') }}</h4>
+                            <p class="text-gray-700 text-sm leading-relaxed">{{ __('Pembengkakan anggaran SDM tanpa korelasi langsung pada output panen.') }}</p>
                         </div>
-                        <div class="flex justify-center"><x-icon name="lucide-arrow-down" class="w-4 h-4 text-primary-dark/30" /></div>
+                        
+                        <hr class="border-gray-100">
+                        
                         <div>
-                            <h4 class="text-xs font-bold text-primary-dark/50 uppercase tracking-widest mb-2">Solution</h4>
-                            <p class="text-primary-dark/90 text-sm">Optimalisasi produktivitas dan restrukturisasi kompetensi tenaga kerja inti.</p>
+                            <h4 class="text-[10px] font-bold text-primary uppercase tracking-widest mb-2">{{ __('Solution') }}</h4>
+                            <p class="text-gray-700 text-sm leading-relaxed">{{ __('Optimalisasi produktivitas dan restrukturisasi kompetensi tenaga kerja inti.') }}</p>
                         </div>
                     </div>
                     
-                    <div class="mt-8 pt-6 border-t border-white/10">
-                        <h4 class="text-sm font-bold text-cta uppercase tracking-widest mb-3">Result</h4>
-                        <ul class="font-medium space-y-2 text-sm text-primary-dark/90">
-                            <li class="flex items-center gap-2"><x-icon name="lucide-check" class="w-4 h-4 text-cta" /> HR Cost Efficiency masif</li>
-                            <li class="flex items-center gap-2"><x-icon name="lucide-check" class="w-4 h-4 text-cta" /> HR Cost turun dari <span class="text-primary-dark font-black text-red-400">12 M</span> → <span class="text-primary-dark font-black text-green-400">5 M</span></li>
+                    <div class="mt-8 bg-[#F6FAFA] rounded-2xl p-6 border border-primary/5">
+                        <h4 class="text-[10px] font-bold text-primary uppercase tracking-widest mb-4">{{ __('Result') }}</h4>
+                        <ul class="list-disc list-outside pl-4 space-y-2 text-sm text-gray-700 font-medium marker:text-primary">
+                            <li>{{ __('HR Cost Efficiency masif') }}</li>
+                            <li>{!! __('HR Cost turun dari <span class="text-primary font-black\">12 M <span class="mx-1 font-normal\">&rarr;</span> 5 M</span>') !!}</li>
                         </ul>
                     </div>
                 </div>
 
                 <!-- Case 3 -->
-                <div class="bg-white/5 border border-white/10 rounded-3xl p-8 lg:p-10 relative flex flex-col h-full" data-aos="fade-up" data-aos-delay="200">
-                    <span class="text-cta font-bold uppercase tracking-widest text-xs mb-3">Logistics</span>
-                    <h3 class="text-2xl font-black mb-8 text-primary-dark">Warehouse Opt.</h3>
+                <div class="bg-white rounded-[2rem] shadow-[0_10px_40px_rgba(0,0,0,0.05)] p-8 lg:p-10 flex flex-col h-full border border-gray-100" data-aos="fade-up" data-aos-delay="200">
+                    <span class="text-primary font-bold uppercase tracking-widest text-[10px] mb-2">{{ __('Logistics') }}</span>
+                    <h3 class="text-xl lg:text-2xl font-black mb-6 text-[#141414]">{{ __('Warehouse Opt.') }}</h3>
+                    
+                    <hr class="border-gray-100 mb-6">
                     
                     <div class="space-y-6 flex-grow">
                         <div>
-                            <h4 class="text-xs font-bold text-primary-dark/50 uppercase tracking-widest mb-2">Challenge</h4>
-                            <p class="text-primary-dark/90 text-sm">Kebocoran finansial di gudang serta ketidakakuratan pergerakan barang.</p>
+                            <h4 class="text-[10px] font-bold text-primary uppercase tracking-widest mb-2">{{ __('Challenge') }}</h4>
+                            <p class="text-gray-700 text-sm leading-relaxed">{{ __('Kebocoran finansial di gudang serta ketidakakuratan pergerakan barang.') }}</p>
                         </div>
-                        <div class="flex justify-center"><x-icon name="lucide-arrow-down" class="w-4 h-4 text-primary-dark/30" /></div>
+                        
+                        <hr class="border-gray-100">
+                        
                         <div>
-                            <h4 class="text-xs font-bold text-primary-dark/50 uppercase tracking-widest mb-2">Solution</h4>
-                            <p class="text-primary-dark/90 text-sm">Implementasi standar *Agile operations* dan audit kapabilitas tim logistik.</p>
+                            <h4 class="text-[10px] font-bold text-primary uppercase tracking-widest mb-2">{{ __('Solution') }}</h4>
+                            <p class="text-gray-700 text-sm leading-relaxed">{{ __('Implementasi standar "Agile operations" dan audit kapabilitas tim logistik.') }}</p>
                         </div>
                     </div>
                     
-                    <div class="mt-8 pt-6 border-t border-white/10">
-                        <h4 class="text-sm font-bold text-cta uppercase tracking-widest mb-3">Result</h4>
-                        <ul class="font-medium space-y-2 text-sm text-primary-dark/90">
-                            <li class="flex items-center gap-2"><x-icon name="lucide-check" class="w-4 h-4 text-cta" /> Stock accuracy <span class="text-primary-dark font-black">98%</span></li>
-                            <li class="flex items-center gap-2"><x-icon name="lucide-check" class="w-4 h-4 text-cta" /> Revenue tambahan <span class="text-primary-dark font-black">+800 M</span></li>
-                            <li class="flex items-center gap-2"><x-icon name="lucide-check" class="w-4 h-4 text-cta" /> Fraud/kebocoran ditemukan dan distop</li>
+                    <div class="mt-8 bg-[#F6FAFA] rounded-2xl p-6 border border-primary/5">
+                        <h4 class="text-[10px] font-bold text-primary uppercase tracking-widest mb-4">{{ __('Result') }}</h4>
+                        <ul class="list-disc list-outside pl-4 space-y-2 text-sm text-gray-700 font-medium marker:text-primary">
+                            <li>{!! __('Stock accuracy <span class="text-primary font-black\">98%</span>') !!}</li>
+                            <li>{!! __('Revenue tambahan <span class="text-primary font-black\">+800 M</span>') !!}</li>
+                            <li>{{ __('Fraud/kebocoran ditemukan dan distop') }}</li>
                         </ul>
                     </div>
                 </div>
-
             </div>
+            
+            <!-- Bottom Values Bar -->
+            <div class="bg-white rounded-2xl shadow-[0_5px_30px_rgba(0,0,0,0.04)] py-6 px-8 lg:px-12 border border-gray-100 flex flex-col md:flex-row items-center justify-between gap-6 lg:gap-10" data-aos="fade-up" data-aos-delay="300">
+                <p class="text-lg md:text-xl font-bold text-[#141414] leading-tight md:max-w-[200px] text-center md:text-left">
+                    What leaders consistently experience
+                </p>
+                
+                <div class="w-full md:w-px h-[1px] md:h-12 bg-gray-200"></div>
+                
+                <div class="flex flex-wrap items-center justify-center md:justify-end gap-6 lg:gap-10 flex-grow">
+                    <span class="text-xs font-black text-primary uppercase tracking-widest">{{ __('Adaptasi') }}</span>
+                    <span class="text-xs font-black text-primary uppercase tracking-widest">{{ __('Kolaborasi') }}</span>
+                    <span class="text-xs font-black text-primary uppercase tracking-widest">{{ __('Optimalisasi') }}</span>
+                    <span class="text-xs font-black text-primary uppercase tracking-widest">{{ __('Inovasi') }}</span>
+                    <span class="text-xs font-black text-primary uppercase tracking-widest">{{ __('Pertumbuhan') }}</span>
+                </div>
+            </div>
+            
         </div>
     </section>
 
@@ -370,102 +400,199 @@
     </section>
 
     <!-- 7. TESTIMONIALS -->
-    <section class="py-16 bg-primary text-primary-dark">
-        <div class="container mx-auto px-6 max-w-[1320px]">
-            <div class="text-center mb-12" data-aos="fade-up">
-                <x-icon name="lucide-quote" class="w-8 h-8 text-primary-dark/20 mx-auto mb-3" stroke-width="1.5" />
-                <h2 class="text-2xl lg:text-3xl font-bold leading-[1.2]">
-                    What Our Clients Say
+    <section class="py-24 bg-white relative overflow-hidden z-0">
+        
+        <!-- DECORATIONS -->
+        <!-- Left Dots -->
+        <div class="absolute top-[10%] -left-10 z-0 opacity-20 pointer-events-none hidden lg:block">
+            <svg width="150" height="300" fill="none" viewBox="0 0 100 200">
+                <pattern id="dots-left" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                    <circle fill="#00a6a6" cx="2" cy="2" r="2"></circle>
+                </pattern>
+                <rect x="0" y="0" width="100" height="200" fill="url(#dots-left)"></rect>
+            </svg>
+        </div>
+        
+        <!-- Right Dots -->
+        <div class="absolute top-[30%] -right-10 z-0 opacity-20 pointer-events-none hidden lg:block">
+            <svg width="150" height="300" fill="none" viewBox="0 0 100 200">
+                <pattern id="dots-right-t" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                    <circle fill="#00a6a6" cx="2" cy="2" r="2"></circle>
+                </pattern>
+                <rect x="0" y="0" width="100" height="200" fill="url(#dots-right-t)"></rect>
+            </svg>
+        </div>
+
+        <!-- Faded swoosh background -->
+        <div class="absolute bottom-0 right-0 w-[500px] h-[500px] border border-primary/10 rounded-full scale-150 translate-x-[20%] translate-y-[40%] pointer-events-none z-0"></div>
+        <div class="absolute bottom-0 right-0 w-[600px] h-[600px] border border-primary/5 rounded-full scale-150 translate-x-[20%] translate-y-[40%] pointer-events-none z-0"></div>
+
+        <div class="container mx-auto px-6 max-w-[1320px] relative z-10">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <x-icon name="lucide-quote" class="w-12 h-12 text-primary mx-auto mb-4" stroke-width="2.5" />
+                <h2 class="text-3xl lg:text-[44px] font-bold leading-[1.2] text-[#141414]">
+                    {!! __('What Our <span class="text-primary\">Clients Say</span>') !!}
                 </h2>
             </div>
 
-            <div class="grid lg:grid-cols-3 gap-6 items-start">
+            <div class="grid lg:grid-cols-3 gap-6 lg:gap-8 items-start mb-10">
                 
                 <!-- Column 1 -->
-                <div class="bg-[#0B9B9A] p-8 rounded-3xl shadow-sm text-center flex flex-col gap-6" data-aos="fade-up" data-aos-delay="0">
-                    <div>
-                        <span class="inline-block bg-[#141414]/30 text-primary-dark text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-3">Manager Retail Chain (Indonesia)</span>
-                        <p class="text-primary-dark text-base font-medium leading-relaxed italic">
-                            "Apa yang harus dilakukan, langsung dipraktekkan! Agile-Design Thinking dari PASS berbeda dari yang biasanya."
+                <div class="bg-white p-8 lg:p-10 rounded-[2rem] shadow-[0_10px_40px_rgba(0,0,0,0.06)] flex flex-col gap-8 h-full" data-aos="fade-up" data-aos-delay="0">
+                    <!-- Testimonial 1 -->
+                    <div class="text-center">
+                        <span class="inline-block bg-primary text-white text-[10px] font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-5">{{ __('Manager Retail Chain (Indonesia)') }}</span>
+                        <p class="text-gray-700 text-sm md:text-base font-medium leading-relaxed italic">
+                            "Apa yang harus dilakukan, langsung dipraktikkan! Agile-Design Thinking dari PASS berbeda dari yang biasanya."
                         </p>
                     </div>
-                    <hr class="border-white/20">
-                    <div>
-                        <span class="inline-block bg-[#141414]/30 text-primary-dark text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-3">Founder Food Processing Manufacturer (Bahrain)</span>
-                        <p class="text-primary-dark text-base font-medium leading-relaxed italic">
+                    
+                    <hr class="border-gray-100">
+                    
+                    <!-- Testimonial 2 -->
+                    <div class="text-center">
+                        <span class="inline-block bg-primary text-white text-[10px] font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-5">{{ __('Founder Food Processing Manufacturer (Emirah)') }}</span>
+                        <p class="text-gray-700 text-sm md:text-base font-medium leading-relaxed italic">
                             "Tim PASS berisi profesional berpengalaman dengan solusi implementatif dalam bentuk report yang langsung berdampak pada pengembangan bisnis kami."
                         </p>
                     </div>
-                    <hr class="border-white/20">
-                    <div class="text-left space-y-4">
-                        <div>
-                            <p class="text-primary-dark font-bold">"92% Accuracy Achieved"</p>
-                            <p class="text-primary-dark/80 text-xs">Retail Company</p>
+                    
+                    <hr class="border-gray-100">
+                    
+                    <!-- Highlights -->
+                    <div class="space-y-4 pt-2">
+                        <!-- Highlight 1 -->
+                        <div class="flex items-start gap-4">
+                            <div class="shrink-0 w-10 h-10 rounded-full border border-primary flex items-center justify-center text-primary bg-[#F0F9F9]">
+                                <x-icon name="lucide-target" class="w-5 h-5" />
+                            </div>
+                            <div>
+                                <h4 class="text-primary font-bold text-sm">{{ __('92% Accuracy Achieved') }}</h4>
+                                <p class="text-gray-500 text-[11px] mt-0.5">{{ __('Retail Company') }}</p>
+                            </div>
                         </div>
-                        <div>
-                            <p class="text-primary-dark font-bold">"Waktu stock opname turun 50%"</p>
-                            <p class="text-primary-dark/80 text-xs">Retail Company</p>
+                        
+                        <!-- Highlight 2 -->
+                        <div class="flex items-start gap-4">
+                            <div class="shrink-0 w-10 h-10 rounded-full border border-primary flex items-center justify-center text-primary bg-[#F0F9F9]">
+                                <x-icon name="lucide-bar-chart-2" class="w-5 h-5" />
+                            </div>
+                            <div>
+                                <h4 class="text-primary font-bold text-sm">{{ __('"Waktu stock opname turun 50%"') }}</h4>
+                                <p class="text-gray-500 text-[11px] mt-0.5">{{ __('Retail Company') }}</p>
+                            </div>
                         </div>
-                        <div>
-                            <p class="text-primary-dark font-bold">"Implementasi 5S mengungkap fraud selama 6 tahun"</p>
-                            <p class="text-primary-dark/80 text-xs">Perusahaan Manufaktur</p>
+
+                        <!-- Highlight 3 -->
+                        <div class="flex items-start gap-4">
+                            <div class="shrink-0 w-10 h-10 rounded-full border border-primary flex items-center justify-center text-primary bg-[#F0F9F9]">
+                                <x-icon name="lucide-shield-check" class="w-5 h-5" />
+                            </div>
+                            <div>
+                                <h4 class="text-primary font-bold text-sm">{{ __('"Implementasi 5S mengungkap fraud selama 6 tahun"') }}</h4>
+                                <p class="text-gray-500 text-[11px] mt-0.5">{{ __('Perusahaan Manufaktur') }}</p>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Column 2 -->
-                <div class="bg-[#0B9B9A] p-8 rounded-3xl shadow-sm text-center flex flex-col gap-6" data-aos="fade-up" data-aos-delay="100">
-                    <div>
-                        <span class="inline-block bg-[#141414]/30 text-primary-dark text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-3">Founder Beauty Clinic (Indonesia)</span>
-                        <p class="text-primary-dark text-base font-medium leading-relaxed italic">
+                <div class="bg-white p-8 lg:p-10 rounded-[2rem] shadow-[0_10px_40px_rgba(0,0,0,0.06)] flex flex-col gap-8 h-full" data-aos="fade-up" data-aos-delay="100">
+                    <!-- Testimonial 1 -->
+                    <div class="text-center">
+                        <span class="inline-block bg-primary text-white text-[10px] font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-5">{{ __('Founder Beauty Clinic (Indonesia)') }}</span>
+                        <p class="text-gray-700 text-sm md:text-base font-medium leading-relaxed italic">
                             "PASSolving membantu kami melihat realita dengan objektif dan memberikan solusi yang tepat."
                         </p>
                     </div>
-                    <hr class="border-white/20">
-                    <div class="text-left space-y-4">
-                        <div>
-                            <p class="text-primary-dark font-bold">"From Fragmented Teams to Unified Agility"</p>
-                            <p class="text-primary-dark/80 text-xs">Perusahaan Telekomunikasi</p>
+                    
+                    <!-- Highlights Block 1 -->
+                    <div class="bg-[#F6FAFA] rounded-2xl p-6 flex flex-col gap-6 border border-primary/5">
+                        <div class="flex items-start gap-5">
+                            <div class="shrink-0 w-12 h-12 rounded-full border border-primary flex items-center justify-center text-primary bg-white shadow-sm">
+                                <x-icon name="lucide-users" class="w-6 h-6" stroke-width="1.5" />
+                            </div>
+                            <div>
+                                <h4 class="text-[#141414] font-bold text-base leading-tight">{{ __('From Fragmented Teams to Unified Agility') }}</h4>
+                                <p class="text-gray-500 text-[11px] mt-2">{{ __('Perusahaan Telekomunikasi') }}</p>
+                            </div>
                         </div>
-                        <div>
-                            <p class="text-primary-dark font-bold">Transformasi operasional meningkatkan kinerja 1000%</p>
-                            <p class="text-primary-dark/80 text-xs">Laboratorium Klinik</p>
+                    </div>
+
+                    <!-- Highlights Block 2 -->
+                    <div class="bg-[#F6FAFA] rounded-2xl p-6 flex flex-col gap-6 border border-primary/5">
+                        <div class="flex items-start gap-5">
+                            <div class="shrink-0 w-12 h-12 rounded-full border border-primary flex items-center justify-center text-primary bg-white shadow-sm">
+                                <x-icon name="lucide-settings" class="w-6 h-6" stroke-width="1.5" />
+                            </div>
+                            <div>
+                                <h4 class="text-[#141414] font-bold text-base leading-tight">{{ __('Transformasi operasional meningkatkan kinerja 1000%') }}</h4>
+                                <p class="text-gray-500 text-[11px] mt-2">{{ __('Laboratorium Klinik') }}</p>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Column 3 -->
-                <div class="bg-[#0B9B9A] p-8 rounded-3xl shadow-sm text-center flex flex-col gap-6" data-aos="fade-up" data-aos-delay="200">
-                    <div>
-                        <span class="inline-block bg-[#141414]/30 text-primary-dark text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-3">Founder Integrated Farm (Indonesia)</span>
-                        <p class="text-primary-dark text-base font-medium leading-relaxed italic">
+                <div class="bg-white p-8 lg:p-10 rounded-[2rem] shadow-[0_10px_40px_rgba(0,0,0,0.06)] flex flex-col gap-8 h-full" data-aos="fade-up" data-aos-delay="200">
+                    <!-- Testimonial 1 -->
+                    <div class="text-center">
+                        <span class="inline-block bg-primary text-white text-[10px] font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-5">{{ __('Founder Integrated Farm (Indonesia)') }}</span>
+                        <p class="text-gray-700 text-sm md:text-base font-medium leading-relaxed italic">
                             "PASSolving membantu membangun visi kuat dan peta jalannya."
                         </p>
                     </div>
-                    <hr class="border-white/20">
-                    <div>
-                        <span class="inline-block bg-[#141414]/30 text-primary-dark text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-3">COO Agroindustry (Indonesia)</span>
-                        <p class="text-primary-dark text-base font-medium leading-relaxed italic">
+                    
+                    <hr class="border-gray-100">
+                    
+                    <!-- Testimonial 2 -->
+                    <div class="text-center">
+                        <span class="inline-block bg-primary text-white text-[10px] font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-5">{{ __('COO Agroindustry (Indonesia)') }}</span>
+                        <p class="text-gray-700 text-sm md:text-base font-medium leading-relaxed italic">
                             "Kami berhasil menghemat biaya tanpa mengorbankan kualitas."
                         </p>
                     </div>
-                    <hr class="border-white/20">
-                    <div class="text-left space-y-4">
-                        <div>
-                            <p class="text-primary-dark font-bold">"Revenue trajectory in 6 Months, 800 billions"</p>
-                            <p class="text-primary-dark/80 text-xs">Agro Industry</p>
+                    
+                    <hr class="border-gray-100">
+                    
+                    <!-- Highlights Block -->
+                    <div class="bg-[#F6FAFA] rounded-2xl p-6 flex flex-col gap-6 border border-primary/5 mt-auto">
+                        <div class="flex items-start gap-5">
+                            <div class="shrink-0 w-12 h-12 rounded-full border border-primary flex items-center justify-center text-primary bg-white shadow-sm">
+                                <x-icon name="lucide-trending-up" class="w-6 h-6" stroke-width="1.5" />
+                            </div>
+                            <div>
+                                <h4 class="text-[#141414] font-bold text-base leading-tight">{{ __('Revenue trajectory in 6 Months, 800 billions') }}</h4>
+                                <p class="text-gray-500 text-[11px] mt-2">{{ __('Agro Industry') }}</p>
+                            </div>
                         </div>
                     </div>
                 </div>
 
             </div>
             
-            <div class="mt-12 text-center flex flex-col md:flex-row items-center justify-center gap-6" data-aos="fade-up" data-aos-delay="300">
-                <p class="text-xl font-bold text-primary-dark">What leaders consistently experience</p>
-                <div class="w-12 h-12 bg-white text-primary-dark rounded-full flex items-center justify-center">
-                    <x-icon name="lucide-arrow-right" class="w-6 h-6" />
+            <!-- Bottom Icon Bar -->
+            <div class="bg-white rounded-2xl shadow-[0_5px_30px_rgba(0,0,0,0.04)] py-6 px-4 md:px-10 border border-gray-100 flex flex-wrap items-center justify-center gap-6 lg:gap-12" data-aos="fade-up" data-aos-delay="300">
+                <div class="flex items-center gap-3">
+                    <x-icon name="lucide-users" class="w-6 h-6 text-primary" stroke-width="1.5" />
+                    <span class="text-xs font-black text-[#141414] uppercase tracking-widest">{{ __('Adaptasi') }}</span>
                 </div>
-                <p class="text-xl font-black text-cta tracking-widest uppercase">Adaptasi, Kolaborasi, Optimalisasi, Inovasi, Pertumbuhan</p>
+                <div class="flex items-center gap-3">
+                    <x-icon name="lucide-handshake" class="w-6 h-6 text-primary" stroke-width="1.5" />
+                    <span class="text-xs font-black text-[#141414] uppercase tracking-widest">{{ __('Kolaborasi') }}</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <x-icon name="lucide-target" class="w-6 h-6 text-primary" stroke-width="1.5" />
+                    <span class="text-xs font-black text-[#141414] uppercase tracking-widest">{{ __('Optimalisasi') }}</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <x-icon name="lucide-lightbulb" class="w-6 h-6 text-primary" stroke-width="1.5" />
+                    <span class="text-xs font-black text-[#141414] uppercase tracking-widest">{{ __('Inovasi') }}</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <x-icon name="lucide-bar-chart-3" class="w-6 h-6 text-primary" stroke-width="1.5" />
+                    <span class="text-xs font-black text-[#141414] uppercase tracking-widest">{{ __('Pertumbuhan') }}</span>
+                </div>
             </div>
         </div>
     </section>

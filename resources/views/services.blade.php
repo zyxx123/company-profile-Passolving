@@ -69,7 +69,7 @@
                         <x-icon name="lucide-graduation-cap" class="w-10 h-10 text-primary" stroke-width="2" />
                         <div class="absolute top-2 right-2 w-2 h-2 rounded-full bg-cta"></div>
                     </div>
-                    <h3 class="text-[26px] font-black text-primary-dark mb-4">Training</h3>
+                    <h3 class="text-[26px] font-black text-primary-dark mb-4">{{ __('Training') }}</h3>
                     <p class="text-[#6B7280] leading-relaxed text-sm px-2">
                         Mengembangkan kompetensi individu dan tim melalui pembelajaran yang aplikatif dan berorientasi pada hasil.
                     </p>
@@ -87,7 +87,7 @@
                         <x-icon name="lucide-briefcase" class="w-10 h-10 text-primary" stroke-width="2" />
                         <div class="absolute top-2 right-2 w-2 h-2 rounded-full bg-cta"></div>
                     </div>
-                    <h3 class="text-[26px] font-black text-primary-dark mb-4">Consulting</h3>
+                    <h3 class="text-[26px] font-black text-primary-dark mb-4">{{ __('Consulting') }}</h3>
                     <p class="text-[#6B7280] leading-relaxed text-sm px-2">
                         Membantu organisasi menerjemahkan strategi menjadi eksekusi yang nyata dan berdampak.
                     </p>
@@ -111,7 +111,7 @@
                         <x-icon name="lucide-line-chart" class="w-10 h-10 text-primary" stroke-width="2" />
                         <div class="absolute top-2 right-2 w-2 h-2 rounded-full bg-cta"></div>
                     </div>
-                    <h3 class="text-[26px] font-black text-primary-dark mb-4">Research</h3>
+                    <h3 class="text-[26px] font-black text-primary-dark mb-4">{{ __('Research') }}</h3>
                     <p class="text-[#6B7280] leading-relaxed text-sm px-2">
                         Memberikan diagnosis organisasi berbasis data untuk mendukung keputusan strategis yang berkelanjutan.
                     </p>
@@ -142,16 +142,16 @@
                     </div>
 
                     <div class="w-full lg:w-1/2 relative z-10" data-aos="fade-right">
-                        <span class="text-primary font-bold tracking-widest uppercase text-sm mb-3 block">Pilar 01</span>
+                        <span class="text-primary font-bold tracking-widest uppercase text-sm mb-3 block">{{ __('Pilar 01') }}</span>
                         <h2 class="text-4xl lg:text-5xl font-black text-[#141414] leading-[1.2] mb-6">
-                            Training & <br/><span class="text-primary">Development</span>
+                            {!! __('Training & <br/><span class="text-primary">Development</span>') !!}
                         </h2>
                         <p class="text-[#585857] leading-relaxed mb-10 text-lg">
                             Program pelatihan kami didesain dengan metodologi "learning by doing" untuk memastikan materi langsung dapat diaplikasikan.
                         </p>
                         
                         <div class="flex items-center gap-4 mb-6">
-                            <h4 class="text-sm font-bold text-primary tracking-widest uppercase">Fokus Program Kami</h4>
+                            <h4 class="text-sm font-bold text-primary tracking-widest uppercase">{{ __('Fokus Program Kami') }}</h4>
                             <div class="flex-1 h-[1px] bg-gray-200"></div>
                         </div>
                         
@@ -161,31 +161,31 @@
                                     <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center shrink-0">
                                         <x-icon name="lucide-users" class="w-5 h-5 text-white" stroke-width="2" />
                                     </div>
-                                    <div><span class="font-bold text-[#141414]">Leadership Agility</span> <span class="text-[#585857] text-sm ml-2">Menciptakan pemimpin yang adaptif.</span></div>
+                                    <div><span class="font-bold text-[#141414]">{{ __('Leadership Agility') }}</span> <span class="text-[#585857] text-sm ml-2">{{ __('Menciptakan pemimpin yang adaptif.') }}</span></div>
                                 </li>
                                 <li class="flex items-center gap-4 p-4 hover:bg-gray-50 transition-colors rounded-xl">
                                     <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center shrink-0">
                                         <x-icon name="lucide-lightbulb" class="w-5 h-5 text-white" stroke-width="2" />
                                     </div>
-                                    <div><span class="font-bold text-[#141414]">Design Thinking</span> <span class="text-[#585857] text-sm ml-2">Solusi berpusat pada manusia.</span></div>
+                                    <div><span class="font-bold text-[#141414]">{{ __('Design Thinking') }}</span> <span class="text-[#585857] text-sm ml-2">{{ __('Solusi berpusat pada manusia.') }}</span></div>
                                 </li>
                                 <li class="flex items-center gap-4 p-4 hover:bg-gray-50 transition-colors rounded-xl">
                                     <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center shrink-0">
                                         <x-icon name="lucide-trending-up" class="w-5 h-5 text-white" stroke-width="2" />
                                     </div>
-                                    <div><span class="font-bold text-[#141414]">Business Agility</span> <span class="text-[#585857] text-sm ml-2">Kesiapan organisasi menghadapi perubahan.</span></div>
+                                    <div><span class="font-bold text-[#141414]">{{ __('Business Agility') }}</span> <span class="text-[#585857] text-sm ml-2">{{ __('Kesiapan organisasi menghadapi perubahan.') }}</span></div>
                                 </li>
                                 <li class="flex items-center gap-4 p-4 hover:bg-gray-50 transition-colors rounded-xl">
                                     <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center shrink-0">
                                         <x-icon name="lucide-award" class="w-5 h-5 text-white" stroke-width="2" />
                                     </div>
-                                    <div><span class="font-bold text-[#141414]">Soft Skill Certification</span> <span class="text-[#585857] text-sm ml-2">Sertifikasi BNSP & keahlian khusus.</span></div>
+                                    <div><span class="font-bold text-[#141414]">{{ __('Soft Skill Certification') }}</span> <span class="text-[#585857] text-sm ml-2">{{ __('Sertifikasi BNSP & keahlian khusus.') }}</span></div>
                                 </li>
                                 <li class="flex items-center gap-4 p-4 hover:bg-gray-50 transition-colors rounded-xl">
                                     <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center shrink-0">
                                         <x-icon name="lucide-puzzle" class="w-5 h-5 text-white" stroke-width="2" />
                                     </div>
-                                    <div><span class="font-bold text-[#141414]">LEGO® Serious Play®</span> <span class="text-[#585857] text-sm ml-2">Fasilitasi strategi melalui bermain yang serius.</span></div>
+                                    <div><span class="font-bold text-[#141414]">{{ __('LEGO® Serious Play®') }}</span> <span class="text-[#585857] text-sm ml-2">{{ __('Fasilitasi strategi melalui bermain yang serius.') }}</span></div>
                                 </li>
                             </ul>
                         </div>
@@ -207,7 +207,7 @@
                             <div class="w-12 h-12 rounded-full border border-white/30 flex items-center justify-center shrink-0">
                                 <x-icon name="lucide-target" class="w-6 h-6 text-white" stroke-width="2" />
                             </div>
-                            <p class="text-sm leading-relaxed">Pembelajaran yang interaktif, aplikatif, dan berdampak nyata.</p>
+                            <p class="text-sm leading-relaxed">{{ __('Pembelajaran yang interaktif, aplikatif, dan berdampak nyata.') }}</p>
                         </div>
                     </div>
                 </div>
@@ -226,16 +226,16 @@
                     </div>
 
                     <div class="w-full lg:w-1/2 relative z-10" data-aos="fade-left">
-                        <span class="text-primary font-bold tracking-widest uppercase text-sm mb-3 block">Pilar 02</span>
+                        <span class="text-primary font-bold tracking-widest uppercase text-sm mb-3 block">{{ __('Pilar 02') }}</span>
                         <h2 class="text-4xl lg:text-5xl font-black text-[#141414] leading-[1.2] mb-6">
-                            Consulting <br/><span class="text-primary">Services</span>
+                            {!! __('Consulting <br/><span class="text-primary\">Services</span>') !!}
                         </h2>
                         <p class="text-[#585857] leading-relaxed mb-10 text-lg">
                             Bermitra dengan kami untuk mengawal perubahan dari akar hingga pucuk kepemimpinan. Fokus layanan konsultasi kami mencakup:
                         </p>
                         
                         <div class="flex items-center gap-4 mb-6">
-                            <h4 class="text-sm font-bold text-primary tracking-widest uppercase">Fokus Program Kami</h4>
+                            <h4 class="text-sm font-bold text-primary tracking-widest uppercase">{{ __('Fokus Program Kami') }}</h4>
                             <div class="flex-1 h-[1px] bg-gray-200"></div>
                         </div>
                         
@@ -245,31 +245,31 @@
                                     <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center shrink-0">
                                         <x-icon name="lucide-briefcase" class="w-5 h-5 text-white" stroke-width="2" />
                                     </div>
-                                    <div><span class="font-bold text-[#141414]">Business Transformation</span> <span class="text-[#585857] text-sm ml-2">Mengelola transformasi skala besar.</span></div>
+                                    <div><span class="font-bold text-[#141414]">{{ __('Business Transformation') }}</span> <span class="text-[#585857] text-sm ml-2">{{ __('Mengelola transformasi skala besar.') }}</span></div>
                                 </li>
                                 <li class="flex items-center gap-4 p-4 hover:bg-gray-50 transition-colors rounded-xl">
                                     <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center shrink-0">
                                         <x-icon name="lucide-refresh-cw" class="w-5 h-5 text-white" stroke-width="2" />
                                     </div>
-                                    <div><span class="font-bold text-[#141414]">Change Management</span> <span class="text-[#585857] text-sm ml-2">Memastikan adopsi perubahan yang mulus.</span></div>
+                                    <div><span class="font-bold text-[#141414]">{{ __('Change Management') }}</span> <span class="text-[#585857] text-sm ml-2">{{ __('Memastikan adopsi perubahan yang mulus.') }}</span></div>
                                 </li>
                                 <li class="flex items-center gap-4 p-4 hover:bg-gray-50 transition-colors rounded-xl">
                                     <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center shrink-0">
                                         <x-icon name="lucide-building" class="w-5 h-5 text-white" stroke-width="2" />
                                     </div>
-                                    <div><span class="font-bold text-[#141414]">Organizational Development</span> <span class="text-[#585857] text-sm ml-2">Pembangunan struktur & budaya.</span></div>
+                                    <div><span class="font-bold text-[#141414]">{{ __('Organizational Development') }}</span> <span class="text-[#585857] text-sm ml-2">{{ __('Pembangunan struktur & budaya.') }}</span></div>
                                 </li>
                                 <li class="flex items-center gap-4 p-4 hover:bg-gray-50 transition-colors rounded-xl">
                                     <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center shrink-0">
                                         <x-icon name="lucide-target" class="w-5 h-5 text-white" stroke-width="2" />
                                     </div>
-                                    <div><span class="font-bold text-[#141414]">Strategy Execution</span> <span class="text-[#585857] text-sm ml-2">Penerjemahan strategi menjadi KPI.</span></div>
+                                    <div><span class="font-bold text-[#141414]">{{ __('Strategy Execution') }}</span> <span class="text-[#585857] text-sm ml-2">{{ __('Penerjemahan strategi menjadi KPI.') }}</span></div>
                                 </li>
                                 <li class="flex items-center gap-4 p-4 hover:bg-gray-50 transition-colors rounded-xl">
                                     <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center shrink-0">
                                         <x-icon name="lucide-git-merge" class="w-5 h-5 text-white" stroke-width="2" />
                                     </div>
-                                    <div><span class="font-bold text-[#141414]">Process Improvement</span> <span class="text-[#585857] text-sm ml-2">Optimalisasi dan efisiensi alur kerja.</span></div>
+                                    <div><span class="font-bold text-[#141414]">{{ __('Process Improvement') }}</span> <span class="text-[#585857] text-sm ml-2">{{ __('Optimalisasi dan efisiensi alur kerja.') }}</span></div>
                                 </li>
                             </ul>
                         </div>
@@ -291,7 +291,7 @@
                             <div class="w-12 h-12 rounded-full border border-white/30 flex items-center justify-center shrink-0">
                                 <x-icon name="lucide-compass" class="w-6 h-6 text-white" stroke-width="2" />
                             </div>
-                            <p class="text-sm leading-relaxed">Eksekusi strategi yang mulus dan berdampak jangka panjang.</p>
+                            <p class="text-sm leading-relaxed">{{ __('Eksekusi strategi yang mulus dan berdampak jangka panjang.') }}</p>
                         </div>
                     </div>
                 </div>
@@ -310,16 +310,16 @@
                     </div>
 
                     <div class="w-full lg:w-1/2 relative z-10" data-aos="fade-right">
-                        <span class="text-primary font-bold tracking-widest uppercase text-sm mb-3 block">Pilar 03</span>
+                        <span class="text-primary font-bold tracking-widest uppercase text-sm mb-3 block">{{ __('Pilar 03') }}</span>
                         <h2 class="text-4xl lg:text-5xl font-black text-[#141414] leading-[1.2] mb-6">
-                            Research & <br/><span class="text-primary">Assessment</span>
+                            {!! __('Research & <br/><span class="text-primary\">Assessment</span>') !!}
                         </h2>
                         <p class="text-[#585857] leading-relaxed mb-10 text-lg">
                             Sebelum organisasi menjalankan transformasi, diagnosis mendalam wajib dilakukan. Kami menyediakan alat ukur objektif.
                         </p>
                         
                         <div class="flex items-center gap-4 mb-6">
-                            <h4 class="text-sm font-bold text-primary tracking-widest uppercase">Fokus Program Kami</h4>
+                            <h4 class="text-sm font-bold text-primary tracking-widest uppercase">{{ __('Fokus Program Kami') }}</h4>
                             <div class="flex-1 h-[1px] bg-gray-200"></div>
                         </div>
                         
@@ -329,25 +329,25 @@
                                     <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center shrink-0">
                                         <x-icon name="lucide-clipboard-check" class="w-5 h-5 text-white" stroke-width="2" />
                                     </div>
-                                    <div><span class="font-bold text-[#141414]">Organization Assessment</span> <span class="text-[#585857] text-sm ml-2">Mengukur kematangan kapabilitas.</span></div>
+                                    <div><span class="font-bold text-[#141414]">{{ __('Organization Assessment') }}</span> <span class="text-[#585857] text-sm ml-2">{{ __('Mengukur kematangan kapabilitas.') }}</span></div>
                                 </li>
                                 <li class="flex items-center gap-4 p-4 hover:bg-gray-50 transition-colors rounded-xl">
                                     <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center shrink-0">
                                         <x-icon name="lucide-activity" class="w-5 h-5 text-white" stroke-width="2" />
                                     </div>
-                                    <div><span class="font-bold text-[#141414]">Agility Assessment</span> <span class="text-[#585857] text-sm ml-2">Analisis kecepatan adaptasi.</span></div>
+                                    <div><span class="font-bold text-[#141414]">{{ __('Agility Assessment') }}</span> <span class="text-[#585857] text-sm ml-2">{{ __('Analisis kecepatan adaptasi.') }}</span></div>
                                 </li>
                                 <li class="flex items-center gap-4 p-4 hover:bg-gray-50 transition-colors rounded-xl">
                                     <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center shrink-0">
                                         <x-icon name="lucide-search" class="w-5 h-5 text-white" stroke-width="2" />
                                     </div>
-                                    <div><span class="font-bold text-[#141414]">Organizational Diagnosis</span> <span class="text-[#585857] text-sm ml-2">Identifikasi akar masalah.</span></div>
+                                    <div><span class="font-bold text-[#141414]">{{ __('Organizational Diagnosis') }}</span> <span class="text-[#585857] text-sm ml-2">{{ __('Identifikasi akar masalah.') }}</span></div>
                                 </li>
                                 <li class="flex items-center gap-4 p-4 hover:bg-gray-50 transition-colors rounded-xl">
                                     <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center shrink-0">
                                         <x-icon name="lucide-bar-chart-2" class="w-5 h-5 text-white" stroke-width="2" />
                                     </div>
-                                    <div><span class="font-bold text-[#141414]">Strategic Recommendation</span> <span class="text-[#585857] text-sm ml-2">Panduan perbaikan berbasis data.</span></div>
+                                    <div><span class="font-bold text-[#141414]">{{ __('Strategic Recommendation') }}</span> <span class="text-[#585857] text-sm ml-2">{{ __('Panduan perbaikan berbasis data.') }}</span></div>
                                 </li>
                             </ul>
                         </div>
@@ -369,7 +369,7 @@
                             <div class="w-12 h-12 rounded-full border border-white/30 flex items-center justify-center shrink-0">
                                 <x-icon name="lucide-database" class="w-6 h-6 text-white" stroke-width="2" />
                             </div>
-                            <p class="text-sm leading-relaxed">Diagnosis yang akurat untuk transformasi yang sukses.</p>
+                            <p class="text-sm leading-relaxed">{{ __('Diagnosis yang akurat untuk transformasi yang sukses.') }}</p>
                         </div>
                     </div>
                 </div>
@@ -385,14 +385,14 @@
                 <h2 class="text-3xl lg:text-[44px] font-bold leading-[1.2] max-w-2xl mx-auto">
                     PASS Engagement Process
                 </h2>
-                <p class="text-primary-dark/70 mt-4 max-w-2xl mx-auto">Setiap fase disesuaikan dengan konteks organisasi dan tingkat kesiapan perubahan.</p>
+                <p class="text-primary-dark/70 mt-4 max-w-2xl mx-auto">{{ __('Setiap fase disesuaikan dengan konteks organisasi dan tingkat kesiapan perubahan.') }}</p>
             </div>
 
             <div class="grid md:grid-cols-4 gap-6">
                 <!-- SCAN -->
                 <div class="bg-white/5 border border-white/10 p-8 rounded-3xl relative" data-aos="fade-up" data-aos-delay="0">
                     <div class="text-5xl font-black text-primary-dark/10 absolute top-6 right-6">01</div>
-                    <h3 class="text-2xl font-black text-cta mb-4 uppercase tracking-wider relative z-10">Scan</h3>
+                    <h3 class="text-2xl font-black text-cta mb-4 uppercase tracking-wider relative z-10">{{ __('Scan') }}</h3>
                     <p class="text-primary-dark/80 leading-relaxed text-sm relative z-10">
                         Memahami kondisi dan tantangan organisasi. Memberikan kejelasan objective atas masalah nyata sebelum keputusan strategis diambil.
                     </p>
@@ -400,7 +400,7 @@
                 <!-- SHIFT -->
                 <div class="bg-white/5 border border-white/10 p-8 rounded-3xl relative" data-aos="fade-up" data-aos-delay="100">
                     <div class="text-5xl font-black text-primary-dark/10 absolute top-6 right-6">02</div>
-                    <h3 class="text-2xl font-black text-cta mb-4 uppercase tracking-wider relative z-10">Shift</h3>
+                    <h3 class="text-2xl font-black text-cta mb-4 uppercase tracking-wider relative z-10">{{ __('Shift') }}</h3>
                     <p class="text-primary-dark/80 leading-relaxed text-sm relative z-10">
                         Mengubah cara kerja dan kepemimpinan agar organisasi mampu mengambil keputusan adaptif terhadap prioritas.
                     </p>
@@ -408,7 +408,7 @@
                 <!-- SCALE -->
                 <div class="bg-white/5 border border-white/10 p-8 rounded-3xl relative" data-aos="fade-up" data-aos-delay="200">
                     <div class="text-5xl font-black text-primary-dark/10 absolute top-6 right-6">03</div>
-                    <h3 class="text-2xl font-black text-cta mb-4 uppercase tracking-wider relative z-10">Scale</h3>
+                    <h3 class="text-2xl font-black text-cta mb-4 uppercase tracking-wider relative z-10">{{ __('Scale') }}</h3>
                     <p class="text-primary-dark/80 leading-relaxed text-sm relative z-10">
                         Memastikan perubahan tidak berhenti di inisiatif, tetapi menjadi sistem kerja dan budaya organisasi yang berkelanjutan.
                     </p>
@@ -416,7 +416,7 @@
                 <!-- SCRIBE -->
                 <div class="bg-white/5 border border-white/10 p-8 rounded-3xl relative" data-aos="fade-up" data-aos-delay="300">
                     <div class="text-5xl font-black text-primary-dark/10 absolute top-6 right-6">04</div>
-                    <h3 class="text-2xl font-black text-cta mb-4 uppercase tracking-wider relative z-10">Scribe</h3>
+                    <h3 class="text-2xl font-black text-cta mb-4 uppercase tracking-wider relative z-10">{{ __('Scribe') }}</h3>
                     <p class="text-primary-dark/80 leading-relaxed text-sm relative z-10">
                         Mendokumentasikan dampak dan menyusun story of impact untuk pembelajaran dan pemangku kepentingan.
                     </p>
@@ -432,7 +432,7 @@
                 <h2 class="text-3xl lg:text-[44px] font-bold text-[#141414] leading-[1.2] max-w-2xl mx-auto">
                     Training Methodology
                 </h2>
-                <p class="text-[#585857] mt-4">Bagaimana PASS merancang program pelatihan dari awal hingga evaluasi hasil.</p>
+                <p class="text-[#585857] mt-4">{{ __('Bagaimana PASS merancang program pelatihan dari awal hingga evaluasi hasil.') }}</p>
             </div>
 
             <div class="relative">
@@ -445,32 +445,32 @@
                         <div class="w-24 h-24 mx-auto bg-primary rounded-2xl flex items-center justify-center mb-6 shadow-[0_10px_30px_rgba(15,159,164,0.3)]">
                             <x-icon name="lucide-search" class="w-10 h-10 text-primary-dark" />
                         </div>
-                        <h4 class="text-lg font-black text-[#141414] mb-3">Problem Identification</h4>
-                        <p class="text-sm text-[#585857]">Identifikasi masalah dan kebutuhan training peserta/organisasi melalui sesi empathize.</p>
+                        <h4 class="text-lg font-black text-[#141414] mb-3">{{ __('Problem Identification') }}</h4>
+                        <p class="text-sm text-[#585857]">{{ __('Identifikasi masalah dan kebutuhan training peserta/organisasi melalui sesi empathize.') }}</p>
                     </div>
                     <!-- Step 2 -->
                     <div class="relative z-10 text-center" data-aos="fade-up" data-aos-delay="100">
                         <div class="w-24 h-24 mx-auto bg-primary rounded-2xl flex items-center justify-center mb-6 shadow-[0_10px_30px_rgba(15,159,164,0.3)]">
                             <x-icon name="lucide-pen-tool" class="w-10 h-10 text-primary-dark" />
                         </div>
-                        <h4 class="text-lg font-black text-[#141414] mb-3">Action Development</h4>
-                        <p class="text-sm text-[#585857]">Penyusunan modul materi, metode, serta aktivitas training secara sistematis.</p>
+                        <h4 class="text-lg font-black text-[#141414] mb-3">{{ __('Action Development') }}</h4>
+                        <p class="text-sm text-[#585857]">{{ __('Penyusunan modul materi, metode, serta aktivitas training secara sistematis.') }}</p>
                     </div>
                     <!-- Step 3 -->
                     <div class="relative z-10 text-center" data-aos="fade-up" data-aos-delay="200">
                         <div class="w-24 h-24 mx-auto bg-primary rounded-2xl flex items-center justify-center mb-6 shadow-[0_10px_30px_rgba(15,159,164,0.3)]">
                             <x-icon name="lucide-play-circle" class="w-10 h-10 text-primary-dark" />
                         </div>
-                        <h4 class="text-lg font-black text-[#141414] mb-3">Program Implementation</h4>
-                        <p class="text-sm text-[#585857]">Implementasi interaktif & partisipatif (learning by doing), penekanan pada praktik dan refleksi.</p>
+                        <h4 class="text-lg font-black text-[#141414] mb-3">{{ __('Program Implementation') }}</h4>
+                        <p class="text-sm text-[#585857]">{{ __('Implementasi interaktif & partisipatif (learning by doing), penekanan pada praktik dan refleksi.') }}</p>
                     </div>
                     <!-- Step 4 -->
                     <div class="relative z-10 text-center" data-aos="fade-up" data-aos-delay="300">
                         <div class="w-24 h-24 mx-auto bg-primary rounded-2xl flex items-center justify-center mb-6 shadow-[0_10px_30px_rgba(15,159,164,0.3)]">
                             <x-icon name="lucide-clipboard-check" class="w-10 h-10 text-primary-dark" />
                         </div>
-                        <h4 class="text-lg font-black text-[#141414] mb-3">Evaluation</h4>
-                        <p class="text-sm text-[#585857]">Mengukur efektivitas melalui pre/post test, feedback evaluation, coaching, dan report.</p>
+                        <h4 class="text-lg font-black text-[#141414] mb-3">{{ __('Evaluation') }}</h4>
+                        <p class="text-sm text-[#585857]">{{ __('Mengukur efektivitas melalui pre/post test, feedback evaluation, coaching, dan report.') }}</p>
                     </div>
                 </div>
             </div>
@@ -484,39 +484,39 @@
                 <h2 class="text-3xl lg:text-[44px] font-bold text-[#141414] leading-[1.2] max-w-2xl mx-auto">
                     Featured Programs
                 </h2>
-                <p class="text-[#585857] mt-4">Topik-topik andalan untuk fondasi sistem dan pemikiran yang kuat.</p>
+                <p class="text-[#585857] mt-4">{{ __('Topik-topik andalan untuk fondasi sistem dan pemikiran yang kuat.') }}</p>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Program 1 -->
                 <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow group" data-aos="fade-up" data-aos-delay="0">
-                    <h3 class="text-xl font-bold text-[#141414] mb-2 group-hover:text-primary transition-colors">Leadership Agility</h3>
-                    <p class="text-sm text-[#585857]">Strategic execution in complex organizations, adaptive leadership, building feedback culture.</p>
+                    <h3 class="text-xl font-bold text-[#141414] mb-2 group-hover:text-primary transition-colors">{{ __('Leadership Agility') }}</h3>
+                    <p class="text-sm text-[#585857]">{{ __('Strategic execution in complex organizations, adaptive leadership, building feedback culture.') }}</p>
                 </div>
                 <!-- Program 2 -->
                 <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow group" data-aos="fade-up" data-aos-delay="100">
-                    <h3 class="text-xl font-bold text-[#141414] mb-2 group-hover:text-primary transition-colors">Business Agility</h3>
-                    <p class="text-sm text-[#585857]">Fundamentals for business, cross-functional collaboration, translating strategy into action.</p>
+                    <h3 class="text-xl font-bold text-[#141414] mb-2 group-hover:text-primary transition-colors">{{ __('Business Agility') }}</h3>
+                    <p class="text-sm text-[#585857]">{{ __('Fundamentals for business, cross-functional collaboration, translating strategy into action.') }}</p>
                 </div>
                 <!-- Program 3 -->
                 <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow group" data-aos="fade-up" data-aos-delay="200">
-                    <h3 class="text-xl font-bold text-[#141414] mb-2 group-hover:text-primary transition-colors">Design Thinking</h3>
-                    <p class="text-sm text-[#585857]">Humanity-centered innovation, solving complex problems with system & design thinking.</p>
+                    <h3 class="text-xl font-bold text-[#141414] mb-2 group-hover:text-primary transition-colors">{{ __('Design Thinking') }}</h3>
+                    <p class="text-sm text-[#585857]">{{ __('Humanity-centered innovation, solving complex problems with system & design thinking.') }}</p>
                 </div>
                 <!-- Program 4 -->
                 <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow group" data-aos="fade-up" data-aos-delay="300">
-                    <h3 class="text-xl font-bold text-[#141414] mb-2 group-hover:text-primary transition-colors">Communication</h3>
-                    <p class="text-sm text-[#585857]">Communication for execution, cross-team collaboration, managing self and others.</p>
+                    <h3 class="text-xl font-bold text-[#141414] mb-2 group-hover:text-primary transition-colors">{{ __('Communication') }}</h3>
+                    <p class="text-sm text-[#585857]">{{ __('Communication for execution, cross-team collaboration, managing self and others.') }}</p>
                 </div>
                 <!-- Program 5 -->
                 <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow group" data-aos="fade-up" data-aos-delay="400">
-                    <h3 class="text-xl font-bold text-[#141414] mb-2 group-hover:text-primary transition-colors">Productivity</h3>
-                    <p class="text-sm text-[#585857]">Agility sprint, learning by transforming, consistent performance management.</p>
+                    <h3 class="text-xl font-bold text-[#141414] mb-2 group-hover:text-primary transition-colors">{{ __('Productivity') }}</h3>
+                    <p class="text-sm text-[#585857]">{{ __('Agility sprint, learning by transforming, consistent performance management.') }}</p>
                 </div>
                 <!-- Program 6 -->
                 <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow group" data-aos="fade-up" data-aos-delay="500">
-                    <h3 class="text-xl font-bold text-[#141414] mb-2 group-hover:text-primary transition-colors">Soft Skill Certification</h3>
-                    <p class="text-sm text-[#585857]">Sertifikasi BNSP Skema Pemecahan Masalah, Kepemimpinan, dan Komunikasi Efektif.</p>
+                    <h3 class="text-xl font-bold text-[#141414] mb-2 group-hover:text-primary transition-colors">{{ __('Soft Skill Certification') }}</h3>
+                    <p class="text-sm text-[#585857]">{{ __('Sertifikasi BNSP Skema Pemecahan Masalah, Kepemimpinan, dan Komunikasi Efektif.') }}</p>
                 </div>
             </div>
         </div>
@@ -529,7 +529,7 @@
                 <h2 class="text-3xl lg:text-[44px] font-bold text-[#141414] leading-[1.2] max-w-2xl mx-auto">
                     Industries We Serve
                 </h2>
-                <p class="text-[#585857] mt-4">Dipercaya di berbagai sektor berskala nasional hingga multinasional.</p>
+                <p class="text-[#585857] mt-4">{{ __('Dipercaya di berbagai sektor berskala nasional hingga multinasional.') }}</p>
             </div>
 
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -537,49 +537,49 @@
                     <div class="w-20 h-20 rounded-full bg-primary flex items-center justify-center group-hover:bg-primary shadow-sm transition-all duration-300 group-hover:-translate-y-2">
                         <x-icon name="lucide-building" class="w-8 h-8 text-primary-dark transition-colors" />
                     </div>
-                    <span class="font-bold text-[#141414]">Government</span>
+                    <span class="font-bold text-[#141414]">{{ __('Government') }}</span>
                 </div>
                 <div class="flex flex-col items-center gap-4 group" data-aos="fade-up" data-aos-delay="50">
                     <div class="w-20 h-20 rounded-full bg-primary flex items-center justify-center group-hover:bg-primary shadow-sm transition-all duration-300 group-hover:-translate-y-2">
                         <x-icon name="lucide-factory" class="w-8 h-8 text-primary-dark transition-colors" />
                     </div>
-                    <span class="font-bold text-[#141414]">Manufacturing</span>
+                    <span class="font-bold text-[#141414]">{{ __('Manufacturing') }}</span>
                 </div>
                 <div class="flex flex-col items-center gap-4 group" data-aos="fade-up" data-aos-delay="100">
                     <div class="w-20 h-20 rounded-full bg-primary flex items-center justify-center group-hover:bg-primary shadow-sm transition-all duration-300 group-hover:-translate-y-2">
                         <x-icon name="lucide-radio-receiver" class="w-8 h-8 text-primary-dark transition-colors" />
                     </div>
-                    <span class="font-bold text-[#141414]">Telecommunication</span>
+                    <span class="font-bold text-[#141414]">{{ __('Telecommunication') }}</span>
                 </div>
                 <div class="flex flex-col items-center gap-4 group" data-aos="fade-up" data-aos-delay="150">
                     <div class="w-20 h-20 rounded-full bg-primary flex items-center justify-center group-hover:bg-primary shadow-sm transition-all duration-300 group-hover:-translate-y-2">
                         <x-icon name="lucide-landmark" class="w-8 h-8 text-primary-dark transition-colors" />
                     </div>
-                    <span class="font-bold text-[#141414]">Banking & Finance</span>
+                    <span class="font-bold text-[#141414]">{{ __('Banking & Finance') }}</span>
                 </div>
                 <div class="flex flex-col items-center gap-4 group" data-aos="fade-up" data-aos-delay="200">
                     <div class="w-20 h-20 rounded-full bg-primary flex items-center justify-center group-hover:bg-primary shadow-sm transition-all duration-300 group-hover:-translate-y-2">
                         <x-icon name="lucide-stethoscope" class="w-8 h-8 text-primary-dark transition-colors" />
                     </div>
-                    <span class="font-bold text-[#141414]">Healthcare</span>
+                    <span class="font-bold text-[#141414]">{{ __('Healthcare') }}</span>
                 </div>
                 <div class="flex flex-col items-center gap-4 group" data-aos="fade-up" data-aos-delay="250">
                     <div class="w-20 h-20 rounded-full bg-primary flex items-center justify-center group-hover:bg-primary shadow-sm transition-all duration-300 group-hover:-translate-y-2">
                         <x-icon name="lucide-graduation-cap" class="w-8 h-8 text-primary-dark transition-colors" />
                     </div>
-                    <span class="font-bold text-[#141414]">Education</span>
+                    <span class="font-bold text-[#141414]">{{ __('Education') }}</span>
                 </div>
                 <div class="flex flex-col items-center gap-4 group" data-aos="fade-up" data-aos-delay="300">
                     <div class="w-20 h-20 rounded-full bg-primary flex items-center justify-center group-hover:bg-primary shadow-sm transition-all duration-300 group-hover:-translate-y-2">
                         <x-icon name="lucide-sprout" class="w-8 h-8 text-primary-dark transition-colors" />
                     </div>
-                    <span class="font-bold text-[#141414]">Agriculture</span>
+                    <span class="font-bold text-[#141414]">{{ __('Agriculture') }}</span>
                 </div>
                 <div class="flex flex-col items-center gap-4 group" data-aos="fade-up" data-aos-delay="350">
                     <div class="w-20 h-20 rounded-full bg-primary flex items-center justify-center group-hover:bg-primary shadow-sm transition-all duration-300 group-hover:-translate-y-2">
                         <x-icon name="lucide-shopping-cart" class="w-8 h-8 text-primary-dark transition-colors" />
                     </div>
-                    <span class="font-bold text-[#141414]">Retail</span>
+                    <span class="font-bold text-[#141414]">{{ __('Retail') }}</span>
                 </div>
             </div>
         </div>

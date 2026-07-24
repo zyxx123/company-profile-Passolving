@@ -26,7 +26,7 @@
                 
                 <!-- Who We Are -->
                 <div data-aos="fade-right">
-                    <span class="text-cta font-bold tracking-widest uppercase text-sm mb-4 block">Who We Are</span>
+                    <span class="text-cta font-bold tracking-widest uppercase text-sm mb-4 block">{{ __('Who We Are') }}</span>
                     <h2 class="text-3xl lg:text-4xl font-bold text-[#141414] leading-[1.2] mb-6">
                         Konsultan Transformasi Berbasis Dampak
                     </h2>
@@ -47,8 +47,8 @@
 
                 <!-- Our Story -->
                 <div class="bg-[#F8FAFB] p-10 lg:p-12 rounded-[40px] border border-gray-100" data-aos="fade-left">
-                    <span class="text-cta font-bold tracking-widest uppercase text-sm mb-4 block">Our Story</span>
-                    <h3 class="text-2xl font-bold text-[#141414] mb-6">Lahir dari Tantangan Eksekusi</h3>
+                    <span class="text-cta font-bold tracking-widest uppercase text-sm mb-4 block">{{ __('Our Story') }}</span>
+                    <h3 class="text-2xl font-bold text-[#141414] mb-6">{{ __('Lahir dari Tantangan Eksekusi') }}</h3>
                     <p class="text-[#585857] leading-relaxed mb-6">
                         Sejarah kami bermula dari sebuah pola masalah yang terus berulang di banyak perusahaan: <em>gap</em> (kesenjangan) yang masif antara strategi di atas kertas dan eksekusi di lapangan. Banyak organisasi memiliki rencana hebat, namun gagal beradaptasi saat berbenturan dengan dinamika pasar.
                     </p>
@@ -118,7 +118,7 @@
                 <h2 class="text-3xl lg:text-[44px] font-bold text-[#141414] leading-[1.2] max-w-2xl mx-auto">
                     Our Core Values
                 </h2>
-                <p class="text-[#585857] mt-4">Prinsip dasar yang memandu setiap strategi dan interaksi kami.</p>
+                <p class="text-[#585857] mt-4">{{ __('Prinsip dasar yang memandu setiap strategi dan interaksi kami.') }}</p>
             </div>
 
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
@@ -127,35 +127,35 @@
                     <div class="w-16 h-16 mx-auto bg-primary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
                         <x-icon name="lucide-brain" class="w-8 h-8 text-primary group-hover:text-primary-dark transition-colors" />
                     </div>
-                    <h4 class="font-bold text-[#141414] mb-2">Empathy</h4>
+                    <h4 class="font-bold text-[#141414] mb-2">{{ __('Empathy') }}</h4>
                 </div>
                 <!-- Value 2 -->
                 <div class="bg-white p-6 lg:p-8 rounded-3xl border border-gray-100 shadow-sm text-center group hover:-translate-y-2 transition-transform duration-300" data-aos="fade-up" data-aos-delay="100">
                     <div class="w-16 h-16 mx-auto bg-primary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
                         <x-icon name="lucide-cog" class="w-8 h-8 text-primary group-hover:text-primary-dark transition-colors" />
                     </div>
-                    <h4 class="font-bold text-[#141414] mb-2">System Thinking</h4>
+                    <h4 class="font-bold text-[#141414] mb-2">{{ __('System Thinking') }}</h4>
                 </div>
                 <!-- Value 3 -->
                 <div class="bg-white p-6 lg:p-8 rounded-3xl border border-gray-100 shadow-sm text-center group hover:-translate-y-2 transition-transform duration-300" data-aos="fade-up" data-aos-delay="200">
                     <div class="w-16 h-16 mx-auto bg-primary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
                         <x-icon name="lucide-trending-up" class="w-8 h-8 text-primary group-hover:text-primary-dark transition-colors" />
                     </div>
-                    <h4 class="font-bold text-[#141414] mb-2">Result Oriented</h4>
+                    <h4 class="font-bold text-[#141414] mb-2">{{ __('Result Oriented') }}</h4>
                 </div>
                 <!-- Value 4 -->
                 <div class="bg-white p-6 lg:p-8 rounded-3xl border border-gray-100 shadow-sm text-center group hover:-translate-y-2 transition-transform duration-300" data-aos="fade-up" data-aos-delay="300">
                     <div class="w-16 h-16 mx-auto bg-primary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
                         <x-icon name="lucide-users" class="w-8 h-8 text-primary group-hover:text-primary-dark transition-colors" />
                     </div>
-                    <h4 class="font-bold text-[#141414] mb-2">Collaboration</h4>
+                    <h4 class="font-bold text-[#141414] mb-2">{{ __('Collaboration') }}</h4>
                 </div>
                 <!-- Value 5 -->
                 <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm text-center group hover:-translate-y-2 transition-transform duration-300 col-span-2 md:col-span-1 lg:col-span-1" data-aos="fade-up" data-aos-delay="400">
                     <div class="w-16 h-16 mx-auto bg-primary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
                         <x-icon name="lucide-rocket" class="w-8 h-8 text-primary group-hover:text-primary-dark transition-colors" />
                     </div>
-                    <h4 class="font-bold text-[#141414] mb-2">Continuous Improvement</h4>
+                    <h4 class="font-bold text-[#141414] mb-2">{{ __('Continuous Improvement') }}</h4>
                 </div>
             </div>
         </div>
@@ -300,7 +300,7 @@
                 <h2 class="text-3xl lg:text-[44px] font-bold text-[#141414] leading-[1.2] max-w-2xl mx-auto">
                     Company Journey
                 </h2>
-                <p class="text-[#585857] mt-4">Jejak langkah pertumbuhan dan dedikasi kami.</p>
+                <p class="text-[#585857] mt-4">{{ __('Jejak langkah pertumbuhan dan dedikasi kami.') }}</p>
             </div>
 
             <div class="max-w-5xl mx-auto relative pl-4 md:pl-0">

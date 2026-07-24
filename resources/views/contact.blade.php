@@ -48,7 +48,7 @@
 
         <div class="container relative z-10 mx-auto px-6 max-w-[1320px] text-center" data-aos="fade-up">
             <h1 class="text-[clamp(2.5rem,7vw,3.5rem)] font-black leading-[1.2] mb-4 max-w-4xl mx-auto uppercase text-white">
-                CONTACT US
+                {{ __('CONTACT US') }}
             </h1>
             
             <!-- Yellow Underline -->
@@ -58,10 +58,10 @@
             </div>
 
             <p class="text-white max-w-2xl mx-auto leading-relaxed text-lg lg:text-xl font-bold">
-                Mari Berkolaborasi untuk Masa Depan yang Lebih Baik
+                {{ __('Mari Berkolaborasi untuk Masa Depan yang Lebih Baik') }}
             </p>
             <p class="text-white/80 max-w-2xl mx-auto leading-relaxed mt-2 text-base">
-                Punya pertanyaan atau ingin berdiskusi lebih lanjut? Kami siap membantu Anda.
+                {{ __('Punya pertanyaan atau ingin berdiskusi lebih lanjut? Kami siap membantu Anda.') }}
             </p>
         </div>
     </section>
@@ -75,7 +75,7 @@
                 <div class="flex flex-col gap-6" data-aos="fade-right" data-aos-delay="300">
                     <!-- Info Card -->
                     <div class="bg-[#F8FAFB] p-6 lg:p-8 rounded-3xl border border-gray-100 shadow-sm">
-                        <h2 class="text-xl font-bold text-[#141414] mb-6">Informasi Kontak</h2>
+                        <h2 class="text-xl font-bold text-[#141414] mb-6">{{ __('Informasi Kontak') }}</h2>
 
                         <div class="space-y-6">
                             <div class="flex items-start gap-4 group">
@@ -83,7 +83,7 @@
                                     <x-icon name="lucide-map-pin" class="w-4 h-4 text-primary group-hover:text-primary-dark transition-colors" />
                                 </div>
                                 <div>
-                                    <h4 class="text-sm font-bold text-[#141414] mb-1">Kantor Pusat</h4>
+                                    <h4 class="text-sm font-bold text-[#141414] mb-1">{{ __('Kantor Pusat') }}</h4>
                                     <p class="text-xs text-[#585857] leading-relaxed">{!! nl2br(e(\App\Models\SiteSetting::get('address', 'Jl. P.P.A No.24, RT.5/RW.4, Ceger, Kec. Cipayung, Kota Jakarta Timur 13820'))) !!}</p>
                                 </div>
                             </div>
@@ -92,7 +92,7 @@
                                     <x-icon name="lucide-mail" class="w-4 h-4 text-primary group-hover:text-primary-dark transition-colors" />
                                 </div>
                                 <div>
-                                    <h4 class="text-sm font-bold text-[#141414] mb-1">Email</h4>
+                                    <h4 class="text-sm font-bold text-[#141414] mb-1">{{ __('Email') }}</h4>
                                     <p class="text-xs text-[#585857]"><a href="mailto:{{ \App\Models\SiteSetting::get('email', 'bersama@passolving.com') }}" class="hover:text-primary transition-colors">{{ \App\Models\SiteSetting::get('email', 'bersama@passolving.com') }}</a></p>
                                 </div>
                             </div>
@@ -101,7 +101,7 @@
                                     <x-icon name="lucide-phone" class="w-4 h-4 text-primary group-hover:text-primary-dark transition-colors" />
                                 </div>
                                 <div>
-                                    <h4 class="text-sm font-bold text-[#141414] mb-1">WhatsApp</h4>
+                                    <h4 class="text-sm font-bold text-[#141414] mb-1">{{ __('WhatsApp') }}</h4>
                                     <p class="text-xs text-[#585857]"><a href="https://wa.me/{{ preg_replace('/[^0-9]/', '', \App\Models\SiteSetting::get('phone', '628979515205')) }}" target="_blank" class="hover:text-primary transition-colors">{{ \App\Models\SiteSetting::get('phone', '+62 897 9515 205') }}</a></p>
                                 </div>
                             </div>
@@ -110,7 +110,7 @@
                                     <x-icon name="lucide-clock" class="w-4 h-4 text-primary group-hover:text-primary-dark transition-colors" />
                                 </div>
                                 <div>
-                                    <h4 class="text-sm font-bold text-[#141414] mb-1">Jam Operasional</h4>
+                                    <h4 class="text-sm font-bold text-[#141414] mb-1">{{ __('Jam Operasional') }}</h4>
                                     <p class="text-xs text-[#585857]">{{ \App\Models\SiteSetting::get('operational_hours', 'Senin - Jumat, 09:00 - 17:00 WIB') }}</p>
                                 </div>
                             </div>
