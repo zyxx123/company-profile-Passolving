@@ -79,7 +79,7 @@
                                 <x-icon name="lucide-users" class="w-6 h-6 text-cta" />
                             </div>
                             <div>
-                                <h4 class="text-2xl font-bold leading-none mb-1">500+</h4>
+                                <h4 class="text-2xl font-bold leading-none mb-1">100+</h4>
                                 <p class="text-xs text-white/70 leading-tight">{!! __('Organizations<br/>Empowered') !!}</p>
                             </div>
                         </div>
@@ -88,7 +88,7 @@
                                 <x-icon name="lucide-bar-chart-2" class="w-6 h-6 text-cta" />
                             </div>
                             <div>
-                                <h4 class="text-2xl font-bold leading-none mb-1">20+</h4>
+                                <h4 class="text-2xl font-bold leading-none mb-1">6+</h4>
                                 <p class="text-xs text-white/70 leading-tight">{!! __('Years of<br/>Experience') !!}</p>
                             </div>
                         </div>
