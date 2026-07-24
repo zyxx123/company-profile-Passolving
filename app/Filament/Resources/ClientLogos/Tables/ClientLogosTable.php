@@ -16,7 +16,8 @@ class ClientLogosTable
     {
         return $table
             ->columns([
-                ImageColumn::make('logo_path'),
+                ImageColumn::make('logo_path')
+                    ->checkFileExistence(false),
                 TextColumn::make('name')
                     ->searchable(),
                 IconColumn::make('is_active')
