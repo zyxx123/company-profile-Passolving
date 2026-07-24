@@ -84,7 +84,7 @@
                                 </div>
                                 <div>
                                     <h4 class="text-sm font-bold text-[#141414] mb-1">Kantor Pusat</h4>
-                                    <p class="text-xs text-[#585857] leading-relaxed">Jl. P.P.A No.24, RT.5/RW.4, Ceger,<br/>Kec. Cipayung, Kota Jakarta Timur 13820</p>
+                                    <p class="text-xs text-[#585857] leading-relaxed">{!! nl2br(e(\App\Models\SiteSetting::get('address', 'Jl. P.P.A No.24, RT.5/RW.4, Ceger, Kec. Cipayung, Kota Jakarta Timur 13820'))) !!}</p>
                                 </div>
                             </div>
                             <div class="flex items-start gap-4 group">
@@ -93,7 +93,7 @@
                                 </div>
                                 <div>
                                     <h4 class="text-sm font-bold text-[#141414] mb-1">Email</h4>
-                                    <p class="text-xs text-[#585857]"><a href="mailto:bersama@passolving.com" class="hover:text-primary transition-colors">bersama@passolving.com</a></p>
+                                    <p class="text-xs text-[#585857]"><a href="mailto:{{ \App\Models\SiteSetting::get('email', 'bersama@passolving.com') }}" class="hover:text-primary transition-colors">{{ \App\Models\SiteSetting::get('email', 'bersama@passolving.com') }}</a></p>
                                 </div>
                             </div>
                             <div class="flex items-start gap-4 group">
@@ -102,7 +102,7 @@
                                 </div>
                                 <div>
                                     <h4 class="text-sm font-bold text-[#141414] mb-1">WhatsApp</h4>
-                                    <p class="text-xs text-[#585857]"><a href="https://wa.me/628979515205" target="_blank" class="hover:text-primary transition-colors">+62 897 9515 205</a></p>
+                                    <p class="text-xs text-[#585857]"><a href="https://wa.me/{{ preg_replace('/[^0-9]/', '', \App\Models\SiteSetting::get('phone', '628979515205')) }}" target="_blank" class="hover:text-primary transition-colors">{{ \App\Models\SiteSetting::get('phone', '+62 897 9515 205') }}</a></p>
                                 </div>
                             </div>
                             <div class="flex items-start gap-4 group">
@@ -111,7 +111,7 @@
                                 </div>
                                 <div>
                                     <h4 class="text-sm font-bold text-[#141414] mb-1">Jam Operasional</h4>
-                                    <p class="text-xs text-[#585857]">Senin - Jumat, 09:00 - 17:00 WIB</p>
+                                    <p class="text-xs text-[#585857]">{{ \App\Models\SiteSetting::get('operational_hours', 'Senin - Jumat, 09:00 - 17:00 WIB') }}</p>
                                 </div>
                             </div>
                         </div>
@@ -119,7 +119,7 @@
 
                     <!-- Map Card -->
                     <div class="h-[250px] lg:h-[300px] rounded-3xl overflow-hidden shadow-sm border border-gray-100 bg-gray-200">
-                        <iframe src="https://maps.google.com/maps?q=-6.3182419,106.8956369&t=&z=16&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="border-0"></iframe>
+                        <iframe src="{{ \App\Models\SiteSetting::get('maps_embed_url', 'https://maps.google.com/maps?q=-6.3182419,106.8956369&t=&z=16&ie=UTF8&iwloc=&output=embed') }}" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="border-0"></iframe>
                     </div>
                 </div>
 

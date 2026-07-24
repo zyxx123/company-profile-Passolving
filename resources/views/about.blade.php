@@ -309,55 +309,26 @@
                 <!-- Timeline Line Mobile -->
                 <div class="absolute left-[16px] top-0 h-full w-1 bg-gray-200 md:hidden"></div>
 
-                <div class="grid md:grid-cols-4 gap-10 md:gap-6 relative z-10">
+                <div class="grid md:grid-cols-{{ $journeys->count() }} gap-10 md:gap-6 relative z-10">
                     
-                    <!-- 2023 -->
-                    <div class="group flex flex-row md:flex-col items-start md:items-center text-left md:text-center" data-aos="fade-up" data-aos-delay="0">
-                        <div class="w-8 h-8 bg-gray-200 shrink-0 rounded-full flex items-center justify-center mb-0 md:mb-6 group-hover:bg-primary transition-colors border-4 border-white shadow-sm relative z-10 -ml-4 md:ml-0">
-                            <div class="w-3 h-3 bg-white rounded-full"></div>
-                        </div>
-                        <div class="ml-6 md:ml-0 mt-0 md:mt-2">
-                            <h4 class="text-xl font-black text-primary mb-1">2023</h4>
-                            <h5 class="font-bold text-[#141414] mb-2">PASS Established</h5>
-                            <p class="text-sm text-[#585857]">Lahir di Jakarta di bawah PT Palsindo Utama.</p>
-                        </div>
-                    </div>
-
-                    <!-- Expansion -->
-                    <div class="group flex flex-row md:flex-col items-start md:items-center text-left md:text-center" data-aos="fade-up" data-aos-delay="100">
-                        <div class="w-8 h-8 bg-gray-200 shrink-0 rounded-full flex items-center justify-center mb-0 md:mb-6 group-hover:bg-primary transition-colors border-4 border-white shadow-sm relative z-10 -ml-4 md:ml-0">
-                            <div class="w-3 h-3 bg-white rounded-full"></div>
-                        </div>
-                        <div class="ml-6 md:ml-0 mt-0 md:mt-2">
-                            <h4 class="text-xl font-black text-primary mb-1">Expansion</h4>
-                            <h5 class="font-bold text-[#141414] mb-2">National Projects</h5>
-                            <p class="text-sm text-[#585857]">Kepercayaan mengelola project skala nasional.</p>
-                        </div>
-                    </div>
-
-                    <!-- Cross Industry -->
-                    <div class="group flex flex-row md:flex-col items-start md:items-center text-left md:text-center" data-aos="fade-up" data-aos-delay="200">
-                        <div class="w-8 h-8 bg-gray-200 shrink-0 rounded-full flex items-center justify-center mb-0 md:mb-6 group-hover:bg-primary transition-colors border-4 border-white shadow-sm relative z-10 -ml-4 md:ml-0">
-                            <div class="w-3 h-3 bg-white rounded-full"></div>
-                        </div>
-                        <div class="ml-6 md:ml-0 mt-0 md:mt-2">
-                            <h4 class="text-xl font-black text-primary mb-1">Growth</h4>
-                            <h5 class="font-bold text-[#141414] mb-2">Cross Industry</h5>
-                            <p class="text-sm text-[#585857]">Ekspansi layanan ke berbagai vertikal industri.</p>
-                        </div>
-                    </div>
-
-                    <!-- Today -->
-                    <div class="group flex flex-row md:flex-col items-start md:items-center text-left md:text-center" data-aos="fade-up" data-aos-delay="300">
+                    @foreach($journeys as $journey)
+                    <div class="group flex flex-row md:flex-col items-start md:items-center text-left md:text-center" data-aos="fade-up" data-aos-delay="{{ $loop->index * 100 }}">
+                        @if($journey->is_current)
                         <div class="w-8 h-8 bg-cta shrink-0 rounded-full flex items-center justify-center mb-0 md:mb-6 border-4 border-white shadow-md animate-pulse relative z-10 -ml-4 md:ml-0">
                             <div class="w-3 h-3 bg-white rounded-full"></div>
                         </div>
+                        @else
+                        <div class="w-8 h-8 bg-gray-200 shrink-0 rounded-full flex items-center justify-center mb-0 md:mb-6 group-hover:bg-primary transition-colors border-4 border-white shadow-sm relative z-10 -ml-4 md:ml-0">
+                            <div class="w-3 h-3 bg-white rounded-full"></div>
+                        </div>
+                        @endif
                         <div class="ml-6 md:ml-0 mt-0 md:mt-2">
-                            <h4 class="text-xl font-black text-cta mb-1">Today</h4>
-                            <h5 class="font-bold text-[#141414] mb-2">Impact Realization</h5>
-                            <p class="text-sm text-[#585857]">Melanjutkan misi transformasi berdampak bagi Indonesia.</p>
+                            <h4 class="text-xl font-black {{ $journey->is_current ? 'text-cta' : 'text-primary' }} mb-1">{{ $journey->year }}</h4>
+                            <h5 class="font-bold text-[#141414] mb-2">{{ $journey->title }}</h5>
+                            <p class="text-sm text-[#585857]">{{ $journey->description }}</p>
                         </div>
                     </div>
+                    @endforeach
 
                 </div>
             </div>

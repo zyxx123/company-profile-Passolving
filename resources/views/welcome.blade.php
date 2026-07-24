@@ -233,46 +233,21 @@
                  @touchmove="mousemove($event)"
                  class="no-scrollbar flex items-center gap-12 lg:gap-16 overflow-x-hidden cursor-grab active:cursor-grabbing w-full select-none"
                  style="display: flex; flex-wrap: nowrap;">
-                @php
-                    $organizations = [
-                        ['name' => 'Heartspeaks Indonesia', 'logo' => 'Heartspeaks Indonesia.webp'], 
-                        ['name' => 'PDMA-Indonesia', 'logo' => 'PDMA-Indonesia.webp'], 
-                        ['name' => 'AIESEC', 'logo' => 'AIESEC-Logo.webp'], 
-                        ['name' => 'Solopos Media Group', 'logo' => 'Solopos Media Group.webp'],
-                        ['name' => 'Indosat Ooredoo Hutchinson', 'logo' => 'Indosat Ooredoo.webp'], 
-                        ['name' => 'Adicipta Inovasi Teknologi', 'logo' => 'Adicipta Inovasi Teknologi.webp'], 
-                        ['name' => 'Kemenkes', 'logo' => 'Kemenkes.webp'],
-                        ['name' => 'LKPP', 'logo' => 'LKPP.webp'], 
-                        ['name' => 'Biro Klasifikasi Indonesia', 'logo' => 'Biro Klasifikasi Indonesia.webp'], 
-                        ['name' => 'Otoritas Jasa Keuangan (OJK) Indonesia', 'logo' => 'Otoritas Jasa Keuangan.webp'],
-                        ['name' => 'Pos Indonesia', 'logo' => 'Pos Indonesia.webp'], 
-                        ['name' => 'BNI Tbk', 'logo' => 'BNI Tbk.webp'], 
-                        ['name' => 'Asuransi Tugu Pratama Ind Tbk', 'logo' => 'Asuransi Tugu Pratama.webp'],
-                        ['name' => 'Pelindo Solusi Logistik', 'logo' => 'PT PELINDO SOLUSI LOGISTIK.webp'], 
-                        ['name' => 'UNPAD', 'logo' => 'UNPAD.webp'], 
-                        ['name' => 'FTUI', 'logo' => 'FTUI.webp'], 
-                        ['name' => 'IKIGAI Consulting', 'logo' => 'IKIGAI Consulting.webp'],
-                        ['name' => 'BDO Indonesia', 'logo' => 'BDO Indonesia.webp'], 
-                        ['name' => 'Al Aaren Food Bahrain', 'logo' => 'Al Aaren Food Bahrain.webp'], 
-                        ['name' => 'DataHen Canada', 'logo' => 'DataHen Canada.webp']
-                    ];
-                @endphp
-                
                 <!-- Set 1 -->
-                @foreach($organizations as $org)
-                    @if($org['logo'] && file_exists(public_path('images/clients/' . $org['logo'])))
-                        <img src="{{ asset('images/clients/' . $org['logo']) }}" alt="{{ $org['name'] }}" class="h-10 lg:h-12 w-auto object-contain" title="{{ $org['name'] }}" loading="lazy">
+                @foreach($clientLogos as $org)
+                    @if($org->logo_path && file_exists(public_path('images/clients/' . $org->logo_path)))
+                        <img src="{{ asset('images/clients/' . $org->logo_path) }}" alt="{{ $org->name }}" class="h-10 lg:h-12 w-auto object-contain" title="{{ $org->name }}" loading="lazy">
                     @else
-                        <h3 class="text-xl lg:text-2xl font-black text-gray-500 whitespace-nowrap" title="{{ $org['name'] }}">{{ $org['name'] }}</h3>
+                        <h3 class="text-xl lg:text-2xl font-black text-gray-500 whitespace-nowrap" title="{{ $org->name }}">{{ $org->name }}</h3>
                     @endif
                 @endforeach
                 
                 <!-- Set 2 (Duplicate for infinite scroll loop) -->
-                @foreach($organizations as $org)
-                    @if($org['logo'] && file_exists(public_path('images/clients/' . $org['logo'])))
-                        <img src="{{ asset('images/clients/' . $org['logo']) }}" alt="{{ $org['name'] }}" class="h-10 lg:h-12 w-auto object-contain" title="{{ $org['name'] }}" loading="lazy">
+                @foreach($clientLogos as $org)
+                    @if($org->logo_path && file_exists(public_path('images/clients/' . $org->logo_path)))
+                        <img src="{{ asset('images/clients/' . $org->logo_path) }}" alt="{{ $org->name }}" class="h-10 lg:h-12 w-auto object-contain" title="{{ $org->name }}" loading="lazy">
                     @else
-                        <h3 class="text-xl lg:text-2xl font-black text-gray-500 whitespace-nowrap" title="{{ $org['name'] }}">{{ $org['name'] }}</h3>
+                        <h3 class="text-xl lg:text-2xl font-black text-gray-500 whitespace-nowrap" title="{{ $org->name }}">{{ $org->name }}</h3>
                     @endif
                 @endforeach
             </div>
@@ -496,45 +471,16 @@
             <div class="bg-white rounded-[32px] p-12 shadow-sm border border-primary/10" data-aos="zoom-in">
                 <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:divide-x divide-gray-100">
                     
-                    <!-- Stat 1 -->
+                    @foreach($statistics as $stat)
                     <div class="text-center px-4" 
-                         x-data="{ count: 0, target: 150, started: false }" 
-                         x-init="let observer = new IntersectionObserver(e => { if(e[0].isIntersecting && !started) { started = true; let t = setInterval(() => { if(count < target) count += 3; else { count = target; clearInterval(t); } }, 30); } }); observer.observe($el);">
+                         x-data="{ count: 0, target: {{ $stat->value }}, started: false }" 
+                         x-init="let step = Math.max(1, Math.ceil(target / 50)); let observer = new IntersectionObserver(e => { if(e[0].isIntersecting && !started) { started = true; let t = setInterval(() => { if(count < target) count += step; else { count = target; clearInterval(t); } }, 30); } }); observer.observe($el);">
                         <h3 class="text-4xl lg:text-5xl font-black text-primary mb-2 flex items-center justify-center">
-                            <span x-text="count">0</span>+
+                            <span x-text="count">0</span>{{ $stat->suffix }}
                         </h3>
-                        <p class="text-sm font-bold text-[#585857] uppercase tracking-widest mt-2">{{ __('Projects') }}</p>
+                        <p class="text-sm font-bold text-[#585857] uppercase tracking-widest mt-2">{{ __($stat->label) }}</p>
                     </div>
-                    
-                    <!-- Stat 2 -->
-                    <div class="text-center px-4"
-                         x-data="{ count: 0, target: 50, started: false }" 
-                         x-init="let observer = new IntersectionObserver(e => { if(e[0].isIntersecting && !started) { started = true; let t = setInterval(() => { if(count < target) count += 1; else { count = target; clearInterval(t); } }, 30); } }); observer.observe($el);">
-                        <h3 class="text-4xl lg:text-5xl font-black text-primary mb-2 flex items-center justify-center">
-                            <span x-text="count">0</span>+
-                        </h3>
-                        <p class="text-sm font-bold text-[#585857] uppercase tracking-widest mt-2">{{ __('Clients') }}</p>
-                    </div>
-                    
-                    <!-- Stat 3 -->
-                    <div class="text-center px-4"
-                         x-data="{ count: 0, target: 98, started: false }" 
-                         x-init="let observer = new IntersectionObserver(e => { if(e[0].isIntersecting && !started) { started = true; let t = setInterval(() => { if(count < target) count += 2; else { count = target; clearInterval(t); } }, 30); } }); observer.observe($el);">
-                        <h3 class="text-4xl lg:text-5xl font-black text-primary mb-2 flex items-center justify-center">
-                            <span x-text="count">0</span>%
-                        </h3>
-                        <p class="text-sm font-bold text-[#585857] uppercase tracking-widest mt-2">{{ __('Satisfaction') }}</p>
-                    </div>
-                    
-                    <!-- Stat 4 -->
-                    <div class="text-center px-4"
-                         x-data="{ count: 0, target: 12, started: false }" 
-                         x-init="let observer = new IntersectionObserver(e => { if(e[0].isIntersecting && !started) { started = true; let t = setInterval(() => { if(count < target) count += 1; else { count = target; clearInterval(t); } }, 100); } }); observer.observe($el);">
-                        <h3 class="text-4xl lg:text-5xl font-black text-primary mb-2 flex items-center justify-center">
-                            <span x-text="count">0</span>
-                        </h3>
-                        <p class="text-sm font-bold text-[#585857] uppercase tracking-widest mt-2">{{ __('Experts') }}</p>
-                    </div>
+                    @endforeach
 
                 </div>
             </div>
@@ -552,47 +498,20 @@
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
-                <!-- Testimonial 1 -->
-                <div class="bg-white p-10 rounded-3xl shadow-sm border border-gray-100 relative" data-aos="fade-up" data-aos-delay="0">
-                    <x-icon name="lucide-quote" class="w-12 h-12 text-primary/10 absolute top-8 left-8" />
+                @foreach($testimonials as $testimonial)
+                <div class="{{ $testimonial->is_featured ? 'bg-primary' : 'bg-white border border-gray-100' }} p-10 rounded-3xl shadow-sm relative" data-aos="fade-up" data-aos-delay="{{ $loop->index * 100 }}">
+                    <x-icon name="lucide-quote" class="w-12 h-12 {{ $testimonial->is_featured ? 'text-primary-dark/10' : 'text-primary/10' }} absolute top-8 left-8" />
                     <div class="relative z-10">
-                        <p class="text-[#141414] font-medium text-lg leading-relaxed italic mb-8 mt-4">
-                            "{{ __('Apa yang harus dilakukan, langsung dipraktekkan! Agile-Design Thinking dari PASS berbeda dari yang biasanya.') }}"
+                        <p class="{{ $testimonial->is_featured ? 'text-primary-dark' : 'text-[#141414]' }} font-medium text-lg leading-relaxed italic mb-8 mt-4">
+                            "{{ $testimonial->quote }}"
                         </p>
                         <div>
-                            <h4 class="font-bold text-[#141414]">{{ __('Manager Retail Chain') }}</h4>
-                            <p class="text-sm text-primary">{{ __('Indonesia') }}</p>
+                            <h4 class="font-bold {{ $testimonial->is_featured ? 'text-primary-dark' : 'text-[#141414]' }}">{{ $testimonial->author_name }}</h4>
+                            <p class="text-sm {{ $testimonial->is_featured ? 'text-cta' : 'text-primary' }}">{{ $testimonial->country }}</p>
                         </div>
                     </div>
                 </div>
-
-                <!-- Testimonial 2 -->
-                <div class="bg-primary p-10 rounded-3xl shadow-sm relative" data-aos="fade-up" data-aos-delay="100">
-                    <x-icon name="lucide-quote" class="w-12 h-12 text-primary-dark/10 absolute top-8 left-8" />
-                    <div class="relative z-10">
-                        <p class="text-primary-dark font-medium text-lg leading-relaxed italic mb-8 mt-4">
-                            "{{ __('PASSolving membantu kami melihat realita dengan objektif dan memberikan solusi yang tepat.') }}"
-                        </p>
-                        <div>
-                            <h4 class="font-bold text-primary-dark">{{ __('Founder Beauty Clinic') }}</h4>
-                            <p class="text-sm text-cta">{{ __('Indonesia') }}</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonial 3 -->
-                <div class="bg-white p-10 rounded-3xl shadow-sm border border-gray-100 relative" data-aos="fade-up" data-aos-delay="200">
-                    <x-icon name="lucide-quote" class="w-12 h-12 text-primary/10 absolute top-8 left-8" />
-                    <div class="relative z-10">
-                        <p class="text-[#141414] font-medium text-lg leading-relaxed italic mb-8 mt-4">
-                            "{{ __('Tim PASS berisi profesional berpengalaman dengan solusi implementatif dalam bentuk report yang langsung berdampak pada pengembangan bisnis.') }}"
-                        </p>
-                        <div>
-                            <h4 class="font-bold text-[#141414]">{{ __('Founder Food Processing Mfr') }}</h4>
-                            <p class="text-sm text-primary">{{ __('Bahrain') }}</p>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
             
             <div class="text-center mt-12" data-aos="fade-up" data-aos-delay="300">

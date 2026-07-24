@@ -3,11 +3,18 @@
 use Illuminate\Support\Facades\Route;
 use App\Models\Service;
 use App\Models\Portfolio;
+use App\Models\Testimonial;
+use App\Models\ClientLogo;
+use App\Models\CompanyStatistic;
+use App\Models\CompanyJourney;
 
 Route::get('/', function () {
     return view('welcome', [
         'services' => Service::take(5)->get(),
         'portfolios' => Portfolio::take(3)->get(),
+        'testimonials' => Testimonial::orderBy('sort_order')->take(3)->get(),
+        'clientLogos' => ClientLogo::where('is_active', true)->orderBy('sort_order')->get(),
+        'statistics' => CompanyStatistic::orderBy('sort_order')->get(),
     ]);
 });
 
@@ -29,7 +36,9 @@ Route::get('/portfolio/{slug}', function ($slug) {
 });
 
 Route::get('/about', function () {
-    return view('about');
+    return view('about', [
+        'journeys' => CompanyJourney::orderBy('sort_order')->get(),
+    ]);
 });
 
 Route::get('/contact', function () {
