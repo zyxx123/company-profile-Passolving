@@ -34,7 +34,7 @@
                 <h4 class="font-bold text-base mb-4 text-primary-dark/90">Navigasi</h4>
                 <ul class="space-y-3">
                     <li><a href="/" wire:navigate class="text-primary-dark/80 hover:text-cta transition-colors flex items-center group"><span class="mr-2 text-cta transition-transform group-hover:translate-x-1">›</span> Home</a></li>
-                    <li><a href="/services" wire:navigate class="text-primary-dark/80 hover:text-cta transition-colors flex items-center group"><span class="mr-2 text-cta transition-transform group-hover:translate-x-1">›</span> Service</a></li>
+                    <li><a href="/services" wire:navigate class="text-primary-dark/80 hover:text-cta transition-colors flex items-center group"><span class="mr-2 text-cta transition-transform group-hover:translate-x-1">›</span> Services</a></li>
                     <li><a href="/portfolio" wire:navigate class="text-primary-dark/80 hover:text-cta transition-colors flex items-center group"><span class="mr-2 text-cta transition-transform group-hover:translate-x-1">›</span> Portfolio</a></li>
                     <li><a href="/about" wire:navigate class="text-primary-dark/80 hover:text-cta transition-colors flex items-center group"><span class="mr-2 text-cta transition-transform group-hover:translate-x-1">›</span> About</a></li>
                     <li><a href="/contact" wire:navigate class="text-primary-dark/80 hover:text-cta transition-colors flex items-center group"><span class="mr-2 text-cta transition-transform group-hover:translate-x-1">›</span> Contact</a></li>

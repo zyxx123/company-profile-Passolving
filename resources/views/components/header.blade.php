@@ -23,7 +23,7 @@
             <!-- Desktop Nav -->
             <nav class="hidden lg:flex items-center space-x-6 xl:space-x-8">
                 <x-ui.nav-link href="/" :active="request()->is('/')">{{ __('Home') }}</x-ui.nav-link>
-                <x-ui.nav-link href="/services" :active="request()->is('services*')">{{ __('Service') }}</x-ui.nav-link>
+                <x-ui.nav-link href="/services" :active="request()->is('services*')">{{ __('Services') }}</x-ui.nav-link>
                 <x-ui.nav-link href="/portfolio" :active="request()->is('portfolio*')">{{ __('Portfolio') }}</x-ui.nav-link>
                 <x-ui.nav-link href="/about" :active="request()->is('about*')">{{ __('About') }}</x-ui.nav-link>
                 <x-ui.nav-link href="/contact" :active="request()->is('contact*')">{{ __('Contact') }}</x-ui.nav-link>
@@ -111,7 +111,7 @@
                             <div class="relative mt-6 flex-1 px-6 sm:px-6">
                                 <nav class="space-y-6 flex flex-col mt-4">
                                     <a href="/" wire:navigate class="text-xl font-bold {{ request()->is('/') ? 'text-primary' : 'text-[#141414]' }} hover:text-primary transition-colors">{{ __('Home') }}</a>
-                                    <a href="/services" wire:navigate class="text-xl font-bold {{ request()->is('services*') ? 'text-primary' : 'text-[#141414]' }} hover:text-primary transition-colors flex items-center justify-between">{{ __('Service') }} <x-icon name="lucide-chevron-right" class="w-5 h-5 text-gray-400"/></a>
+                                    <a href="/services" wire:navigate class="text-xl font-bold {{ request()->is('services*') ? 'text-primary' : 'text-[#141414]' }} hover:text-primary transition-colors flex items-center justify-between">{{ __('Services') }}</a>
                                     <a href="/portfolio" wire:navigate class="text-xl font-bold {{ request()->is('portfolio*') ? 'text-primary' : 'text-[#141414]' }} hover:text-primary transition-colors">{{ __('Portfolio') }}</a>
                                     <a href="/about" wire:navigate class="text-xl font-bold {{ request()->is('about*') ? 'text-primary' : 'text-[#141414]' }} hover:text-primary transition-colors">{{ __('About') }}</a>
                                     <a href="/contact" wire:navigate class="text-xl font-bold {{ request()->is('contact*') ? 'text-primary' : 'text-[#141414]' }} hover:text-primary transition-colors">{{ __('Contact') }}</a>
