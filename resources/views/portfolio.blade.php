@@ -317,34 +317,7 @@
                 <!-- Scrollable Container -->
                 <div id="clients-scroll" class="flex items-center gap-12 md:gap-24 overflow-x-auto hide-scroll snap-x snap-mandatory pb-4 px-8" style="cursor: grab;" onmousedown="this.style.cursor='grabbing'" onmouseup="this.style.cursor='grab'" onmouseleave="this.style.cursor='grab'">
                     @php
-                        $organizations = [
-                            ['name' => 'BNI Tbk', 'logo' => 'BNI Tbk.webp'], 
-                            ['name' => 'Otoritas Jasa Keuangan (OJK) Indonesia', 'logo' => 'Otoritas Jasa Keuangan.webp'],
-                            ['name' => 'Kemenkes', 'logo' => 'Kemenkes.webp'],
-                            ['name' => 'Pelindo Solusi Logistik', 'logo' => 'PT PELINDO SOLUSI LOGISTIK.webp'], 
-                            ['name' => 'Indosat Ooredoo Hutchinson', 'logo' => 'Indosat Ooredoo.webp'], 
-                            ['name' => 'LKPP', 'logo' => 'LKPP.webp'], 
-                            ['name' => 'ITB', 'logo' => 'ITB.webp'], 
-                            ['name' => 'UNPAD', 'logo' => 'UNPAD.webp'], 
-                            ['name' => 'Heartspeaks Indonesia', 'logo' => 'Heartspeaks Indonesia.webp'], 
-                            ['name' => 'PDMA-Indonesia', 'logo' => 'PDMA-Indonesia.webp'], 
-                            ['name' => 'AIESEC', 'logo' => 'AIESEC-Logo.webp'], 
-                            ['name' => 'Solopos Media Group', 'logo' => 'Solopos Media Group.webp'],
-                            ['name' => 'Adicipta Inovasi Teknologi', 'logo' => 'Adicipta Inovasi Teknologi.webp'], 
-                            ['name' => 'Biro Klasifikasi Indonesia', 'logo' => 'Biro Klasifikasi Indonesia.webp'], 
-                            ['name' => 'Pos Indonesia', 'logo' => 'Pos Indonesia.webp'], 
-                            ['name' => 'Asuransi Tugu Pratama Ind Tbk', 'logo' => 'Asuransi Tugu Pratama.webp'],
-                            ['name' => 'Widodo Makmur Perkasa Tbk', 'logo' => 'Widodo Makmur Perkasa.webp'], 
-                            ['name' => 'Widodo Makmur Unggas Tbk', 'logo' => 'Widodo Makmur Unggas.webp'],
-                            ['name' => 'Prisma Surya Gemilang', 'logo' => 'Prisma Surya Gemilang.webp'], 
-                            ['name' => 'Universitas Muhammadiyah Cirebon', 'logo' => 'Universitas Muhammadiya Cirebon.webp'],
-                            ['name' => 'PPM Manajemen', 'logo' => 'PPM Manajemen.webp'], 
-                            ['name' => 'FTUI', 'logo' => 'FTUI.webp'], 
-                            ['name' => 'IKIGAI Consulting', 'logo' => 'IKIGAI Consulting.webp'],
-                            ['name' => 'BDO Indonesia', 'logo' => 'BDO Indonesia.webp'], 
-                            ['name' => 'Al Aaren Food Bahrain', 'logo' => 'Al Aaren Food Bahrain.webp'], 
-                            ['name' => 'DataHen Canada', 'logo' => 'DataHen Canada.webp']
-                        ];
+                        $organizations = \App\Models\ClientLogo::where('is_active', true)->orderBy('sort_order', 'asc')->get();
                     @endphp
                     
                     <!-- Space placeholder at start for scrolling padding -->
@@ -352,10 +325,10 @@
                     
                     @foreach($organizations as $org)
                         <div class="shrink-0 flex items-center justify-center snap-center hover:scale-110 transition-transform duration-300 py-4">
-                            @if($org['logo'] && file_exists(public_path('images/clients/' . $org['logo'])))
-                                <img src="{{ asset('images/clients/' . $org['logo']) }}" alt="{{ $org['name'] }}" class="h-10 md:h-14 lg:h-16 w-auto object-contain transition-all duration-300" title="{{ $org['name'] }}" loading="lazy">
+                            @if($org->logo_path)
+                                <img src="{{ Storage::url($org->logo_path) }}" alt="{{ $org->name }}" class="h-10 md:h-14 lg:h-16 w-auto object-contain transition-all duration-300" title="{{ $org->name }}" loading="lazy">
                             @else
-                                <h3 class="text-xl md:text-2xl font-black text-[#141414] whitespace-nowrap" title="{{ $org['name'] }}">{{ $org['name'] }}</h3>
+                                <h3 class="text-xl md:text-2xl font-black text-[#141414] whitespace-nowrap" title="{{ $org->name }}">{{ $org->name }}</h3>
                             @endif
                         </div>
                     @endforeach

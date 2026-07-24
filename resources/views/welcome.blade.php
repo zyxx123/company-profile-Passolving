@@ -235,8 +235,8 @@
                  style="display: flex; flex-wrap: nowrap;">
                 <!-- Set 1 -->
                 @foreach($clientLogos as $org)
-                    @if($org->logo_path && file_exists(public_path('images/clients/' . $org->logo_path)))
-                        <img src="{{ asset('images/clients/' . $org->logo_path) }}" alt="{{ $org->name }}" class="h-10 lg:h-12 w-auto object-contain" title="{{ $org->name }}" loading="lazy">
+                    @if($org->logo_path)
+                        <img src="{{ Storage::url($org->logo_path) }}" alt="{{ $org->name }}" class="h-10 lg:h-12 w-auto object-contain" title="{{ $org->name }}" loading="lazy">
                     @else
                         <h3 class="text-xl lg:text-2xl font-black text-gray-500 whitespace-nowrap" title="{{ $org->name }}">{{ $org->name }}</h3>
                     @endif
@@ -244,8 +244,8 @@
                 
                 <!-- Set 2 (Duplicate for infinite scroll loop) -->
                 @foreach($clientLogos as $org)
-                    @if($org->logo_path && file_exists(public_path('images/clients/' . $org->logo_path)))
-                        <img src="{{ asset('images/clients/' . $org->logo_path) }}" alt="{{ $org->name }}" class="h-10 lg:h-12 w-auto object-contain" title="{{ $org->name }}" loading="lazy">
+                    @if($org->logo_path)
+                        <img src="{{ Storage::url($org->logo_path) }}" alt="{{ $org->name }}" class="h-10 lg:h-12 w-auto object-contain" title="{{ $org->name }}" loading="lazy">
                     @else
                         <h3 class="text-xl lg:text-2xl font-black text-gray-500 whitespace-nowrap" title="{{ $org->name }}">{{ $org->name }}</h3>
                     @endif
