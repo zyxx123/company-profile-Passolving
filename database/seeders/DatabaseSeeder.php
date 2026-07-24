@@ -2,8 +2,13 @@
 
 namespace Database\Seeders;
 
+use App\Models\ClientLogo;
+use App\Models\CompanyJourney;
+use App\Models\CompanyStatistic;
 use App\Models\Portfolio;
 use App\Models\Service;
+use App\Models\SiteSetting;
+use App\Models\Testimonial;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -105,6 +110,140 @@ class DatabaseSeeder extends Seeder
 
         foreach ($portfolios as $port) {
             Portfolio::create($port);
+        }
+
+        // TESTIMONIALS
+        $testimonials = [
+            [
+                'quote' => 'Apa yang harus dilakukan, langsung dipraktekkan! Agile-Design Thinking dari PASS berbeda dari yang biasanya.',
+                'author_name' => 'Manager Retail Chain',
+                'author_role' => 'Manager',
+                'company' => 'Retail Chain',
+                'country' => 'Indonesia',
+                'is_featured' => false,
+                'sort_order' => 1,
+            ],
+            [
+                'quote' => 'PASSolving membantu kami melihat realita dengan objektif dan memberikan solusi yang tepat.',
+                'author_name' => 'Founder Beauty Clinic',
+                'author_role' => 'Founder',
+                'company' => 'Beauty Clinic',
+                'country' => 'Indonesia',
+                'is_featured' => true,
+                'sort_order' => 2,
+            ],
+            [
+                'quote' => 'Tim PASS berisi profesional berpengalaman dengan solusi implementatif dalam bentuk report yang langsung berdampak pada pengembangan bisnis.',
+                'author_name' => 'Founder Food Processing Mfr',
+                'author_role' => 'Founder',
+                'company' => 'Food Processing Manufacturer',
+                'country' => 'Bahrain',
+                'is_featured' => false,
+                'sort_order' => 3,
+            ],
+        ];
+
+        foreach ($testimonials as $t) {
+            Testimonial::create($t);
+        }
+
+        // CLIENT LOGOS
+        $clientLogos = [
+            ['name' => 'Heartspeaks Indonesia', 'logo_path' => 'Heartspeaks Indonesia.webp', 'sort_order' => 1],
+            ['name' => 'PDMA-Indonesia', 'logo_path' => 'PDMA-Indonesia.webp', 'sort_order' => 2],
+            ['name' => 'AIESEC', 'logo_path' => 'AIESEC-Logo.webp', 'sort_order' => 3],
+            ['name' => 'Solopos Media Group', 'logo_path' => 'Solopos Media Group.webp', 'sort_order' => 4],
+            ['name' => 'Indosat Ooredoo Hutchinson', 'logo_path' => 'Indosat Ooredoo.webp', 'sort_order' => 5],
+            ['name' => 'Adicipta Inovasi Teknologi', 'logo_path' => 'Adicipta Inovasi Teknologi.webp', 'sort_order' => 6],
+            ['name' => 'Kemenkes', 'logo_path' => 'Kemenkes.webp', 'sort_order' => 7],
+            ['name' => 'LKPP', 'logo_path' => 'LKPP.webp', 'sort_order' => 8],
+            ['name' => 'Biro Klasifikasi Indonesia', 'logo_path' => 'Biro Klasifikasi Indonesia.webp', 'sort_order' => 9],
+            ['name' => 'Otoritas Jasa Keuangan (OJK) Indonesia', 'logo_path' => 'Otoritas Jasa Keuangan.webp', 'sort_order' => 10],
+            ['name' => 'Pos Indonesia', 'logo_path' => 'Pos Indonesia.webp', 'sort_order' => 11],
+            ['name' => 'BNI Tbk', 'logo_path' => 'BNI Tbk.webp', 'sort_order' => 12],
+            ['name' => 'Asuransi Tugu Pratama Ind Tbk', 'logo_path' => 'Asuransi Tugu Pratama.webp', 'sort_order' => 13],
+            ['name' => 'Pelindo Solusi Logistik', 'logo_path' => 'PT PELINDO SOLUSI LOGISTIK.webp', 'sort_order' => 14],
+            ['name' => 'UNPAD', 'logo_path' => 'UNPAD.webp', 'sort_order' => 15],
+            ['name' => 'FTUI', 'logo_path' => 'FTUI.webp', 'sort_order' => 16],
+            ['name' => 'IKIGAI Consulting', 'logo_path' => 'IKIGAI Consulting.webp', 'sort_order' => 17],
+            ['name' => 'BDO Indonesia', 'logo_path' => 'BDO Indonesia.webp', 'sort_order' => 18],
+            ['name' => 'Al Aaren Food Bahrain', 'logo_path' => 'Al Aaren Food Bahrain.webp', 'sort_order' => 19],
+            ['name' => 'DataHen Canada', 'logo_path' => 'DataHen Canada.webp', 'sort_order' => 20],
+        ];
+
+        foreach ($clientLogos as $logo) {
+            ClientLogo::create($logo);
+        }
+
+        // COMPANY STATISTICS
+        $statistics = [
+            ['label' => 'Projects', 'value' => 150, 'suffix' => '+', 'sort_order' => 1],
+            ['label' => 'Clients', 'value' => 50, 'suffix' => '+', 'sort_order' => 2],
+            ['label' => 'Satisfaction', 'value' => 98, 'suffix' => '%', 'sort_order' => 3],
+            ['label' => 'Experts', 'value' => 12, 'suffix' => null, 'sort_order' => 4],
+        ];
+
+        foreach ($statistics as $stat) {
+            CompanyStatistic::create($stat);
+        }
+
+        // COMPANY JOURNEYS
+        $journeys = [
+            [
+                'year' => '2023',
+                'title' => 'PASS Established',
+                'subtitle' => 'Founded',
+                'description' => 'Lahir di Jakarta di bawah PT Palsindo Utama.',
+                'is_current' => false,
+                'sort_order' => 1,
+            ],
+            [
+                'year' => 'Expansion',
+                'title' => 'National Projects',
+                'subtitle' => 'Growth',
+                'description' => 'Kepercayaan mengelola project skala nasional.',
+                'is_current' => false,
+                'sort_order' => 2,
+            ],
+            [
+                'year' => 'Growth',
+                'title' => 'Cross Industry',
+                'subtitle' => 'Diversification',
+                'description' => 'Ekspansi layanan ke berbagai vertikal industri.',
+                'is_current' => false,
+                'sort_order' => 3,
+            ],
+            [
+                'year' => 'Today',
+                'title' => 'Impact Realization',
+                'subtitle' => 'Present',
+                'description' => 'Melanjutkan misi transformasi berdampak bagi Indonesia.',
+                'is_current' => true,
+                'sort_order' => 4,
+            ],
+        ];
+
+        foreach ($journeys as $journey) {
+            CompanyJourney::create($journey);
+        }
+
+        // SITE SETTINGS
+        $settings = [
+            'phone' => '+62 897 9515 205',
+            'email' => 'bersama@passolving.com',
+            'address' => 'Jl. P.P.A No.24, RT.5/RW.4, Ceger, Kec. Cipayung, Kota Jakarta Timur 13820',
+            'operational_hours' => 'Senin - Jumat, 09:00 - 17:00 WIB',
+            'maps_embed_url' => 'https://maps.google.com/maps?q=-6.3182419,106.8956369&t=&z=16&ie=UTF8&iwloc=&output=embed',
+            'linkedin_url' => 'https://www.linkedin.com/company/passolving/',
+            'instagram_url' => 'https://www.instagram.com/passolving',
+            'youtube_url' => 'https://www.youtube.com/@passolving9836',
+            'facebook_url' => 'https://facebook.com/kita.passolving.7',
+            'threads_url' => 'https://www.threads.net/@passolving',
+            'tagline' => 'Partner strategis Anda dalam mewujudkan kelincahan (agility) dan efektivitas tim yang berkelanjutan di era transformasi.',
+        ];
+
+        foreach ($settings as $key => $value) {
+            SiteSetting::create(['key' => $key, 'value' => $value]);
         }
     }
 }
