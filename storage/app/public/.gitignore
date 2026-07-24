@@ -1,2 +1,6 @@
 *
 !.gitignore
+!clients/
+!clients/*
+!portfolios/
+!portfolios/*
