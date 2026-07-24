@@ -5,6 +5,7 @@ namespace App\Filament\Resources\Portfolios\Schemas;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\TagsInput;
 use Filament\Forms\Components\Select;
 use Filament\Schemas\Schema;
 
@@ -38,7 +39,7 @@ class PortfolioForm
                     ->columnSpanFull(),
                 TextInput::make('focus'),
                 TextInput::make('role'),
-                Textarea::make('impact')
+                TagsInput::make('impact')
                     ->columnSpanFull(),
             ]);
     }
